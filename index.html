@@ -918,7 +918,7 @@ function slide(oldEl, newEl, dir){
   let done = false;
   const finish = ()=>{
     if(done) return; done = true;
-    oldEl.removeEventListener('transitionend', finish);
+    oldEl.removeEventListener('transitionend', onEnd);
     oldEl.classList.remove('active');
     oldEl.style.transition = 'none';
     oldEl.style.transform = '';
@@ -926,7 +926,12 @@ function slide(oldEl, newEl, dir){
     if(oldEl.dataset.disposable==='1') oldEl.remove();
     animating = false;
   };
-  oldEl.addEventListener('transitionend', finish);
+  // only react to the old screen's OWN transform transition —
+  // ignore transitionend events that bubble up from children (tiles, pills, switches…)
+  const onEnd = (e)=>{
+    if(e.target === oldEl && e.propertyName === 'transform') finish();
+  };
+  oldEl.addEventListener('transitionend', onEnd);
   setTimeout(finish, DUR + 80); // safety fallback
 }
 
