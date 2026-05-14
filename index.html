@@ -1,1059 +1,1028 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Islam 24/7 – Your Daily Spiritual Companion</title>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<meta name="theme-color" content="#1f7ad6" />
+<title>ISLAM 24/7 — Your Daily Spiritual Companion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root{
+    --blue-1:#1f7ad6;
+    --blue-2:#3f96e4;
+    --blue-3:#5aa9e8;
+    --blue-deep:#155fb0;
+    --tile-top:#eaf3fd;
+    --tile-bot:#ffffff;
+    --tile-border:#bcd8f3;
+    --ink:#0f3c66;
+    --ink-soft:#3d6790;
+    --gold:#f5b21e;
+    --teal-1:#17a8ad;
+    --teal-2:#39c9c1;
+    --card-glass:rgba(255,255,255,.16);
+    --card-line:rgba(255,255,255,.35);
+    --navh:calc(64px + env(safe-area-inset-bottom));
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0;}
+  html,body{height:100%;}
+  body{
+    font-family:'Poppins',system-ui,-apple-system,sans-serif;
+    background:#0c2c4d;
+    overflow:hidden;
+  }
+  /* App fills the whole viewport — no device frame */
+  #phone{
+    position:relative;
+    width:100%;
+    height:100vh;height:100dvh;
+    background:#0c2c4d;overflow:hidden;
+    margin:0 auto;
+  }
+  /* Screens */
+  .screen{
+    position:absolute;inset:0;display:none;flex-direction:column;
+    overflow:hidden;will-change:transform;backface-visibility:hidden;
+    transform:translateZ(0);
+  }
+  .screen.active{display:flex;}
+  .scroll{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;}
+  .scroll::-webkit-scrollbar{width:0;}
 
-  :root {
-    --teal: #20b2aa;
-    --blue: #1a6fb5;
-    --blue-mid: #1e7ecb;
-    --blue-light: #3a9ee8;
-    --gold: #f0a500;
-    --white: #ffffff;
+  /* Status bar */
+  .statusbar{
+    height:46px;flex:0 0 46px;display:flex;align-items:center;justify-content:space-between;
+    padding:0 22px 0 26px;color:#fff;font-size:15px;font-weight:600;
+    position:relative;z-index:5;
   }
+  .statusbar .sb-right{display:flex;align-items:center;gap:6px;}
+  .sb-right svg{display:block;}
 
-  html, body {
-    height: 100%;
-    background: #1a1a2e;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Poppins', sans-serif;
-    overflow: hidden;
+  /* ===== SPLASH ===== */
+  #splash{
+    background:
+      radial-gradient(120% 80% at 75% 88%,rgba(120,235,210,.55),transparent 60%),
+      linear-gradient(160deg,var(--teal-1),var(--teal-2) 70%,#52ddc9);
+    align-items:center;justify-content:center;text-align:center;
   }
+  .mandala{
+    position:absolute;top:50%;left:50%;width:560px;height:560px;
+    transform:translate(-50%,-58%);opacity:.13;
+    background:radial-gradient(circle,transparent 30%,#fff 31%,transparent 32%) ,
+              conic-gradient(from 0deg,#fff,transparent 8%,#fff 16%,transparent 24%,#fff 32%,transparent 40%,#fff 48%,transparent 56%,#fff 64%,transparent 72%,#fff 80%,transparent 88%,#fff 96%);
+    -webkit-mask:radial-gradient(circle,#000 62%,transparent 63%);
+            mask:radial-gradient(circle,#000 62%,transparent 63%);
+    border-radius:50%;animation:spin 60s linear infinite;
+  }
+  @keyframes spin{to{transform:translate(-50%,-58%) rotate(360deg);}}
+  .splash-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;padding:0 30px;}
+  .kaaba{
+    width:150px;height:150px;margin-bottom:26px;
+    filter:drop-shadow(0 14px 30px rgba(0,0,0,.35));
+    animation:rise 1s cubic-bezier(.22,.61,.36,1);
+  }
+  @keyframes rise{from{transform:translateY(26px) scale(.9);opacity:0;}to{transform:translateY(0) scale(1);opacity:1;}}
+  .splash-title{
+    font-size:46px;font-weight:800;color:#fff;letter-spacing:.5px;
+    text-shadow:0 4px 16px rgba(0,0,0,.22);
+  }
+  .splash-sub{
+    margin-top:8px;font-size:18px;font-weight:600;color:rgba(255,255,255,.92);
+  }
+  .loader-dots{display:flex;gap:9px;margin-top:120px;align-items:center;}
+  .loader-dots i{
+    width:8px;height:8px;border-radius:50%;background:var(--gold);display:block;
+    opacity:.55;animation:pulse 1.3s ease-in-out infinite;
+  }
+  .loader-dots i:nth-child(1){animation-delay:0s;}
+  .loader-dots i:nth-child(2){animation-delay:.12s;}
+  .loader-dots i:nth-child(3){animation-delay:.24s;}
+  .loader-dots i:nth-child(4){width:15px;height:15px;animation-delay:.36s;box-shadow:0 0 14px rgba(245,178,30,.9);}
+  .loader-dots i:nth-child(5){animation-delay:.48s;}
+  .loader-dots i:nth-child(6){animation-delay:.6s;}
+  .loader-dots i:nth-child(7){animation-delay:.72s;}
+  @keyframes pulse{0%,100%{opacity:.4;transform:scale(.85);}50%{opacity:1;transform:scale(1.15);}}
+  .splash-foot{margin-top:18px;color:rgba(255,255,255,.92);font-weight:600;font-size:16px;letter-spacing:.2px;}
 
-  .phone-shell {
-    width: 390px;
-    height: 844px;
-    background: #fff;
-    border-radius: 48px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 30px 80px rgba(0,0,0,0.6), inset 0 0 0 2px rgba(255,255,255,0.1);
-    border: 6px solid #111;
-  }
-
-  .screen {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-    display: none;
-    flex-direction: column;
-  }
-  .screen.active { display: flex; }
-
-  /* ─── SPLASH ─── */
-  #splash {
-    background: linear-gradient(160deg, #21c4ba 0%, #1ba8a0 40%, #159e96 100%);
-    align-items: center;
-    justify-content: center;
-  }
-  .splash-pattern {
-    position: absolute;
-    inset: 0;
-    opacity: 0.10;
-    background-image: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.8) 0%, transparent 50%),
-                      radial-gradient(circle at 70% 70%, rgba(255,255,255,0.5) 0%, transparent 50%);
-  }
-  .splash-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-    margin-top: -80px;
-  }
-  .kaaba-wrap {
-    width: 160px;
-    height: 160px;
-    position: relative;
-    margin-bottom: 28px;
-    animation: float 3s ease-in-out infinite;
-  }
-  @keyframes float {
-    0%,100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-  .kaaba-glow {
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 28px;
-    background: radial-gradient(ellipse, rgba(255,255,255,0.6) 0%, transparent 70%);
-    animation: pulse-glow 2.5s ease-in-out infinite;
-  }
-  @keyframes pulse-glow {
-    0%,100% { opacity: 0.6; }
-    50% { opacity: 1; }
-  }
-  .splash-title {
-    font-size: 38px;
-    font-weight: 800;
-    color: #fff;
-    letter-spacing: 1px;
-    text-shadow: 0 2px 12px rgba(0,0,0,0.2);
-  }
-  .splash-sub {
-    font-size: 15px;
-    font-weight: 600;
-    color: rgba(255,255,255,0.9);
-    margin-top: 6px;
-  }
-  .splash-footer {
-    position: absolute;
-    bottom: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    width: 100%;
-    z-index: 1;
-  }
-  .loading-dots { display: flex; gap: 8px; align-items: center; }
-  .loading-dots span {
-    width: 10px; height: 10px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.5);
-    animation: dot-pulse 1.4s ease-in-out infinite;
-  }
-  .loading-dots span.big {
-    width: 16px; height: 16px;
-    background: rgba(255,215,0,0.9);
-    animation-delay: 0.3s;
-  }
-  .loading-dots span:nth-child(1){animation-delay:0s}
-  .loading-dots span:nth-child(2){animation-delay:0.15s}
-  .loading-dots span:nth-child(3){animation-delay:0.15s}
-  .loading-dots span:nth-child(5){animation-delay:0.6s}
-  .loading-dots span:nth-child(6){animation-delay:0.75s}
-  .loading-dots span:nth-child(7){animation-delay:0.9s}
-  .loading-dots span:nth-child(8){animation-delay:1.05s}
-  @keyframes dot-pulse {
-    0%,80%,100% { opacity: 0.4; transform: scale(1); }
-    40% { opacity: 1; transform: scale(1.3); }
-  }
-  .splash-connecting {
-    font-size: 14px;
-    font-weight: 600;
-    color: rgba(255,255,255,0.85);
-    font-style: italic;
+  /* ===== Shared blue background ===== */
+  .bluebg{
+    background:
+      radial-gradient(140% 60% at 50% 0%,#2f8ce0,transparent 60%),
+      linear-gradient(180deg,var(--blue-1),var(--blue-2) 55%,var(--blue-3));
   }
 
-  /* ─── STATUS BAR ─── */
-  .status-bar {
-    background: var(--blue);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px 6px;
-    flex-shrink: 0;
-    color: white;
-    font-size: 13px;
-    font-weight: 600;
+  /* ===== HOME header ===== */
+  .home-head{
+    flex:0 0 auto;padding:2px 22px 20px;color:#fff;text-align:center;position:relative;
+  }
+  .home-head .bell-btn{position:absolute;right:20px;top:-2px;}
+  .greeting{font-size:25px;font-weight:700;letter-spacing:.2px;}
+  .date-row{
+    margin-top:6px;font-size:13px;font-weight:500;color:rgba(255,255,255,.9);
+    display:flex;align-items:center;justify-content:center;gap:10px;
+  }
+  .date-row::before,.date-row::after{content:"";height:1px;width:26px;background:rgba(255,255,255,.5);display:block;}
+
+  /* generic header for sub screens */
+  .subhead{
+    flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+    padding:2px 18px 16px;color:#fff;
+  }
+  .subhead h1{font-size:26px;font-weight:700;letter-spacing:.3px;}
+  .icon-btn{
+    width:42px;height:42px;border:none;background:transparent;color:#fff;
+    display:flex;align-items:center;justify-content:center;cursor:pointer;border-radius:12px;
+  }
+  .icon-btn:active{background:rgba(255,255,255,.16);}
+
+  /* Daily Ayah */
+  .ayah-card{
+    margin:4px 16px 20px;border-radius:20px;overflow:hidden;
+    background:rgba(255,255,255,.14);border:1px solid var(--card-line);
+    box-shadow:0 10px 26px rgba(0,0,0,.16);
+  }
+  .ayah-card .cap{
+    text-align:center;color:#fff;font-weight:700;font-size:18px;padding:11px;
+    letter-spacing:1px;background:rgba(0,0,0,.10);
+  }
+  .ayah-card .cap span{opacity:.7;margin:0 8px;}
+  .ayah-body{
+    margin:11px;padding:20px 16px;border-radius:14px;
+    background:linear-gradient(180deg,#dcebfb,#cfe4f8);
+    background:linear-gradient(180deg,#dceafa,#cfe3f7);
+    text-align:center;
+  }
+  .ayah-ar{
+    font-family:'Amiri',serif;font-size:30px;line-height:1.9;color:#143a5f;font-weight:700;
+    direction:rtl;
+  }
+  .ayah-tr{margin-top:14px;font-size:14px;color:#264a6b;font-weight:500;line-height:1.5;}
+  .ayah-ref{margin-top:12px;font-size:14px;color:#143a5f;font-weight:600;}
+
+  /* Grid of tiles */
+  .grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:0 16px 18px;
+  }
+  .tile{
+    background:linear-gradient(180deg,var(--tile-top),var(--tile-bot));
+    border:1px solid var(--tile-border);border-radius:18px;
+    padding:12px 4px 9px;display:flex;flex-direction:column;align-items:center;gap:7px;
+    cursor:pointer;box-shadow:0 6px 14px rgba(8,40,80,.18);
+    transition:transform .12s ease,box-shadow .12s ease;
+  }
+  .tile:active{transform:scale(.94);box-shadow:0 3px 8px rgba(8,40,80,.22);}
+  .tile .ic{
+    font-size:30px;line-height:1;height:38px;display:flex;align-items:center;justify-content:center;
+    filter:drop-shadow(0 4px 6px rgba(20,60,100,.28));
+  }
+  .tile .lb{
+    font-size:10.5px;font-weight:600;color:var(--ink);text-align:center;line-height:1.2;
+    min-height:25px;display:flex;align-items:center;
+  }
+  /* 6-grid for sub screens (bigger tiles) */
+  .grid6{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:16px;padding:6px 18px 20px;
+  }
+  .tile-lg{
+    background:linear-gradient(180deg,var(--tile-top),var(--tile-bot));
+    border:1px solid var(--tile-border);border-radius:22px;
+    padding:26px 10px 18px;display:flex;flex-direction:column;align-items:center;gap:14px;
+    cursor:pointer;box-shadow:0 8px 18px rgba(8,40,80,.20);
+    transition:transform .12s ease;
+  }
+  .tile-lg:active{transform:scale(.95);}
+  .tile-lg .ic{font-size:52px;line-height:1;filter:drop-shadow(0 6px 9px rgba(20,60,100,.3));}
+  .tile-lg .lb{font-size:17px;font-weight:600;color:var(--ink);}
+
+  /* Notification strip on home */
+  .notif-strip{
+    margin:0 16px 20px;background:rgba(255,255,255,.16);border:1px solid var(--card-line);
+    border-radius:16px;padding:13px 14px;display:flex;gap:11px;color:#fff;
+  }
+  .notif-strip .nbell{
+    width:34px;height:34px;border-radius:50%;background:var(--blue-deep);
+    display:flex;align-items:center;justify-content:center;flex:0 0 34px;font-size:17px;
+  }
+  .notif-strip .ntxt{flex:1;font-size:12px;line-height:1.5;}
+  .notif-strip .ntop{display:flex;justify-content:space-between;font-weight:600;margin-bottom:2px;}
+  .notif-strip .nago{font-weight:500;opacity:.85;font-size:11px;}
+
+  /* Sliding stage + persistent bottom nav */
+  #stage{position:absolute;inset:0;overflow:hidden;}
+  #stage.with-nav{bottom:var(--navh);}
+  #globalNav{
+    position:absolute;left:0;right:0;bottom:0;z-index:20;display:none;
+  }
+  #globalNav.show{display:flex;}
+
+  /* Bottom nav */
+  .botnav{
+    height:var(--navh);display:flex;align-items:center;justify-content:space-around;
+    background:linear-gradient(180deg,#e9f2fc,#d6e7f8);
+    border-top:1px solid #bcd6f0;padding-bottom:env(safe-area-inset-bottom);
+  }
+  .navbtn{
+    border:none;background:transparent;cursor:pointer;position:relative;
+    width:54px;height:54px;display:flex;align-items:center;justify-content:center;
+    color:#5b8cba;border-radius:16px;
+  }
+  .navbtn.on{color:var(--blue-1);}
+  .navbtn.on::after{content:"";position:absolute;bottom:7px;width:5px;height:5px;border-radius:50%;background:var(--blue-1);}
+  .navbtn .badge{
+    position:absolute;top:6px;right:8px;background:#e8392f;color:#fff;
+    font-size:10px;font-weight:700;min-width:17px;height:17px;border-radius:9px;
+    display:flex;align-items:center;justify-content:center;padding:0 4px;
+    border:1.5px solid #e9f2fc;
   }
 
-  /* ─── HOME ─── */
-  #home { background: #e8f4fd; }
-  .home-header {
-    background: linear-gradient(180deg, #1a6fb5 0%, #2282d0 60%, #3a9ee8 100%);
-    padding: 14px 20px 32px;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
+  /* Back pill */
+  .backpill{
+    margin:6px auto 20px;display:flex;align-items:center;justify-content:center;gap:12px;
+    width:calc(100% - 80px);max-width:300px;padding:15px;border:none;cursor:pointer;
+    background:linear-gradient(180deg,#2f8ce0,#1f6ec9);color:#fff;font-weight:700;font-size:19px;
+    border-radius:30px;box-shadow:0 8px 18px rgba(8,40,80,.3);font-family:inherit;
   }
-  .home-header::after {
-    content: '';
-    position: absolute;
-    bottom: -20px; left: 0; right: 0;
-    height: 42px;
-    background: #e8f4fd;
-    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-  }
-  .header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    position: relative;
-    z-index: 1;
-  }
-  .header-greeting { color: white; }
-  .header-greeting h2 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
-  .header-date {
-    font-size: 12px;
-    color: rgba(255,255,255,0.85);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-weight: 500;
-  }
-  .header-date::before,.header-date::after{content:'—';opacity:0.6;}
-  .bell-btn {
-    width: 40px; height: 40px;
-    background: rgba(255,255,255,0.2);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    cursor: pointer; border: none; color: white; font-size: 18px;
-    position: relative; z-index: 1;
-  }
+  .backpill:active{transform:scale(.97);}
 
-  .home-body {
-    flex: 1;
-    overflow-y: auto;
-    padding: 6px 14px 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    scrollbar-width: none;
-  }
-  .home-body::-webkit-scrollbar { display: none; }
+  /* Content building blocks */
+  .pad{padding:0 16px 10px;}
+  .sec-title{color:#fff;font-weight:600;font-size:15px;margin:6px 4px 12px;display:flex;align-items:center;gap:8px;}
+  .sec-title::before{content:"";width:4px;height:16px;border-radius:2px;background:var(--gold);display:block;}
 
-  .ayah-card {
-    background: linear-gradient(135deg, #1e7ecb 0%, #2a8fd4 60%, #4aaef5 100%);
-    border-radius: 18px;
-    padding: 16px;
-    text-align: center;
-    box-shadow: 0 6px 20px rgba(30,126,203,0.35);
-    position: relative;
-    overflow: hidden;
+  .listcard{
+    background:linear-gradient(180deg,var(--tile-top),var(--tile-bot));
+    border:1px solid var(--tile-border);border-radius:16px;margin-bottom:11px;
+    padding:14px;display:flex;gap:13px;align-items:center;cursor:pointer;
+    box-shadow:0 5px 12px rgba(8,40,80,.14);transition:transform .1s ease;
   }
-  .ayah-card::before {
-    content:'';position:absolute;top:-30px;right:-30px;
-    width:100px;height:100px;border-radius:50%;
-    background:rgba(255,255,255,0.08);
+  .listcard:active{transform:scale(.98);}
+  .listcard .lic{
+    width:46px;height:46px;flex:0 0 46px;border-radius:13px;
+    background:linear-gradient(150deg,#e7f1fc,#cfe3f8);border:1px solid var(--tile-border);
+    display:flex;align-items:center;justify-content:center;font-size:24px;
   }
-  .ayah-label {
-    font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.9);
-    letter-spacing: 2px; margin-bottom: 10px;
-    display: flex; align-items: center; justify-content: center; gap: 8px;
-  }
-  .ayah-label::before,.ayah-label::after{content:'•';opacity:0.7;}
-  .ayah-arabic {
-    font-family: 'Amiri', serif;
-    font-size: 26px; color: #1a2a45; line-height: 1.6;
-    background: rgba(255,255,255,0.92);
-    border-radius: 12px; padding: 14px 10px; margin-bottom: 10px;
-    direction: rtl;
-  }
-  .ayah-translation { font-size: 12.5px; color: rgba(255,255,255,0.95); font-style: italic; line-height: 1.5; margin-bottom: 4px; }
-  .ayah-ref { font-size: 12px; color: rgba(255,255,255,0.7); font-weight: 600; }
+  .listcard .lbody{flex:1;min-width:0;}
+  .listcard .lt{font-weight:600;font-size:14px;color:var(--ink);}
+  .listcard .ls{font-size:11.5px;color:var(--ink-soft);margin-top:3px;line-height:1.45;}
+  .listcard .lchev{color:#9bb9d6;font-size:20px;flex:0 0 auto;}
 
-  .grid-section { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; }
-  .grid-btn {
-    background: linear-gradient(145deg, #daeeff 0%, #c8e4f8 100%);
-    border-radius: 14px;
-    display: flex; flex-direction: column; align-items: center;
-    justify-content: center; gap: 7px; padding: 14px 6px 12px;
-    cursor: pointer; border: 1.5px solid rgba(255,255,255,0.8);
-    box-shadow: 0 3px 10px rgba(30,126,203,0.12);
-    transition: transform 0.15s; min-height: 90px;
+  .quote{
+    background:linear-gradient(180deg,#dcebfb,#cfe3f7);border:1px solid var(--tile-border);
+    border-radius:16px;padding:18px;margin-bottom:12px;
   }
-  .grid-btn:active { transform: scale(0.94); }
-  .grid-icon { font-size: 28px; line-height: 1; }
-  .grid-label { font-size: 9.5px; font-weight: 700; color: #155a99; text-align: center; line-height: 1.2; }
+  .quote .qar{font-family:'Amiri',serif;direction:rtl;text-align:right;font-size:22px;line-height:2;color:#143a5f;font-weight:700;}
+  .quote .qtr{margin-top:10px;font-size:13px;color:#264a6b;line-height:1.6;}
+  .quote .qsrc{margin-top:9px;font-size:12px;color:#1f6ec9;font-weight:600;}
 
-  .notif-strip {
-    background: linear-gradient(135deg, #e8f4fd 0%, #d5eaf8 100%);
-    border-radius: 14px; padding: 10px 12px;
-    display: flex; align-items: flex-start; gap: 10px;
-    border: 1px solid rgba(30,126,203,0.15);
-    box-shadow: 0 2px 8px rgba(30,126,203,0.1); flex-shrink: 0;
+  .pillrow{display:flex;gap:9px;padding:2px 16px 14px;overflow-x:auto;}
+  .pillrow::-webkit-scrollbar{height:0;}
+  .pill{
+    flex:0 0 auto;padding:8px 16px;border-radius:20px;font-size:12.5px;font-weight:600;
+    background:rgba(255,255,255,.16);color:#fff;border:1px solid var(--card-line);cursor:pointer;
   }
-  .notif-bell-icon {
-    width: 38px; height: 38px;
-    background: linear-gradient(135deg, #1e7ecb, #4aaef5);
-    border-radius: 10px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 18px; flex-shrink: 0; position: relative;
-  }
-  .notif-bell-icon::after {
-    content:'!';position:absolute;top:-4px;right:-4px;
-    background:#f0a500;color:white;font-size:9px;font-weight:800;
-    width:14px;height:14px;border-radius:50%;
-    display:flex;align-items:center;justify-content:center;
-  }
-  .notif-text { flex: 1; }
-  .notif-title { font-size: 11px; font-weight: 700; color: #1a6fb5; margin-bottom: 2px; }
-  .notif-body { font-size: 10.5px; color: #334; line-height: 1.4; }
-  .notif-time { font-size: 10px; color: #888; flex-shrink: 0; white-space: nowrap; }
+  .pill.on{background:#fff;color:var(--blue-1);}
 
-  .bottom-nav {
-    background: linear-gradient(180deg, #1e7ecb 0%, #1a6fb5 100%);
-    display: flex; justify-content: space-around; align-items: center;
-    padding: 8px 0 16px; flex-shrink: 0;
-    border-top: 1px solid rgba(255,255,255,0.15);
+  .banner{
+    margin:0 16px 16px;border-radius:18px;padding:20px 18px;color:#fff;
+    background:linear-gradient(135deg,#0e5fb4,#2f8ce0);border:1px solid rgba(255,255,255,.25);
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
   }
-  .nav-btn {
-    display: flex; flex-direction: column; align-items: center; gap: 3px;
-    cursor: pointer; background: none; border: none;
-    padding: 6px 16px; border-radius: 10px;
-    transition: background 0.2s; position: relative;
-  }
-  .nav-btn:active { background: rgba(255,255,255,0.15); }
-  .nav-btn .nav-icon { font-size: 22px; color: rgba(255,255,255,0.75); }
-  .nav-btn.active .nav-icon { color: #fff; }
-  .nav-badge {
-    position: absolute; top: 4px; right: 10px;
-    background: #e53935; color: white;
-    font-size: 9px; font-weight: 800;
-    width: 16px; height: 16px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-  }
+  .banner h3{font-size:18px;font-weight:700;}
+  .banner p{font-size:12.5px;margin-top:6px;opacity:.92;line-height:1.55;}
 
-  /* ─── SUB SCREENS ─── */
-  .sub-screen-header {
-    background: linear-gradient(180deg, #1a6fb5 0%, #2282d0 60%, #3a9ee8 100%);
-    padding: 12px 18px 32px;
-    position: relative;
-    display: flex; align-items: center; justify-content: space-between;
-    flex-shrink: 0;
+  .field{margin:0 16px 14px;}
+  .field label{display:block;color:#fff;font-size:13px;font-weight:600;margin-bottom:7px;padding-left:4px;}
+  .field input,.field select,.field textarea{
+    width:100%;border:1px solid var(--tile-border);border-radius:13px;padding:13px 14px;
+    font-family:inherit;font-size:14px;color:var(--ink);background:#fff;outline:none;
   }
-  .sub-screen-header::after {
-    content:'';position:absolute;bottom:-20px;left:0;right:0;
-    height:42px;background:#c5e2f8;
-    border-radius:50% 50% 0 0/100% 100% 0 0;
+  .field textarea{min-height:104px;resize:none;}
+  .btn-primary{
+    margin:4px 16px 8px;width:calc(100% - 32px);padding:15px;border:none;cursor:pointer;
+    background:linear-gradient(180deg,#f5b21e,#e69a06);color:#fff;font-weight:700;font-size:16px;
+    border-radius:14px;font-family:inherit;box-shadow:0 8px 18px rgba(230,154,6,.4);
   }
-  .sub-title { font-size: 22px; font-weight: 700; color: white; position: relative; z-index: 1; }
-  .back-btn {
-    width: 36px; height: 36px;
-    background: rgba(255,255,255,0.2); border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    cursor: pointer; border: none; color: white; font-size: 18px;
-    position: relative; z-index: 1; transition: background 0.2s;
-    font-family: 'Poppins', sans-serif;
-  }
-  .back-btn:active { background: rgba(255,255,255,0.35); }
+  .btn-primary:active{transform:scale(.98);}
 
-  .sub-body {
-    flex: 1;
-    background: linear-gradient(180deg, #c5e2f8 0%, #daeeff 100%);
-    overflow-y: auto;
-    padding: 30px 16px 16px;
-    scrollbar-width: none;
+  .prodgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:0 16px 14px;}
+  .prod{
+    background:linear-gradient(180deg,var(--tile-top),var(--tile-bot));
+    border:1px solid var(--tile-border);border-radius:16px;overflow:hidden;cursor:pointer;
+    box-shadow:0 5px 12px rgba(8,40,80,.14);transition:transform .1s ease;
   }
-  .sub-body::-webkit-scrollbar { display: none; }
+  .prod:active{transform:scale(.97);}
+  .prod .pimg{height:96px;display:flex;align-items:center;justify-content:center;font-size:46px;background:linear-gradient(150deg,#e7f1fc,#d2e4f7);}
+  .prod .pinfo{padding:10px 11px 12px;}
+  .prod .pname{font-size:12.5px;font-weight:600;color:var(--ink);line-height:1.3;}
+  .prod .pprice{font-size:13px;font-weight:700;color:#1f6ec9;margin-top:5px;}
 
-  .sub-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
-  .sub-tile {
-    background: linear-gradient(145deg, #1e7ecb 0%, #2a8fd4 100%);
-    border-radius: 18px;
-    padding: 20px 14px 18px;
-    display: flex; flex-direction: column; align-items: center; gap: 12px;
-    cursor: pointer;
-    box-shadow: 0 6px 20px rgba(20,90,170,0.35);
-    border: 1.5px solid rgba(255,255,255,0.25);
-    transition: transform 0.15s;
-    min-height: 140px; justify-content: center;
-    position: relative; overflow: hidden;
+  .vidcard{
+    background:linear-gradient(180deg,var(--tile-top),var(--tile-bot));
+    border:1px solid var(--tile-border);border-radius:16px;overflow:hidden;margin-bottom:12px;
+    cursor:pointer;box-shadow:0 5px 12px rgba(8,40,80,.14);
   }
-  .sub-tile::before {
-    content:'';position:absolute;top:-20px;right:-20px;
-    width:70px;height:70px;border-radius:50%;
-    background:rgba(255,255,255,0.08);
+  .vidcard:active{transform:scale(.99);}
+  .vidthumb{
+    height:128px;display:flex;align-items:center;justify-content:center;position:relative;
+    background:linear-gradient(135deg,#16699f,#2f8ce0);
   }
-  .sub-tile:active { transform: scale(0.95); }
-  .sub-tile-icon { font-size: 48px; line-height: 1; position: relative; z-index: 1; }
-  .sub-tile-label { font-size: 14px; font-weight: 700; color: white; text-align: center; position: relative; z-index: 1; }
+  .vidthumb .play{
+    width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.92);
+    display:flex;align-items:center;justify-content:center;color:#1f6ec9;font-size:20px;padding-left:4px;
+  }
+  .vidthumb .dur{position:absolute;bottom:8px;right:8px;background:rgba(0,0,0,.6);color:#fff;font-size:10px;padding:2px 7px;border-radius:6px;font-weight:600;}
+  .vidmeta{padding:11px 13px 13px;}
+  .vidmeta .vt{font-size:13.5px;font-weight:600;color:var(--ink);}
+  .vidmeta .vs{font-size:11px;color:var(--ink-soft);margin-top:3px;}
 
-  .back-full-btn {
-    background: linear-gradient(90deg, #1e7ecb 0%, #2a8fd4 100%);
-    border: none; border-radius: 28px; color: white;
-    font-size: 16px; font-weight: 700; padding: 14px 0;
-    width: 100%; cursor: pointer;
-    display: flex; align-items: center; justify-content: center; gap: 10px;
-    box-shadow: 0 4px 16px rgba(20,90,170,0.3);
-    transition: transform 0.15s; margin-top: 4px;
-    font-family: 'Poppins', sans-serif;
+  /* Qibla compass */
+  .compass-wrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:20px;}
+  .compass{
+    width:270px;height:270px;border-radius:50%;position:relative;
+    background:radial-gradient(circle at 50% 40%,#eaf3fd,#cfe3f7);
+    border:6px solid rgba(255,255,255,.5);box-shadow:0 16px 40px rgba(0,0,0,.3),inset 0 0 30px rgba(31,122,214,.15);
   }
-  .back-full-btn:active { transform: scale(0.97); }
+  .compass .deg{position:absolute;inset:0;}
+  .compass .mark{position:absolute;top:8px;left:50%;width:2px;height:12px;background:#7ba3c9;transform-origin:50% 127px;}
+  .compass .card-n,.compass .card-s,.compass .card-e,.compass .card-w{
+    position:absolute;font-weight:700;font-size:15px;color:var(--ink);
+  }
+  .compass .card-n{top:14px;left:50%;transform:translateX(-50%);color:#e8392f;}
+  .compass .card-s{bottom:14px;left:50%;transform:translateX(-50%);}
+  .compass .card-e{right:16px;top:50%;transform:translateY(-50%);}
+  .compass .card-w{left:16px;top:50%;transform:translateY(-50%);}
+  .needle{
+    position:absolute;top:50%;left:50%;width:8px;height:104px;
+    transform-origin:50% 100%;transform:translate(-50%,-100%) rotate(0deg);
+    transition:transform 1.2s cubic-bezier(.22,.61,.36,1);
+  }
+  .needle::before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,#e8392f 0 50%,#1f6ec9 50% 100%);
+    clip-path:polygon(50% 0,100% 100%,50% 82%,0 100%);
+  }
+  .kaaba-mark{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:34px;height:34px;border-radius:8px;background:#1a1a1a;border:2px solid var(--gold);
+    display:flex;align-items:center;justify-content:center;font-size:15px;z-index:3;
+  }
+  .compass-info{text-align:center;color:#fff;}
+  .compass-info .big{font-size:32px;font-weight:800;}
+  .compass-info .sm{font-size:13px;opacity:.9;margin-top:4px;}
 
-  /* Surah list */
-  .surah-list { padding: 24px 14px 14px; flex: 1; overflow-y: auto; scrollbar-width: none; }
-  .surah-list::-webkit-scrollbar { display: none; }
-  .surah-item {
-    background: linear-gradient(135deg, #1e7ecb 0%, #3a9ee8 100%);
-    border-radius: 14px; padding: 14px 16px; margin-bottom: 10px;
-    display: flex; align-items: center; gap: 14px; cursor: pointer;
-    box-shadow: 0 3px 12px rgba(20,90,170,0.25);
-    transition: transform 0.15s;
-    border: 1px solid rgba(255,255,255,0.2);
+  .toast{
+    position:absolute;left:50%;bottom:96px;transform:transl(-50%,20px);transform:translateX(-50%) translateY(20px);
+    background:rgba(15,40,70,.95);color:#fff;padding:12px 20px;border-radius:24px;
+    font-size:13px;font-weight:500;opacity:0;pointer-events:none;transition:.3s;z-index:50;
+    border:1px solid rgba(255,255,255,.2);max-width:80%;text-align:center;
   }
-  .surah-item:active { transform: scale(0.97); }
-  .surah-num {
-    width: 36px; height: 36px; background: rgba(255,255,255,0.25);
-    border-radius: 50%; display: flex; align-items: center; justify-content: center;
-    font-weight: 800; color: white; font-size: 13px; flex-shrink: 0;
-  }
-  .surah-info { flex: 1; }
-  .surah-name { font-size: 14px; font-weight: 700; color: white; }
-  .surah-meta { font-size: 11px; color: rgba(255,255,255,0.75); margin-top: 2px; }
-  .surah-arabic { font-family: 'Amiri', serif; font-size: 18px; color: rgba(255,255,255,0.9); direction: rtl; }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 
-  /* Cards */
-  .content-card {
-    background: linear-gradient(135deg, #1e7ecb 0%, #2a8fd4 100%);
-    border-radius: 18px; padding: 18px; margin-bottom: 12px;
-    box-shadow: 0 6px 20px rgba(20,90,170,0.3);
-    border: 1px solid rgba(255,255,255,0.2);
-    cursor: pointer; transition: transform 0.15s;
+  .empty-note{
+    color:rgba(255,255,255,.85);font-size:12.5px;text-align:center;
+    padding:14px 30px 4px;line-height:1.6;
   }
-  .content-card:active { transform: scale(0.97); }
-  .card-label { font-size: 11px; font-weight: 700; color: rgba(255,215,0,0.9); margin-bottom: 6px; letter-spacing: 0.5px; }
-  .card-arabic { font-family: 'Amiri', serif; font-size: 22px; direction: rtl; color: rgba(255,255,255,0.95); line-height: 1.8; margin-bottom: 10px; }
-  .card-text { font-size: 13px; color: white; line-height: 1.6; font-weight: 500; }
-  .card-translation { font-size: 12px; color: rgba(255,255,255,0.85); line-height: 1.6; font-style: italic; }
-  .card-source { font-size: 11px; color: rgba(255,255,255,0.7); margin-top: 8px; font-weight: 700; }
-  .card-chain { font-size: 11px; color: rgba(255,255,255,0.7); margin-bottom: 6px; font-style: italic; }
-
-  /* Ask form */
-  .ask-form { padding: 30px 16px 16px; flex: 1; display: flex; flex-direction: column; gap: 14px; }
-  .ask-label { font-size: 13px; font-weight: 700; color: #1a6fb5; }
-  .ask-select, .ask-textarea {
-    background: white; border: 2px solid #b8d9f5;
-    border-radius: 12px; padding: 12px 14px;
-    font-family: 'Poppins', sans-serif; font-size: 13px; color: #333;
-    outline: none; width: 100%; transition: border-color 0.2s;
+  .switch{
+    width:46px;height:27px;border-radius:14px;background:#bcd2e8;position:relative;
+    flex:0 0 46px;cursor:pointer;transition:.2s;
   }
-  .ask-select:focus,.ask-textarea:focus { border-color: #1e7ecb; }
-  .ask-textarea { resize: none; height: 120px; }
-  .ask-submit {
-    background: linear-gradient(90deg, #1e7ecb 0%, #2a8fd4 100%);
-    border: none; border-radius: 14px; color: white;
-    font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 700;
-    padding: 14px; cursor: pointer;
-    box-shadow: 0 4px 16px rgba(20,90,170,0.3);
-    transition: transform 0.15s;
-  }
-  .ask-submit:active { transform: scale(0.97); }
-
-  /* Multimedia */
-  .media-item {
-    background: linear-gradient(135deg, #1e7ecb 0%, #2a8fd4 100%);
-    border-radius: 18px; margin-bottom: 12px; overflow: hidden;
-    box-shadow: 0 6px 20px rgba(20,90,170,0.3); cursor: pointer;
-    transition: transform 0.15s;
-    border: 1px solid rgba(255,255,255,0.2);
-  }
-  .media-item:active { transform: scale(0.97); }
-  .media-thumb {
-    height: 90px; background: linear-gradient(135deg, #0d4e8a 0%, #1a6fb5 100%);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 36px; position: relative;
-  }
-  .media-thumb::after {
-    content:'▶';position:absolute;right:14px;bottom:12px;
-    width:38px;height:38px;background:rgba(255,255,255,0.2);
-    border-radius:50%;display:flex;align-items:center;justify-content:center;
-    font-size:16px;color:white;line-height:38px;text-align:center;
-  }
-  .media-info { padding: 12px 14px; }
-  .media-title { font-size: 13px; font-weight: 700; color: white; margin-bottom: 3px; }
-  .media-meta { font-size: 11px; color: rgba(255,255,255,0.7); }
-
-  /* Settings */
-  .settings-body { padding: 26px 14px 14px; flex: 1; overflow-y: auto; scrollbar-width: none; background: #e8f4fd; }
-  .settings-body::-webkit-scrollbar { display: none; }
-  .settings-section { margin-bottom: 18px; }
-  .settings-section-title { font-size: 11px; font-weight: 800; color: #1a6fb5; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; padding-left: 4px; }
-  .settings-item {
-    background: white; border-radius: 14px; padding: 14px 16px;
-    display: flex; align-items: center; gap: 12px; margin-bottom: 6px;
-    cursor: pointer; box-shadow: 0 2px 8px rgba(20,90,170,0.08);
-    transition: transform 0.15s;
-  }
-  .settings-item:active { transform: scale(0.98); }
-  .settings-item-icon { font-size: 22px; }
-  .settings-item-text { flex: 1; }
-  .settings-item-label { font-size: 13px; font-weight: 700; color: #1a2a45; }
-  .settings-item-sub { font-size: 11px; color: #889; margin-top: 1px; }
-  .settings-chevron { font-size: 16px; color: #aac; }
-  .toggle {
-    width: 42px; height: 24px; background: #1e7ecb; border-radius: 12px;
-    position: relative; cursor: pointer; flex-shrink: 0;
-  }
-  .toggle::after {
-    content:'';position:absolute;right:3px;top:3px;
-    width:18px;height:18px;background:white;border-radius:50%;
-    box-shadow:0 1px 4px rgba(0,0,0,0.2);transition:all 0.2s;
-  }
-  .toggle.off { background: #ccc; }
-  .toggle.off::after { right:auto;left:3px; }
-
-  /* Notifications */
-  .notif-screen-body { padding: 26px 14px 14px; flex: 1; overflow-y: auto; scrollbar-width: none; background: #e8f4fd; }
-  .notif-screen-body::-webkit-scrollbar { display: none; }
-  .notif-full-item {
-    background: white; border-radius: 14px; padding: 14px 16px;
-    margin-bottom: 10px; display: flex; gap: 12px; cursor: pointer;
-    box-shadow: 0 2px 8px rgba(20,90,170,0.1);
-    border-left: 4px solid #1e7ecb; transition: transform 0.15s;
-  }
-  .notif-full-item:active { transform: scale(0.97); }
-  .notif-full-icon { font-size: 26px; flex-shrink: 0; }
-  .notif-full-content { flex: 1; }
-  .notif-full-title { font-size: 13px; font-weight: 700; color: #1a2a45; margin-bottom: 3px; }
-  .notif-full-body { font-size: 12px; color: #556; line-height: 1.5; }
-  .notif-full-time { font-size: 11px; color: #aaa; margin-top: 4px; }
-
-  /* Qibla */
-  .qibla-body {
-    padding: 26px 14px 14px; flex: 1;
-    display: flex; flex-direction: column; align-items: center; gap: 20px;
-    overflow-y: auto; scrollbar-width: none; background: #e8f4fd;
-  }
-  .qibla-body::-webkit-scrollbar { display: none; }
-  .compass-container {
-    width: 230px; height: 230px;
-    background: linear-gradient(145deg, #1e7ecb 0%, #0d4e8a 100%);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 8px 32px rgba(20,90,170,0.4), inset 0 0 40px rgba(0,0,0,0.2);
-    position: relative;
-    border: 4px solid rgba(255,255,255,0.2);
-  }
-  .compass-inner {
-    width: 190px; height: 190px;
-    background: linear-gradient(145deg, #155a99 0%, #0d3d72 100%);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    border: 3px solid rgba(255,255,255,0.15); position: relative;
-  }
-  .compass-needle {
-    width: 6px; height: 90px; position: relative;
-    animation: spin-needle 4s ease-in-out forwards;
-  }
-  @keyframes spin-needle {
-    0% { transform: rotate(0deg); }
-    60% { transform: rotate(380deg); }
-    75% { transform: rotate(340deg); }
-    85% { transform: rotate(358deg); }
-    100% { transform: rotate(350deg); }
-  }
-  .needle-north { width: 6px; height: 45px; background: linear-gradient(180deg, #f0a500, #e08000); border-radius: 3px 3px 0 0; }
-  .needle-south { width: 6px; height: 45px; background: linear-gradient(180deg, #e8f4fd, #aac); border-radius: 0 0 3px 3px; }
-  .compass-dir { position: absolute; color: rgba(255,255,255,0.8); font-size: 12px; font-weight: 700; }
-  .compass-dir.n{top:12px;} .compass-dir.s{bottom:12px;} .compass-dir.e{right:12px;} .compass-dir.w{left:12px;}
-  .qibla-info { text-align: center; }
-  .qibla-info h3 { font-size: 18px; font-weight: 700; color: #1a6fb5; margin-bottom: 6px; }
-  .qibla-info p { font-size: 13px; color: #556; line-height: 1.5; }
-  .prayer-times {
-    width: 100%;
-    background: linear-gradient(135deg, #1e7ecb 0%, #2a8fd4 100%);
-    border-radius: 18px; padding: 16px;
-    box-shadow: 0 6px 20px rgba(20,90,170,0.3);
-  }
-  .prayer-times-title { font-size: 14px; font-weight: 700; color: white; margin-bottom: 12px; text-align: center; }
-  .prayer-row {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.15);
-  }
-  .prayer-row:last-child { border-bottom: none; }
-  .prayer-name { font-size: 13px; font-weight: 600; color: white; }
-  .prayer-time { font-size: 13px; font-weight: 700; color: rgba(255,215,0,0.9); }
-  .prayer-row.active-prayer { background: rgba(255,255,255,0.1); border-radius: 8px; padding: 8px 6px; margin: 0 -6px; }
-
-  /* Library */
-  .library-card {
-    background: linear-gradient(135deg, #1e7ecb 0%, #2a8fd4 100%);
-    border-radius: 16px; padding: 16px; margin-bottom: 10px;
-    display: flex; gap: 14px; cursor: pointer;
-    box-shadow: 0 4px 14px rgba(20,90,170,0.25);
-    border: 1px solid rgba(255,255,255,0.2); transition: transform 0.15s;
-  }
-  .library-card:active { transform: scale(0.97); }
-  .lib-icon { font-size: 36px; flex-shrink: 0; }
-  .lib-info { flex: 1; }
-  .lib-title { font-size: 13px; font-weight: 700; color: white; margin-bottom: 3px; }
-  .lib-author { font-size: 11px; color: rgba(255,255,255,0.7); margin-bottom: 5px; }
-  .lib-badge { display: inline-block; background: rgba(255,215,0,0.25); color: rgba(255,215,0,0.95); font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; }
-
-  /* Donate */
-  .donate-body { padding: 26px 16px 16px; flex: 1; overflow-y: auto; scrollbar-width: none; background: #e8f4fd; }
-  .donate-body::-webkit-scrollbar { display: none; }
-  .donate-banner {
-    background: linear-gradient(135deg, #1e7ecb 0%, #2a8fd4 100%);
-    border-radius: 18px; padding: 20px; text-align: center;
-    margin-bottom: 16px; box-shadow: 0 6px 20px rgba(20,90,170,0.3);
-  }
-  .donate-icon { font-size: 48px; margin-bottom: 10px; }
-  .donate-title { font-size: 18px; font-weight: 800; color: white; margin-bottom: 6px; }
-  .donate-desc { font-size: 12px; color: rgba(255,255,255,0.85); line-height: 1.5; }
-  .donate-amounts { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 14px; }
-  .amt-btn {
-    background: linear-gradient(135deg, #1e7ecb 0%, #2a8fd4 100%);
-    border: 2px solid transparent; border-radius: 12px;
-    padding: 12px 6px; text-align: center; cursor: pointer;
-    transition: transform 0.15s; box-shadow: 0 3px 10px rgba(20,90,170,0.2);
-  }
-  .amt-btn.selected { border-color: #f0a500; }
-  .amt-btn:active { transform: scale(0.95); }
-  .amt-value { font-size: 16px; font-weight: 800; color: white; }
-  .amt-label { font-size: 10px; color: rgba(255,255,255,0.7); margin-top: 2px; }
-  .donate-btn {
-    background: linear-gradient(90deg, #f0a500 0%, #e08000 100%);
-    border: none; border-radius: 14px; color: white;
-    font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 800;
-    padding: 14px; width: 100%; cursor: pointer;
-    box-shadow: 0 4px 16px rgba(240,165,0,0.35); transition: transform 0.15s;
-  }
-  .donate-btn:active { transform: scale(0.97); }
-
-  /* Bazaar */
-  .bazaar-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .bazaar-item { background: white; border-radius: 16px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 14px rgba(20,90,170,0.15); transition: transform 0.15s; }
-  .bazaar-item:active { transform: scale(0.96); }
-  .bazaar-img { height: 90px; background: linear-gradient(135deg, #c5e2f8, #daeeff); display: flex; align-items: center; justify-content: center; font-size: 42px; }
-  .bazaar-info { padding: 10px; }
-  .bazaar-name { font-size: 12px; font-weight: 700; color: #1a2a45; margin-bottom: 3px; }
-  .bazaar-price { font-size: 13px; font-weight: 800; color: #1e7ecb; }
-
-  /* Imam */
-  .imam-card { background: linear-gradient(135deg, #1e7ecb 0%, #2a8fd4 100%); border-radius: 16px; padding: 16px; margin-bottom: 10px; cursor: pointer; box-shadow: 0 4px 14px rgba(20,90,170,0.25); border: 1px solid rgba(255,255,255,0.2); transition: transform 0.15s; }
-  .imam-card:active { transform: scale(0.97); }
-  .imam-name { font-size: 14px; font-weight: 700; color: white; margin-bottom: 6px; }
-  .imam-detail { font-size: 12px; color: rgba(255,255,255,0.75); margin-bottom: 3px; display: flex; align-items: center; gap: 5px; }
-
-  /* Hawzah */
-  .hawzah-course { background: linear-gradient(135deg, #1e7ecb 0%, #2a8fd4 100%); border-radius: 16px; padding: 16px; margin-bottom: 10px; cursor: pointer; box-shadow: 0 4px 14px rgba(20,90,170,0.25); border: 1px solid rgba(255,255,255,0.2); transition: transform 0.15s; display: flex; gap: 12px; align-items: center; }
-  .hawzah-course:active { transform: scale(0.97); }
-  .course-icon { font-size: 32px; flex-shrink: 0; }
-  .course-info { flex: 1; }
-  .course-title { font-size: 13px; font-weight: 700; color: white; margin-bottom: 3px; }
-  .course-meta { font-size: 11px; color: rgba(255,255,255,0.7); }
-  .course-level { display: inline-block; background: rgba(240,165,0,0.25); color: rgba(255,215,0,0.95); font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; margin-top: 4px; }
-
-  /* Toast */
-  .toast {
-    position: absolute; bottom: 90px; left: 50%; transform: translateX(-50%);
-    background: rgba(20,60,100,0.92); color: white;
-    padding: 10px 20px; border-radius: 20px;
-    font-size: 12px; font-weight: 600; white-space: nowrap;
-    z-index: 999; opacity: 0; transition: opacity 0.3s; pointer-events: none;
-  }
-  .toast.show { opacity: 1; }
-
-  /* Responsive */
-  @media (max-height: 860px) {
-    .phone-shell { width: 360px; height: 780px; }
-  }
-  @media (max-width: 420px) {
-    .phone-shell { width: 100vw; height: 100vh; border-radius: 0; border: none; }
-    html, body { background: #fff; }
-  }
+  .switch.on{background:#1f9d55;}
+  .switch::after{content:"";position:absolute;top:3px;left:3px;width:21px;height:21px;border-radius:50%;background:#fff;transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,.3);}
+  .switch.on::after{left:22px;}
+  .toprime{height:8px;}
+  .botspace{height:14px;}
 </style>
 </head>
 <body>
-<div class="phone-shell" id="app">
-  <div class="toast" id="toast"></div>
+<div id="phone">
 
-  <!-- ═══ SPLASH ═══ -->
-  <div class="screen active" id="splash">
-    <div class="splash-pattern"></div>
-    <div class="splash-content">
-      <div class="kaaba-wrap">
-        <div class="kaaba-glow"></div>
-        <svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="22" cy="92" r="2" fill="rgba(255,255,255,0.6)"/>
-          <circle cx="118" cy="88" r="2.5" fill="rgba(255,255,255,0.5)"/>
-          <circle cx="15" cy="78" r="1.5" fill="rgba(255,255,255,0.7)"/>
-          <circle cx="125" cy="72" r="1.5" fill="rgba(255,255,255,0.6)"/>
-          <circle cx="28" cy="102" r="1.5" fill="rgba(255,255,255,0.4)"/>
-          <circle cx="112" cy="98" r="2" fill="rgba(255,255,255,0.5)"/>
-          <polygon points="35,95 70,115 70,45 35,30" fill="#1a1a1a"/>
-          <polygon points="35,30 70,45 105,30 75,15" fill="#2c2c2c"/>
-          <polygon points="70,45 105,30 105,95 70,115" fill="#111"/>
-          <polygon points="35,68 70,84 70,76 35,60" fill="#f0a500"/>
-          <polygon points="70,76 105,63 105,56 70,69" fill="#c88000"/>
-          <polygon points="51,95 62,101 62,68 51,63" fill="#8a8a8a"/>
-          <polygon points="51,63 62,68 62,63 56,59" fill="#999"/>
-          <circle cx="56.5" cy="78" r="3" fill="#aaa"/>
-        </svg>
-      </div>
+  <!-- ================= SPLASH ================= -->
+  <section class="screen active" id="splash">
+    <div class="mandala"></div>
+    <div class="splash-inner">
+      <svg class="kaaba" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="kl" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#4a4a4a"/><stop offset="1" stop-color="#1c1c1c"/>
+          </linearGradient>
+          <linearGradient id="kr" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#2c2c2c"/><stop offset="1" stop-color="#111"/>
+          </linearGradient>
+        </defs>
+        <polygon points="100,28 168,60 168,140 100,172 32,140 32,60" fill="#3a3a3a"/>
+        <polygon points="100,28 168,60 100,92 32,60" fill="#555"/>
+        <polygon points="32,60 100,92 100,172 32,140" fill="url(#kl)"/>
+        <polygon points="168,60 100,92 100,172 168,140" fill="url(#kr)"/>
+        <polygon points="32,74 100,106 100,120 32,88" fill="#f5b21e"/>
+        <polygon points="168,74 100,106 100,120 168,88" fill="#e69a06"/>
+        <path d="M86 150 L86 120 Q100 104 114 120 L114 150 L100 158 Z" fill="#c7c7c7"/>
+        <circle cx="100" cy="112" r="9" fill="#dcdcdc"/>
+      </svg>
       <div class="splash-title">ISLAM 24/7</div>
       <div class="splash-sub">Your Daily Spiritual Companion</div>
+      <div class="loader-dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="splash-foot">Connecting you with faith&hellip;</div>
     </div>
-    <div class="splash-footer">
-      <div class="loading-dots">
-        <span></span><span></span><span></span>
-        <span class="big"></span>
-        <span></span><span></span><span></span><span></span>
-      </div>
-      <div class="splash-connecting">Connecting you with faith. . .</div>
-    </div>
-  </div>
+  </section>
 
-  <!-- ═══ HOME ═══ -->
-  <div class="screen" id="home">
-    <div class="status-bar"><span>9:41</span><span>▐▐▐ ⌾ ▮▮▮</span></div>
-    <div class="home-header">
-      <div class="header-top">
-        <div class="header-greeting">
-          <h2>Assalamu Alaikum, User</h2>
-          <div class="header-date">5 Shawwal 1447&nbsp;|&nbsp;April 4, 2026</div>
-        </div>
-        <button class="bell-btn" onclick="showScreen('notifications')">🔔</button>
-      </div>
+  <!-- ===== SLIDING STAGE: screens live here and slide; the bottom nav stays fixed below ===== -->
+  <div id="stage">
+
+  <!-- ================= HOME ================= -->
+  <section class="screen bluebg" id="home">
+    <div class="statusbar">
+      <span>9:41</span>
+      <span class="sb-right">
+        <svg width="18" height="11" viewBox="0 0 18 11"><g fill="#fff"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="6" rx="1"/><rect x="10" y="3" width="3" height="8" rx="1"/><rect x="15" y="0" width="3" height="11" rx="1"/></g></svg>
+        <svg width="17" height="12" viewBox="0 0 17 12" fill="#fff"><path d="M8.5 11.5 1 4a10.6 10.6 0 0 1 15 0L8.5 11.5Z" opacity=".4"/><path d="M8.5 11.5 4.2 7.2a6.1 6.1 0 0 1 8.6 0L8.5 11.5Z"/></svg>
+        <svg width="26" height="12" viewBox="0 0 26 12"><rect x="1" y="1" width="21" height="10" rx="3" fill="none" stroke="#fff" stroke-opacity=".6"/><rect x="3" y="3" width="16" height="6" rx="1.5" fill="#fff"/><rect x="23" y="4" width="2" height="4" rx="1" fill="#fff" fill-opacity=".6"/></svg>
+      </span>
     </div>
-    <div class="home-body">
+    <div class="home-head">
+      <div class="greeting">Assalamu Alaikum, User</div>
+      <div class="date-row"><span>12 Ramadan 1442</span><span>April 24, 2024</span></div>
+    </div>
+    <div class="scroll">
       <div class="ayah-card">
-        <div class="ayah-label">Daily Ayah</div>
-        <div class="ayah-arabic">إِنَّآ أَنزَلۡنَٰهُ فِي لَيۡلَةِ ٱلۡقَدۡرِ</div>
-        <div class="ayah-translation">"Indeed, We sent the Quran down during the Night of Decree."</div>
-        <div class="ayah-ref">(Quran 97:1)</div>
+        <div class="cap"><span>&bull;</span>Daily Ayah<span>&bull;</span></div>
+        <div class="ayah-body">
+          <div class="ayah-ar">إِنَّآ أَنزَلْنَٰهُ فِى لَيْلَةِ ٱلْقَدْرِ</div>
+          <div class="ayah-tr">The Night of Glory is better than a thousand months</div>
+          <div class="ayah-ref">(Quran 97:3)</div>
+        </div>
       </div>
-      <div class="grid-section">
-        <div class="grid-btn" onclick="showScreen('quran')"><div class="grid-icon">📖</div><div class="grid-label">Quran</div></div>
-        <div class="grid-btn" onclick="showScreen('nahjul')"><div class="grid-icon">📜</div><div class="grid-label">Nahjul Balagha</div></div>
-        <div class="grid-btn" onclick="showScreen('sahifa')"><div class="grid-icon">🌙</div><div class="grid-label">Sahifa Sajjadiya</div></div>
-        <div class="grid-btn" onclick="showScreen('hadith')"><div class="grid-icon">📚</div><div class="grid-label">Hadith</div></div>
-      </div>
-      <div class="grid-section">
-        <div class="grid-btn" onclick="showScreen('library')"><div class="grid-icon">🎓</div><div class="grid-label">Digital Library</div></div>
-        <div class="grid-btn" onclick="showScreen('duas')"><div class="grid-icon">🤲</div><div class="grid-label">Duas &amp; Ziarat</div></div>
-        <div class="grid-btn" onclick="showScreen('donate')"><div class="grid-icon">💛</div><div class="grid-label">Donate Us</div></div>
-        <div class="grid-btn" onclick="showScreen('hawzah')"><div class="grid-icon">📕</div><div class="grid-label">Hawzah Online</div></div>
-      </div>
-      <div class="grid-section">
-        <div class="grid-btn" onclick="showScreen('bazaar')"><div class="grid-icon">🛒</div><div class="grid-label">Bazaar Online</div></div>
-        <div class="grid-btn" onclick="showScreen('ask')"><div class="grid-icon">💬</div><div class="grid-label">Ask a Question</div></div>
-        <div class="grid-btn" onclick="showScreen('imambargah')"><div class="grid-icon">🕌</div><div class="grid-label">Imambargah Online</div></div>
-        <div class="grid-btn" onclick="showScreen('multimedia')"><div class="grid-icon">▶️</div><div class="grid-label">Multimedia</div></div>
-      </div>
+
+      <div class="grid" id="homeGrid"></div>
+
       <div class="notif-strip">
-        <div class="notif-bell-icon">🔔</div>
-        <div class="notif-text">
-          <div class="notif-title">Notification:</div>
-          <div class="notif-body">Prophet Muhammad (PBUH): "Whoever considers me his Mawla, Ali is also his Mawla" (Ghadir Khumm)</div>
+        <div class="nbell">
+          <svg width="15" height="16" viewBox="0 0 22 24" fill="#fff"><path d="M11 0a2 2 0 0 1 2 2v.6A8 8 0 0 1 19 10v5l2 3v1H0v-1l2-3v-5A8 8 0 0 1 8 2.6V2a2 2 0 0 1 2-2Zm0 24a3 3 0 0 1-3-3h6a3 3 0 0 1-3 3Z"/></svg>
         </div>
-        <div class="notif-time">2 Min ago</div>
-      </div>
-    </div>
-    <div class="bottom-nav">
-      <button class="nav-btn active" onclick="showScreen('home')"><span class="nav-icon">🏠</span></button>
-      <button class="nav-btn" onclick="showScreen('notifications')" style="position:relative"><span class="nav-icon">🔔</span><span class="nav-badge">3</span></button>
-      <button class="nav-btn" onclick="showScreen('qibla')"><span class="nav-icon">🧭</span></button>
-      <button class="nav-btn" onclick="showScreen('settings')"><span class="nav-icon">⚙️</span></button>
-    </div>
-  </div>
-
-  <!-- ═══ QURAN ═══ -->
-  <div class="screen" id="quran">
-    <div class="status-bar"><span>9:41</span><span>▐▐▐ ⌾ ▮▮▮</span></div>
-    <div class="sub-screen-header">
-      <button class="back-btn" onclick="showScreen('home')">←</button>
-      <span class="sub-title">Quran</span>
-      <button class="bell-btn" onclick="showScreen('notifications')">🔔</button>
-    </div>
-    <div class="sub-body">
-      <div class="sub-grid">
-        <div class="sub-tile" onclick="showScreen('quran-aayah')"><div class="sub-tile-icon">📖</div><div class="sub-tile-label">Aayah</div></div>
-        <div class="sub-tile" onclick="showToast('Translations – coming soon')"><div class="sub-tile-icon">🌍</div><div class="sub-tile-label">Translations</div></div>
-        <div class="sub-tile" onclick="showToast('Tafseers – coming soon')"><div class="sub-tile-icon">🔍</div><div class="sub-tile-label">Tafseers</div></div>
-        <div class="sub-tile" onclick="showToast('Mafaheem – coming soon')"><div class="sub-tile-icon">❓</div><div class="sub-tile-label">Mafaheem</div></div>
-        <div class="sub-tile" onclick="showToast('Recitations – coming soon')"><div class="sub-tile-icon">🎙️</div><div class="sub-tile-label">Recitations</div></div>
-        <div class="sub-tile" onclick="showScreen('multimedia')"><div class="sub-tile-icon">📱</div><div class="sub-tile-label">Audio / Video</div></div>
-      </div>
-      <button class="back-full-btn" onclick="showScreen('home')">← Back</button>
-    </div>
-  </div>
-
-  <!-- ═══ QURAN AAYAH ═══ -->
-  <div class="screen" id="quran-aayah">
-    <div class="status-bar"><span>9:41</span><span>▐▐▐ ⌾ ▮▮▮</span></div>
-    <div class="sub-screen-header">
-      <button class="back-btn" onclick="showScreen('quran')">←</button>
-      <span class="sub-title">Surah List</span>
-      <button class="bell-btn">🔔</button>
-    </div>
-    <div class="surah-list">
-      <div class="surah-item" onclick="showToast('Opening Al-Fatiha...')"><div class="surah-num">1</div><div class="surah-info"><div class="surah-name">Al-Fatiha</div><div class="surah-meta">7 Ayaat · Makkiyya</div></div><div class="surah-arabic">الفاتحة</div></div>
-      <div class="surah-item" onclick="showToast('Opening Al-Baqara...')"><div class="surah-num">2</div><div class="surah-info"><div class="surah-name">Al-Baqara</div><div class="surah-meta">286 Ayaat · Madaniyya</div></div><div class="surah-arabic">البقرة</div></div>
-      <div class="surah-item" onclick="showToast('Opening Aal-e-Imran...')"><div class="surah-num">3</div><div class="surah-info"><div class="surah-name">Aal-e-Imran</div><div class="surah-meta">200 Ayaat · Madaniyya</div></div><div class="surah-arabic">آل عمران</div></div>
-      <div class="surah-item" onclick="showToast('Opening An-Nisa...')"><div class="surah-num">4</div><div class="surah-info"><div class="surah-name">An-Nisa</div><div class="surah-meta">176 Ayaat · Madaniyya</div></div><div class="surah-arabic">النساء</div></div>
-      <div class="surah-item" onclick="showToast('Opening Al-Maida...')"><div class="surah-num">5</div><div class="surah-info"><div class="surah-name">Al-Maida</div><div class="surah-meta">120 Ayaat · Madaniyya</div></div><div class="surah-arabic">المائدة</div></div>
-      <div class="surah-item" onclick="showToast('Opening Al-An\'am...')"><div class="surah-num">6</div><div class="surah-info"><div class="surah-name">Al-An'am</div><div class="surah-meta">165 Ayaat · Makkiyya</div></div><div class="surah-arabic">الأنعام</div></div>
-      <div class="surah-item" onclick="showToast('Opening Ya-Sin...')"><div class="surah-num">36</div><div class="surah-info"><div class="surah-name">Ya-Sin</div><div class="surah-meta">83 Ayaat · Makkiyya</div></div><div class="surah-arabic">يس</div></div>
-      <div class="surah-item" onclick="showToast('Opening Al-Qadr...')"><div class="surah-num">97</div><div class="surah-info"><div class="surah-name">Al-Qadr</div><div class="surah-meta">5 Ayaat · Makkiyya</div></div><div class="surah-arabic">القدر</div></div>
-    </div>
-  </div>
-
-  <!-- ═══ NAHJUL BALAGHA ═══ -->
-  <div class="screen" id="nahjul">
-    <div class="status-bar"><span>9:41</span><span>▐▐▐ ⌾ ▮▮▮</span></div>
-    <div class="sub-screen-header"><button class="back-btn" onclick="showScreen('home')">←</button><span class="sub-title">Nahjul Balagha</span><button class="bell-btn">🔔</button></div>
-    <div class="sub-body">
-      <div class="content-card"><div class="card-label">SERMON 1</div><div class="card-arabic">الْحَمْدُ لِلَّهِ الَّذِي لَا تُدْرِكُهُ الشَّوَاهِدُ</div><div class="card-translation">"All praise is for Allah Whom the senses cannot perceive and Whom imagination cannot encompass..."</div></div>
-      <div class="content-card"><div class="card-label">SERMON 4 – On the Khilafat</div><div class="card-arabic">أَمَا وَاللَّهِ لَقَدْ تَقَمَّصَهَا فُلَانٌ</div><div class="card-translation">"By Allah! The son of Abu Quhafa dressed himself with it (the caliphate) while he certainly knew..."</div></div>
-      <div class="content-card"><div class="card-label">SAYING 1 – On Knowledge</div><div class="card-arabic">قِيمَةُ كُلِّ امْرِئٍ مَا يُحْسِنُهُ</div><div class="card-translation">"The worth of every man is in his attainments."</div></div>
-      <div class="content-card"><div class="card-label">LETTER 53 – To Malik al-Ashtar</div><div class="card-arabic">هَذَا مَا أَمَرَ بِهِ عَبْدُ اللَّهِ عَلِيٌّ</div><div class="card-translation">"This is what Ali, the servant of Allah, ordered Malik ibn al-Harith al-Ashtar..."</div></div>
-      <button class="back-full-btn" onclick="showScreen('home')">← Back</button>
-    </div>
-  </div>
-
-  <!-- ═══ SAHIFA SAJJADIYA ═══ -->
-  <div class="screen" id="sahifa">
-    <div class="status-bar"><span>9:41</span><span>▐▐▐ ⌾ ▮▮▮</span></div>
-    <div class="sub-screen-header"><button class="back-btn" onclick="showScreen('home')">←</button><span class="sub-title">Sahifa Sajjadiya</span><button class="bell-btn">🔔</button></div>
-    <div class="sub-body">
-      <div class="content-card"><div class="card-label">DUA 1 – In Praise of Allah</div><div class="card-arabic">اَلْحَمْدُ لِلَّهِ الْأَوَّلِ بِلَا أَوَّلٍ كَانَ قَبْلَهُ</div><div class="card-translation">"Praise belongs to Allah, the First, without a first before Him..."</div></div>
-      <div class="content-card"><div class="card-label">DUA 3 – Blessings upon the Prophet</div><div class="card-arabic">اَللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَآلِ مُحَمَّدٍ</div><div class="card-translation">"O Allah, bless Muhammad and the family of Muhammad, the seal of the prophets..."</div></div>
-      <div class="content-card"><div class="card-label">DUA 20 – For Noble Character</div><div class="card-arabic">اَللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَآلِهِ وَحَلِّنِي بِحِلْيَةِ الصَّالِحِينَ</div><div class="card-translation">"O Allah, adorn me with the adornment of the righteous, and clothe me in the ornaments of the God-fearing..."</div></div>
-      <div class="content-card"><div class="card-label">DUA 47 – Day of Arafa</div><div class="card-arabic">اَللَّهُمَّ إِنَّ هَذَا الْيَوْمَ يَوْمٌ شَرَّفْتَهُ</div><div class="card-translation">"O Allah, this is a day You have made noble, honoured, and dignified..."</div></div>
-      <button class="back-full-btn" onclick="showScreen('home')">← Back</button>
-    </div>
-  </div>
-
-  <!-- ═══ HADITH ═══ -->
-  <div class="screen" id="hadith">
-    <div class="status-bar"><span>9:41</span><span>▐▐▐ ⌾ ▮▮▮</span></div>
-    <div class="sub-screen-header"><button class="back-btn" onclick="showScreen('home')">←</button><span class="sub-title">Hadith</span><button class="bell-btn">🔔</button></div>
-    <div class="sub-body">
-      <div class="content-card"><div class="card-chain">Prophet Muhammad (PBUH) – Hadith al-Thaqalayn</div><div class="card-text">"I am leaving among you two weighty things: the Book of Allah and my progeny, the Ahlul Bayt. They shall never separate until they meet me at the Pond."</div><div class="card-source">📚 Sahih Muslim</div></div>
-      <div class="content-card"><div class="card-chain">Imam Ali ibn Abi Talib (AS)</div><div class="card-text">"Do not let your difficulties fill you with anxiety, for it is in the darkest nights that stars shine most brilliantly."</div><div class="card-source">📚 Nahjul Balagha – Saying 5</div></div>
-      <div class="content-card"><div class="card-chain">Prophet Muhammad (PBUH) – Ghadir Khumm</div><div class="card-text">"Whoever considers me his Mawla, then Ali is also his Mawla. O Allah, support whoever supports Ali."</div><div class="card-source">📚 Multiple sources – Mutawatir</div></div>
-      <div class="content-card"><div class="card-chain">Imam Jafar al-Sadiq (AS)</div><div class="card-text">"The best worship is to contemplate about Allah and His power."</div><div class="card-source">📚 Usul al-Kafi, Vol. 2</div></div>
-      <button class="back-full-btn" onclick="showScreen('home')">← Back</button>
-    </div>
-  </div>
-
-  <!-- ═══ DUAS & ZIARAT ═══ -->
-  <div class="screen" id="duas">
-    <div class="status-bar"><span>9:41</span><span>▐▐▐ ⌾ ▮▮▮</span></div>
-    <div class="sub-screen-header"><button class="back-btn" onclick="showScreen('home')">←</button><span class="sub-title">Duas &amp; Ziarat</span><button class="bell-btn">🔔</button></div>
-    <div class="sub-body">
-      <div class="content-card"><div class="card-label">🤲 Dua Kumayl</div><div class="card-arabic">اَللَّهُمَّ إِنِّي أَسْأَلُكَ بِرَحْمَتِكَ الَّتِي وَسِعَتْ كُلَّ شَيْءٍ</div><div class="card-translation">"O Allah, I ask You by Your mercy which encompasses all things..."</div></div>
-      <div class="content-card"><div class="card-label">🤲 Dua Tawassul</div><div class="card-arabic">اَللَّهُمَّ إِنِّي أَتَوَجَّهُ إِلَيْكَ بِنَبِيِّكَ مُحَمَّدٍ</div><div class="card-translation">"O Allah, I turn to You through Your Prophet Muhammad, the Prophet of Mercy..."</div></div>
-      <div class="content-card"><div class="card-label">🕌 Ziarat Ashura</div><div class="card-arabic">اَلسَّلَامُ عَلَيْكَ يَا أَبَا عَبْدِ اللَّهِ</div><div class="card-translation">"Peace be upon you, O Aba Abdullah (Imam Hussain)..."</div></div>
-      <div class="content-card"><div class="card-label">🤲 Dua Ahad</div><div class="card-arabic">اَللَّهُمَّ رَبَّ النُّورِ الْعَظِيمِ</div><div class="card-translation">"O Allah, Lord of the Great Light, Lord of the Elevated Throne..."</div></div>
-      <div class="content-card"><div class="card-label">🕌 Ziarat Warith</div><div class="card-arabic">اَلسَّلَامُ عَلَيْكَ يَا وَارِثَ آدَمَ صَفِيِّ اللَّهِ</div><div class="card-translation">"Peace be upon you, O heir of Adam, the chosen of Allah..."</div></div>
-      <button class="back-full-btn" onclick="showScreen('home')">← Back</button>
-    </div>
-  </div>
-
-  <!-- ═══ DIGITAL LIBRARY ═══ -->
-  <div class="screen" id="library">
-    <div class="status-bar"><span>9:41</span><span>▐▐▐ ⌾ ▮▮▮</span></div>
-    <div class="sub-screen-header"><button class="back-btn" onclick="showScreen('home')">←</button><span class="sub-title">Digital Library</span><button class="bell-btn">🔔</button></div>
-    <div class="sub-body">
-      <div class="library-card" onclick="showToast('Opening Mafatih al-Jinan...')"><div class="lib-icon">📗</div><div class="lib-info"><div class="lib-title">Mafatih al-Jinan</div><div class="lib-author">Sheikh Abbas Qummi</div><div class="lib-badge">POPULAR</div></div></div>
-      <div class="library-card" onclick="showToast('Opening Al-Kafi...')"><div class="lib-icon">📘</div><div class="lib-info"><div class="lib-title">Al-Kafi (Usul)</div><div class="lib-author">Sheikh Kulayni</div><div class="lib-badge">HADITH</div></div></div>
-      <div class="library-card" onclick="showToast('Opening Tahdhib...')"><div class="lib-icon">📙</div><div class="lib-info"><div class="lib-title">Tahdhib al-Ahkam</div><div class="lib-author">Sheikh Tusi</div><div class="lib-badge">FIQH</div></div></div>
-      <div class="library-card" onclick="showToast('Opening Bihar al-Anwar...')"><div class="lib-icon">📕</div><div class="lib-info"><div class="lib-title">Bihar al-Anwar</div><div class="lib-author">Allama Majlisi</div><div class="lib-badge">110 VOLS</div></div></div>
-      <div class="library-card" onclick="showToast('Opening Risalah Amaliyya...')"><div class="lib-icon">📓</div><div class="lib-info"><div class="lib-title">Risalah Amaliyya</div><div class="lib-author">Ayatullah Sistani</div><div class="lib-badge">PRACTICAL</div></div></div>
-      <button class="back-full-btn" onclick="showScreen('home')">← Back</button>
-    </div>
-  </div>
-
-  <!-- ═══ HAWZAH ONLINE ═══ -->
-  <div class="screen" id="hawzah">
-    <div class="status-bar"><span>9:41</span><span>▐▐▐ ⌾ ▮▮▮</span></div>
-    <div class="sub-screen-header"><button class="back-btn" onclick="showScreen('home')">←</button><span class="sub-title">Hawzah Online</span><button class="bell-btn">🔔</button></div>
-    <div class="sub-body">
-      <div class="hawzah-course" onclick="showToast('Enrolling...')"><div class="course-icon">📖</div><div class="course-info"><div class="course-title">Introduction to Islamic Theology</div><div class="course-meta">12 Lessons · Ustadh Haider</div><span class="course-level">BEGINNER</span></div></div>
-      <div class="hawzah-course" onclick="showToast('Enrolling...')"><div class="course-icon">⚖️</div><div class="course-info"><div class="course-title">Principles of Islamic Jurisprudence</div><div class="course-meta">20 Lessons · Ustadh Ali</div><span class="course-level">INTERMEDIATE</span></div></div>
-      <div class="hawzah-course" onclick="showToast('Enrolling...')"><div class="course-icon">🌟</div><div class="course-info"><div class="course-title">Shia Hadith Sciences (Rijal)</div><div class="course-meta">30 Lessons · Ustadh Kazim</div><span class="course-level">ADVANCED</span></div></div>
-      <div class="hawzah-course" onclick="showToast('Enrolling...')"><div class="course-icon">🔤</div><div class="course-info"><div class="course-title">Arabic Grammar (Sarf &amp; Nahw)</div><div class="course-meta">16 Lessons · Ustadh Jabir</div><span class="course-level">BEGINNER</span></div></div>
-      <div class="hawzah-course" onclick="showToast('Enrolling...')"><div class="course-icon">🌙</div><div class="course-info"><div class="course-title">Quran Exegesis (Tafsir)</div><div class="course-meta">25 Lessons · Ustadh Abbas</div><span class="course-level">INTERMEDIATE</span></div></div>
-      <button class="back-full-btn" onclick="showScreen('home')">← Back</button>
-    </div>
-  </div>
-
-  <!-- ═══ BAZAAR ONLINE ═══ -->
-  <div class="screen" id="bazaar">
-    <div class="status-bar"><span>9:41</span><span>▐▐▐ ⌾ ▮▮▮</span></div>
-    <div class="sub-screen-header"><button class="back-btn" onclick="showScreen('home')">←</button><span class="sub-title">Bazaar Online</span><button class="bell-btn">🔔</button></div>
-    <div class="sub-body">
-      <div class="bazaar-grid">
-        <div class="bazaar-item" onclick="showToast('Added to cart! 🛒')"><div class="bazaar-img">📿</div><div class="bazaar-info"><div class="bazaar-name">Tasbih – 99 Beads</div><div class="bazaar-price">$12.99</div></div></div>
-        <div class="bazaar-item" onclick="showToast('Added to cart! 🛒')"><div class="bazaar-img">🎴</div><div class="bazaar-info"><div class="bazaar-name">Prayer Rug</div><div class="bazaar-price">$29.99</div></div></div>
-        <div class="bazaar-item" onclick="showToast('Added to cart! 🛒')"><div class="bazaar-img">📚</div><div class="bazaar-info"><div class="bazaar-name">Quran (Ar+En)</div><div class="bazaar-price">$24.99</div></div></div>
-        <div class="bazaar-item" onclick="showToast('Added to cart! 🛒')"><div class="bazaar-img">🕯️</div><div class="bazaar-info"><div class="bazaar-name">Turbah (Mohr)</div><div class="bazaar-price">$5.99</div></div></div>
-        <div class="bazaar-item" onclick="showToast('Added to cart! 🛒')"><div class="bazaar-img">🌙</div><div class="bazaar-info"><div class="bazaar-name">Islamic Art Print</div><div class="bazaar-price">$18.99</div></div></div>
-        <div class="bazaar-item" onclick="showToast('Added to cart! 🛒')"><div class="bazaar-img">🧿</div><div class="bazaar-info"><div class="bazaar-name">Agate Ring</div><div class="bazaar-price">$22.99</div></div></div>
-      </div>
-      <br>
-      <button class="back-full-btn" onclick="showScreen('home')">← Back</button>
-    </div>
-  </div>
-
-  <!-- ═══ ASK A QUESTION ═══ -->
-  <div class="screen" id="ask">
-    <div class="status-bar"><span>9:41</span><span>▐▐▐ ⌾ ▮▮▮</span></div>
-    <div class="sub-screen-header"><button class="back-btn" onclick="showScreen('home')">←</button><span class="sub-title">Ask a Question</span><button class="bell-btn">🔔</button></div>
-    <div class="ask-form">
-      <div><div class="ask-label">Category</div><select class="ask-select"><option>Select a category...</option><option>Fiqh (Islamic Law)</option><option>Aqeedah (Theology)</option><option>Quran &amp; Tafsir</option><option>Hadith Sciences</option><option>Ethics &amp; Morality</option><option>Family Affairs</option></select></div>
-      <div><div class="ask-label">Scholar / Marja</div><select class="ask-select"><option>Submit to any available scholar</option><option>Ayatullah Sistani (Najaf)</option><option>Ayatullah Khamenei</option><option>Ayatullah Makarem Shirazi</option></select></div>
-      <div><div class="ask-label">Your Question</div><textarea class="ask-textarea" placeholder="Type your question here in detail..."></textarea></div>
-      <button class="ask-submit" onclick="showToast('Question submitted! You will be notified.')">Submit Question</button>
-      <button class="back-full-btn" onclick="showScreen('home')">← Back</button>
-    </div>
-  </div>
-
-  <!-- ═══ IMAMBARGAH ONLINE ═══ -->
-  <div class="screen" id="imambargah">
-    <div class="status-bar"><span>9:41</span><span>▐▐▐ ⌾ ▮▮▮</span></div>
-    <div class="sub-screen-header"><button class="back-btn" onclick="showScreen('home')">←</button><span class="sub-title">Imambargah Online</span><button class="bell-btn">🔔</button></div>
-    <div class="sub-body">
-      <div class="imam-card" onclick="showToast('Joining live stream...')"><div class="imam-name">🔴 LIVE – Hussainia Al-Zahra, Karachi</div><div class="imam-detail">📍 Karachi, Pakistan</div><div class="imam-detail">🕐 Majlis: 8:00 PM PKT</div><div class="imam-detail">👥 234 watching now</div></div>
-      <div class="imam-card" onclick="showToast('Viewing...')"><div class="imam-name">🕌 Islamic Centre of England</div><div class="imam-detail">📍 London, United Kingdom</div><div class="imam-detail">📅 Next: Friday Prayers – 1:00 PM</div></div>
-      <div class="imam-card" onclick="showToast('Viewing...')"><div class="imam-name">🕌 Imam Ali Foundation, Toronto</div><div class="imam-detail">📍 Toronto, Canada</div><div class="imam-detail">📅 Dua Kumayl: Every Thursday 9:00 PM</div></div>
-      <div class="imam-card" onclick="showToast('Viewing...')"><div class="imam-name">🕌 Al-Khoei Foundation, London</div><div class="imam-detail">📍 London, United Kingdom</div><div class="imam-detail">📅 Daily Prayers · Quran Classes</div></div>
-      <button class="back-full-btn" onclick="showScreen('home')">← Back</button>
-    </div>
-  </div>
-
-  <!-- ═══ MULTIMEDIA ═══ -->
-  <div class="screen" id="multimedia">
-    <div class="status-bar"><span>9:41</span><span>▐▐▐ ⌾ ▮▮▮</span></div>
-    <div class="sub-screen-header"><button class="back-btn" onclick="showScreen('home')">←</button><span class="sub-title">Multimedia</span><button class="bell-btn">🔔</button></div>
-    <div class="sub-body">
-      <div class="media-item" onclick="showToast('Playing lecture...')"><div class="media-thumb">🎙️</div><div class="media-info"><div class="media-title">Karbala – The Eternal Lesson</div><div class="media-meta">🎧 Audio · Maulana Sadiq Hassan · 45 min</div></div></div>
-      <div class="media-item" onclick="showToast('Playing video...')"><div class="media-thumb">🎬</div><div class="media-info"><div class="media-title">Imam Ali (AS) – Life and Teachings</div><div class="media-meta">📹 Video · Documentary · 1h 20min</div></div></div>
-      <div class="media-item" onclick="showToast('Playing recitation...')"><div class="media-thumb">📖</div><div class="media-info"><div class="media-title">Quran Recitation – Sheikh Minshawi</div><div class="media-meta">🎧 Audio · Full Quran · 16 hours</div></div></div>
-      <div class="media-item" onclick="showToast('Playing lecture...')"><div class="media-thumb">🌟</div><div class="media-info"><div class="media-title">The Occultation of Imam Mahdi (AS)</div><div class="media-meta">📹 Video · Lecture · 55 min</div></div></div>
-      <div class="media-item" onclick="showToast('Playing noha...')"><div class="media-thumb">🕌</div><div class="media-info"><div class="media-title">Muharram Noha Collection 2025</div><div class="media-meta">🎧 Audio · Various Reciters · 3h 10min</div></div></div>
-      <button class="back-full-btn" onclick="showScreen('home')">← Back</button>
-    </div>
-  </div>
-
-  <!-- ═══ DONATE ═══ -->
-  <div class="screen" id="donate">
-    <div class="status-bar"><span>9:41</span><span>▐▐▐ ⌾ ▮▮▮</span></div>
-    <div class="sub-screen-header"><button class="back-btn" onclick="showScreen('home')">←</button><span class="sub-title">Donate</span><button class="bell-btn">🔔</button></div>
-    <div class="donate-body">
-      <div class="donate-banner"><div class="donate-icon">💛</div><div class="donate-title">Support Islamic Education</div><div class="donate-desc">Your donations help maintain the app, fund Hawzah scholarships, and spread Islamic knowledge worldwide.</div></div>
-      <div style="font-size:12px;font-weight:700;color:#1a6fb5;margin-bottom:10px;">SELECT AMOUNT</div>
-      <div class="donate-amounts">
-        <div class="amt-btn" onclick="selectAmt(this)"><div class="amt-value">$5</div><div class="amt-label">Sadaqah</div></div>
-        <div class="amt-btn selected" onclick="selectAmt(this)"><div class="amt-value">$10</div><div class="amt-label">Student</div></div>
-        <div class="amt-btn" onclick="selectAmt(this)"><div class="amt-value">$25</div><div class="amt-label">Sponsor</div></div>
-        <div class="amt-btn" onclick="selectAmt(this)"><div class="amt-value">$50</div><div class="amt-label">Patron</div></div>
-        <div class="amt-btn" onclick="selectAmt(this)"><div class="amt-value">$100</div><div class="amt-label">Benefactor</div></div>
-        <div class="amt-btn" onclick="selectAmt(this)"><div class="amt-value">Custom</div><div class="amt-label">Set amount</div></div>
-      </div>
-      <div style="margin-bottom:12px;"><div style="font-size:12px;font-weight:700;color:#1a6fb5;margin-bottom:8px;">DONATE TO</div><select class="ask-select"><option>General Fund – App Development</option><option>Hawzah Scholarships</option><option>Quran Distribution Project</option><option>Orphan Sponsorship</option></select></div>
-      <button class="donate-btn" onclick="showToast('JazakAllah! Donation received ❤️')">Donate Now</button>
-      <br><br>
-      <button class="back-full-btn" onclick="showScreen('home')">← Back</button>
-    </div>
-  </div>
-
-  <!-- ═══ NOTIFICATIONS ═══ -->
-  <div class="screen" id="notifications">
-    <div class="status-bar"><span>9:41</span><span>▐▐▐ ⌾ ▮▮▮</span></div>
-    <div class="sub-screen-header"><button class="back-btn" onclick="showScreen('home')">←</button><span class="sub-title">Notifications</span><button class="bell-btn">🔔</button></div>
-    <div class="notif-screen-body">
-      <div class="notif-full-item"><div class="notif-full-icon">📿</div><div class="notif-full-content"><div class="notif-full-title">Hadith of the Day</div><div class="notif-full-body">Prophet Muhammad (PBUH): "Whoever considers me his Mawla, Ali is also his Mawla." (Ghadir Khumm)</div><div class="notif-full-time">2 minutes ago</div></div></div>
-      <div class="notif-full-item"><div class="notif-full-icon">🌙</div><div class="notif-full-content"><div class="notif-full-title">Prayer Time Reminder</div><div class="notif-full-body">Asr prayer time starts in 15 minutes – 5:32 PM</div><div class="notif-full-time">30 minutes ago</div></div></div>
-      <div class="notif-full-item"><div class="notif-full-icon">📖</div><div class="notif-full-content"><div class="notif-full-title">New Hawzah Course Available</div><div class="notif-full-body">"Advanced Fiqh – Rules of Purification" is now live in Hawzah Online.</div><div class="notif-full-time">2 hours ago</div></div></div>
-      <div class="notif-full-item"><div class="notif-full-icon">🕌</div><div class="notif-full-content"><div class="notif-full-title">Upcoming Majlis – Tonight</div><div class="notif-full-body">Live majlis at Hussainia Al-Zahra begins at 8:00 PM. Join on Imambargah Online.</div><div class="notif-full-time">3 hours ago</div></div></div>
-      <div class="notif-full-item" style="border-left-color:#ccc;"><div class="notif-full-icon">💛</div><div class="notif-full-content"><div class="notif-full-title">Donation Received</div><div class="notif-full-body">Thank you! Your $10 donation has been received. May Allah reward you greatly.</div><div class="notif-full-time">Yesterday</div></div></div>
-    </div>
-    <div class="bottom-nav">
-      <button class="nav-btn" onclick="showScreen('home')"><span class="nav-icon">🏠</span></button>
-      <button class="nav-btn active"><span class="nav-icon">🔔</span></button>
-      <button class="nav-btn" onclick="showScreen('qibla')"><span class="nav-icon">🧭</span></button>
-      <button class="nav-btn" onclick="showScreen('settings')"><span class="nav-icon">⚙️</span></button>
-    </div>
-  </div>
-
-  <!-- ═══ QIBLA ═══ -->
-  <div class="screen" id="qibla">
-    <div class="status-bar"><span>9:41</span><span>▐▐▐ ⌾ ▮▮▮</span></div>
-    <div class="sub-screen-header"><button class="back-btn" onclick="showScreen('home')">←</button><span class="sub-title">Qibla &amp; Prayers</span><button class="bell-btn">🔔</button></div>
-    <div class="qibla-body">
-      <div class="compass-container">
-        <div class="compass-inner">
-          <span class="compass-dir n">N</span><span class="compass-dir s">S</span>
-          <span class="compass-dir e">E</span><span class="compass-dir w">W</span>
-          <div class="compass-needle"><div class="needle-north"></div><div class="needle-south"></div></div>
+        <div class="ntxt">
+          <div class="ntop"><span>Notification:</span><span class="nago">2 Min ago</span></div>
+          Prophet Muhammad (PBUH) sayings "Whoever considers me his Mawla (master) Ali is also his Mawla" (Ghadir Khumm)
         </div>
       </div>
-      <div class="qibla-info">
-        <h3>🕌 Qibla Direction</h3>
-        <p>Facing <strong>291° NW</strong> from your location<br>Karachi, Pakistan → Makkah al-Mukarramah</p>
-      </div>
-      <div class="prayer-times">
-        <div class="prayer-times-title">Today's Prayer Times – Karachi</div>
-        <div class="prayer-row"><span class="prayer-name">Fajr</span><span class="prayer-time">5:14 AM</span></div>
-        <div class="prayer-row"><span class="prayer-name">Sunrise</span><span class="prayer-time">6:33 AM</span></div>
-        <div class="prayer-row active-prayer"><span class="prayer-name">⏰ Dhuhr (current)</span><span class="prayer-time">12:40 PM</span></div>
-        <div class="prayer-row"><span class="prayer-name">Asr</span><span class="prayer-time">4:15 PM</span></div>
-        <div class="prayer-row"><span class="prayer-name">Maghrib</span><span class="prayer-time">6:47 PM</span></div>
-        <div class="prayer-row"><span class="prayer-name">Isha</span><span class="prayer-time">8:05 PM</span></div>
-      </div>
+      <div class="botspace"></div>
     </div>
-    <div class="bottom-nav">
-      <button class="nav-btn" onclick="showScreen('home')"><span class="nav-icon">🏠</span></button>
-      <button class="nav-btn" onclick="showScreen('notifications')"><span class="nav-icon">🔔</span><span class="nav-badge">3</span></button>
-      <button class="nav-btn active"><span class="nav-icon">🧭</span></button>
-      <button class="nav-btn" onclick="showScreen('settings')"><span class="nav-icon">⚙️</span></button>
-    </div>
-  </div>
+  </section>
 
-  <!-- ═══ SETTINGS ═══ -->
-  <div class="screen" id="settings">
-    <div class="status-bar"><span>9:41</span><span>▐▐▐ ⌾ ▮▮▮</span></div>
-    <div class="sub-screen-header"><button class="back-btn" onclick="showScreen('home')">←</button><span class="sub-title">Settings</span><button class="bell-btn">🔔</button></div>
-    <div class="settings-body">
-      <div class="settings-section">
-        <div class="settings-section-title">Account</div>
-        <div class="settings-item" onclick="showToast('Edit profile')"><span class="settings-item-icon">👤</span><div class="settings-item-text"><div class="settings-item-label">Edit Profile</div><div class="settings-item-sub">Name, email, location</div></div><span class="settings-chevron">›</span></div>
-        <div class="settings-item" onclick="showToast('Marja preference')"><span class="settings-item-icon">🕌</span><div class="settings-item-text"><div class="settings-item-label">Marja Preference</div><div class="settings-item-sub">Ayatullah Sistani</div></div><span class="settings-chevron">›</span></div>
-      </div>
-      <div class="settings-section">
-        <div class="settings-section-title">Prayer Settings</div>
-        <div class="settings-item"><span class="settings-item-icon">📍</span><div class="settings-item-text"><div class="settings-item-label">Location</div><div class="settings-item-sub">Karachi, Pakistan</div></div><span class="settings-chevron">›</span></div>
-        <div class="settings-item"><span class="settings-item-icon">🕐</span><div class="settings-item-text"><div class="settings-item-label">Calculation Method</div><div class="settings-item-sub">Univ. of Islamic Sciences, Karachi</div></div><span class="settings-chevron">›</span></div>
-        <div class="settings-item"><span class="settings-item-icon">🔔</span><div class="settings-item-text"><div class="settings-item-label">Prayer Reminders</div><div class="settings-item-sub">Adhan + 15 min before</div></div><div class="toggle" onclick="this.classList.toggle('off')"></div></div>
-      </div>
-      <div class="settings-section">
-        <div class="settings-section-title">Appearance</div>
-        <div class="settings-item"><span class="settings-item-icon">🌙</span><div class="settings-item-text"><div class="settings-item-label">Dark Mode</div><div class="settings-item-sub">Easier on eyes at night</div></div><div class="toggle off" onclick="this.classList.toggle('off')"></div></div>
-        <div class="settings-item" onclick="showToast('Language changed')"><span class="settings-item-icon">🌍</span><div class="settings-item-text"><div class="settings-item-label">Language</div><div class="settings-item-sub">English</div></div><span class="settings-chevron">›</span></div>
-      </div>
-      <div class="settings-section">
-        <div class="settings-section-title">About</div>
-        <div class="settings-item" onclick="showToast('Version 2.4.1')"><span class="settings-item-icon">ℹ️</span><div class="settings-item-text"><div class="settings-item-label">App Version</div><div class="settings-item-sub">2.4.1 (Build 241)</div></div></div>
-      </div>
-    </div>
-    <div class="bottom-nav">
-      <button class="nav-btn" onclick="showScreen('home')"><span class="nav-icon">🏠</span></button>
-      <button class="nav-btn" onclick="showScreen('notifications')"><span class="nav-icon">🔔</span><span class="nav-badge">3</span></button>
-      <button class="nav-btn" onclick="showScreen('qibla')"><span class="nav-icon">🧭</span></button>
-      <button class="nav-btn active"><span class="nav-icon">⚙️</span></button>
-    </div>
-  </div>
+  <!-- sub-screens are created dynamically and appended into #stage -->
+  </div><!-- /#stage -->
 
+  <nav id="globalNav" class="botnav"></nav>
+
+  <div class="toast" id="toast"></div>
 </div>
 
 <script>
-  setTimeout(() => showScreen('home'), 3200);
+/* ---------------- DATA ---------------- */
+const HOME_TILES = [
+  {id:'quran',        ic:'📖', label:'Quran'},
+  {id:'nahjul',       ic:'📜', label:'Nahjul Balagha'},
+  {id:'sahifa',       ic:'📗', label:'Sahifa Sajjadiya'},
+  {id:'hadith',       ic:'📕', label:'Hadith'},
+  {id:'library',      ic:'🎓', label:'Digital Library'},
+  {id:'duas',         ic:'🤲', label:'Duas & Ziarat'},
+  {id:'donate',       ic:'💛', label:'Donate Us'},
+  {id:'hawzah',       ic:'📚', label:'Hawzah Online'},
+  {id:'bazaar',       ic:'🛒', label:'Bazaar Online'},
+  {id:'ask',          ic:'💬', label:'Ask a Question'},
+  {id:'imambargah',   ic:'🕌', label:'Imambargah Online'},
+  {id:'multimedia',   ic:'▶️', label:'Multimedia'},
+];
 
-  function showScreen(id) {
-    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-    const t = document.getElementById(id);
-    if (t) { t.classList.add('active'); t.scrollTop = 0; }
-  }
+const QURAN_TILES = [
+  {ic:'📖', label:'Aayah',        screen:'quran-aayah'},
+  {ic:'🔎', label:'Translations', screen:'quran-translations'},
+  {ic:'✨', label:'Tafseers',     screen:'quran-tafseers'},
+  {ic:'📘', label:'Mafaheem',     screen:'quran-mafaheem'},
+  {ic:'🎙️', label:'Recitations',  screen:'quran-recitations'},
+  {ic:'🎬', label:'Audio/ Video', screen:'quran-av'},
+];
 
-  function showToast(msg) {
-    const t = document.getElementById('toast');
-    t.textContent = msg;
-    t.classList.add('show');
-    clearTimeout(t._timer);
-    t._timer = setTimeout(() => t.classList.remove('show'), 2300);
-  }
+/* ---------------- ICONS for bottom nav ---------------- */
+const NAV = [
+  {id:'home', label:'Home', svg:'<svg width="25" height="25" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 2 12h3v8h6v-5h2v5h6v-8h3L12 3Z"/></svg>'},
+  {id:'notifications', label:'Alerts', badge:3, svg:'<svg width="24" height="25" viewBox="0 0 22 24" fill="currentColor"><path d="M11 0a2 2 0 0 1 2 2v.6A8 8 0 0 1 19 10v5l2 3v1H0v-1l2-3v-5A8 8 0 0 1 8 2.6V2a2 2 0 0 1 2-2Zm0 24a3 3 0 0 1-3-3h6a3 3 0 0 1-3 3Z"/></svg>'},
+  {id:'qibla', label:'Qibla', svg:'<svg width="25" height="25" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm3.5-11.5L10 11l-1.5 5.5L14 14l1.5-5.5Z"/></svg>'},
+  {id:'settings', label:'Settings', svg:'<svg width="25" height="25" viewBox="0 0 24 24" fill="currentColor"><path d="M19.4 13a7.8 7.8 0 0 0 0-2l2-1.6-2-3.5L17 7a7.6 7.6 0 0 0-1.7-1l-.4-2.5h-4L10.6 6a7.6 7.6 0 0 0-1.7 1L6.6 6 4.6 9.4 6.6 11a7.8 7.8 0 0 0 0 2l-2 1.6 2 3.5L9 17a7.6 7.6 0 0 0 1.7 1l.4 2.5h4l.4-2.5a7.6 7.6 0 0 0 1.7-1l2.4.9 2-3.5-2-1.6ZM12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Z"/></svg>'},
+];
 
-  function selectAmt(el) {
-    document.querySelectorAll('.amt-btn').forEach(b => b.classList.remove('selected'));
-    el.classList.add('selected');
+/* ---------------- SCREEN CONTENT BUILDERS ---------------- */
+function listItem(ic,t,s,onclick){
+  return `<div class="listcard" onclick="${onclick||'comingSoon()'}">
+    <div class="lic">${ic}</div>
+    <div class="lbody"><div class="lt">${t}</div>${s?`<div class="ls">${s}</div>`:''}</div>
+    <div class="lchev">›</div>
+  </div>`;
+}
+function quoteBlock(ar,tr,src){
+  return `<div class="quote"><div class="qar">${ar}</div><div class="qtr">${tr}</div><div class="qsrc">${src}</div></div>`;
+}
+
+/* Each entry: title + html content for the .scroll area */
+const SCREENS = {
+  /* ---- QURAN ---- */
+  'quran':{title:'Quran', body:()=>`
+    <div class="toprime"></div>
+    <div class="grid6">${QURAN_TILES.map(t=>`
+      <div class="tile-lg" onclick="go('${t.screen}')">
+        <div class="ic">${t.ic}</div><div class="lb">${t.label}</div>
+      </div>`).join('')}</div>
+    ${backPill()}`},
+
+  'quran-aayah':{title:'Aayah', body:()=>`
+    <div class="pillrow">
+      <div class="pill on">Al-Fatihah</div><div class="pill">Al-Baqarah</div>
+      <div class="pill">Aal-Imran</div><div class="pill">Ya-Sin</div><div class="pill">Al-Qadr</div>
+    </div>
+    <div class="pad">
+      ${quoteBlock('بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ','In the Name of Allah, the All-Merciful, the All-Compassionate.','Surah Al-Fatihah · 1:1')}
+      ${quoteBlock('ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ','All praise belongs to Allah, Lord of all the worlds.','Surah Al-Fatihah · 1:2')}
+      ${quoteBlock('ٱلرَّحْمَٰنِ ٱلرَّحِيمِ','The All-Merciful, the All-Compassionate.','Surah Al-Fatihah · 1:3')}
+      ${quoteBlock('مَٰلِكِ يَوْمِ ٱلدِّينِ','Master of the Day of Judgment.','Surah Al-Fatihah · 1:4')}
+    </div>${backPill()}`},
+
+  'quran-translations':{title:'Translations', body:()=>`
+    <div class="sec-title" style="margin:6px 20px 12px">Available Translations</div>
+    <div class="pad">
+      ${listItem('🇬🇧','English — Ali Quli Qarai','A clear, phrase-by-phrase rendering.')}
+      ${listItem('🇬🇧','English — M.H. Shakir','Widely used classical translation.')}
+      ${listItem('🇵🇰','Urdu — Maulana Maqbool Ahmed','Complete Urdu translation with notes.')}
+      ${listItem('🇮🇷','Persian — Makarem Shirazi','Translation alongside Tafseer Nemooneh.')}
+      ${listItem('🇫🇷','French — Traduction du Coran','Standard French translation.')}
+    </div>${backPill()}`},
+
+  'quran-tafseers':{title:'Tafseers', body:()=>`
+    <div class="pad"><div class="sec-title">Exegesis Collections</div>
+      ${listItem('📗','Tafseer al-Mizan','Allamah Tabatabai · 20 volumes')}
+      ${listItem('📘','Tafseer Nemooneh','Ayatollah Makarem Shirazi · 27 volumes')}
+      ${listItem('📙','Majma al-Bayan','Shaykh al-Tabarsi · classical Shia tafseer')}
+      ${listItem('📕','Tafseer al-Qummi','Ali ibn Ibrahim al-Qummi · early narrations')}
+      ${listItem('📓','Tafseer al-Safi','Mulla Muhsin Faiz al-Kashani')}
+    </div>${backPill()}`},
+
+  'quran-mafaheem':{title:'Mafaheem', body:()=>`
+    <div class="empty-note">Thematic Quranic concepts — explore the Quran by subject.</div>
+    <div class="pad" style="padding-top:10px">
+      ${listItem('🌙','Tawhid — The Oneness of God','42 related verses')}
+      ${listItem('⚖️','Adl — Divine Justice','30 related verses')}
+      ${listItem('👥','Imamah — Divine Leadership','24 related verses')}
+      ${listItem('🕊️','Akhlaq — Moral Conduct','58 related verses')}
+      ${listItem('🤝','Social Justice in the Quran','37 related verses')}
+      ${listItem('🌟','The Hereafter & Resurrection','64 related verses')}
+    </div>${backPill()}`},
+
+  'quran-recitations':{title:'Recitations', body:()=>`
+    <div class="pad"><div class="sec-title">Featured Reciters</div>
+      ${listItem('🎙️','Mishary Rashid Al-Afasy','Full Quran · Murattal')}
+      ${listItem('🎙️','Mahmoud Khalil Al-Husary','Full Quran · Mujawwad')}
+      ${listItem('🎙️','Parhizgar','Verse-by-verse · ideal for learning')}
+      ${listItem('🎙️','Abdul Basit Abdus Samad','Full Quran · classical')}
+      ${listItem('🎙️','Karim Mansouri','Full Quran · with translation')}
+    </div>${backPill()}`},
+
+  'quran-av':{title:'Audio / Video', body:()=>`
+    <div class="pad">
+      ${vid('Surah Al-Qadr — Recitation & Reflection','Tafseer series · Ep. 12','6:24')}
+      ${vid('The Etiquette of Reciting the Quran','Quranic Sciences','11:48')}
+      ${vid('Understanding the Makki & Madani Surahs','Quranic Sciences','15:02')}
+      ${vid('Tajweed Basics — Lesson 1','Learn to Recite','9:30')}
+    </div>${backPill()}`},
+
+  /* ---- NAHJUL BALAGHA ---- */
+  'nahjul':{title:'Nahjul Balagha', body:()=>`
+    <div class="empty-note">The collected sermons, letters and sayings of Imam Ali ibn Abi Talib (a.s.), compiled by Sharif al-Radi.</div>
+    <div class="pillrow" style="padding-top:10px">
+      <div class="pill on">Sayings</div><div class="pill">Sermons</div><div class="pill">Letters</div>
+    </div>
+    <div class="pad">
+      ${quoteBlock('قِيمَةُ كُلِّ امْرِئٍ مَا يُحْسِنُهُ','The worth of every person is in what they do well.','Saying 81')}
+      ${quoteBlock('الصَّبْرُ صَبْرَانِ: صَبْرٌ عَلَى مَا تَكْرَهُ، وَصَبْرٌ عَمَّا تُحِبُّ','Patience is of two kinds: patience over what pains you, and patience against what you desire.','Saying 55')}
+      ${quoteBlock('مَنْ أَصْلَحَ مَا بَيْنَهُ وَبَيْنَ اللَّهِ أَصْلَحَ اللَّهُ مَا بَيْنَهُ وَبَيْنَ النَّاسِ','Whoever sets right what is between himself and God, God will set right what is between him and people.','Saying 89')}
+    </div>${backPill()}`},
+
+  /* ---- SAHIFA SAJJADIYA ---- */
+  'sahifa':{title:'Sahifa Sajjadiya', body:()=>`
+    <div class="empty-note">The Psalms of Islam — supplications of Imam Ali ibn al-Husayn, Zayn al-Abidin (a.s.).</div>
+    <div class="pad" style="padding-top:10px">
+      ${listItem('۱','His Supplication in Praise of God','The opening supplication')}
+      ${listItem('۲','His Blessing upon Muhammad & his Household','Sending salawat')}
+      ${listItem('۳','His Supplication for the Bearers of the Throne','For the angels')}
+      ${listItem('۶','His Supplication in the Morning and Evening','Daily remembrance')}
+      ${listItem('۲۰','His Supplication on Noble Moral Traits','Makarim al-Akhlaq')}
+      ${listItem('۴۴','His Supplication for the Coming of Ramadan','Welcoming the holy month')}
+    </div>${backPill()}`},
+
+  /* ---- HADITH ---- */
+  'hadith':{title:'Hadith', body:()=>`
+    <div class="pad"><div class="sec-title">Major Collections</div>
+      ${listItem('📕','Al-Kafi','Shaykh al-Kulayni · The most prominent of the Four Books')}
+      ${listItem('📗','Man La Yahduruhu al-Faqih','Shaykh al-Saduq')}
+      ${listItem('📘','Tahdhib al-Ahkam','Shaykh al-Tusi')}
+      ${listItem('📙','Al-Istibsar','Shaykh al-Tusi')}
+      ${listItem('📚','Bihar al-Anwar','Allamah Majlisi · the great encyclopedia')}
+      ${listItem('🌹','Nahjul Fasaha','Sayings of the Prophet (s.a.w.)')}
+    </div>
+    <div class="pad">
+      <div class="sec-title">Hadith of the Day</div>
+      ${quoteBlock('طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ','Seeking knowledge is an obligation upon every Muslim.','Prophet Muhammad (s.a.w.) · Al-Kafi')}
+    </div>${backPill()}`},
+
+  /* ---- DIGITAL LIBRARY ---- */
+  'library':{title:'Digital Library', body:()=>`
+    <div class="pillrow">
+      <div class="pill on">All</div><div class="pill">Aqaid</div><div class="pill">Fiqh</div>
+      <div class="pill">History</div><div class="pill">Ethics</div>
+    </div>
+    <div class="pad">
+      ${listItem('📗','Peak of Eloquence','Translation & commentary of Nahjul Balagha')}
+      ${listItem('📘','The Life of Imam Husayn (a.s.)','Biography · Historical')}
+      ${listItem('📙','A Shiite Anthology','Selected by Allamah Tabatabai')}
+      ${listItem('📕','Self-Building (Tahdhib al-Nafs)','Ayatollah Ibrahim Amini · Ethics')}
+      ${listItem('📓','The Awaited Saviour','On the topic of Imam al-Mahdi (a.j.)')}
+      ${listItem('📔','Islamic Beliefs at a Glance','Introductory · Aqaid')}
+    </div>${backPill()}`},
+
+  /* ---- DUAS & ZIARAT ---- */
+  'duas':{title:'Duas & Ziarat', body:()=>`
+    <div class="pillrow"><div class="pill on">Duas</div><div class="pill">Ziarat</div><div class="pill">Munajat</div></div>
+    <div class="pad">
+      ${listItem('🤲','Dua Kumayl','Recited on Thursday nights')}
+      ${listItem('🤲','Dua Tawassul','Seeking nearness through the Ahlul Bayt')}
+      ${listItem('🤲','Dua Nudba','Recited on Fridays & Eids')}
+      ${listItem('🌙','Dua Iftitah','Recited nightly during Ramadan')}
+      ${listItem('🕊️','Ziarat Ashura','Salutation to Imam Husayn (a.s.)')}
+      ${listItem('🕊️','Ziarat Warith','At the shrine of Imam Husayn (a.s.)')}
+      ${listItem('✨','Munajat Sha\'baniyyah','The whispered prayer of Sha\'ban')}
+    </div>${backPill()}`},
+
+  /* ---- DONATE ---- */
+  'donate':{title:'Donate Us', body:()=>`
+    <div class="banner">
+      <h3>Support Islamic Knowledge 💛</h3>
+      <p>Your contribution helps keep the Quran, hadith and learning resources free for everyone, everywhere.</p>
+    </div>
+    <div class="sec-title" style="margin:0 20px 12px">Choose an Amount</div>
+    <div class="grid6" style="grid-template-columns:repeat(3,1fr);padding-top:0">
+      <div class="tile-lg" onclick="selAmount(this,'$10')"><div class="ic">🌱</div><div class="lb">$10</div></div>
+      <div class="tile-lg" onclick="selAmount(this,'$50')"><div class="ic">🌿</div><div class="lb">$50</div></div>
+      <div class="tile-lg" onclick="selAmount(this,'$100')"><div class="ic">🌳</div><div class="lb">$100</div></div>
+    </div>
+    <div class="field"><label>Or enter a custom amount</label><input id="donAmt" type="text" placeholder="Enter amount (USD)"></div>
+    <div class="field"><label>Donation Type</label>
+      <select><option>General — Sadaqah</option><option>Khums</option><option>Zakat</option><option>Build & Maintain Imambargah</option><option>Sponsor a Hawzah Student</option></select>
+    </div>
+    <button class="btn-primary" onclick="comingSoon('This is a demo — no payment is processed.')">Donate Now</button>
+    <div class="botspace"></div>${backPill()}`},
+
+  /* ---- HAWZAH ONLINE ---- */
+  'hawzah':{title:'Hawzah Online', body:()=>`
+    <div class="banner" style="background:linear-gradient(135deg,#0e7a6b,#19b39b)">
+      <h3>Online Islamic Seminary 📚</h3>
+      <p>Structured courses in Arabic, Fiqh, Aqaid and Quranic sciences — learn at your own pace.</p>
+    </div>
+    <div class="pad">
+      ${listItem('🟢','Arabic Grammar — Level 1','12 weeks · Beginner · Enrolling now')}
+      ${listItem('🔵','Introduction to Fiqh','10 weeks · Beginner')}
+      ${listItem('🟣','Aqaid — Foundations of Belief','8 weeks · Intermediate')}
+      ${listItem('🟠','Quranic Sciences (Ulum al-Quran)','14 weeks · Intermediate')}
+      ${listItem('🔴','Logic (Mantiq) — Al-Muzaffar','16 weeks · Advanced')}
+    </div>
+    <button class="btn-primary" onclick="comingSoon('Enrollment opens in the full app.')">Browse All Courses</button>
+    <div class="botspace"></div>${backPill()}`},
+
+  /* ---- BAZAAR ---- */
+  'bazaar':{title:'Bazaar Online', body:()=>`
+    <div class="pillrow"><div class="pill on">All</div><div class="pill">Books</div><div class="pill">Tasbeeh</div><div class="pill">Turbah</div><div class="pill">Gifts</div></div>
+    <div class="prodgrid">
+      ${prod('📿','Aqeeq Tasbeeh (33 beads)','$12.00')}
+      ${prod('🕋','Karbala Turbah Set','$8.50')}
+      ${prod('📗','Nahjul Balagha (Hardcover)','$24.00')}
+      ${prod('🧕','Prayer Chador','$19.99')}
+      ${prod('🪔','Decorative Quran Stand','$32.00')}
+      ${prod('🖼️','Ayatul Kursi Wall Art','$27.50')}
+    </div>
+    <div class="botspace"></div>${backPill()}`},
+
+  /* ---- ASK A QUESTION ---- */
+  'ask':{title:'Ask a Question', body:()=>`
+    <div class="empty-note">Submit your religious question and receive a response from a qualified scholar.</div>
+    <div class="field" style="margin-top:8px"><label>Category</label>
+      <select><option>Fiqh — Worship (Ibadat)</option><option>Fiqh — Transactions (Muamalat)</option><option>Aqaid — Beliefs</option><option>Quran & Tafseer</option><option>Ethics & Family</option><option>Other</option></select>
+    </div>
+    <div class="field"><label>Your Question</label><textarea placeholder="Type your question here..."></textarea></div>
+    <div class="field"><label>Email (for the reply)</label><input type="email" placeholder="you@example.com"></div>
+    <button class="btn-primary" onclick="comingSoon('Question submitted (demo). A scholar would reply within 48h.')">Submit Question</button>
+    <div class="pad" style="padding-top:8px">
+      <div class="sec-title">Recently Answered</div>
+      ${listItem('❓','Can I combine Dhuhr and Asr prayers?','Fiqh — Worship · Answered')}
+      ${listItem('❓','What invalidates the fast?','Fiqh — Worship · Answered')}
+      ${listItem('❓','How is Khums calculated?','Fiqh — Transactions · Answered')}
+    </div>${backPill()}`},
+
+  /* ---- IMAMBARGAH ONLINE ---- */
+  'imambargah':{title:'Imambargah Online', body:()=>`
+    <div class="banner" style="background:linear-gradient(135deg,#5a2d8c,#8a4fd0)">
+      <h3>Live Majalis & Programs 🕌</h3>
+      <p>Connect with Imambargahs around the world — watch majalis and programs live or on demand.</p>
+    </div>
+    <div class="pad">
+      <div class="sec-title">🔴 Live Now</div>
+      ${vid('Majlis — 12th Ramadan','Masjid-e-Ali, Dubai · 1,204 watching','LIVE')}
+      <div class="sec-title">Upcoming</div>
+      ${listItem('🕌','Shab-e-Qadr Program','19th Ramadan · 9:00 PM GST')}
+      ${listItem('🕌','Daily Dua Iftitah','Every night · 8:30 PM GST')}
+      ${listItem('🕌','Friday Majlis & Lecture','Every Friday · 7:00 PM GST')}
+    </div>${backPill()}`},
+
+  /* ---- MULTIMEDIA ---- */
+  'multimedia':{title:'Multimedia', body:()=>`
+    <div class="pillrow"><div class="pill on">All</div><div class="pill">Lectures</div><div class="pill">Nasheed</div><div class="pill">Documentary</div><div class="pill">Kids</div></div>
+    <div class="pad">
+      ${vid('The Lessons of Karbala','Lecture · Sayed Ammar Nakshawani','42:15')}
+      ${vid('Who are the Ahlul Bayt?','Documentary','28:50')}
+      ${vid('Nasheed — Ya Ali Madad','Nasheed','4:32')}
+      ${vid('Stories of the Prophets for Kids','Kids','13:20')}
+      ${vid('Understanding Tawassul','Lecture','19:07')}
+    </div>${backPill()}`},
+
+  /* ---- NOTIFICATIONS (nav) ---- */
+  'notifications':{title:'Notifications', nav:true, body:()=>`
+    <div class="pad" style="padding-top:8px">
+      ${listItem('🟢','Prophet Muhammad (PBUH) sayings','"Whoever considers me his Mawla, Ali is also his Mawla" — Ghadir Khumm · 2 min ago')}
+      ${listItem('🌙','Tonight is the 12th of Ramadan','Don\'t forget Dua Iftitah after Isha · 3 h ago')}
+      ${listItem('📖','New Tafseer added','Tafseer al-Mizan Vol. 14 is now available · 1 d ago')}
+      ${listItem('🕌','Live Majlis starting soon','Masjid-e-Ali, Dubai goes live at 8:30 PM · 1 d ago')}
+      ${listItem('🎓','Course reminder','"Arabic Grammar — Level 1" begins Monday · 2 d ago')}
+      ${listItem('💛','Thank you for your support','Your contribution helps keep knowledge free · 4 d ago')}
+    </div>`},
+
+  /* ---- QIBLA (nav) ---- */
+  'qibla':{title:'Qibla Finder', nav:true, body:()=>`
+    <div class="compass-wrap">
+      <div class="compass">
+        <div class="deg" id="degMarks"></div>
+        <div class="card-n">N</div><div class="card-s">S</div><div class="card-e">E</div><div class="card-w">W</div>
+        <div class="kaaba-mark">🕋</div>
+        <div class="needle" id="needle"></div>
+      </div>
+      <div class="compass-info">
+        <div class="big" id="qDir">258° NW</div>
+        <div class="sm">Direction to the Holy Kaaba</div>
+        <div class="sm" id="qLoc" style="margin-top:10px;opacity:.75">📍 Approx. location: Dubai, UAE</div>
+      </div>
+      <div class="empty-note" style="padding:0 36px">Point the top of your phone forward and turn until the marker aligns with the Kaaba. (Demo uses a fixed bearing.)</div>
+    </div>`},
+
+  /* ---- SETTINGS (nav) ---- */
+  'settings':{title:'Settings', nav:true, body:()=>`
+    <div class="pad" style="padding-top:8px">
+      <div class="sec-title">Preferences</div>
+      ${settingRow('🌐','Language','English')}
+      ${settingRow('🎨','Theme','Blue (Default)')}
+      ${settingRow('🔤','Arabic Font Size','Medium')}
+      ${toggleRow('🔔','Prayer Time Alerts',true)}
+      ${toggleRow('📿','Daily Ayah Notification',true)}
+      ${toggleRow('🌙','Ramadan Reminders',true)}
+      ${toggleRow('🌗','Dark Mode',false)}
+      <div class="sec-title">Account</div>
+      ${settingRow('👤','Profile','User')}
+      ${settingRow('📍','Location for Prayer Times','Dubai, UAE')}
+      <div class="sec-title">About</div>
+      ${settingRow('ℹ️','App Version','1.0.0 (Demo)')}
+      ${listItem('⭐','Rate ISLAM 24/7','Share your feedback')}
+      ${listItem('📤','Share the App','Spread the benefit')}
+      ${listItem('📜','Privacy Policy','')}
+    </div>`},
+};
+
+function vid(t,s,dur){
+  return `<div class="vidcard" onclick="comingSoon('Playback available in the full app.')">
+    <div class="vidthumb"><div class="play">▶</div><div class="dur">${dur}</div></div>
+    <div class="vidmeta"><div class="vt">${t}</div><div class="vs">${s}</div></div>
+  </div>`;
+}
+function prod(ic,name,price){
+  return `<div class="prod" onclick="comingSoon('Store checkout is available in the full app.')">
+    <div class="pimg">${ic}</div>
+    <div class="pinfo"><div class="pname">${name}</div><div class="pprice">${price}</div></div>
+  </div>`;
+}
+function settingRow(ic,t,val){
+  return `<div class="listcard" onclick="comingSoon()">
+    <div class="lic">${ic}</div>
+    <div class="lbody"><div class="lt">${t}</div></div>
+    <div class="ls" style="margin:0 4px 0 0;color:#1f6ec9;font-weight:600">${val}</div>
+    <div class="lchev">›</div>
+  </div>`;
+}
+function toggleRow(ic,t,on){
+  return `<div class="listcard" style="cursor:default">
+    <div class="lic">${ic}</div>
+    <div class="lbody"><div class="lt">${t}</div></div>
+    <div class="switch ${on?'on':''}" onclick="this.classList.toggle('on')"></div>
+  </div>`;
+}
+function backPill(){return `<button class="backpill" onclick="back()">← Back</button><div class="botspace"></div>`;}
+
+/* ---------------- NAVIGATION ENGINE ---------------- */
+let stack = ['home'];
+
+function statusBar(){
+  return `<div class="statusbar"><span>9:41</span>
+    <span class="sb-right">
+      <svg width="18" height="11" viewBox="0 0 18 11"><g fill="#fff"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="6" rx="1"/><rect x="10" y="3" width="3" height="8" rx="1"/><rect x="15" y="0" width="3" height="11" rx="1"/></g></svg>
+      <svg width="17" height="12" viewBox="0 0 17 12" fill="#fff"><path d="M8.5 11.5 1 4a10.6 10.6 0 0 1 15 0L8.5 11.5Z" opacity=".4"/><path d="M8.5 11.5 4.2 7.2a6.1 6.1 0 0 1 8.6 0L8.5 11.5Z"/></svg>
+      <svg width="26" height="12" viewBox="0 0 26 12"><rect x="1" y="1" width="21" height="10" rx="3" fill="none" stroke="#fff" stroke-opacity=".6"/><rect x="3" y="3" width="16" height="6" rx="1.5" fill="#fff"/><rect x="23" y="4" width="2" height="4" rx="1" fill="#fff" fill-opacity=".6"/></svg>
+    </span></div>`;
+}
+/* ---- persistent bottom nav (lives outside the sliding stage) ---- */
+const MAIN_IDS = NAV.map(n=>n.id);
+function renderGlobalNav(activeId){
+  document.getElementById('globalNav').innerHTML = NAV.map(n=>`
+    <button class="navbtn ${n.id===activeId?'on':''}" onclick="navTo('${n.id}')" aria-label="${n.label}">
+      ${n.svg}${n.badge?`<span class="badge">${n.badge}</span>`:''}
+    </button>`).join('');
+}
+function setNav(activeId){
+  const nav = document.getElementById('globalNav');
+  const stage = document.getElementById('stage');
+  if(activeId && MAIN_IDS.includes(activeId)){
+    renderGlobalNav(activeId);
+    nav.classList.add('show');
+    stage.classList.add('with-nav');
+  } else {
+    nav.classList.remove('show');
+    stage.classList.remove('with-nav');
   }
+}
+
+function buildScreenEl(id){
+  const def = SCREENS[id];
+  if(!def) return null;
+  const isMain = !!def.nav;
+  const leftSlot = isMain
+    ? `<div class="icon-btn" aria-hidden="true"></div>`
+    : `<button class="icon-btn" onclick="back()" aria-label="Back">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M15.5 4 7 12.5 15.5 21l1.8-1.8-6.7-6.7 6.7-6.7L15.5 4Z"/></svg>
+      </button>`;
+  const sec = document.createElement('section');
+  sec.className = 'screen bluebg';
+  sec.id = 'scr-'+id;
+  sec.dataset.disposable = '1';
+  sec.innerHTML = `
+    ${statusBar()}
+    <div class="subhead">
+      ${leftSlot}
+      <h1>${def.title}</h1>
+      <div class="icon-btn" aria-hidden="true"></div>
+    </div>
+    <div class="scroll">${def.body()}</div>`;
+  sec.querySelectorAll('.pillrow').forEach(row=>{
+    row.querySelectorAll('.pill').forEach(p=>p.addEventListener('click',()=>{
+      row.querySelectorAll('.pill').forEach(x=>x.classList.remove('on'));
+      p.classList.add('on');
+    }));
+  });
+  document.getElementById('stage').appendChild(sec);
+  if(id==='qibla') setTimeout(initCompass,30);
+  return sec;
+}
+
+/* ---- connected sliding transition ---- */
+let currentEl = null;
+let animating = false;
+const EASE = 'cubic-bezier(.33,0,.18,1)';
+const DUR = 380;
+
+function slide(oldEl, newEl, dir){
+  if(!oldEl || !newEl || oldEl===newEl){ return; }
+  animating = true;
+  // place the incoming screen off-screen, edge-to-edge with the current one, NO transition
+  newEl.style.transition = 'none';
+  newEl.style.transform = dir==='fwd' ? 'translateX(100%)' : 'translateX(-100%)';
+  newEl.classList.add('active');
+  // force a reflow so the start position is committed before we animate
+  void newEl.offsetWidth;
+  // animate both panes the SAME distance, SAME time — one connected track
+  const t = `transform ${DUR}ms ${EASE}`;
+  newEl.style.transition = t;
+  oldEl.style.transition = t;
+  newEl.style.transform = 'translateX(0)';
+  oldEl.style.transform = dir==='fwd' ? 'translateX(-100%)' : 'translateX(100%)';
+
+  let done = false;
+  const finish = ()=>{
+    if(done) return; done = true;
+    oldEl.removeEventListener('transitionend', finish);
+    oldEl.classList.remove('active');
+    oldEl.style.transition = 'none';
+    oldEl.style.transform = '';
+    newEl.style.transition = 'none';
+    if(oldEl.dataset.disposable==='1') oldEl.remove();
+    animating = false;
+  };
+  oldEl.addEventListener('transitionend', finish);
+  setTimeout(finish, DUR + 80); // safety fallback
+}
+
+function go(id){
+  if(animating) return;
+  if(id==='home'){ navTo('home'); return; }
+  const oldEl = currentEl;
+  const newEl = buildScreenEl(id);
+  if(!newEl) return;
+  stack.push(id);
+  currentEl = newEl;
+  setNav(null);            // content screen: no bottom nav
+  slide(oldEl, newEl, 'fwd');
+}
+function back(){
+  if(animating) return;
+  if(stack.length<=1) return;
+  stack.pop();
+  const prevId = stack[stack.length-1];
+  const oldEl = currentEl;
+  const newEl = prevId==='home' ? document.getElementById('home') : buildScreenEl(prevId);
+  currentEl = newEl;
+  setNav(MAIN_IDS.includes(prevId) ? prevId : null);
+  slide(oldEl, newEl, 'back');
+}
+function navTo(id){
+  if(animating) return;
+  const targetId = id;
+  const oldEl = currentEl;
+  if(!oldEl) return;
+  const curId = oldEl.id==='home' ? 'home' : oldEl.id.replace('scr-','');
+  if(curId===targetId) return; // already here
+  // direction follows position in the bottom nav: left of current = back, right = fwd
+  const order = NAV.map(n=>n.id);
+  const curIdx = order.indexOf(curId);
+  const tgtIdx = order.indexOf(targetId);
+  let dir = 'fwd';
+  if(curIdx!==-1 && tgtIdx!==-1) dir = tgtIdx > curIdx ? 'fwd' : 'back';
+  else dir = targetId==='home' ? 'back' : 'fwd';
+  const newEl = targetId==='home' ? document.getElementById('home') : buildScreenEl(targetId);
+  if(!newEl || oldEl===newEl) return;
+  stack = targetId==='home' ? ['home'] : ['home',targetId];
+  currentEl = newEl;
+  setNav(targetId);        // all bottom-nav destinations are main pages
+  slide(oldEl, newEl, dir);
+}
+
+/* ---------------- HELPERS ---------------- */
+function comingSoon(msg){ showToast(msg || 'This feature is available in the full app.'); }
+let toastT;
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastT);
+  toastT = setTimeout(()=>t.classList.remove('show'),2600);
+}
+function selAmount(el,amt){
+  el.closest('.grid6').querySelectorAll('.tile-lg').forEach(x=>x.style.outline='');
+  el.style.outline='3px solid #f5b21e';
+  const inp=document.getElementById('donAmt'); if(inp) inp.value=amt;
+}
+function initCompass(){
+  const marks = document.getElementById('degMarks');
+  if(marks && !marks.children.length){
+    let h='';
+    for(let i=0;i<36;i++) h+=`<div class="mark" style="transform:rotate(${i*10}deg)"></div>`;
+    marks.innerHTML=h;
+  }
+  const needle = document.getElementById('needle');
+  if(needle){ needle.style.transform='translate(-50%,-100%) rotate(0deg)';
+    setTimeout(()=>{ needle.style.transform='translate(-50%,-100%) rotate(258deg)'; },200);
+  }
+}
+
+/* ---------------- BUILD HOME ---------------- */
+document.getElementById('homeGrid').innerHTML = HOME_TILES.map(t=>`
+  <div class="tile" onclick="go('${t.id}')">
+    <div class="ic">${t.ic}</div><div class="lb">${t.label}</div>
+  </div>`).join('');
+renderGlobalNav('home');
+
+/* ---------------- SPLASH -> HOME ---------------- */
+setTimeout(()=>{
+  const splash = document.getElementById('splash');
+  const home = document.getElementById('home');
+  splash.style.transition='opacity .55s ease';
+  splash.style.opacity='0';
+  home.classList.add('active');
+  currentEl = home;
+  setNav('home');
+  setTimeout(()=>{ splash.classList.remove('active'); splash.style.display='none'; },560);
+},2800);
+
+/* hardware-style back: browser back button */
+history.pushState({},''); 
+window.addEventListener('popstate',()=>{ history.pushState({},''); back(); });
 </script>
 </body>
 </html>
