@@ -1,0 +1,55 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 106,
+  "numberOfAyahs": 4,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:22:11+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "For (the) familiarity",
+        "(of the) Quraish"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "Their familiarity",
+        "(with the) journey",
+        "(of) winter",
+        "and summer"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "So let them worship",
+        "(the) Lord",
+        "(of) this",
+        "House"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "The One Who",
+        "feeds them",
+        "[from]",
+        "(against) hunger",
+        "and gives them security",
+        "from",
+        "fear"
+      ]
+    }
+  ]
+}

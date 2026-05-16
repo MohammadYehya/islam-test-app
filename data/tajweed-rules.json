@@ -1,0 +1,104 @@
+{
+  "h": {
+    "name": "Hamzat ul Wasl",
+    "arabic": "همزة الوصل",
+    "color": "#AAAAAA",
+    "description": "The connecting hamza, only pronounced when starting on it."
+  },
+  "s": {
+    "name": "Silent",
+    "arabic": "حرف صامت",
+    "color": "#AAAAAA",
+    "description": "A letter written but not pronounced."
+  },
+  "l": {
+    "name": "Laam Shamsiyyah",
+    "arabic": "لام شمسية",
+    "color": "#AAAAAA",
+    "description": "The silent ل of ال before a sun letter."
+  },
+  "n": {
+    "name": "Madd 2 Harakat",
+    "arabic": "مد طبيعي",
+    "color": "#537FFF",
+    "description": "Natural prolongation of two counts."
+  },
+  "p": {
+    "name": "Madd Munfasil 4-5",
+    "arabic": "مد منفصل",
+    "color": "#4050FF",
+    "description": "Permissible four-to-five count prolongation across word boundaries."
+  },
+  "m": {
+    "name": "Madd Lazim 6",
+    "arabic": "مد لازم",
+    "color": "#000EBC",
+    "description": "Necessary six-count prolongation."
+  },
+  "q": {
+    "name": "Qalqalah",
+    "arabic": "قلقلة",
+    "color": "#DD0008",
+    "description": "Echoing sound on ق ط ب ج د when sukoon."
+  },
+  "o": {
+    "name": "Madd Muttasil 4-5",
+    "arabic": "مد متصل",
+    "color": "#2144C1",
+    "description": "Obligatory four-to-five count prolongation within a word."
+  },
+  "c": {
+    "name": "Ikhfa Shafawi",
+    "arabic": "إخفاء شفوي",
+    "color": "#D500B7",
+    "description": "Partial hiding of م before ب."
+  },
+  "f": {
+    "name": "Ikhfa",
+    "arabic": "إخفاء",
+    "color": "#9400A8",
+    "description": "Partial hiding of ن ساكنة or tanwīn before 15 letters."
+  },
+  "w": {
+    "name": "Idgham Shafawi",
+    "arabic": "إدغام شفوي",
+    "color": "#58B800",
+    "description": "Merging of م with م."
+  },
+  "i": {
+    "name": "Iqlab",
+    "arabic": "إقلاب",
+    "color": "#26BFFD",
+    "description": "Converting ن ساكنة / tanwīn into م before ب."
+  },
+  "a": {
+    "name": "Idgham With Ghunnah",
+    "arabic": "إدغام بغنة",
+    "color": "#169200",
+    "description": "Merging into ي ن م و with nasalization."
+  },
+  "u": {
+    "name": "Idgham Without Ghunnah",
+    "arabic": "إدغام بلا غنة",
+    "color": "#169200",
+    "description": "Merging into ل ر without nasalization."
+  },
+  "d": {
+    "name": "Idgham Mutajanisain",
+    "arabic": "إدغام متجانسين",
+    "color": "#A1A1A1",
+    "description": "Merging of letters from the same articulation point."
+  },
+  "b": {
+    "name": "Idgham Mutaqaribain",
+    "arabic": "إدغام متقاربين",
+    "color": "#A1A1A1",
+    "description": "Merging of letters from nearby articulation points."
+  },
+  "g": {
+    "name": "Ghunnah",
+    "arabic": "غنة",
+    "color": "#FF7E1E",
+    "description": "Two-count nasalization on shaddah of ن or م."
+  }
+}

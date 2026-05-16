@@ -1,0 +1,85 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 1,
+  "numberOfAyahs": 7,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:20:23+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "In (the) name",
+        "(of) Allah",
+        "the Most Gracious",
+        "the Most Merciful"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "All praises and thanks",
+        "(be) to Allah",
+        "the Lord",
+        "of the universe"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "The Most Gracious",
+        "the Most Merciful"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "(The) Master",
+        "(of the) Day",
+        "(of the) Judgment"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "You Alone",
+        "we worship",
+        "and You Alone",
+        "we ask for help"
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "text": null,
+      "words": [
+        "Guide us",
+        "(to) the path",
+        "the straight"
+      ]
+    },
+    {
+      "ayahNumber": 7,
+      "text": null,
+      "words": [
+        "(The) path",
+        "(of) those",
+        "You have bestowed (Your) Favors",
+        "on them",
+        "not (of)",
+        "those who earned (Your) wrath",
+        "on themselves",
+        "and not",
+        "(of) those who go astray"
+      ]
+    }
+  ]
+}

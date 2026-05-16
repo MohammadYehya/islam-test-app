@@ -1,0 +1,46 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 103,
+  "numberOfAyahs": 3,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:22:09+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "By the time"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "Indeed",
+        "mankind",
+        "(is) surely, in",
+        "loss"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "Except",
+        "those who",
+        "believe",
+        "and do",
+        "righteous deeds",
+        "and enjoin (each other)",
+        "to the truth",
+        "and enjoin (each other)",
+        "to [the] patience"
+      ]
+    }
+  ]
+}

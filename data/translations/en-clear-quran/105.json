@@ -1,0 +1,67 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 105,
+  "numberOfAyahs": 5,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:22:11+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "Have not",
+        "you seen",
+        "how",
+        "dealt",
+        "your Lord",
+        "with (the) Companions",
+        "(of the) Elephant"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "Did not",
+        "He make",
+        "their plan",
+        "go",
+        "astray"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "And He sent",
+        "against them",
+        "birds",
+        "(in) flocks"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "Striking them",
+        "with stones",
+        "of",
+        "baked clay"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "Then He made them",
+        "like straw",
+        "eaten up"
+      ]
+    }
+  ]
+}

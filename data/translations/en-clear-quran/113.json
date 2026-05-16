@@ -1,0 +1,67 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 113,
+  "numberOfAyahs": 5,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:22:17+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "Say",
+        "I seek refuge",
+        "in (the) Lord",
+        "(of) the dawn"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "From",
+        "(the) evil",
+        "(of) what",
+        "He created"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "And from",
+        "(the) evil",
+        "(of) darkness",
+        "when",
+        "it spreads"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "And from",
+        "(the) evil",
+        "(of) the blowers",
+        "in",
+        "the knots"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "And from",
+        "(the) evil",
+        "(of) an envier",
+        "when",
+        "he envies"
+      ]
+    }
+  ]
+}

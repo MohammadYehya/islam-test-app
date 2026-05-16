@@ -1,0 +1,120 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 100,
+  "numberOfAyahs": 11,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:22:07+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "By the racers",
+        "panting"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "And the producers of sparks",
+        "striking"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "And the chargers",
+        "(at) dawn"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "Then raise",
+        "thereby",
+        "dust"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "Then penetrate (in the) center",
+        "thereby",
+        "collectively"
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "text": null,
+      "words": [
+        "Indeed",
+        "mankind",
+        "to his Lord",
+        "(is) surely ungrateful"
+      ]
+    },
+    {
+      "ayahNumber": 7,
+      "text": null,
+      "words": [
+        "And indeed, he",
+        "on",
+        "that",
+        "surely (is) a witness"
+      ]
+    },
+    {
+      "ayahNumber": 8,
+      "text": null,
+      "words": [
+        "And indeed he",
+        "in (the) love",
+        "(of) wealth",
+        "(is) surely intense"
+      ]
+    },
+    {
+      "ayahNumber": 9,
+      "text": null,
+      "words": [
+        "But does not",
+        "he know",
+        "when",
+        "will be scattered",
+        "what",
+        "(is) in",
+        "the graves"
+      ]
+    },
+    {
+      "ayahNumber": 10,
+      "text": null,
+      "words": [
+        "And is made apparent",
+        "what",
+        "(is) in",
+        "the breasts"
+      ]
+    },
+    {
+      "ayahNumber": 11,
+      "text": null,
+      "words": [
+        "Indeed",
+        "their Lord",
+        "about them",
+        "that Day",
+        "(is) surely All-Aware"
+      ]
+    }
+  ]
+}

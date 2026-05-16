@@ -1,0 +1,90 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 102,
+  "numberOfAyahs": 8,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:22:08+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "Diverts you",
+        "the competition to increase"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "Until",
+        "you visit",
+        "the graves"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "Nay",
+        "Soon",
+        "you will know"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "Then",
+        "nay",
+        "Soon",
+        "you will know"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "Nay",
+        "If",
+        "you know",
+        "(with) a knowledge",
+        "(of) certainty"
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "text": null,
+      "words": [
+        "Surely you will see",
+        "the Hellfire"
+      ]
+    },
+    {
+      "ayahNumber": 7,
+      "text": null,
+      "words": [
+        "Then",
+        "surely you will see it",
+        "(with the) eye",
+        "(of) certainty"
+      ]
+    },
+    {
+      "ayahNumber": 8,
+      "text": null,
+      "words": [
+        "Then",
+        "surely you will be asked",
+        "that Day",
+        "about",
+        "the pleasures"
+      ]
+    }
+  ]
+}

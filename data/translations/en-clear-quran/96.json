@@ -1,0 +1,200 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 96,
+  "numberOfAyahs": 19,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:22:03+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "Read",
+        "in (the) name",
+        "(of) your Lord",
+        "the One Who",
+        "created"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "He created",
+        "man",
+        "from",
+        "a clinging substance"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "Read",
+        "and your Lord",
+        "(is) the Most Generous"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "The One Who",
+        "taught",
+        "by the pen"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "Taught",
+        "man",
+        "what",
+        "not",
+        "he knew"
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "text": null,
+      "words": [
+        "Nay",
+        "Indeed",
+        "man",
+        "surely transgresses"
+      ]
+    },
+    {
+      "ayahNumber": 7,
+      "text": null,
+      "words": [
+        "That",
+        "he sees himself",
+        "self-sufficient"
+      ]
+    },
+    {
+      "ayahNumber": 8,
+      "text": null,
+      "words": [
+        "Indeed",
+        "to",
+        "your Lord",
+        "(is) the return"
+      ]
+    },
+    {
+      "ayahNumber": 9,
+      "text": null,
+      "words": [
+        "Have you seen",
+        "the one who",
+        "forbids"
+      ]
+    },
+    {
+      "ayahNumber": 10,
+      "text": null,
+      "words": [
+        "A slave",
+        "when",
+        "he prays"
+      ]
+    },
+    {
+      "ayahNumber": 11,
+      "text": null,
+      "words": [
+        "Have you seen",
+        "if",
+        "he is",
+        "upon",
+        "[the] guidance"
+      ]
+    },
+    {
+      "ayahNumber": 12,
+      "text": null,
+      "words": [
+        "Or",
+        "he enjoins",
+        "[of the] righteousness"
+      ]
+    },
+    {
+      "ayahNumber": 13,
+      "text": null,
+      "words": [
+        "Have you seen",
+        "if",
+        "he denies",
+        "and turns away"
+      ]
+    },
+    {
+      "ayahNumber": 14,
+      "text": null,
+      "words": [
+        "Does not",
+        "he know",
+        "that",
+        "Allah",
+        "sees"
+      ]
+    },
+    {
+      "ayahNumber": 15,
+      "text": null,
+      "words": [
+        "Nay",
+        "If",
+        "not",
+        "he desists",
+        "surely We will drag him",
+        "by the forelock"
+      ]
+    },
+    {
+      "ayahNumber": 16,
+      "text": null,
+      "words": [
+        "A forelock",
+        "lying",
+        "sinful"
+      ]
+    },
+    {
+      "ayahNumber": 17,
+      "text": null,
+      "words": [
+        "Then let him call",
+        "his associates"
+      ]
+    },
+    {
+      "ayahNumber": 18,
+      "text": null,
+      "words": [
+        "We will call",
+        "the Angels of Hell"
+      ]
+    },
+    {
+      "ayahNumber": 19,
+      "text": null,
+      "words": [
+        "Nay",
+        "(Do) not",
+        "obey him",
+        "But prostrate",
+        "and draw near (to Allah)"
+      ]
+    }
+  ]
+}

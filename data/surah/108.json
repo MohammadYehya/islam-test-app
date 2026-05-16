@@ -1,0 +1,193 @@
+{
+  "metadata": {
+    "surahNumber": 108,
+    "name": {
+      "arabic": "سُورَةُ الكَوۡثَرِ",
+      "transliteration": "Al-Kawthar",
+      "translation": "Abundance"
+    },
+    "revelationType": "Meccan",
+    "numberOfAyahs": 3,
+    "source": {
+      "tajweed": "api.alquran.cloud (quran-tajweed)",
+      "transliteration": "api.quran.com v4 (en-clear-quran)",
+      "generatedAt": "2026-05-16T13:22:13+00:00"
+    }
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "globalNumber": 6205,
+      "juz": 30,
+      "manzil": 7,
+      "page": 602,
+      "ruku": 550,
+      "hizbQuarter": 240,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "إِنَّآ",
+          "segments": [
+            {
+              "text": "إِ"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "َآ",
+              "rule": "o"
+            }
+          ],
+          "transliteration": "innā"
+        },
+        {
+          "plain": "أَعْطَيْنَـٰكَ",
+          "segments": [
+            {
+              "text": "أَعْطَيْنَ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "n"
+            },
+            {
+              "text": "كَ"
+            }
+          ],
+          "transliteration": "aʿṭaynāka"
+        },
+        {
+          "plain": "ٱلْكَوْثَرَ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 14659
+            },
+            {
+              "text": "لْكَوْثَرَ"
+            }
+          ],
+          "transliteration": "l-kawthara"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "globalNumber": 6206,
+      "juz": 30,
+      "manzil": 7,
+      "page": 602,
+      "ruku": 550,
+      "hizbQuarter": 240,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَصَلِّ",
+          "segments": [
+            {
+              "text": "فَصَلِّ"
+            }
+          ],
+          "transliteration": "faṣalli"
+        },
+        {
+          "plain": "لِرَبِّكَ",
+          "segments": [
+            {
+              "text": "لِرَبِّكَ"
+            }
+          ],
+          "transliteration": "lirabbika"
+        },
+        {
+          "plain": "وَٱنْحَرْ",
+          "segments": [
+            {
+              "text": "وَ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 14660
+            },
+            {
+              "text": "نْحَرْ"
+            }
+          ],
+          "transliteration": "wa-in'ḥar"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "globalNumber": 6207,
+      "juz": 30,
+      "manzil": 7,
+      "page": 602,
+      "ruku": 550,
+      "hizbQuarter": 240,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "إِنَّ",
+          "segments": [
+            {
+              "text": "إِ"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "َ"
+            }
+          ],
+          "transliteration": "inna"
+        },
+        {
+          "plain": "شَانِئَكَ",
+          "segments": [
+            {
+              "text": "شَانِئَكَ"
+            }
+          ],
+          "transliteration": "shāni-aka"
+        },
+        {
+          "plain": "هُوَ",
+          "segments": [
+            {
+              "text": "هُوَ"
+            }
+          ],
+          "transliteration": "huwa"
+        },
+        {
+          "plain": "ٱلْأَبْتَرُ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 14661
+            },
+            {
+              "text": "لْأَ"
+            },
+            {
+              "text": "بْ",
+              "rule": "q",
+              "id": 14662
+            },
+            {
+              "text": "تَرُ"
+            }
+          ],
+          "transliteration": "l-abtaru"
+        }
+      ]
+    }
+  ]
+}

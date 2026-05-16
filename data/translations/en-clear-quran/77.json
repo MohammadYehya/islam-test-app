@@ -1,0 +1,495 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 77,
+  "numberOfAyahs": 50,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:21:47+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "By the ones sent forth",
+        "one after another"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "And the winds that blow",
+        "violently"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "And the ones that scatter",
+        "far and wide"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "And those who separate",
+        "(by the) Criterion"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "And those who bring down",
+        "(the) Reminder"
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "text": null,
+      "words": [
+        "(As) justification",
+        "or",
+        "warning"
+      ]
+    },
+    {
+      "ayahNumber": 7,
+      "text": null,
+      "words": [
+        "Indeed, what",
+        "you are promised",
+        "will surely occur"
+      ]
+    },
+    {
+      "ayahNumber": 8,
+      "text": null,
+      "words": [
+        "So when",
+        "the stars",
+        "are obliterated"
+      ]
+    },
+    {
+      "ayahNumber": 9,
+      "text": null,
+      "words": [
+        "And when",
+        "the heaven",
+        "is cleft asunder"
+      ]
+    },
+    {
+      "ayahNumber": 10,
+      "text": null,
+      "words": [
+        "And when",
+        "the mountains",
+        "are blown away"
+      ]
+    },
+    {
+      "ayahNumber": 11,
+      "text": null,
+      "words": [
+        "And when",
+        "the Messengers",
+        "are gathered to their appointed time"
+      ]
+    },
+    {
+      "ayahNumber": 12,
+      "text": null,
+      "words": [
+        "For what",
+        "Day",
+        "are (these) postponed"
+      ]
+    },
+    {
+      "ayahNumber": 13,
+      "text": null,
+      "words": [
+        "For (the) Day",
+        "(of) Judgment"
+      ]
+    },
+    {
+      "ayahNumber": 14,
+      "text": null,
+      "words": [
+        "And what",
+        "will make you know",
+        "what",
+        "(is the) Day",
+        "(of) the Judgment"
+      ]
+    },
+    {
+      "ayahNumber": 15,
+      "text": null,
+      "words": [
+        "Woe",
+        "that Day",
+        "to the deniers"
+      ]
+    },
+    {
+      "ayahNumber": 16,
+      "text": null,
+      "words": [
+        "Did not",
+        "We destroy",
+        "the former (people)"
+      ]
+    },
+    {
+      "ayahNumber": 17,
+      "text": null,
+      "words": [
+        "Then",
+        "We follow them up",
+        "(with) the later ones"
+      ]
+    },
+    {
+      "ayahNumber": 18,
+      "text": null,
+      "words": [
+        "Thus",
+        "We deal",
+        "with the criminals"
+      ]
+    },
+    {
+      "ayahNumber": 19,
+      "text": null,
+      "words": [
+        "Woe",
+        "that Day",
+        "to the deniers"
+      ]
+    },
+    {
+      "ayahNumber": 20,
+      "text": null,
+      "words": [
+        "Did not",
+        "We create you",
+        "from",
+        "a water",
+        "despicable"
+      ]
+    },
+    {
+      "ayahNumber": 21,
+      "text": null,
+      "words": [
+        "Then We placed it",
+        "in",
+        "an abode",
+        "safe"
+      ]
+    },
+    {
+      "ayahNumber": 22,
+      "text": null,
+      "words": [
+        "For",
+        "a period",
+        "known"
+      ]
+    },
+    {
+      "ayahNumber": 23,
+      "text": null,
+      "words": [
+        "So We measured",
+        "and Best",
+        "(are We to) measure"
+      ]
+    },
+    {
+      "ayahNumber": 24,
+      "text": null,
+      "words": [
+        "Woe",
+        "that Day",
+        "to the deniers"
+      ]
+    },
+    {
+      "ayahNumber": 25,
+      "text": null,
+      "words": [
+        "Have not",
+        "We made",
+        "the earth",
+        "a receptacle"
+      ]
+    },
+    {
+      "ayahNumber": 26,
+      "text": null,
+      "words": [
+        "(For the) living",
+        "and (the) dead"
+      ]
+    },
+    {
+      "ayahNumber": 27,
+      "text": null,
+      "words": [
+        "And We made",
+        "therein",
+        "firmly set mountains",
+        "lofty",
+        "and We gave you to drink",
+        "water",
+        "sweet"
+      ]
+    },
+    {
+      "ayahNumber": 28,
+      "text": null,
+      "words": [
+        "Woe",
+        "that Day",
+        "to the deniers"
+      ]
+    },
+    {
+      "ayahNumber": 29,
+      "text": null,
+      "words": [
+        "Proceed",
+        "to",
+        "what",
+        "you used to",
+        "in it",
+        "deny"
+      ]
+    },
+    {
+      "ayahNumber": 30,
+      "text": null,
+      "words": [
+        "Proceed",
+        "to",
+        "a shadow",
+        "having",
+        "three",
+        "columns"
+      ]
+    },
+    {
+      "ayahNumber": 31,
+      "text": null,
+      "words": [
+        "No",
+        "cool shade",
+        "and not",
+        "availing",
+        "against",
+        "the flame"
+      ]
+    },
+    {
+      "ayahNumber": 32,
+      "text": null,
+      "words": [
+        "Indeed, it",
+        "throws up",
+        "sparks",
+        "as the fortress"
+      ]
+    },
+    {
+      "ayahNumber": 33,
+      "text": null,
+      "words": [
+        "As if they (were)",
+        "camels",
+        "yellow"
+      ]
+    },
+    {
+      "ayahNumber": 34,
+      "text": null,
+      "words": [
+        "Woe",
+        "that Day",
+        "to the deniers"
+      ]
+    },
+    {
+      "ayahNumber": 35,
+      "text": null,
+      "words": [
+        "This",
+        "(is) a Day",
+        "not",
+        "they will speak"
+      ]
+    },
+    {
+      "ayahNumber": 36,
+      "text": null,
+      "words": [
+        "And not",
+        "will it be permitted",
+        "for them",
+        "to make excuses"
+      ]
+    },
+    {
+      "ayahNumber": 37,
+      "text": null,
+      "words": [
+        "Woe",
+        "that Day",
+        "to the deniers"
+      ]
+    },
+    {
+      "ayahNumber": 38,
+      "text": null,
+      "words": [
+        "This",
+        "(is the) Day",
+        "(of) Judgment",
+        "We have gathered you",
+        "and the former (people)"
+      ]
+    },
+    {
+      "ayahNumber": 39,
+      "text": null,
+      "words": [
+        "So if",
+        "is",
+        "for you",
+        "a plan",
+        "then plan against Me"
+      ]
+    },
+    {
+      "ayahNumber": 40,
+      "text": null,
+      "words": [
+        "Woe",
+        "that Day",
+        "to the deniers"
+      ]
+    },
+    {
+      "ayahNumber": 41,
+      "text": null,
+      "words": [
+        "Indeed",
+        "the righteous",
+        "(will be) in",
+        "shades",
+        "and springs"
+      ]
+    },
+    {
+      "ayahNumber": 42,
+      "text": null,
+      "words": [
+        "And fruits",
+        "from what",
+        "they desire"
+      ]
+    },
+    {
+      "ayahNumber": 43,
+      "text": null,
+      "words": [
+        "Eat",
+        "and drink",
+        "(in) satisfaction",
+        "for what",
+        "you used to",
+        "do"
+      ]
+    },
+    {
+      "ayahNumber": 44,
+      "text": null,
+      "words": [
+        "Indeed, We",
+        "thus",
+        "reward",
+        "the good-doers"
+      ]
+    },
+    {
+      "ayahNumber": 45,
+      "text": null,
+      "words": [
+        "Woe",
+        "that Day",
+        "to the deniers"
+      ]
+    },
+    {
+      "ayahNumber": 46,
+      "text": null,
+      "words": [
+        "Eat",
+        "and enjoy yourselves",
+        "a little",
+        "indeed, you",
+        "(are) criminals"
+      ]
+    },
+    {
+      "ayahNumber": 47,
+      "text": null,
+      "words": [
+        "Woe",
+        "that Day",
+        "to the deniers"
+      ]
+    },
+    {
+      "ayahNumber": 48,
+      "text": null,
+      "words": [
+        "And when",
+        "it is said",
+        "to them",
+        "Bow",
+        "not",
+        "they bow"
+      ]
+    },
+    {
+      "ayahNumber": 49,
+      "text": null,
+      "words": [
+        "Woe",
+        "that Day",
+        "to the deniers"
+      ]
+    },
+    {
+      "ayahNumber": 50,
+      "text": null,
+      "words": [
+        "Then in what",
+        "statement",
+        "after it",
+        "will they believe"
+      ]
+    }
+  ]
+}

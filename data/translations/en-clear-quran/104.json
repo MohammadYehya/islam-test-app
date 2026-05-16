@@ -1,0 +1,101 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 104,
+  "numberOfAyahs": 9,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:22:10+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "Woe",
+        "to every",
+        "slanderer",
+        "backbiter"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "The one who",
+        "collects",
+        "wealth",
+        "and counts it"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "Thinking",
+        "that",
+        "his wealth",
+        "will make him immortal"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "Nay",
+        "Surely he will be thrown",
+        "in",
+        "the Crusher"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "And what",
+        "will make you know",
+        "what",
+        "the Crusher (is)"
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "text": null,
+      "words": [
+        "A Fire",
+        "Allah",
+        "kindled"
+      ]
+    },
+    {
+      "ayahNumber": 7,
+      "text": null,
+      "words": [
+        "Which",
+        "mounts up",
+        "to",
+        "the hearts"
+      ]
+    },
+    {
+      "ayahNumber": 8,
+      "text": null,
+      "words": [
+        "Indeed, it",
+        "(will be) upon them",
+        "closed over"
+      ]
+    },
+    {
+      "ayahNumber": 9,
+      "text": null,
+      "words": [
+        "In",
+        "columns",
+        "extended"
+      ]
+    }
+  ]
+}

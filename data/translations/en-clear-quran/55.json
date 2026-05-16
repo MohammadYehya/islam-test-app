@@ -1,0 +1,833 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 55,
+  "numberOfAyahs": 78,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:21:27+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "The Most Gracious"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "He taught",
+        "the Quran"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "He created",
+        "[the] man"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "He taught him",
+        "[the] speech"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "The sun",
+        "and the moon",
+        "by (precise) calculation"
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "text": null,
+      "words": [
+        "And the stars",
+        "and the trees",
+        "both prostrate"
+      ]
+    },
+    {
+      "ayahNumber": 7,
+      "text": null,
+      "words": [
+        "And the heaven",
+        "He raised it",
+        "and He has set up",
+        "the balance"
+      ]
+    },
+    {
+      "ayahNumber": 8,
+      "text": null,
+      "words": [
+        "That not",
+        "you may transgress",
+        "in",
+        "the balance"
+      ]
+    },
+    {
+      "ayahNumber": 9,
+      "text": null,
+      "words": [
+        "And establish",
+        "the weight",
+        "in justice",
+        "and (do) not",
+        "make deficient",
+        "the balance"
+      ]
+    },
+    {
+      "ayahNumber": 10,
+      "text": null,
+      "words": [
+        "And the earth",
+        "He laid it",
+        "for the creatures"
+      ]
+    },
+    {
+      "ayahNumber": 11,
+      "text": null,
+      "words": [
+        "Therein",
+        "(is) fruit",
+        "and date-palms",
+        "having",
+        "sheaths"
+      ]
+    },
+    {
+      "ayahNumber": 12,
+      "text": null,
+      "words": [
+        "And the grain",
+        "having",
+        "husk",
+        "and scented plants"
+      ]
+    },
+    {
+      "ayahNumber": 13,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 14,
+      "text": null,
+      "words": [
+        "He created",
+        "the man",
+        "from",
+        "clay",
+        "like the pottery"
+      ]
+    },
+    {
+      "ayahNumber": 15,
+      "text": null,
+      "words": [
+        "And He created",
+        "the jinn",
+        "from",
+        "a smokeless flame",
+        "of",
+        "fire"
+      ]
+    },
+    {
+      "ayahNumber": 16,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 17,
+      "text": null,
+      "words": [
+        "Lord",
+        "(of) the two Easts",
+        "and Lord",
+        "(of) the two Wests"
+      ]
+    },
+    {
+      "ayahNumber": 18,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 19,
+      "text": null,
+      "words": [
+        "He released",
+        "the two seas",
+        "meeting"
+      ]
+    },
+    {
+      "ayahNumber": 20,
+      "text": null,
+      "words": [
+        "Between both of them",
+        "(is) a barrier",
+        "not",
+        "they transgress"
+      ]
+    },
+    {
+      "ayahNumber": 21,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 22,
+      "text": null,
+      "words": [
+        "Come forth",
+        "from both of them",
+        "the pearl",
+        "and the coral"
+      ]
+    },
+    {
+      "ayahNumber": 23,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 24,
+      "text": null,
+      "words": [
+        "And for Him",
+        "(are) the ships",
+        "elevated",
+        "in",
+        "the sea",
+        "like mountains"
+      ]
+    },
+    {
+      "ayahNumber": 25,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 26,
+      "text": null,
+      "words": [
+        "Everyone",
+        "who",
+        "(is) on it",
+        "(will) perish"
+      ]
+    },
+    {
+      "ayahNumber": 27,
+      "text": null,
+      "words": [
+        "But will remain",
+        "(the) Face",
+        "(of) your Lord",
+        "(the) Owner",
+        "(of) Majesty",
+        "and Honor"
+      ]
+    },
+    {
+      "ayahNumber": 28,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 29,
+      "text": null,
+      "words": [
+        "Asks Him",
+        "whoever",
+        "(is) in",
+        "the heavens",
+        "and the earth",
+        "Every",
+        "day",
+        "He",
+        "(is) in",
+        "a matter"
+      ]
+    },
+    {
+      "ayahNumber": 30,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 31,
+      "text": null,
+      "words": [
+        "Soon We will attend",
+        "to you",
+        "O you",
+        "two classes"
+      ]
+    },
+    {
+      "ayahNumber": 32,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 33,
+      "text": null,
+      "words": [
+        "O assembly",
+        "(of) the jinn",
+        "and the men",
+        "If",
+        "you are able",
+        "to",
+        "pass beyond",
+        "[of]",
+        "(the) regions",
+        "(of) the heavens",
+        "and the earth",
+        "then pass",
+        "Not",
+        "you (can) pass",
+        "except",
+        "by authority"
+      ]
+    },
+    {
+      "ayahNumber": 34,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 35,
+      "text": null,
+      "words": [
+        "Will be sent",
+        "against both of you",
+        "a flame",
+        "of",
+        "fire",
+        "and smoke",
+        "and not",
+        "you will (be able to) defend yourselves"
+      ]
+    },
+    {
+      "ayahNumber": 36,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 37,
+      "text": null,
+      "words": [
+        "Then when",
+        "is split",
+        "the heaven",
+        "and it becomes",
+        "rose-colored",
+        "like murky oil"
+      ]
+    },
+    {
+      "ayahNumber": 38,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 39,
+      "text": null,
+      "words": [
+        "Then (on) that Day",
+        "not",
+        "will be asked",
+        "about",
+        "his sin",
+        "any man",
+        "and not",
+        "any jinn"
+      ]
+    },
+    {
+      "ayahNumber": 40,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 41,
+      "text": null,
+      "words": [
+        "Will be known",
+        "the criminals",
+        "by their marks",
+        "and will be seized",
+        "by the forelocks",
+        "and the feet"
+      ]
+    },
+    {
+      "ayahNumber": 42,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 43,
+      "text": null,
+      "words": [
+        "This",
+        "(is) Hell",
+        "which",
+        "deny",
+        "[of it]",
+        "the criminals"
+      ]
+    },
+    {
+      "ayahNumber": 44,
+      "text": null,
+      "words": [
+        "They will go around",
+        "between it",
+        "and between",
+        "scalding water",
+        "heated"
+      ]
+    },
+    {
+      "ayahNumber": 45,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 46,
+      "text": null,
+      "words": [
+        "But for (him) who",
+        "fears",
+        "(the) standing",
+        "(before) his Lord",
+        "(are) two gardens"
+      ]
+    },
+    {
+      "ayahNumber": 47,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 48,
+      "text": null,
+      "words": [
+        "Having",
+        "branches"
+      ]
+    },
+    {
+      "ayahNumber": 49,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 50,
+      "text": null,
+      "words": [
+        "In both of them",
+        "(are) two springs",
+        "flowing"
+      ]
+    },
+    {
+      "ayahNumber": 51,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 52,
+      "text": null,
+      "words": [
+        "In both of them",
+        "[of]",
+        "(are) every",
+        "fruits",
+        "(in) pairs"
+      ]
+    },
+    {
+      "ayahNumber": 53,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 54,
+      "text": null,
+      "words": [
+        "Reclining",
+        "on",
+        "couches",
+        "(whose) inner linings",
+        "(are) of",
+        "brocade",
+        "and (the) fruit",
+        "(of) both the gardens",
+        "(is) near"
+      ]
+    },
+    {
+      "ayahNumber": 55,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 56,
+      "text": null,
+      "words": [
+        "In them",
+        "(will be) companions of modest gaze",
+        "(will be) companions of modest gaze",
+        "not",
+        "has touched them",
+        "any man",
+        "before them",
+        "and not",
+        "any jinn"
+      ]
+    },
+    {
+      "ayahNumber": 57,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 58,
+      "text": null,
+      "words": [
+        "As if they were",
+        "rubies",
+        "and coral"
+      ]
+    },
+    {
+      "ayahNumber": 59,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 60,
+      "text": null,
+      "words": [
+        "Is",
+        "(the) reward",
+        "for the good",
+        "but",
+        "good"
+      ]
+    },
+    {
+      "ayahNumber": 61,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 62,
+      "text": null,
+      "words": [
+        "Besides these two",
+        "Besides these two",
+        "(are) two gardens"
+      ]
+    },
+    {
+      "ayahNumber": 63,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 64,
+      "text": null,
+      "words": [
+        "Dark green"
+      ]
+    },
+    {
+      "ayahNumber": 65,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 66,
+      "text": null,
+      "words": [
+        "In both of them",
+        "(are) two springs",
+        "gushing forth"
+      ]
+    },
+    {
+      "ayahNumber": 67,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 68,
+      "text": null,
+      "words": [
+        "In both of them",
+        "(are) fruits",
+        "and date-palms",
+        "and pomegranates"
+      ]
+    },
+    {
+      "ayahNumber": 69,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 70,
+      "text": null,
+      "words": [
+        "In them",
+        "(are) good",
+        "and beautiful ones"
+      ]
+    },
+    {
+      "ayahNumber": 71,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 72,
+      "text": null,
+      "words": [
+        "Fair ones",
+        "restrained",
+        "in",
+        "the pavilions"
+      ]
+    },
+    {
+      "ayahNumber": 73,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 74,
+      "text": null,
+      "words": [
+        "Not",
+        "has touched them",
+        "any man",
+        "before them",
+        "and not",
+        "any jinn"
+      ]
+    },
+    {
+      "ayahNumber": 75,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 76,
+      "text": null,
+      "words": [
+        "Reclining",
+        "on",
+        "cushions",
+        "green",
+        "and carpets",
+        "beautiful"
+      ]
+    },
+    {
+      "ayahNumber": 77,
+      "text": null,
+      "words": [
+        "So which",
+        "(of the) favors",
+        "(of) your Lord",
+        "will you both deny"
+      ]
+    },
+    {
+      "ayahNumber": 78,
+      "text": null,
+      "words": [
+        "Blessed is",
+        "(the) name",
+        "(of) your Lord",
+        "Owner",
+        "(of) Majesty",
+        "and Honor"
+      ]
+    }
+  ]
+}

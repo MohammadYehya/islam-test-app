@@ -1,0 +1,158 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 91,
+  "numberOfAyahs": 15,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:21:59+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "By the sun",
+        "and its brightness"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "And the moon",
+        "when",
+        "it follows it"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "And the day",
+        "when",
+        "it displays it"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "And the night",
+        "when",
+        "it covers it"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "And the heaven",
+        "and (He) Who",
+        "constructed it"
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "text": null,
+      "words": [
+        "And the earth",
+        "and by (He) Who",
+        "spread it"
+      ]
+    },
+    {
+      "ayahNumber": 7,
+      "text": null,
+      "words": [
+        "And (the) soul",
+        "and (He) Who",
+        "proportioned it"
+      ]
+    },
+    {
+      "ayahNumber": 8,
+      "text": null,
+      "words": [
+        "And He inspired it",
+        "(to distinguish) its wickedness",
+        "and its righteousness"
+      ]
+    },
+    {
+      "ayahNumber": 9,
+      "text": null,
+      "words": [
+        "Indeed",
+        "he succeeds",
+        "who",
+        "purifies it"
+      ]
+    },
+    {
+      "ayahNumber": 10,
+      "text": null,
+      "words": [
+        "And indeed",
+        "he fails",
+        "who",
+        "buries it"
+      ]
+    },
+    {
+      "ayahNumber": 11,
+      "text": null,
+      "words": [
+        "Denied",
+        "Thamud",
+        "by their transgression"
+      ]
+    },
+    {
+      "ayahNumber": 12,
+      "text": null,
+      "words": [
+        "When",
+        "(was) sent forth",
+        "(the) most wicked of them"
+      ]
+    },
+    {
+      "ayahNumber": 13,
+      "text": null,
+      "words": [
+        "But said",
+        "to them",
+        "(the) Messenger",
+        "(of) Allah",
+        "(It is the) she-camel",
+        "(of) Allah",
+        "and her drink"
+      ]
+    },
+    {
+      "ayahNumber": 14,
+      "text": null,
+      "words": [
+        "But they denied him",
+        "and they hamstrung her",
+        "So destroyed",
+        "them",
+        "their Lord",
+        "for their sin",
+        "and leveled them"
+      ]
+    },
+    {
+      "ayahNumber": 15,
+      "text": null,
+      "words": [
+        "And not",
+        "He fears",
+        "its consequences"
+      ]
+    }
+  ]
+}

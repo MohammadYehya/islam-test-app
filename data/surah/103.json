@@ -1,0 +1,288 @@
+{
+  "metadata": {
+    "surahNumber": 103,
+    "name": {
+      "arabic": "سُورَةُ العَصۡرِ",
+      "transliteration": "Al-Asr",
+      "translation": "The Declining Day, Epoch"
+    },
+    "revelationType": "Meccan",
+    "numberOfAyahs": 3,
+    "source": {
+      "tajweed": "api.alquran.cloud (quran-tajweed)",
+      "transliteration": "api.quran.com v4 (en-clear-quran)",
+      "generatedAt": "2026-05-16T13:22:09+00:00"
+    }
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "globalNumber": 6177,
+      "juz": 30,
+      "manzil": 7,
+      "page": 601,
+      "ruku": 545,
+      "hizbQuarter": 240,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "وَٱلْعَصْرِ",
+          "segments": [
+            {
+              "text": "وَ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 9999
+            },
+            {
+              "text": "لْعَصْرِ"
+            }
+          ],
+          "transliteration": "wal-ʿaṣri"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "globalNumber": 6178,
+      "juz": 30,
+      "manzil": 7,
+      "page": 601,
+      "ruku": 545,
+      "hizbQuarter": 240,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "إِنَّ",
+          "segments": [
+            {
+              "text": "إِ"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "َ"
+            }
+          ],
+          "transliteration": "inna"
+        },
+        {
+          "plain": "ٱلْإِنسَـٰنَ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 7137
+            },
+            {
+              "text": "لْإِ"
+            },
+            {
+              "text": "نس",
+              "rule": "f",
+              "id": 5969
+            },
+            {
+              "text": "َ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "n"
+            },
+            {
+              "text": "نَ"
+            }
+          ],
+          "transliteration": "l-insāna"
+        },
+        {
+          "plain": "لَفِى",
+          "segments": [
+            {
+              "text": "لَفِى"
+            }
+          ],
+          "transliteration": "lafī"
+        },
+        {
+          "plain": "خُسْرٍ",
+          "segments": [
+            {
+              "text": "خُسْرٍ"
+            }
+          ],
+          "transliteration": "khus'rin"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "globalNumber": 6179,
+      "juz": 30,
+      "manzil": 7,
+      "page": 601,
+      "ruku": 545,
+      "hizbQuarter": 240,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "إِلَّا",
+          "segments": [
+            {
+              "text": "إِلَّا"
+            }
+          ],
+          "transliteration": "illā"
+        },
+        {
+          "plain": "ٱلَّذِينَ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 778
+            },
+            {
+              "text": "لَّذِينَ"
+            }
+          ],
+          "transliteration": "alladhīna"
+        },
+        {
+          "plain": "ءَامَنُواْ",
+          "segments": [
+            {
+              "text": "ءَامَنُو"
+            },
+            {
+              "text": "اْ",
+              "rule": "s"
+            }
+          ],
+          "transliteration": "āmanū"
+        },
+        {
+          "plain": "وَعَمِلُواْ",
+          "segments": [
+            {
+              "text": "وَعَمِلُو"
+            },
+            {
+              "text": "اْ",
+              "rule": "s"
+            }
+          ],
+          "transliteration": "waʿamilū"
+        },
+        {
+          "plain": "ٱلصَّـٰلِحَـٰتِ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 118
+            },
+            {
+              "text": "ل",
+              "rule": "l"
+            },
+            {
+              "text": "صَّ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "n"
+            },
+            {
+              "text": "لِحَ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "n"
+            },
+            {
+              "text": "تِ"
+            }
+          ],
+          "transliteration": "l-ṣāliḥāti"
+        },
+        {
+          "plain": "وَتَوَاصَوْاْ",
+          "segments": [
+            {
+              "text": "وَتَوَاصَوْ"
+            },
+            {
+              "text": "اْ",
+              "rule": "s"
+            }
+          ],
+          "transliteration": "watawāṣaw"
+        },
+        {
+          "plain": "بِٱلْحَقِّ",
+          "segments": [
+            {
+              "text": "بِ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 370
+            },
+            {
+              "text": "لْحَقِّ"
+            }
+          ],
+          "transliteration": "bil-ḥaqi"
+        },
+        {
+          "plain": "وَتَوَاصَوْاْ",
+          "segments": [
+            {
+              "text": "وَتَوَاصَوْ"
+            },
+            {
+              "text": "اْ",
+              "rule": "s"
+            }
+          ],
+          "transliteration": "watawāṣaw"
+        },
+        {
+          "plain": "بِٱلصَّبْرِ",
+          "segments": [
+            {
+              "text": "بِ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 223
+            },
+            {
+              "text": "ل",
+              "rule": "l"
+            },
+            {
+              "text": "صَّ"
+            },
+            {
+              "text": "بْ",
+              "rule": "q",
+              "id": 223
+            },
+            {
+              "text": "رِ"
+            }
+          ],
+          "transliteration": "bil-ṣabri"
+        }
+      ]
+    }
+  ]
+}

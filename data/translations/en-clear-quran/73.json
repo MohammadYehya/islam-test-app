@@ -1,0 +1,333 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 73,
+  "numberOfAyahs": 20,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:21:43+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "O you",
+        "who wraps himself"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "Stand",
+        "(in) the night",
+        "except",
+        "a little"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "Half of it",
+        "or",
+        "lessen",
+        "from it",
+        "a little"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "Or",
+        "add",
+        "to it",
+        "and recite",
+        "the Quran",
+        "(with) measured rhythmic recitation"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "Indeed, We",
+        "will cast",
+        "upon you",
+        "a Word",
+        "heavy"
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "text": null,
+      "words": [
+        "Indeed",
+        "(the) rising",
+        "(at) the night",
+        "it",
+        "(is) very hard",
+        "and most potent",
+        "and more suitable",
+        "(for) Word"
+      ]
+    },
+    {
+      "ayahNumber": 7,
+      "text": null,
+      "words": [
+        "Indeed",
+        "for you",
+        "in",
+        "the day",
+        "(is) occupation",
+        "prolonged"
+      ]
+    },
+    {
+      "ayahNumber": 8,
+      "text": null,
+      "words": [
+        "And remember",
+        "(the) name",
+        "(of) your Lord",
+        "and devote yourself",
+        "to Him",
+        "(with) devotion"
+      ]
+    },
+    {
+      "ayahNumber": 9,
+      "text": null,
+      "words": [
+        "(The) Lord",
+        "(of) the east",
+        "and the west",
+        "(there is) no",
+        "god",
+        "except",
+        "Him",
+        "so take Him",
+        "(as) Disposer of Affairs"
+      ]
+    },
+    {
+      "ayahNumber": 10,
+      "text": null,
+      "words": [
+        "And be patient",
+        "over",
+        "what",
+        "they say",
+        "and avoid them",
+        "an avoidance",
+        "gracious"
+      ]
+    },
+    {
+      "ayahNumber": 11,
+      "text": null,
+      "words": [
+        "And leave Me",
+        "and the deniers",
+        "possessors",
+        "(of) the ease",
+        "and allow them respite",
+        "a little"
+      ]
+    },
+    {
+      "ayahNumber": 12,
+      "text": null,
+      "words": [
+        "Indeed",
+        "with Us",
+        "(are) shackles",
+        "and burning fire"
+      ]
+    },
+    {
+      "ayahNumber": 13,
+      "text": null,
+      "words": [
+        "And food",
+        "that",
+        "chokes",
+        "and a punishment",
+        "painful"
+      ]
+    },
+    {
+      "ayahNumber": 14,
+      "text": null,
+      "words": [
+        "(On the) Day",
+        "will quake",
+        "the earth",
+        "and the mountains",
+        "and will become",
+        "the mountains",
+        "a heap of sand",
+        "pouring down"
+      ]
+    },
+    {
+      "ayahNumber": 15,
+      "text": null,
+      "words": [
+        "Indeed, We",
+        "[We] have sent",
+        "to you",
+        "a Messenger",
+        "(as) a witness",
+        "upon you",
+        "as",
+        "We sent",
+        "to",
+        "Firaun",
+        "a Messenger"
+      ]
+    },
+    {
+      "ayahNumber": 16,
+      "text": null,
+      "words": [
+        "But disobeyed",
+        "Firaun",
+        "the Messenger",
+        "so We seized him",
+        "(with) a seizure",
+        "ruinous"
+      ]
+    },
+    {
+      "ayahNumber": 17,
+      "text": null,
+      "words": [
+        "Then how",
+        "will you guard yourselves",
+        "if",
+        "you disbelieve",
+        "a Day",
+        "(that) will make",
+        "the children",
+        "gray-haired"
+      ]
+    },
+    {
+      "ayahNumber": 18,
+      "text": null,
+      "words": [
+        "The heaven",
+        "(will) break apart",
+        "therefrom",
+        "is",
+        "His Promise",
+        "to be fulfilled"
+      ]
+    },
+    {
+      "ayahNumber": 19,
+      "text": null,
+      "words": [
+        "Indeed",
+        "this",
+        "(is) a Reminder",
+        "then whoever",
+        "wills",
+        "(let him) take",
+        "to",
+        "his Lord",
+        "a way"
+      ]
+    },
+    {
+      "ayahNumber": 20,
+      "text": null,
+      "words": [
+        "Indeed",
+        "your Lord",
+        "knows",
+        "that you",
+        "stand",
+        "(a little) less",
+        "than",
+        "two-thirds",
+        "(of) the night",
+        "and half of it",
+        "and a third of it",
+        "and (so do) a group",
+        "of",
+        "those who",
+        "(are) with you",
+        "And Allah",
+        "determines",
+        "the night",
+        "and the day",
+        "He knows",
+        "that",
+        "not",
+        "you count it",
+        "so He has turned",
+        "to you",
+        "so recite",
+        "what",
+        "is easy",
+        "of",
+        "the Quran",
+        "He knows",
+        "that",
+        "there will be",
+        "among you",
+        "sick",
+        "and others",
+        "traveling",
+        "in",
+        "the land",
+        "seeking",
+        "of",
+        "(the) Bounty",
+        "(of) Allah",
+        "and others",
+        "fighting",
+        "in",
+        "(the) way",
+        "(of) Allah",
+        "So recite",
+        "what",
+        "is easy",
+        "of it",
+        "and establish",
+        "the prayer",
+        "and give",
+        "the zakah",
+        "and loan",
+        "Allah",
+        "a loan",
+        "goodly",
+        "And whatever",
+        "you send forth",
+        "for yourselves",
+        "of",
+        "good",
+        "you will find it",
+        "with",
+        "Allah",
+        "It",
+        "(will be) better",
+        "and greater",
+        "(in) reward",
+        "And seek forgiveness",
+        "(of) Allah",
+        "Indeed",
+        "Allah",
+        "(is) Oft-Forgiving",
+        "Most Merciful"
+      ]
+    }
+  ]
+}

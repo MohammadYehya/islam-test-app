@@ -1,0 +1,216 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 90,
+  "numberOfAyahs": 20,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:21:58+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "Nay",
+        "I swear",
+        "by this",
+        "city"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "And you",
+        "(are) free (to dwell)",
+        "in this",
+        "city"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "And the begetter",
+        "and what",
+        "he begot"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "Certainly",
+        "We have created",
+        "man",
+        "(to be) in",
+        "hardship"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "Does he think",
+        "that",
+        "not",
+        "has power",
+        "over him",
+        "anyone"
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "text": null,
+      "words": [
+        "He will say",
+        "I have squandered",
+        "wealth",
+        "abundant"
+      ]
+    },
+    {
+      "ayahNumber": 7,
+      "text": null,
+      "words": [
+        "Does he think",
+        "that",
+        "not",
+        "sees him",
+        "anyone"
+      ]
+    },
+    {
+      "ayahNumber": 8,
+      "text": null,
+      "words": [
+        "Have not",
+        "We made",
+        "for him",
+        "two eyes"
+      ]
+    },
+    {
+      "ayahNumber": 9,
+      "text": null,
+      "words": [
+        "And a tongue",
+        "and two lips"
+      ]
+    },
+    {
+      "ayahNumber": 10,
+      "text": null,
+      "words": [
+        "And shown him",
+        "the two ways"
+      ]
+    },
+    {
+      "ayahNumber": 11,
+      "text": null,
+      "words": [
+        "But not",
+        "he has attempted",
+        "the steep path"
+      ]
+    },
+    {
+      "ayahNumber": 12,
+      "text": null,
+      "words": [
+        "And what",
+        "can make you know",
+        "what",
+        "the steep path (is)"
+      ]
+    },
+    {
+      "ayahNumber": 13,
+      "text": null,
+      "words": [
+        "(It is) freeing",
+        "a neck"
+      ]
+    },
+    {
+      "ayahNumber": 14,
+      "text": null,
+      "words": [
+        "Or",
+        "feeding",
+        "in",
+        "a day",
+        "of",
+        "severe hunger"
+      ]
+    },
+    {
+      "ayahNumber": 15,
+      "text": null,
+      "words": [
+        "An orphan",
+        "of",
+        "near relationship"
+      ]
+    },
+    {
+      "ayahNumber": 16,
+      "text": null,
+      "words": [
+        "Or",
+        "a needy person",
+        "in",
+        "misery"
+      ]
+    },
+    {
+      "ayahNumber": 17,
+      "text": null,
+      "words": [
+        "Then",
+        "he is",
+        "of",
+        "those who",
+        "believe",
+        "and enjoin (each other)",
+        "to patience",
+        "and enjoin (each other)",
+        "to compassion"
+      ]
+    },
+    {
+      "ayahNumber": 18,
+      "text": null,
+      "words": [
+        "Those",
+        "(are the) companions",
+        "(of) the right (hand)"
+      ]
+    },
+    {
+      "ayahNumber": 19,
+      "text": null,
+      "words": [
+        "But those who",
+        "disbelieve",
+        "in Our Verses",
+        "they",
+        "(are the) companions",
+        "(of) the left (hand)"
+      ]
+    },
+    {
+      "ayahNumber": 20,
+      "text": null,
+      "words": [
+        "Over them",
+        "(will be the) Fire",
+        "closed in"
+      ]
+    }
+  ]
+}

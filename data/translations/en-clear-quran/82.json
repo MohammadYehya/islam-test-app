@@ -1,0 +1,208 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 82,
+  "numberOfAyahs": 19,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:21:51+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "When",
+        "the sky",
+        "(is) cleft asunder"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "And when",
+        "the stars",
+        "scatter"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "And when",
+        "the seas",
+        "are made to gush forth"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "And when",
+        "the graves",
+        "are overturned"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "Will know",
+        "a soul",
+        "what",
+        "it has sent forth",
+        "and left behind"
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "text": null,
+      "words": [
+        "O",
+        "man",
+        "What",
+        "has deceived you",
+        "concerning your Lord",
+        "the Most Noble"
+      ]
+    },
+    {
+      "ayahNumber": 7,
+      "text": null,
+      "words": [
+        "Who",
+        "created you",
+        "then fashioned you",
+        "then balanced you"
+      ]
+    },
+    {
+      "ayahNumber": 8,
+      "text": null,
+      "words": [
+        "In",
+        "whatever",
+        "form",
+        "what",
+        "He willed",
+        "He assembled you"
+      ]
+    },
+    {
+      "ayahNumber": 9,
+      "text": null,
+      "words": [
+        "Nay",
+        "But",
+        "you deny",
+        "the Judgment"
+      ]
+    },
+    {
+      "ayahNumber": 10,
+      "text": null,
+      "words": [
+        "And indeed",
+        "over you",
+        "(are) surely guardians"
+      ]
+    },
+    {
+      "ayahNumber": 11,
+      "text": null,
+      "words": [
+        "Noble",
+        "recording"
+      ]
+    },
+    {
+      "ayahNumber": 12,
+      "text": null,
+      "words": [
+        "They know",
+        "whatever",
+        "you do"
+      ]
+    },
+    {
+      "ayahNumber": 13,
+      "text": null,
+      "words": [
+        "Indeed",
+        "the righteous",
+        "(will be) surely in",
+        "bliss"
+      ]
+    },
+    {
+      "ayahNumber": 14,
+      "text": null,
+      "words": [
+        "And indeed",
+        "the wicked",
+        "(will be) surely in",
+        "Hellfire"
+      ]
+    },
+    {
+      "ayahNumber": 15,
+      "text": null,
+      "words": [
+        "They will burn (in) it",
+        "(on the) Day",
+        "(of) the Judgment"
+      ]
+    },
+    {
+      "ayahNumber": 16,
+      "text": null,
+      "words": [
+        "And not",
+        "they",
+        "from it",
+        "(will be) absent"
+      ]
+    },
+    {
+      "ayahNumber": 17,
+      "text": null,
+      "words": [
+        "And what",
+        "can make you know",
+        "what",
+        "(is the) Day",
+        "(of) the Judgment"
+      ]
+    },
+    {
+      "ayahNumber": 18,
+      "text": null,
+      "words": [
+        "Then",
+        "what",
+        "can make you know",
+        "what",
+        "(is the) Day",
+        "(of) the Judgment"
+      ]
+    },
+    {
+      "ayahNumber": 19,
+      "text": null,
+      "words": [
+        "(The) Day",
+        "not",
+        "will have power",
+        "a soul",
+        "for a soul",
+        "anything",
+        "and the Command",
+        "that Day",
+        "(will be) with Allah"
+      ]
+    }
+  ]
+}

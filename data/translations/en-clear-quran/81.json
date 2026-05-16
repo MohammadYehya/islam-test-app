@@ -1,0 +1,292 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 81,
+  "numberOfAyahs": 29,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:21:50+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "When",
+        "the sun",
+        "is wrapped up"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "And when",
+        "the stars",
+        "fall, losing their luster"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "And when",
+        "the mountains",
+        "are moved away"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "And when",
+        "the full-term she-camels",
+        "(are) left untended"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "And when",
+        "the wild beasts",
+        "are gathered"
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "text": null,
+      "words": [
+        "And when",
+        "the seas",
+        "are made to overflow"
+      ]
+    },
+    {
+      "ayahNumber": 7,
+      "text": null,
+      "words": [
+        "And when",
+        "the souls",
+        "are paired"
+      ]
+    },
+    {
+      "ayahNumber": 8,
+      "text": null,
+      "words": [
+        "And when",
+        "the female infant buried alive",
+        "is asked"
+      ]
+    },
+    {
+      "ayahNumber": 9,
+      "text": null,
+      "words": [
+        "For what",
+        "sin",
+        "she was killed"
+      ]
+    },
+    {
+      "ayahNumber": 10,
+      "text": null,
+      "words": [
+        "And when",
+        "the pages",
+        "are laid open"
+      ]
+    },
+    {
+      "ayahNumber": 11,
+      "text": null,
+      "words": [
+        "And when",
+        "the sky",
+        "is stripped away"
+      ]
+    },
+    {
+      "ayahNumber": 12,
+      "text": null,
+      "words": [
+        "And when",
+        "the Hellfire",
+        "is set ablaze"
+      ]
+    },
+    {
+      "ayahNumber": 13,
+      "text": null,
+      "words": [
+        "And when",
+        "Paradise",
+        "is brought near"
+      ]
+    },
+    {
+      "ayahNumber": 14,
+      "text": null,
+      "words": [
+        "Will know",
+        "a soul",
+        "what",
+        "it has brought"
+      ]
+    },
+    {
+      "ayahNumber": 15,
+      "text": null,
+      "words": [
+        "But nay",
+        "I swear",
+        "by the retreating planets"
+      ]
+    },
+    {
+      "ayahNumber": 16,
+      "text": null,
+      "words": [
+        "Those that run",
+        "(and) disappear"
+      ]
+    },
+    {
+      "ayahNumber": 17,
+      "text": null,
+      "words": [
+        "And the night",
+        "when",
+        "it departs"
+      ]
+    },
+    {
+      "ayahNumber": 18,
+      "text": null,
+      "words": [
+        "And the dawn",
+        "when",
+        "it breathes"
+      ]
+    },
+    {
+      "ayahNumber": 19,
+      "text": null,
+      "words": [
+        "Indeed, it",
+        "(is) surely a word",
+        "(of) a Messenger",
+        "noble"
+      ]
+    },
+    {
+      "ayahNumber": 20,
+      "text": null,
+      "words": [
+        "Possessor of",
+        "power",
+        "with",
+        "(the) Owner of",
+        "the Throne",
+        "secure"
+      ]
+    },
+    {
+      "ayahNumber": 21,
+      "text": null,
+      "words": [
+        "One to be obeyed",
+        "and",
+        "trustworthy"
+      ]
+    },
+    {
+      "ayahNumber": 22,
+      "text": null,
+      "words": [
+        "And not",
+        "(is) your companion",
+        "mad"
+      ]
+    },
+    {
+      "ayahNumber": 23,
+      "text": null,
+      "words": [
+        "And certainly",
+        "he saw him",
+        "in the horizon",
+        "the clear"
+      ]
+    },
+    {
+      "ayahNumber": 24,
+      "text": null,
+      "words": [
+        "And not",
+        "he (is)",
+        "on",
+        "the unseen",
+        "a withholder"
+      ]
+    },
+    {
+      "ayahNumber": 25,
+      "text": null,
+      "words": [
+        "And not",
+        "it",
+        "(is the) word",
+        "(of) Shaitaan",
+        "accursed"
+      ]
+    },
+    {
+      "ayahNumber": 26,
+      "text": null,
+      "words": [
+        "So where",
+        "are you going"
+      ]
+    },
+    {
+      "ayahNumber": 27,
+      "text": null,
+      "words": [
+        "Not",
+        "it",
+        "(is) except",
+        "a reminder",
+        "to the worlds"
+      ]
+    },
+    {
+      "ayahNumber": 28,
+      "text": null,
+      "words": [
+        "For whoever",
+        "wills",
+        "among you",
+        "to",
+        "take a straight way"
+      ]
+    },
+    {
+      "ayahNumber": 29,
+      "text": null,
+      "words": [
+        "And not",
+        "you will",
+        "except",
+        "that",
+        "wills",
+        "Allah",
+        "Lord",
+        "(of) the worlds"
+      ]
+    }
+  ]
+}

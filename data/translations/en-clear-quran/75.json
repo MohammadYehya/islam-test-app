@@ -1,0 +1,418 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 75,
+  "numberOfAyahs": 40,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:21:45+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "Nay",
+        "I swear",
+        "by (the) Day",
+        "(of) the Resurrection"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "And nay",
+        "I swear",
+        "by the soul",
+        "self-accusing"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "Does think",
+        "[the] man",
+        "that not",
+        "We will assemble",
+        "his bones"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "Nay",
+        "(We are) Able",
+        "on",
+        "that",
+        "We can restore",
+        "his fingertips"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "Nay",
+        "Desires",
+        "[the] man",
+        "to give (the) lie",
+        "(to) what is before him"
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "text": null,
+      "words": [
+        "He asks",
+        "When",
+        "(is the) Day",
+        "(of) the Resurrection"
+      ]
+    },
+    {
+      "ayahNumber": 7,
+      "text": null,
+      "words": [
+        "So when",
+        "is dazzled",
+        "the vision"
+      ]
+    },
+    {
+      "ayahNumber": 8,
+      "text": null,
+      "words": [
+        "And becomes dark",
+        "the moon"
+      ]
+    },
+    {
+      "ayahNumber": 9,
+      "text": null,
+      "words": [
+        "And are joined",
+        "the sun",
+        "and the moon"
+      ]
+    },
+    {
+      "ayahNumber": 10,
+      "text": null,
+      "words": [
+        "Will say",
+        "[the] man",
+        "that Day",
+        "Where",
+        "(is) the escape"
+      ]
+    },
+    {
+      "ayahNumber": 11,
+      "text": null,
+      "words": [
+        "By no means",
+        "(There is) no",
+        "refuge"
+      ]
+    },
+    {
+      "ayahNumber": 12,
+      "text": null,
+      "words": [
+        "To",
+        "your Lord",
+        "that Day",
+        "(is) the place of rest"
+      ]
+    },
+    {
+      "ayahNumber": 13,
+      "text": null,
+      "words": [
+        "Will be informed",
+        "[the] man",
+        "that Day",
+        "of what",
+        "he sent forth",
+        "and kept back"
+      ]
+    },
+    {
+      "ayahNumber": 14,
+      "text": null,
+      "words": [
+        "Nay",
+        "[The] man",
+        "against",
+        "himself",
+        "(will be) a witness"
+      ]
+    },
+    {
+      "ayahNumber": 15,
+      "text": null,
+      "words": [
+        "Even if",
+        "he presents",
+        "his excuses"
+      ]
+    },
+    {
+      "ayahNumber": 16,
+      "text": null,
+      "words": [
+        "Not",
+        "move",
+        "with it",
+        "your tongue",
+        "to hasten",
+        "with it"
+      ]
+    },
+    {
+      "ayahNumber": 17,
+      "text": null,
+      "words": [
+        "Indeed",
+        "upon Us",
+        "(is) its collection",
+        "and its recitation"
+      ]
+    },
+    {
+      "ayahNumber": 18,
+      "text": null,
+      "words": [
+        "And when",
+        "We have recited it",
+        "then follow",
+        "its recitation"
+      ]
+    },
+    {
+      "ayahNumber": 19,
+      "text": null,
+      "words": [
+        "Then",
+        "indeed",
+        "upon Us",
+        "(is) its explanation"
+      ]
+    },
+    {
+      "ayahNumber": 20,
+      "text": null,
+      "words": [
+        "No",
+        "But",
+        "you love",
+        "the immediate"
+      ]
+    },
+    {
+      "ayahNumber": 21,
+      "text": null,
+      "words": [
+        "And leave",
+        "the Hereafter"
+      ]
+    },
+    {
+      "ayahNumber": 22,
+      "text": null,
+      "words": [
+        "Faces",
+        "that Day",
+        "(will be) radiant"
+      ]
+    },
+    {
+      "ayahNumber": 23,
+      "text": null,
+      "words": [
+        "Towards",
+        "their Lord",
+        "looking"
+      ]
+    },
+    {
+      "ayahNumber": 24,
+      "text": null,
+      "words": [
+        "And faces",
+        "that Day",
+        "(will be) distorted"
+      ]
+    },
+    {
+      "ayahNumber": 25,
+      "text": null,
+      "words": [
+        "Thinking",
+        "that",
+        "will be done",
+        "to them",
+        "backbreaking"
+      ]
+    },
+    {
+      "ayahNumber": 26,
+      "text": null,
+      "words": [
+        "No",
+        "When",
+        "it reaches",
+        "the collar bones"
+      ]
+    },
+    {
+      "ayahNumber": 27,
+      "text": null,
+      "words": [
+        "And it is said",
+        "Who",
+        "(will) cure"
+      ]
+    },
+    {
+      "ayahNumber": 28,
+      "text": null,
+      "words": [
+        "And he is certain",
+        "that it",
+        "(is) the parting"
+      ]
+    },
+    {
+      "ayahNumber": 29,
+      "text": null,
+      "words": [
+        "And is wound",
+        "the leg",
+        "about the leg"
+      ]
+    },
+    {
+      "ayahNumber": 30,
+      "text": null,
+      "words": [
+        "To",
+        "your Lord",
+        "that Day",
+        "(will be) the driving"
+      ]
+    },
+    {
+      "ayahNumber": 31,
+      "text": null,
+      "words": [
+        "And not",
+        "he accepted (the) truth",
+        "and not",
+        "he prayed"
+      ]
+    },
+    {
+      "ayahNumber": 32,
+      "text": null,
+      "words": [
+        "But",
+        "he denied",
+        "and turned away"
+      ]
+    },
+    {
+      "ayahNumber": 33,
+      "text": null,
+      "words": [
+        "Then",
+        "he went",
+        "to",
+        "his family",
+        "swaggering"
+      ]
+    },
+    {
+      "ayahNumber": 34,
+      "text": null,
+      "words": [
+        "Woe",
+        "to you",
+        "and woe"
+      ]
+    },
+    {
+      "ayahNumber": 35,
+      "text": null,
+      "words": [
+        "Then",
+        "woe",
+        "to you",
+        "and woe"
+      ]
+    },
+    {
+      "ayahNumber": 36,
+      "text": null,
+      "words": [
+        "Does think",
+        "man",
+        "that",
+        "he will be left",
+        "neglected"
+      ]
+    },
+    {
+      "ayahNumber": 37,
+      "text": null,
+      "words": [
+        "Was not",
+        "he",
+        "a semen-drop",
+        "of",
+        "semen",
+        "emitted"
+      ]
+    },
+    {
+      "ayahNumber": 38,
+      "text": null,
+      "words": [
+        "Then",
+        "he was",
+        "a clinging substance",
+        "then He created",
+        "and proportioned"
+      ]
+    },
+    {
+      "ayahNumber": 39,
+      "text": null,
+      "words": [
+        "Then made",
+        "of him",
+        "two kinds",
+        "(the) male",
+        "and the female"
+      ]
+    },
+    {
+      "ayahNumber": 40,
+      "text": null,
+      "words": [
+        "Is not",
+        "[that]",
+        "(He) Able",
+        "[over]",
+        "to",
+        "give life",
+        "(to) the dead"
+      ]
+    }
+  ]
+}

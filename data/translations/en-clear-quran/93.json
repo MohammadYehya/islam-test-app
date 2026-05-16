@@ -1,0 +1,120 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 93,
+  "numberOfAyahs": 11,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:22:01+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "By the morning brightness"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "And the night",
+        "when",
+        "it covers with darkness"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "Not",
+        "has forsaken you",
+        "your Lord",
+        "and not",
+        "He is displeased"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "And surely the Hereafter",
+        "(is) better",
+        "for you",
+        "than",
+        "the first"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "And soon",
+        "will give you",
+        "your Lord",
+        "then you will be satisfied"
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "text": null,
+      "words": [
+        "Did not",
+        "He find you",
+        "an orphan",
+        "and give shelter"
+      ]
+    },
+    {
+      "ayahNumber": 7,
+      "text": null,
+      "words": [
+        "And He found you",
+        "lost",
+        "so He guided"
+      ]
+    },
+    {
+      "ayahNumber": 8,
+      "text": null,
+      "words": [
+        "And He found you",
+        "in need",
+        "so He made self-sufficient"
+      ]
+    },
+    {
+      "ayahNumber": 9,
+      "text": null,
+      "words": [
+        "So as for",
+        "the orphan",
+        "then (do) not",
+        "oppress"
+      ]
+    },
+    {
+      "ayahNumber": 10,
+      "text": null,
+      "words": [
+        "And as for",
+        "one who asks",
+        "then (do) not",
+        "repel"
+      ]
+    },
+    {
+      "ayahNumber": 11,
+      "text": null,
+      "words": [
+        "But as for",
+        "(the) Favor",
+        "(of) your Lord",
+        "narrate"
+      ]
+    }
+  ]
+}

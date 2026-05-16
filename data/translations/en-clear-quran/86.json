@@ -1,0 +1,177 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 86,
+  "numberOfAyahs": 17,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:21:55+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "By the sky",
+        "and the night comer"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "And what",
+        "can make you know",
+        "what",
+        "the night comer (is)"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "(It is) the star",
+        "the piercing"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "Not",
+        "(is) every",
+        "soul",
+        "but",
+        "over it",
+        "(is) a protector"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "So let see",
+        "man",
+        "from what",
+        "he is created"
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "text": null,
+      "words": [
+        "He is created",
+        "from",
+        "a water",
+        "ejected"
+      ]
+    },
+    {
+      "ayahNumber": 7,
+      "text": null,
+      "words": [
+        "Coming forth",
+        "from",
+        "between",
+        "the backbone",
+        "and the ribs"
+      ]
+    },
+    {
+      "ayahNumber": 8,
+      "text": null,
+      "words": [
+        "Indeed, He",
+        "to",
+        "return him",
+        "(is) Able"
+      ]
+    },
+    {
+      "ayahNumber": 9,
+      "text": null,
+      "words": [
+        "(The) Day",
+        "will be tested",
+        "the secrets"
+      ]
+    },
+    {
+      "ayahNumber": 10,
+      "text": null,
+      "words": [
+        "Then not",
+        "(is) for him",
+        "any",
+        "power",
+        "and not",
+        "any helper"
+      ]
+    },
+    {
+      "ayahNumber": 11,
+      "text": null,
+      "words": [
+        "By the sky",
+        "which",
+        "returns"
+      ]
+    },
+    {
+      "ayahNumber": 12,
+      "text": null,
+      "words": [
+        "And the earth",
+        "which",
+        "cracks open"
+      ]
+    },
+    {
+      "ayahNumber": 13,
+      "text": null,
+      "words": [
+        "Indeed, it",
+        "(is) surely a Word",
+        "decisive"
+      ]
+    },
+    {
+      "ayahNumber": 14,
+      "text": null,
+      "words": [
+        "And not",
+        "it",
+        "(is) for amusement"
+      ]
+    },
+    {
+      "ayahNumber": 15,
+      "text": null,
+      "words": [
+        "Indeed, they",
+        "are plotting",
+        "a plot"
+      ]
+    },
+    {
+      "ayahNumber": 16,
+      "text": null,
+      "words": [
+        "But I am planning",
+        "a plan"
+      ]
+    },
+    {
+      "ayahNumber": 17,
+      "text": null,
+      "words": [
+        "So give respite",
+        "(to) the disbelievers",
+        "Give respite to them",
+        "little"
+      ]
+    }
+  ]
+}

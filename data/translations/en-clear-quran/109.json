@@ -1,0 +1,76 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 109,
+  "numberOfAyahs": 6,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:22:14+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "Say",
+        "O",
+        "disbelievers"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "Not",
+        "I worship",
+        "what",
+        "you worship"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "And not",
+        "you",
+        "(are) worshippers",
+        "(of) what",
+        "I worship"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "And not",
+        "I am",
+        "a worshipper",
+        "(of) what",
+        "you worship"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "And not",
+        "you",
+        "(are) worshippers",
+        "(of) what",
+        "I worship"
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "text": null,
+      "words": [
+        "For you",
+        "(is) your religion",
+        "and for me",
+        "(is) my religion"
+      ]
+    }
+  ]
+}

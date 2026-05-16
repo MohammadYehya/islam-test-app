@@ -1,0 +1,42 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 108,
+  "numberOfAyahs": 3,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:22:13+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "Indeed, We",
+        "We have given you",
+        "Al-Kauthar"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "So pray",
+        "to your Lord",
+        "and sacrifice"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "Indeed",
+        "your enemy",
+        "he (is)",
+        "the one cut off"
+      ]
+    }
+  ]
+}

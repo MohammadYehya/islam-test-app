@@ -1,0 +1,291 @@
+{
+  "metadata": {
+    "surahNumber": 110,
+    "name": {
+      "arabic": "سُورَةُ النَّصۡرِ",
+      "transliteration": "An-Nasr",
+      "translation": "Divine Support"
+    },
+    "revelationType": "Medinan",
+    "numberOfAyahs": 3,
+    "source": {
+      "tajweed": "api.alquran.cloud (quran-tajweed)",
+      "transliteration": "api.quran.com v4 (en-clear-quran)",
+      "generatedAt": "2026-05-16T13:22:14+00:00"
+    }
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "globalNumber": 6214,
+      "juz": 30,
+      "manzil": 7,
+      "page": 603,
+      "ruku": 552,
+      "hizbQuarter": 240,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "إِذَا",
+          "segments": [
+            {
+              "text": "إِذَا"
+            }
+          ],
+          "transliteration": "idhā"
+        },
+        {
+          "plain": "جَآءَ",
+          "segments": [
+            {
+              "text": "ج"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءَ"
+            }
+          ],
+          "transliteration": "jāa"
+        },
+        {
+          "plain": "نَصْرُ",
+          "segments": [
+            {
+              "text": "نَصْرُ"
+            }
+          ],
+          "transliteration": "naṣru"
+        },
+        {
+          "plain": "ٱللَّهِ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 1184
+            },
+            {
+              "text": "للَّهِ"
+            }
+          ],
+          "transliteration": "l-lahi"
+        },
+        {
+          "plain": "وَٱلْفَتْحُ",
+          "segments": [
+            {
+              "text": "وَ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 14666
+            },
+            {
+              "text": "لْفَتْحُ"
+            }
+          ],
+          "transliteration": "wal-fatḥu"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "globalNumber": 6215,
+      "juz": 30,
+      "manzil": 7,
+      "page": 603,
+      "ruku": 552,
+      "hizbQuarter": 240,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "وَرَأَيْتَ",
+          "segments": [
+            {
+              "text": "وَرَأَيْتَ"
+            }
+          ],
+          "transliteration": "wara-ayta"
+        },
+        {
+          "plain": "ٱلنَّاسَ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 14667
+            },
+            {
+              "text": "ل",
+              "rule": "l"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "َاسَ"
+            }
+          ],
+          "transliteration": "l-nāsa"
+        },
+        {
+          "plain": "يَدْخُلُونَ",
+          "segments": [
+            {
+              "text": "يَ"
+            },
+            {
+              "text": "دْ",
+              "rule": "q",
+              "id": 3156
+            },
+            {
+              "text": "خُلُونَ"
+            }
+          ],
+          "transliteration": "yadkhulūna"
+        },
+        {
+          "plain": "فِى",
+          "segments": [
+            {
+              "text": "فِى"
+            }
+          ],
+          "transliteration": "fī"
+        },
+        {
+          "plain": "دِينِ",
+          "segments": [
+            {
+              "text": "دِينِ"
+            }
+          ],
+          "transliteration": "dīni"
+        },
+        {
+          "plain": "ٱللَّهِ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 2072
+            },
+            {
+              "text": "للَّهِ"
+            }
+          ],
+          "transliteration": "l-lahi"
+        },
+        {
+          "plain": "أَفْوَاجًا",
+          "segments": [
+            {
+              "text": "أَفْوَاجًا"
+            }
+          ],
+          "transliteration": "afwājan"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "globalNumber": 6216,
+      "juz": 30,
+      "manzil": 7,
+      "page": 603,
+      "ruku": 552,
+      "hizbQuarter": 240,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَسَبِّحْ",
+          "segments": [
+            {
+              "text": "فَسَبِّحْ"
+            }
+          ],
+          "transliteration": "fasabbiḥ"
+        },
+        {
+          "plain": "بِحَمْدِ",
+          "segments": [
+            {
+              "text": "بِحَمْدِ"
+            }
+          ],
+          "transliteration": "biḥamdi"
+        },
+        {
+          "plain": "رَبِّكَ",
+          "segments": [
+            {
+              "text": "رَبِّكَ"
+            }
+          ],
+          "transliteration": "rabbika"
+        },
+        {
+          "plain": "وَٱسْتَغْفِرْهُ‌ۚ",
+          "segments": [
+            {
+              "text": "وَ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 14668
+            },
+            {
+              "text": "سْتَغْفِرْهُ‌ۚ"
+            }
+          ],
+          "transliteration": "wa-is'taghfir'hu"
+        },
+        {
+          "plain": "إِنَّهُۥ",
+          "segments": [
+            {
+              "text": "إِ"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "َهُ"
+            },
+            {
+              "text": "ۥ",
+              "rule": "n"
+            }
+          ],
+          "transliteration": "innahu"
+        },
+        {
+          "plain": "كَانَ",
+          "segments": [
+            {
+              "text": "كَانَ"
+            }
+          ],
+          "transliteration": "kāna"
+        },
+        {
+          "plain": "تَوَّابَۢا",
+          "segments": [
+            {
+              "text": "تَوَّابَۢا"
+            }
+          ],
+          "transliteration": "tawwāban"
+        }
+      ]
+    }
+  ]
+}

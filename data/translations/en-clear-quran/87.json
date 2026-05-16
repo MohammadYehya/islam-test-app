@@ -1,0 +1,200 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 87,
+  "numberOfAyahs": 19,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:21:56+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "Glorify",
+        "(the) name",
+        "(of) your Lord",
+        "the Most High"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "The One Who",
+        "created",
+        "then proportioned"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "And the One Who",
+        "measured",
+        "then guided"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "And the One Who",
+        "brings forth",
+        "the pasture"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "And then makes it",
+        "stubble",
+        "dark"
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "text": null,
+      "words": [
+        "We will make you recite",
+        "so not",
+        "you will forget"
+      ]
+    },
+    {
+      "ayahNumber": 7,
+      "text": null,
+      "words": [
+        "Except",
+        "what",
+        "wills",
+        "Allah",
+        "Indeed, He",
+        "knows",
+        "the manifest",
+        "and what",
+        "is hidden"
+      ]
+    },
+    {
+      "ayahNumber": 8,
+      "text": null,
+      "words": [
+        "And We will ease you",
+        "to the ease"
+      ]
+    },
+    {
+      "ayahNumber": 9,
+      "text": null,
+      "words": [
+        "So remind",
+        "if",
+        "benefits",
+        "the reminder"
+      ]
+    },
+    {
+      "ayahNumber": 10,
+      "text": null,
+      "words": [
+        "He will pay heed",
+        "(one) who",
+        "fears (Allah)"
+      ]
+    },
+    {
+      "ayahNumber": 11,
+      "text": null,
+      "words": [
+        "And will avoid it",
+        "the wretched one"
+      ]
+    },
+    {
+      "ayahNumber": 12,
+      "text": null,
+      "words": [
+        "The one who",
+        "will burn",
+        "(in) the Fire",
+        "[the] great"
+      ]
+    },
+    {
+      "ayahNumber": 13,
+      "text": null,
+      "words": [
+        "Then",
+        "not",
+        "he will die",
+        "therein",
+        "and not",
+        "will live"
+      ]
+    },
+    {
+      "ayahNumber": 14,
+      "text": null,
+      "words": [
+        "Certainly",
+        "has succeeded",
+        "(one) who",
+        "purifies (himself)"
+      ]
+    },
+    {
+      "ayahNumber": 15,
+      "text": null,
+      "words": [
+        "And remembers",
+        "(the) name",
+        "(of) his Lord",
+        "and prays"
+      ]
+    },
+    {
+      "ayahNumber": 16,
+      "text": null,
+      "words": [
+        "Nay",
+        "You prefer",
+        "the life",
+        "(of) the world"
+      ]
+    },
+    {
+      "ayahNumber": 17,
+      "text": null,
+      "words": [
+        "While the Hereafter",
+        "(is) better",
+        "and everlasting"
+      ]
+    },
+    {
+      "ayahNumber": 18,
+      "text": null,
+      "words": [
+        "Indeed",
+        "this",
+        "surely (is) in",
+        "the Scriptures",
+        "[the] former"
+      ]
+    },
+    {
+      "ayahNumber": 19,
+      "text": null,
+      "words": [
+        "(The) Scriptures",
+        "(of) Ibrahim",
+        "and Musa"
+      ]
+    }
+  ]
+}

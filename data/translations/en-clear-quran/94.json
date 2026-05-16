@@ -1,0 +1,89 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 94,
+  "numberOfAyahs": 8,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:22:02+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "Have not",
+        "We expanded",
+        "for you",
+        "your breast"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "And We removed",
+        "from you",
+        "your burden"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "Which",
+        "weighed upon",
+        "your back"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "And We raised high",
+        "for you",
+        "your reputation"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "So indeed",
+        "with",
+        "the hardship",
+        "(is) ease"
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "text": null,
+      "words": [
+        "Indeed",
+        "with",
+        "the hardship",
+        "(is) ease"
+      ]
+    },
+    {
+      "ayahNumber": 7,
+      "text": null,
+      "words": [
+        "So when",
+        "you have finished",
+        "then labor hard"
+      ]
+    },
+    {
+      "ayahNumber": 8,
+      "text": null,
+      "words": [
+        "And to",
+        "your Lord",
+        "turn your attention"
+      ]
+    }
+  ]
+}

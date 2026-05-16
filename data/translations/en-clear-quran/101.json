@@ -1,0 +1,116 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 101,
+  "numberOfAyahs": 11,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:22:08+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "The Striking Calamity"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "What",
+        "(is) the Striking Calamity"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "And what",
+        "will make you know",
+        "what",
+        "(is) the Striking Calamity"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "(The) Day",
+        "will be",
+        "the mankind",
+        "like moths",
+        "scattered"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "And will be",
+        "the mountains",
+        "like wool",
+        "fluffed up"
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "text": null,
+      "words": [
+        "Then as for",
+        "(him) whose",
+        "(are) heavy",
+        "his scales"
+      ]
+    },
+    {
+      "ayahNumber": 7,
+      "text": null,
+      "words": [
+        "Then he",
+        "(will be) in",
+        "a life",
+        "pleasant"
+      ]
+    },
+    {
+      "ayahNumber": 8,
+      "text": null,
+      "words": [
+        "But as for",
+        "(him) whose",
+        "(are) light",
+        "his scales"
+      ]
+    },
+    {
+      "ayahNumber": 9,
+      "text": null,
+      "words": [
+        "His abode",
+        "(will be the) Pit"
+      ]
+    },
+    {
+      "ayahNumber": 10,
+      "text": null,
+      "words": [
+        "And what",
+        "will make you know",
+        "what",
+        "it is"
+      ]
+    },
+    {
+      "ayahNumber": 11,
+      "text": null,
+      "words": [
+        "A Fire",
+        "intensely hot"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5847 @@
+{
+  "metadata": {
+    "surahNumber": 55,
+    "name": {
+      "arabic": "سُورَةُ الرَّحۡمَٰن",
+      "transliteration": "Ar-Rahmaan",
+      "translation": "The Beneficent"
+    },
+    "revelationType": "Medinan",
+    "numberOfAyahs": 78,
+    "source": {
+      "tajweed": "api.alquran.cloud (quran-tajweed)",
+      "transliteration": "api.quran.com v4 (en-clear-quran)",
+      "generatedAt": "2026-05-16T13:21:27+00:00"
+    }
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "globalNumber": 4902,
+      "juz": 27,
+      "manzil": 7,
+      "page": 531,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "ٱلرَّحْمَـٰنُ",
+          "segments": [
+            {
+              "text": "ٱ"
+            },
+            {
+              "text": "ل",
+              "rule": "l"
+            },
+            {
+              "text": "رَّحْمَ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "p"
+            },
+            {
+              "text": "نُ"
+            }
+          ],
+          "transliteration": "al-raḥmānu"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "globalNumber": 4903,
+      "juz": 27,
+      "manzil": 7,
+      "page": 531,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "عَلَّمَ",
+          "segments": [
+            {
+              "text": "عَلَّمَ"
+            }
+          ],
+          "transliteration": "ʿallama"
+        },
+        {
+          "plain": "ٱلْقُرْءَانَ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13123
+            },
+            {
+              "text": "لْقُرْء"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نَ"
+            }
+          ],
+          "transliteration": "l-qur'āna"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "globalNumber": 4904,
+      "juz": 27,
+      "manzil": 7,
+      "page": 531,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "خَلَقَ",
+          "segments": [
+            {
+              "text": "خَلَقَ"
+            }
+          ],
+          "transliteration": "khalaqa"
+        },
+        {
+          "plain": "ٱلْإِنسَـٰنَ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 7324
+            },
+            {
+              "text": "لْإِ"
+            },
+            {
+              "text": "نس",
+              "rule": "f",
+              "id": 5969
+            },
+            {
+              "text": "َ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "p"
+            },
+            {
+              "text": "نَ"
+            }
+          ],
+          "transliteration": "l-insāna"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "globalNumber": 4905,
+      "juz": 27,
+      "manzil": 7,
+      "page": 531,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "عَلَّمَهُ",
+          "segments": [
+            {
+              "text": "عَلَّمَهُ"
+            }
+          ],
+          "transliteration": "ʿallamahu"
+        },
+        {
+          "plain": "ٱلْبَيَانَ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13124
+            },
+            {
+              "text": "لْبَي"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نَ"
+            }
+          ],
+          "transliteration": "l-bayāna"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "globalNumber": 4906,
+      "juz": 27,
+      "manzil": 7,
+      "page": 531,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "ٱلشَّمْسُ",
+          "segments": [
+            {
+              "text": "ٱ"
+            },
+            {
+              "text": "ل",
+              "rule": "l"
+            },
+            {
+              "text": "شَّمْسُ"
+            }
+          ],
+          "transliteration": "al-shamsu"
+        },
+        {
+          "plain": "وَٱلْقَمَرُ",
+          "segments": [
+            {
+              "text": "وَ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 8956
+            },
+            {
+              "text": "لْقَمَرُ"
+            }
+          ],
+          "transliteration": "wal-qamaru"
+        },
+        {
+          "plain": "بِحُسْبَانٍ",
+          "segments": [
+            {
+              "text": "بِحُسْب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نٍ"
+            }
+          ],
+          "transliteration": "biḥus'bānin"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "globalNumber": 4907,
+      "juz": 27,
+      "manzil": 7,
+      "page": 531,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "وَٱلنَّجْمُ",
+          "segments": [
+            {
+              "text": "وَ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 9999
+            },
+            {
+              "text": "ل",
+              "rule": "l"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "َ"
+            },
+            {
+              "text": "جْ",
+              "rule": "q",
+              "id": 13125
+            },
+            {
+              "text": "مُ"
+            }
+          ],
+          "transliteration": "wal-najmu"
+        },
+        {
+          "plain": "وَٱلشَّجَرُ",
+          "segments": [
+            {
+              "text": "وَ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 8958
+            },
+            {
+              "text": "ل",
+              "rule": "l"
+            },
+            {
+              "text": "شَّجَرُ"
+            }
+          ],
+          "transliteration": "wal-shajaru"
+        },
+        {
+          "plain": "يَسْجُدَانِ",
+          "segments": [
+            {
+              "text": "يَسْجُد"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "yasjudāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 7,
+      "globalNumber": 4908,
+      "juz": 27,
+      "manzil": 7,
+      "page": 531,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "وَٱلسَّمَآءَ",
+          "segments": [
+            {
+              "text": "وَ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 9999
+            },
+            {
+              "text": "ل",
+              "rule": "l"
+            },
+            {
+              "text": "سَّم"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءَ"
+            }
+          ],
+          "transliteration": "wal-samāa"
+        },
+        {
+          "plain": "رَفَعَهَا",
+          "segments": [
+            {
+              "text": "رَفَعَهَا"
+            }
+          ],
+          "transliteration": "rafaʿahā"
+        },
+        {
+          "plain": "وَوَضَعَ",
+          "segments": [
+            {
+              "text": "وَوَضَعَ"
+            }
+          ],
+          "transliteration": "wawaḍaʿa"
+        },
+        {
+          "plain": "ٱلْمِيزَانَ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13126
+            },
+            {
+              "text": "لْمِيز"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نَ"
+            }
+          ],
+          "transliteration": "l-mīzāna"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 8,
+      "globalNumber": 4909,
+      "juz": 27,
+      "manzil": 7,
+      "page": 531,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "أَلَّا",
+          "segments": [
+            {
+              "text": "أَلَّا"
+            }
+          ],
+          "transliteration": "allā"
+        },
+        {
+          "plain": "تَطْغَوْاْ",
+          "segments": [
+            {
+              "text": "تَ"
+            },
+            {
+              "text": "طْ",
+              "rule": "q",
+              "id": 6515
+            },
+            {
+              "text": "غَوْ"
+            },
+            {
+              "text": "اْ",
+              "rule": "s"
+            }
+          ],
+          "transliteration": "taṭghaw"
+        },
+        {
+          "plain": "فِى",
+          "segments": [
+            {
+              "text": "فِى"
+            }
+          ],
+          "transliteration": "fī"
+        },
+        {
+          "plain": "ٱلْمِيزَانِ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13127
+            },
+            {
+              "text": "لْمِيز"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "l-mīzāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 9,
+      "globalNumber": 4910,
+      "juz": 27,
+      "manzil": 7,
+      "page": 531,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "وَأَقِيمُواْ",
+          "segments": [
+            {
+              "text": "وَأَقِيمُو"
+            },
+            {
+              "text": "اْ",
+              "rule": "s"
+            }
+          ],
+          "transliteration": "wa-aqīmū"
+        },
+        {
+          "plain": "ٱلْوَزْنَ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13128
+            },
+            {
+              "text": "لْوَزْنَ"
+            }
+          ],
+          "transliteration": "l-wazna"
+        },
+        {
+          "plain": "بِٱلْقِسْطِ",
+          "segments": [
+            {
+              "text": "بِ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 1800
+            },
+            {
+              "text": "لْقِسْطِ"
+            }
+          ],
+          "transliteration": "bil-qis'ṭi"
+        },
+        {
+          "plain": "وَلَا",
+          "segments": [
+            {
+              "text": "وَلَا"
+            }
+          ],
+          "transliteration": "walā"
+        },
+        {
+          "plain": "تُخْسِرُواْ",
+          "segments": [
+            {
+              "text": "تُخْسِرُو"
+            },
+            {
+              "text": "اْ",
+              "rule": "s"
+            }
+          ],
+          "transliteration": "tukh'sirū"
+        },
+        {
+          "plain": "ٱلْمِيزَانَ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13129
+            },
+            {
+              "text": "لْمِيز"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نَ"
+            }
+          ],
+          "transliteration": "l-mīzāna"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 10,
+      "globalNumber": 4911,
+      "juz": 27,
+      "manzil": 7,
+      "page": 531,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "وَٱلْأَرْضَ",
+          "segments": [
+            {
+              "text": "وَ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 9999
+            },
+            {
+              "text": "لْأَرْضَ"
+            }
+          ],
+          "transliteration": "wal-arḍa"
+        },
+        {
+          "plain": "وَضَعَهَا",
+          "segments": [
+            {
+              "text": "وَضَعَهَا"
+            }
+          ],
+          "transliteration": "waḍaʿahā"
+        },
+        {
+          "plain": "لِلْأَنَامِ",
+          "segments": [
+            {
+              "text": "لِلْأَن"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "مِ"
+            }
+          ],
+          "transliteration": "lil'anāmi"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 11,
+      "globalNumber": 4912,
+      "juz": 27,
+      "manzil": 7,
+      "page": 531,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فِيهَا",
+          "segments": [
+            {
+              "text": "فِيهَا"
+            }
+          ],
+          "transliteration": "fīhā"
+        },
+        {
+          "plain": "فَـٰكِهَةٌ وَٱلنَّخْلُ",
+          "segments": [
+            {
+              "text": "فَ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "n"
+            },
+            {
+              "text": "كِهَ"
+            },
+            {
+              "text": "ةٌ و",
+              "rule": "a",
+              "id": 13130
+            },
+            {
+              "text": "َ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13131
+            },
+            {
+              "text": "ل",
+              "rule": "l"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "َخْلُ"
+            }
+          ],
+          "transliteration": "fākihatun"
+        },
+        {
+          "plain": "ذَاتُ",
+          "segments": [
+            {
+              "text": "ذَاتُ"
+            }
+          ],
+          "transliteration": "wal-nakhlu"
+        },
+        {
+          "plain": "ٱلْأَكْمَامِ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13132
+            },
+            {
+              "text": "لْأَكْم"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "مِ"
+            }
+          ],
+          "transliteration": "dhātu"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 12,
+      "globalNumber": 4913,
+      "juz": 27,
+      "manzil": 7,
+      "page": 531,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "وَٱلْحَبُّ",
+          "segments": [
+            {
+              "text": "وَ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 9999
+            },
+            {
+              "text": "لْحَبُّ"
+            }
+          ],
+          "transliteration": "wal-ḥabu"
+        },
+        {
+          "plain": "ذُو",
+          "segments": [
+            {
+              "text": "ذُو"
+            }
+          ],
+          "transliteration": "dhū"
+        },
+        {
+          "plain": "ٱلْعَصْفِ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13133
+            },
+            {
+              "text": "لْعَصْفِ"
+            }
+          ],
+          "transliteration": "l-ʿaṣfi"
+        },
+        {
+          "plain": "وَٱلرَّيْحَانُ",
+          "segments": [
+            {
+              "text": "وَ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13134
+            },
+            {
+              "text": "ل",
+              "rule": "l"
+            },
+            {
+              "text": "رَّيْح"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نُ"
+            }
+          ],
+          "transliteration": "wal-rayḥānu"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 13,
+      "globalNumber": 4914,
+      "juz": 27,
+      "manzil": 7,
+      "page": 531,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 14,
+      "globalNumber": 4915,
+      "juz": 27,
+      "manzil": 7,
+      "page": 531,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "خَلَقَ",
+          "segments": [
+            {
+              "text": "خَلَقَ"
+            }
+          ],
+          "transliteration": "khalaqa"
+        },
+        {
+          "plain": "ٱلْإِنسَـٰنَ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 7324
+            },
+            {
+              "text": "لْإِ"
+            },
+            {
+              "text": "نس",
+              "rule": "f",
+              "id": 5969
+            },
+            {
+              "text": "َ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "n"
+            },
+            {
+              "text": "نَ"
+            }
+          ],
+          "transliteration": "l-insāna"
+        },
+        {
+          "plain": "مِن صَلْصَـٰلٍ كَٱلْفَخَّارِ",
+          "segments": [
+            {
+              "text": "مِ"
+            },
+            {
+              "text": "ن ص",
+              "rule": "f",
+              "id": 7229
+            },
+            {
+              "text": "َلْصَ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "n"
+            },
+            {
+              "text": "لٍ ك",
+              "rule": "f",
+              "id": 13135
+            },
+            {
+              "text": "َ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13136
+            },
+            {
+              "text": "لْفَخّ"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "رِ"
+            }
+          ],
+          "transliteration": "min"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 15,
+      "globalNumber": 4916,
+      "juz": 27,
+      "manzil": 7,
+      "page": 531,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "وَخَلَقَ",
+          "segments": [
+            {
+              "text": "وَخَلَقَ"
+            }
+          ],
+          "transliteration": "wakhalaqa"
+        },
+        {
+          "plain": "ٱلْجَآنَّ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13137
+            },
+            {
+              "text": "لْج"
+            },
+            {
+              "text": "َا",
+              "rule": "m"
+            },
+            {
+              "text": "ٓ"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "َ"
+            }
+          ],
+          "transliteration": "l-jāna"
+        },
+        {
+          "plain": "مِن مَّارِجٍ مِّن نَّارٍ",
+          "segments": [
+            {
+              "text": "م"
+            },
+            {
+              "text": "ِن م",
+              "rule": "a",
+              "id": 13138
+            },
+            {
+              "text": "َّارِ"
+            },
+            {
+              "text": "جٍ م",
+              "rule": "a",
+              "id": 13139
+            },
+            {
+              "text": "ّ"
+            },
+            {
+              "text": "ِن ن",
+              "rule": "a",
+              "id": 4598
+            },
+            {
+              "text": "ّ"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "رٍ"
+            }
+          ],
+          "transliteration": "min"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 16,
+      "globalNumber": 4917,
+      "juz": 27,
+      "manzil": 7,
+      "page": 531,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 17,
+      "globalNumber": 4918,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "رَبُّ",
+          "segments": [
+            {
+              "text": "رَبُّ"
+            }
+          ],
+          "transliteration": "rabbu"
+        },
+        {
+          "plain": "ٱلْمَشْرِقَيْنِ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13140
+            },
+            {
+              "text": "لْمَشْرِقَيْنِ"
+            }
+          ],
+          "transliteration": "l-mashriqayni"
+        },
+        {
+          "plain": "وَرَبُّ",
+          "segments": [
+            {
+              "text": "وَرَبُّ"
+            }
+          ],
+          "transliteration": "warabbu"
+        },
+        {
+          "plain": "ٱلْمَغْرِبَيْنِ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13141
+            },
+            {
+              "text": "لْمَغْرِبَ"
+            },
+            {
+              "text": "يْ",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "l-maghribayni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 18,
+      "globalNumber": 4919,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 19,
+      "globalNumber": 4920,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "مَرَجَ",
+          "segments": [
+            {
+              "text": "مَرَجَ"
+            }
+          ],
+          "transliteration": "maraja"
+        },
+        {
+          "plain": "ٱلْبَحْرَيْنِ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 9669
+            },
+            {
+              "text": "لْبَحْرَيْنِ"
+            }
+          ],
+          "transliteration": "l-baḥrayni"
+        },
+        {
+          "plain": "يَلْتَقِيَانِ",
+          "segments": [
+            {
+              "text": "يَلْتَقِي"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "yaltaqiyāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 20,
+      "globalNumber": 4921,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "بَيْنَهُمَا",
+          "segments": [
+            {
+              "text": "بَيْنَهُمَا"
+            }
+          ],
+          "transliteration": "baynahumā"
+        },
+        {
+          "plain": "بَرْزَخٌ لَّا",
+          "segments": [
+            {
+              "text": "بَرْزَ"
+            },
+            {
+              "text": "خٌ ل",
+              "rule": "u",
+              "id": 13142
+            },
+            {
+              "text": "َّا"
+            }
+          ],
+          "transliteration": "barzakhun"
+        },
+        {
+          "plain": "يَبْغِيَانِ",
+          "segments": [
+            {
+              "text": "يَ"
+            },
+            {
+              "text": "بْ",
+              "rule": "q",
+              "id": 13143
+            },
+            {
+              "text": "غِي"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "lā"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 21,
+      "globalNumber": 4922,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 22,
+      "globalNumber": 4923,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "يَخْرُجُ",
+          "segments": [
+            {
+              "text": "يَخْرُجُ"
+            }
+          ],
+          "transliteration": "yakhruju"
+        },
+        {
+          "plain": "مِنْهُمَا",
+          "segments": [
+            {
+              "text": "مِنْهُمَا"
+            }
+          ],
+          "transliteration": "min'humā"
+        },
+        {
+          "plain": "ٱللُّؤْلُؤُ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13144
+            },
+            {
+              "text": "ل",
+              "rule": "l"
+            },
+            {
+              "text": "لُّؤْلُؤُ"
+            }
+          ],
+          "transliteration": "l-lu'lu-u"
+        },
+        {
+          "plain": "وَٱلْمَرْجَانُ",
+          "segments": [
+            {
+              "text": "وَ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13145
+            },
+            {
+              "text": "لْمَرْج"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نُ"
+            }
+          ],
+          "transliteration": "wal-marjānu"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 23,
+      "globalNumber": 4924,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 24,
+      "globalNumber": 4925,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "وَلَهُ",
+          "segments": [
+            {
+              "text": "وَلَهُ"
+            }
+          ],
+          "transliteration": "walahu"
+        },
+        {
+          "plain": "ٱلْجَوَارِ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13146
+            },
+            {
+              "text": "لْجَوَارِ"
+            }
+          ],
+          "transliteration": "l-jawāri"
+        },
+        {
+          "plain": "ٱلْمُنشَـَٔـاتُ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13147
+            },
+            {
+              "text": "لْمُ"
+            },
+            {
+              "text": "نش",
+              "rule": "f",
+              "id": 13148
+            },
+            {
+              "text": "َـَٔـاتُ"
+            }
+          ],
+          "transliteration": "l-munshaātu"
+        },
+        {
+          "plain": "فِى",
+          "segments": [
+            {
+              "text": "فِى"
+            }
+          ],
+          "transliteration": "fī"
+        },
+        {
+          "plain": "ٱلْبَحْرِ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 837
+            },
+            {
+              "text": "لْبَحْرِ"
+            }
+          ],
+          "transliteration": "l-baḥri"
+        },
+        {
+          "plain": "كَٱلْأَعْلَـٰمِ",
+          "segments": [
+            {
+              "text": "كَ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 12143
+            },
+            {
+              "text": "لْأَعْلَ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "p"
+            },
+            {
+              "text": "مِ"
+            }
+          ],
+          "transliteration": "kal-aʿlāmi"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 25,
+      "globalNumber": 4926,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 466,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 26,
+      "globalNumber": 4927,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 467,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "كُلُّ",
+          "segments": [
+            {
+              "text": "كُلُّ"
+            }
+          ],
+          "transliteration": "kullu"
+        },
+        {
+          "plain": "مَنْ",
+          "segments": [
+            {
+              "text": "مَنْ"
+            }
+          ],
+          "transliteration": "man"
+        },
+        {
+          "plain": "عَلَيْهَا",
+          "segments": [
+            {
+              "text": "عَلَيْهَا"
+            }
+          ],
+          "transliteration": "ʿalayhā"
+        },
+        {
+          "plain": "فَانٍ",
+          "segments": [
+            {
+              "text": "ف"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نٍ"
+            }
+          ],
+          "transliteration": "fānin"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 27,
+      "globalNumber": 4928,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 467,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "وَيَبْقَىٰ",
+          "segments": [
+            {
+              "text": "وَيَ"
+            },
+            {
+              "text": "بْ",
+              "rule": "q",
+              "id": 13149
+            },
+            {
+              "text": "قَىٰ"
+            }
+          ],
+          "transliteration": "wayabqā"
+        },
+        {
+          "plain": "وَجْهُ",
+          "segments": [
+            {
+              "text": "وَ"
+            },
+            {
+              "text": "جْ",
+              "rule": "q",
+              "id": 603
+            },
+            {
+              "text": "هُ"
+            }
+          ],
+          "transliteration": "wajhu"
+        },
+        {
+          "plain": "رَبِّكَ",
+          "segments": [
+            {
+              "text": "رَبِّكَ"
+            }
+          ],
+          "transliteration": "rabbika"
+        },
+        {
+          "plain": "ذُو",
+          "segments": [
+            {
+              "text": "ذُو"
+            }
+          ],
+          "transliteration": "dhū"
+        },
+        {
+          "plain": "ٱلْجَلَـٰلِ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13150
+            },
+            {
+              "text": "لْجَلَ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "n"
+            },
+            {
+              "text": "لِ"
+            }
+          ],
+          "transliteration": "l-jalāli"
+        },
+        {
+          "plain": "وَٱلْإِكْرَامِ",
+          "segments": [
+            {
+              "text": "وَ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13151
+            },
+            {
+              "text": "لْإِكْر"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "مِ"
+            }
+          ],
+          "transliteration": "wal-ik'rāmi"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 28,
+      "globalNumber": 4929,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 467,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 29,
+      "globalNumber": 4930,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 467,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "يَسْــَٔلُهُۥ",
+          "segments": [
+            {
+              "text": "يَسْــَٔلُهُ"
+            },
+            {
+              "text": "ۥ",
+              "rule": "n"
+            }
+          ],
+          "transliteration": "yasaluhu"
+        },
+        {
+          "plain": "مَن فِى",
+          "segments": [
+            {
+              "text": "مَ"
+            },
+            {
+              "text": "ن ف",
+              "rule": "f",
+              "id": 2074
+            },
+            {
+              "text": "ِى"
+            }
+          ],
+          "transliteration": "man"
+        },
+        {
+          "plain": "ٱلسَّمَـٰوَٲتِ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 609
+            },
+            {
+              "text": "ل",
+              "rule": "l"
+            },
+            {
+              "text": "سَّمَ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "n"
+            },
+            {
+              "text": "و"
+            },
+            {
+              "text": "َٲ",
+              "rule": "n"
+            },
+            {
+              "text": "تِ"
+            }
+          ],
+          "transliteration": "fī"
+        },
+        {
+          "plain": "وَٱلْأَرْضِ‌ۚ",
+          "segments": [
+            {
+              "text": "وَ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 177
+            },
+            {
+              "text": "لْأَرْضِ‌ۚ"
+            }
+          ],
+          "transliteration": "l-samāwāti"
+        },
+        {
+          "plain": "كُلَّ",
+          "segments": [
+            {
+              "text": "كُلَّ"
+            }
+          ],
+          "transliteration": "wal-arḍi"
+        },
+        {
+          "plain": "يَوْمٍ",
+          "segments": [
+            {
+              "text": "يَوْمٍ"
+            }
+          ],
+          "transliteration": "kulla"
+        },
+        {
+          "plain": "هُوَ",
+          "segments": [
+            {
+              "text": "هُوَ"
+            }
+          ],
+          "transliteration": "yawmin"
+        },
+        {
+          "plain": "فِى",
+          "segments": [
+            {
+              "text": "فِى"
+            }
+          ],
+          "transliteration": "huwa"
+        },
+        {
+          "plain": "شَأْنٍ",
+          "segments": [
+            {
+              "text": "شَأْنٍ"
+            }
+          ],
+          "transliteration": "fī"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 30,
+      "globalNumber": 4931,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 467,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 31,
+      "globalNumber": 4932,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 467,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "سَنَفْرُغُ",
+          "segments": [
+            {
+              "text": "سَنَفْرُغُ"
+            }
+          ],
+          "transliteration": "sanafrughu"
+        },
+        {
+          "plain": "لَكُمْ",
+          "segments": [
+            {
+              "text": "لَكُمْ"
+            }
+          ],
+          "transliteration": "lakum"
+        },
+        {
+          "plain": "أَيُّهَ",
+          "segments": [
+            {
+              "text": "أَيُّهَ"
+            }
+          ],
+          "transliteration": "ayyuha"
+        },
+        {
+          "plain": "ٱلثَّقَلَانِ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13152
+            },
+            {
+              "text": "ل",
+              "rule": "l"
+            },
+            {
+              "text": "ثَّقَل"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "l-thaqalāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 32,
+      "globalNumber": 4933,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 467,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 33,
+      "globalNumber": 4934,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 467,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "يَـٰمَعْشَرَ",
+          "segments": [
+            {
+              "text": "يَ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "n"
+            },
+            {
+              "text": "مَعْشَرَ"
+            }
+          ],
+          "transliteration": "yāmaʿshara"
+        },
+        {
+          "plain": "ٱلْجِنِّ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 4407
+            },
+            {
+              "text": "لْجِ"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "ِ"
+            }
+          ],
+          "transliteration": "l-jini"
+        },
+        {
+          "plain": "وَٱلْإِنسِ",
+          "segments": [
+            {
+              "text": "وَ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 4418
+            },
+            {
+              "text": "لْإِ"
+            },
+            {
+              "text": "نس",
+              "rule": "f",
+              "id": 4418
+            },
+            {
+              "text": "ِ"
+            }
+          ],
+          "transliteration": "wal-insi"
+        },
+        {
+          "plain": "إِنِ",
+          "segments": [
+            {
+              "text": "إِنِ"
+            }
+          ],
+          "transliteration": "ini"
+        },
+        {
+          "plain": "ٱسْتَطَعْتُمْ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13153
+            },
+            {
+              "text": "سْتَطَعْتُمْ"
+            }
+          ],
+          "transliteration": "is'taṭaʿtum"
+        },
+        {
+          "plain": "أَن تَنفُذُواْ",
+          "segments": [
+            {
+              "text": "أَ"
+            },
+            {
+              "text": "ن ت",
+              "rule": "f",
+              "id": 13154
+            },
+            {
+              "text": "َ"
+            },
+            {
+              "text": "نف",
+              "rule": "f",
+              "id": 13155
+            },
+            {
+              "text": "ُذُو"
+            },
+            {
+              "text": "اْ",
+              "rule": "s"
+            }
+          ],
+          "transliteration": "an"
+        },
+        {
+          "plain": "مِنْ",
+          "segments": [
+            {
+              "text": "مِنْ"
+            }
+          ],
+          "transliteration": "tanfudhū"
+        },
+        {
+          "plain": "أَقْطَارِ",
+          "segments": [
+            {
+              "text": "أَ"
+            },
+            {
+              "text": "قْ",
+              "rule": "q",
+              "id": 13156
+            },
+            {
+              "text": "طَارِ"
+            }
+          ],
+          "transliteration": "min"
+        },
+        {
+          "plain": "ٱلسَّمَـٰوَٲتِ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13157
+            },
+            {
+              "text": "ل",
+              "rule": "l"
+            },
+            {
+              "text": "سَّمَ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "n"
+            },
+            {
+              "text": "و"
+            },
+            {
+              "text": "َٲ",
+              "rule": "n"
+            },
+            {
+              "text": "تِ"
+            }
+          ],
+          "transliteration": "aqṭāri"
+        },
+        {
+          "plain": "وَٱلْأَرْضِ",
+          "segments": [
+            {
+              "text": "وَ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 177
+            },
+            {
+              "text": "لْأَرْضِ"
+            }
+          ],
+          "transliteration": "l-samāwāti"
+        },
+        {
+          "plain": "فَٱنفُذُواْ‌ۚ",
+          "segments": [
+            {
+              "text": "فَ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13158
+            },
+            {
+              "text": "نف",
+              "rule": "f",
+              "id": 13158
+            },
+            {
+              "text": "ُذُو"
+            },
+            {
+              "text": "اْ‌ۚ",
+              "rule": "s"
+            }
+          ],
+          "transliteration": "wal-arḍi"
+        },
+        {
+          "plain": "لَا",
+          "segments": [
+            {
+              "text": "لَا"
+            }
+          ],
+          "transliteration": "fa-unfudhū"
+        },
+        {
+          "plain": "تَنفُذُونَ",
+          "segments": [
+            {
+              "text": "تَ"
+            },
+            {
+              "text": "نف",
+              "rule": "f",
+              "id": 13159
+            },
+            {
+              "text": "ُذُونَ"
+            }
+          ],
+          "transliteration": "lā"
+        },
+        {
+          "plain": "إِلَّا",
+          "segments": [
+            {
+              "text": "إِلَّا"
+            }
+          ],
+          "transliteration": "tanfudhūna"
+        },
+        {
+          "plain": "بِسُلْطَـٰنٍ",
+          "segments": [
+            {
+              "text": "بِسُلْطَ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "p"
+            },
+            {
+              "text": "نٍ"
+            }
+          ],
+          "transliteration": "illā"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 34,
+      "globalNumber": 4935,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 467,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 35,
+      "globalNumber": 4936,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 467,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "يُرْسَلُ",
+          "segments": [
+            {
+              "text": "يُرْسَلُ"
+            }
+          ],
+          "transliteration": "yur'salu"
+        },
+        {
+          "plain": "عَلَيْكُمَا",
+          "segments": [
+            {
+              "text": "عَلَيْكُمَا"
+            }
+          ],
+          "transliteration": "ʿalaykumā"
+        },
+        {
+          "plain": "شُوَاظٌ مِّن نَّارٍ وَنُحَاسٌ فَلَا",
+          "segments": [
+            {
+              "text": "شُوَا"
+            },
+            {
+              "text": "ظٌ م",
+              "rule": "a",
+              "id": 13160
+            },
+            {
+              "text": "ّ"
+            },
+            {
+              "text": "ِن ن",
+              "rule": "a",
+              "id": 4598
+            },
+            {
+              "text": "َّا"
+            },
+            {
+              "text": "رٍ و",
+              "rule": "a",
+              "id": 13161
+            },
+            {
+              "text": "َنُحَا"
+            },
+            {
+              "text": "سٌ ف",
+              "rule": "f",
+              "id": 13162
+            },
+            {
+              "text": "َلَا"
+            }
+          ],
+          "transliteration": "shuwāẓun"
+        },
+        {
+          "plain": "تَنتَصِرَانِ",
+          "segments": [
+            {
+              "text": "تَ"
+            },
+            {
+              "text": "نت",
+              "rule": "f",
+              "id": 13163
+            },
+            {
+              "text": "َصِر"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "min"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 36,
+      "globalNumber": 4937,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 467,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 37,
+      "globalNumber": 4938,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 467,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَإِذَا",
+          "segments": [
+            {
+              "text": "فَإِذَا"
+            }
+          ],
+          "transliteration": "fa-idhā"
+        },
+        {
+          "plain": "ٱنشَقَّتِ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13164
+            },
+            {
+              "text": "نش",
+              "rule": "f",
+              "id": 13165
+            },
+            {
+              "text": "َقَّتِ"
+            }
+          ],
+          "transliteration": "inshaqqati"
+        },
+        {
+          "plain": "ٱلسَّمَآءُ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13166
+            },
+            {
+              "text": "ل",
+              "rule": "l"
+            },
+            {
+              "text": "سَّم"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءُ"
+            }
+          ],
+          "transliteration": "l-samāu"
+        },
+        {
+          "plain": "فَكَانَتْ",
+          "segments": [
+            {
+              "text": "فَكَانَتْ"
+            }
+          ],
+          "transliteration": "fakānat"
+        },
+        {
+          "plain": "وَرْدَةً كَٱلدِّهَانِ",
+          "segments": [
+            {
+              "text": "وَرْدَ"
+            },
+            {
+              "text": "ةً ك",
+              "rule": "f",
+              "id": 13167
+            },
+            {
+              "text": "َ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13168
+            },
+            {
+              "text": "ل",
+              "rule": "l"
+            },
+            {
+              "text": "دِّه"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "wardatan"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 38,
+      "globalNumber": 4939,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 467,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 39,
+      "globalNumber": 4940,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 467,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَيَوْمَئِذٍ لَّا",
+          "segments": [
+            {
+              "text": "فَيَوْمَئِ"
+            },
+            {
+              "text": "ذٍ ل",
+              "rule": "u",
+              "id": 10538
+            },
+            {
+              "text": "َّا"
+            }
+          ],
+          "transliteration": "fayawma-idhin"
+        },
+        {
+          "plain": "يُسْــَٔلُ",
+          "segments": [
+            {
+              "text": "يُسْــَٔلُ"
+            }
+          ],
+          "transliteration": "lā"
+        },
+        {
+          "plain": "عَن ذَنۢبِهِۦٓ",
+          "segments": [
+            {
+              "text": "عَ"
+            },
+            {
+              "text": "ن ذ",
+              "rule": "f",
+              "id": 13169
+            },
+            {
+              "text": "َ"
+            },
+            {
+              "text": "نۢب",
+              "rule": "i",
+              "id": 13170
+            },
+            {
+              "text": "ِه"
+            },
+            {
+              "text": "ِۦٓ",
+              "rule": "o"
+            }
+          ],
+          "transliteration": "yus'alu"
+        },
+        {
+          "plain": "إِنسٌ وَلَا",
+          "segments": [
+            {
+              "text": "إِن"
+            },
+            {
+              "text": "سٌ و",
+              "rule": "a",
+              "id": 13171
+            },
+            {
+              "text": "َلَا"
+            }
+          ],
+          "transliteration": "ʿan"
+        },
+        {
+          "plain": "جَآنٌّ",
+          "segments": [
+            {
+              "text": "ج"
+            },
+            {
+              "text": "َا",
+              "rule": "m"
+            },
+            {
+              "text": "ٓ"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "ٌ"
+            }
+          ],
+          "transliteration": "dhanbihi"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 40,
+      "globalNumber": 4941,
+      "juz": 27,
+      "manzil": 7,
+      "page": 532,
+      "ruku": 467,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 41,
+      "globalNumber": 4942,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 467,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "يُعْرَفُ",
+          "segments": [
+            {
+              "text": "يُعْرَفُ"
+            }
+          ],
+          "transliteration": "yuʿ'rafu"
+        },
+        {
+          "plain": "ٱلْمُجْرِمُونَ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13172
+            },
+            {
+              "text": "لْمُ"
+            },
+            {
+              "text": "جْ",
+              "rule": "q",
+              "id": 5255
+            },
+            {
+              "text": "رِمُونَ"
+            }
+          ],
+          "transliteration": "l-muj'rimūna"
+        },
+        {
+          "plain": "بِسِيمَـٰهُمْ",
+          "segments": [
+            {
+              "text": "بِسِيمَ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "n"
+            },
+            {
+              "text": "هُمْ"
+            }
+          ],
+          "transliteration": "bisīmāhum"
+        },
+        {
+          "plain": "فَيُؤْخَذُ",
+          "segments": [
+            {
+              "text": "فَيُؤْخَذُ"
+            }
+          ],
+          "transliteration": "fayu'khadhu"
+        },
+        {
+          "plain": "بِٱلنَّوَٲصِى",
+          "segments": [
+            {
+              "text": "بِ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13173
+            },
+            {
+              "text": "ل",
+              "rule": "l"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "َو"
+            },
+            {
+              "text": "َٲ",
+              "rule": "n"
+            },
+            {
+              "text": "صِى"
+            }
+          ],
+          "transliteration": "bil-nawāṣī"
+        },
+        {
+          "plain": "وَٱلْأَقْدَامِ",
+          "segments": [
+            {
+              "text": "وَ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13174
+            },
+            {
+              "text": "لْأَ"
+            },
+            {
+              "text": "قْ",
+              "rule": "q",
+              "id": 13174
+            },
+            {
+              "text": "د"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "مِ"
+            }
+          ],
+          "transliteration": "wal-aqdāmi"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 42,
+      "globalNumber": 4943,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 467,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 43,
+      "globalNumber": 4944,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 467,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "هَـٰذِهِۦ",
+          "segments": [
+            {
+              "text": "هَ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "n"
+            },
+            {
+              "text": "ذِه"
+            },
+            {
+              "text": "ِۦ",
+              "rule": "n"
+            }
+          ],
+          "transliteration": "hādhihi"
+        },
+        {
+          "plain": "جَهَنَّمُ",
+          "segments": [
+            {
+              "text": "جَهَ"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "َمُ"
+            }
+          ],
+          "transliteration": "jahannamu"
+        },
+        {
+          "plain": "ٱلَّتِى",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 11279
+            },
+            {
+              "text": "لَّتِى"
+            }
+          ],
+          "transliteration": "allatī"
+        },
+        {
+          "plain": "يُكَذِّبُ",
+          "segments": [
+            {
+              "text": "يُكَذِّبُ"
+            }
+          ],
+          "transliteration": "yukadhibu"
+        },
+        {
+          "plain": "بِهَا",
+          "segments": [
+            {
+              "text": "بِهَا"
+            }
+          ],
+          "transliteration": "bihā"
+        },
+        {
+          "plain": "ٱلْمُجْرِمُونَ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13175
+            },
+            {
+              "text": "لْمُ"
+            },
+            {
+              "text": "جْ",
+              "rule": "q",
+              "id": 5255
+            },
+            {
+              "text": "رِم"
+            },
+            {
+              "text": "ُو",
+              "rule": "p"
+            },
+            {
+              "text": "نَ"
+            }
+          ],
+          "transliteration": "l-muj'rimūna"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 44,
+      "globalNumber": 4945,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 467,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "يَطُوفُونَ",
+          "segments": [
+            {
+              "text": "يَطُوفُونَ"
+            }
+          ],
+          "transliteration": "yaṭūfūna"
+        },
+        {
+          "plain": "بَيْنَهَا",
+          "segments": [
+            {
+              "text": "بَيْنَهَا"
+            }
+          ],
+          "transliteration": "baynahā"
+        },
+        {
+          "plain": "وَبَيْنَ",
+          "segments": [
+            {
+              "text": "وَبَيْنَ"
+            }
+          ],
+          "transliteration": "wabayna"
+        },
+        {
+          "plain": "حَمِيمٍ",
+          "segments": [
+            {
+              "text": "حَمِيمٍ"
+            }
+          ],
+          "transliteration": "ḥamīmin"
+        },
+        {
+          "plain": "ءَانٍ",
+          "segments": [
+            {
+              "text": "ء"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نٍ"
+            }
+          ],
+          "transliteration": "ānin"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 45,
+      "globalNumber": 4946,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 467,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 46,
+      "globalNumber": 4947,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "وَلِمَنْ",
+          "segments": [
+            {
+              "text": "وَلِمَنْ"
+            }
+          ],
+          "transliteration": "waliman"
+        },
+        {
+          "plain": "خَافَ",
+          "segments": [
+            {
+              "text": "خَافَ"
+            }
+          ],
+          "transliteration": "khāfa"
+        },
+        {
+          "plain": "مَقَامَ",
+          "segments": [
+            {
+              "text": "مَقَامَ"
+            }
+          ],
+          "transliteration": "maqāma"
+        },
+        {
+          "plain": "رَبِّهِۦ",
+          "segments": [
+            {
+              "text": "رَبِّه"
+            },
+            {
+              "text": "ِۦ",
+              "rule": "n"
+            }
+          ],
+          "transliteration": "rabbihi"
+        },
+        {
+          "plain": "جَنَّتَانِ",
+          "segments": [
+            {
+              "text": "جَ"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "َت"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "jannatāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 47,
+      "globalNumber": 4948,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 48,
+      "globalNumber": 4949,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "ذَوَاتَآ",
+          "segments": [
+            {
+              "text": "ذَوَات"
+            },
+            {
+              "text": "َآ",
+              "rule": "o"
+            }
+          ],
+          "transliteration": "dhawātā"
+        },
+        {
+          "plain": "أَفْنَانٍ",
+          "segments": [
+            {
+              "text": "أَفْن"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نٍ"
+            }
+          ],
+          "transliteration": "afnānin"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 49,
+      "globalNumber": 4950,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 50,
+      "globalNumber": 4951,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فِيهِمَا",
+          "segments": [
+            {
+              "text": "فِيهِمَا"
+            }
+          ],
+          "transliteration": "fīhimā"
+        },
+        {
+          "plain": "عَيْنَانِ",
+          "segments": [
+            {
+              "text": "عَيْنَانِ"
+            }
+          ],
+          "transliteration": "ʿaynāni"
+        },
+        {
+          "plain": "تَجْرِيَانِ",
+          "segments": [
+            {
+              "text": "تَ"
+            },
+            {
+              "text": "جْ",
+              "rule": "q",
+              "id": 13176
+            },
+            {
+              "text": "رِي"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tajriyāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 51,
+      "globalNumber": 4952,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 52,
+      "globalNumber": 4953,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فِيهِمَا",
+          "segments": [
+            {
+              "text": "فِيهِمَا"
+            }
+          ],
+          "transliteration": "fīhimā"
+        },
+        {
+          "plain": "مِن كُلِّ",
+          "segments": [
+            {
+              "text": "مِ"
+            },
+            {
+              "text": "ن ك",
+              "rule": "f",
+              "id": 843
+            },
+            {
+              "text": "ُلِّ"
+            }
+          ],
+          "transliteration": "min"
+        },
+        {
+          "plain": "فَـٰكِهَةٍ زَوْجَانِ",
+          "segments": [
+            {
+              "text": "فَ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "n"
+            },
+            {
+              "text": "كِهَ"
+            },
+            {
+              "text": "ةٍ ز",
+              "rule": "f",
+              "id": 13177
+            },
+            {
+              "text": "َوْج"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "kulli"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 53,
+      "globalNumber": 4954,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 54,
+      "globalNumber": 4955,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "مُتَّكِــِٔينَ",
+          "segments": [
+            {
+              "text": "مُتَّكِــِٔينَ"
+            }
+          ],
+          "transliteration": "muttakiīna"
+        },
+        {
+          "plain": "عَلَىٰ",
+          "segments": [
+            {
+              "text": "عَلَىٰ"
+            }
+          ],
+          "transliteration": "ʿalā"
+        },
+        {
+          "plain": "فُرُشِۭ بَطَآئِنُهَا",
+          "segments": [
+            {
+              "text": "فُرُ"
+            },
+            {
+              "text": "شِۭ ب",
+              "rule": "i",
+              "id": 13178
+            },
+            {
+              "text": "َط"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓئِنُهَا"
+            }
+          ],
+          "transliteration": "furushin"
+        },
+        {
+          "plain": "مِنْ",
+          "segments": [
+            {
+              "text": "مِنْ"
+            }
+          ],
+          "transliteration": "baṭāinuhā"
+        },
+        {
+          "plain": "إِسْتَبْرَقٍ‌ۚ وَجَنَى",
+          "segments": [
+            {
+              "text": "إِسْتَ"
+            },
+            {
+              "text": "بْ",
+              "rule": "q",
+              "id": 13179
+            },
+            {
+              "text": "رَ"
+            },
+            {
+              "text": "قٍ‌ۚ و",
+              "rule": "a",
+              "id": 13180
+            },
+            {
+              "text": "َجَنَى"
+            }
+          ],
+          "transliteration": "min"
+        },
+        {
+          "plain": "ٱلْجَنَّتَيْنِ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13181
+            },
+            {
+              "text": "لْجَ"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "َتَيْنِ"
+            }
+          ],
+          "transliteration": "is'tabraqin"
+        },
+        {
+          "plain": "دَانٍ",
+          "segments": [
+            {
+              "text": "د"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نٍ"
+            }
+          ],
+          "transliteration": "wajanā"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 55,
+      "globalNumber": 4956,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 56,
+      "globalNumber": 4957,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فِيهِنَّ",
+          "segments": [
+            {
+              "text": "فِيهِ"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "َ"
+            }
+          ],
+          "transliteration": "fīhinna"
+        },
+        {
+          "plain": "قَـٰصِرَٲتُ",
+          "segments": [
+            {
+              "text": "قَ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "n"
+            },
+            {
+              "text": "صِر"
+            },
+            {
+              "text": "َٲ",
+              "rule": "n"
+            },
+            {
+              "text": "تُ"
+            }
+          ],
+          "transliteration": "qāṣirātu"
+        },
+        {
+          "plain": "ٱلطَّرْفِ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 11365
+            },
+            {
+              "text": "ل",
+              "rule": "l"
+            },
+            {
+              "text": "طَّرْفِ"
+            }
+          ],
+          "transliteration": "l-ṭarfi"
+        },
+        {
+          "plain": "لَمْ",
+          "segments": [
+            {
+              "text": "لَمْ"
+            }
+          ],
+          "transliteration": "lam"
+        },
+        {
+          "plain": "يَطْمِثْهُنَّ",
+          "segments": [
+            {
+              "text": "يَ"
+            },
+            {
+              "text": "طْ",
+              "rule": "q",
+              "id": 13182
+            },
+            {
+              "text": "مِثْهُ"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "َ"
+            }
+          ],
+          "transliteration": "yaṭmith'hunna"
+        },
+        {
+          "plain": "إِنسٌ قَبْلَهُمْ",
+          "segments": [
+            {
+              "text": "إِ"
+            },
+            {
+              "text": "نس",
+              "rule": "f",
+              "id": 13183
+            },
+            {
+              "text": "ٌ ق",
+              "rule": "f",
+              "id": 13184
+            },
+            {
+              "text": "َ"
+            },
+            {
+              "text": "بْ",
+              "rule": "q",
+              "id": 8394
+            },
+            {
+              "text": "لَهُمْ"
+            }
+          ],
+          "transliteration": "insun"
+        },
+        {
+          "plain": "وَلَا",
+          "segments": [
+            {
+              "text": "وَلَا"
+            }
+          ],
+          "transliteration": "qablahum"
+        },
+        {
+          "plain": "جَآنٌّ",
+          "segments": [
+            {
+              "text": "ج"
+            },
+            {
+              "text": "َا",
+              "rule": "m"
+            },
+            {
+              "text": "ٓ"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "ٌ"
+            }
+          ],
+          "transliteration": "walā"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 57,
+      "globalNumber": 4958,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 58,
+      "globalNumber": 4959,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "كَأَنَّهُنَّ",
+          "segments": [
+            {
+              "text": "كَأَ"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "َهُ"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "َ"
+            }
+          ],
+          "transliteration": "ka-annahunna"
+        },
+        {
+          "plain": "ٱلْيَاقُوتُ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13185
+            },
+            {
+              "text": "لْيَاقُوتُ"
+            }
+          ],
+          "transliteration": "l-yāqūtu"
+        },
+        {
+          "plain": "وَٱلْمَرْجَانُ",
+          "segments": [
+            {
+              "text": "وَ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13145
+            },
+            {
+              "text": "لْمَرْج"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نُ"
+            }
+          ],
+          "transliteration": "wal-marjānu"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 59,
+      "globalNumber": 4960,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 60,
+      "globalNumber": 4961,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "هَلْ",
+          "segments": [
+            {
+              "text": "هَلْ"
+            }
+          ],
+          "transliteration": "hal"
+        },
+        {
+          "plain": "جَزَآءُ",
+          "segments": [
+            {
+              "text": "جَز"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءُ"
+            }
+          ],
+          "transliteration": "jazāu"
+        },
+        {
+          "plain": "ٱلْإِحْسَـٰنِ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13186
+            },
+            {
+              "text": "لْإِحْسَ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "n"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "l-iḥ'sāni"
+        },
+        {
+          "plain": "إِلَّا",
+          "segments": [
+            {
+              "text": "إِلَّا"
+            }
+          ],
+          "transliteration": "illā"
+        },
+        {
+          "plain": "ٱلْإِحْسَـٰنُ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13187
+            },
+            {
+              "text": "لْإِحْسَ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "p"
+            },
+            {
+              "text": "نُ"
+            }
+          ],
+          "transliteration": "l-iḥ'sānu"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 61,
+      "globalNumber": 4962,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 62,
+      "globalNumber": 4963,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "وَمِن دُونِهِمَا",
+          "segments": [
+            {
+              "text": "وَمِ"
+            },
+            {
+              "text": "ن د",
+              "rule": "f",
+              "id": 13188
+            },
+            {
+              "text": "ُونِهِمَا"
+            }
+          ],
+          "transliteration": "wamin"
+        },
+        {
+          "plain": "جَنَّتَانِ",
+          "segments": [
+            {
+              "text": "جَ"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "َت"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "dūnihimā"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 63,
+      "globalNumber": 4964,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 64,
+      "globalNumber": 4965,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "مُدْهَآمَّتَانِ",
+          "segments": [
+            {
+              "text": "مُ"
+            },
+            {
+              "text": "دْ",
+              "rule": "q",
+              "id": 13189
+            },
+            {
+              "text": "ه"
+            },
+            {
+              "text": "َا",
+              "rule": "m"
+            },
+            {
+              "text": "ٓ"
+            },
+            {
+              "text": "مّ",
+              "rule": "g"
+            },
+            {
+              "text": "َت"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "mud'hāmmatāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 65,
+      "globalNumber": 4966,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 66,
+      "globalNumber": 4967,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فِيهِمَا",
+          "segments": [
+            {
+              "text": "فِيهِمَا"
+            }
+          ],
+          "transliteration": "fīhimā"
+        },
+        {
+          "plain": "عَيْنَانِ",
+          "segments": [
+            {
+              "text": "عَيْنَانِ"
+            }
+          ],
+          "transliteration": "ʿaynāni"
+        },
+        {
+          "plain": "نَضَّاخَتَانِ",
+          "segments": [
+            {
+              "text": "نَضَّاخَت"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "naḍḍākhatāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 67,
+      "globalNumber": 4968,
+      "juz": 27,
+      "manzil": 7,
+      "page": 533,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 68,
+      "globalNumber": 4969,
+      "juz": 27,
+      "manzil": 7,
+      "page": 534,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فِيهِمَا",
+          "segments": [
+            {
+              "text": "فِيهِمَا"
+            }
+          ],
+          "transliteration": "fīhimā"
+        },
+        {
+          "plain": "فَـٰكِهَةٌ وَنَخْلٌ وَرُمَّانٌ",
+          "segments": [
+            {
+              "text": "فَ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "n"
+            },
+            {
+              "text": "كِهَ"
+            },
+            {
+              "text": "ةٌ و",
+              "rule": "a",
+              "id": 13190
+            },
+            {
+              "text": "َنَخْ"
+            },
+            {
+              "text": "لٌ و",
+              "rule": "a",
+              "id": 13191
+            },
+            {
+              "text": "َرُ"
+            },
+            {
+              "text": "مّ",
+              "rule": "g"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نٌ"
+            }
+          ],
+          "transliteration": "fākihatun"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 69,
+      "globalNumber": 4970,
+      "juz": 27,
+      "manzil": 7,
+      "page": 534,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 70,
+      "globalNumber": 4971,
+      "juz": 27,
+      "manzil": 7,
+      "page": 534,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فِيهِنَّ",
+          "segments": [
+            {
+              "text": "فِيهِ"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "َ"
+            }
+          ],
+          "transliteration": "fīhinna"
+        },
+        {
+          "plain": "خَيْرَٲتٌ",
+          "segments": [
+            {
+              "text": "خَيْر"
+            },
+            {
+              "text": "َٲ",
+              "rule": "n"
+            },
+            {
+              "text": "تٌ"
+            }
+          ],
+          "transliteration": "khayrātun"
+        },
+        {
+          "plain": "حِسَانٌ",
+          "segments": [
+            {
+              "text": "حِس"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نٌ"
+            }
+          ],
+          "transliteration": "ḥisānun"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 71,
+      "globalNumber": 4972,
+      "juz": 27,
+      "manzil": 7,
+      "page": 534,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 72,
+      "globalNumber": 4973,
+      "juz": 27,
+      "manzil": 7,
+      "page": 534,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "حُورٌ مَّقْصُورَٲتٌ فِى",
+          "segments": [
+            {
+              "text": "حُو"
+            },
+            {
+              "text": "رٌ م",
+              "rule": "a",
+              "id": 13192
+            },
+            {
+              "text": "َّ"
+            },
+            {
+              "text": "قْ",
+              "rule": "q",
+              "id": 13193
+            },
+            {
+              "text": "صُور"
+            },
+            {
+              "text": "َٲ",
+              "rule": "n"
+            },
+            {
+              "text": "تٌ ف",
+              "rule": "f",
+              "id": 13194
+            },
+            {
+              "text": "ِى"
+            }
+          ],
+          "transliteration": "ḥūrun"
+        },
+        {
+          "plain": "ٱلْخِيَامِ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13195
+            },
+            {
+              "text": "لْخِي"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "مِ"
+            }
+          ],
+          "transliteration": "maqṣūrātun"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 73,
+      "globalNumber": 4974,
+      "juz": 27,
+      "manzil": 7,
+      "page": 534,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 74,
+      "globalNumber": 4975,
+      "juz": 27,
+      "manzil": 7,
+      "page": 534,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "لَمْ",
+          "segments": [
+            {
+              "text": "لَمْ"
+            }
+          ],
+          "transliteration": "lam"
+        },
+        {
+          "plain": "يَطْمِثْهُنَّ",
+          "segments": [
+            {
+              "text": "يَ"
+            },
+            {
+              "text": "طْ",
+              "rule": "q",
+              "id": 13182
+            },
+            {
+              "text": "مِثْهُ"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "َ"
+            }
+          ],
+          "transliteration": "yaṭmith'hunna"
+        },
+        {
+          "plain": "إِنسٌ قَبْلَهُمْ",
+          "segments": [
+            {
+              "text": "إِ"
+            },
+            {
+              "text": "نس",
+              "rule": "f",
+              "id": 13183
+            },
+            {
+              "text": "ٌ ق",
+              "rule": "f",
+              "id": 13184
+            },
+            {
+              "text": "َ"
+            },
+            {
+              "text": "بْ",
+              "rule": "q",
+              "id": 8394
+            },
+            {
+              "text": "لَهُمْ"
+            }
+          ],
+          "transliteration": "insun"
+        },
+        {
+          "plain": "وَلَا",
+          "segments": [
+            {
+              "text": "وَلَا"
+            }
+          ],
+          "transliteration": "qablahum"
+        },
+        {
+          "plain": "جَآنٌّ",
+          "segments": [
+            {
+              "text": "ج"
+            },
+            {
+              "text": "َا",
+              "rule": "m"
+            },
+            {
+              "text": "ٓ"
+            },
+            {
+              "text": "نّ",
+              "rule": "g"
+            },
+            {
+              "text": "ٌ"
+            }
+          ],
+          "transliteration": "walā"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 75,
+      "globalNumber": 4976,
+      "juz": 27,
+      "manzil": 7,
+      "page": 534,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 76,
+      "globalNumber": 4977,
+      "juz": 27,
+      "manzil": 7,
+      "page": 534,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "مُتَّكِــِٔينَ",
+          "segments": [
+            {
+              "text": "مُتَّكِــِٔينَ"
+            }
+          ],
+          "transliteration": "muttakiīna"
+        },
+        {
+          "plain": "عَلَىٰ",
+          "segments": [
+            {
+              "text": "عَلَىٰ"
+            }
+          ],
+          "transliteration": "ʿalā"
+        },
+        {
+          "plain": "رَفْرَفٍ",
+          "segments": [
+            {
+              "text": "رَفْرَفٍ"
+            }
+          ],
+          "transliteration": "rafrafin"
+        },
+        {
+          "plain": "خُضْرٍ وَعَبْقَرِىٍّ",
+          "segments": [
+            {
+              "text": "خُضْ"
+            },
+            {
+              "text": "رٍ و",
+              "rule": "a",
+              "id": 13196
+            },
+            {
+              "text": "َعَ"
+            },
+            {
+              "text": "بْ",
+              "rule": "q",
+              "id": 13197
+            },
+            {
+              "text": "قَرِىٍّ"
+            }
+          ],
+          "transliteration": "khuḍ'rin"
+        },
+        {
+          "plain": "حِسَانٍ",
+          "segments": [
+            {
+              "text": "حِس"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نٍ"
+            }
+          ],
+          "transliteration": "waʿabqariyyin"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 77,
+      "globalNumber": 4978,
+      "juz": 27,
+      "manzil": 7,
+      "page": 534,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "فَبِأَىِّ",
+          "segments": [
+            {
+              "text": "فَبِأَىِّ"
+            }
+          ],
+          "transliteration": "fabi-ayyi"
+        },
+        {
+          "plain": "ءَالَآءِ",
+          "segments": [
+            {
+              "text": "ءَال"
+            },
+            {
+              "text": "َا",
+              "rule": "o"
+            },
+            {
+              "text": "ٓءِ"
+            }
+          ],
+          "transliteration": "ālāi"
+        },
+        {
+          "plain": "رَبِّكُمَا",
+          "segments": [
+            {
+              "text": "رَبِّكُمَا"
+            }
+          ],
+          "transliteration": "rabbikumā"
+        },
+        {
+          "plain": "تُكَذِّبَانِ",
+          "segments": [
+            {
+              "text": "تُكَذِّب"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "نِ"
+            }
+          ],
+          "transliteration": "tukadhibāni"
+        }
+      ]
+    },
+    {
+      "ayahNumber": 78,
+      "globalNumber": 4979,
+      "juz": 27,
+      "manzil": 7,
+      "page": 534,
+      "ruku": 468,
+      "hizbQuarter": 213,
+      "sajda": false,
+      "words": [
+        {
+          "plain": "تَبَـٰرَكَ",
+          "segments": [
+            {
+              "text": "تَبَ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "n"
+            },
+            {
+              "text": "رَكَ"
+            }
+          ],
+          "transliteration": "tabāraka"
+        },
+        {
+          "plain": "ٱسْمُ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13198
+            },
+            {
+              "text": "سْمُ"
+            }
+          ],
+          "transliteration": "us'mu"
+        },
+        {
+          "plain": "رَبِّكَ",
+          "segments": [
+            {
+              "text": "رَبِّكَ"
+            }
+          ],
+          "transliteration": "rabbika"
+        },
+        {
+          "plain": "ذِى",
+          "segments": [
+            {
+              "text": "ذِى"
+            }
+          ],
+          "transliteration": "dhī"
+        },
+        {
+          "plain": "ٱلْجَلَـٰلِ",
+          "segments": [
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13199
+            },
+            {
+              "text": "لْجَلَ"
+            },
+            {
+              "text": "ـٰ",
+              "rule": "n"
+            },
+            {
+              "text": "لِ"
+            }
+          ],
+          "transliteration": "l-jalāli"
+        },
+        {
+          "plain": "وَٱلْإِكْرَامِ",
+          "segments": [
+            {
+              "text": "وَ"
+            },
+            {
+              "text": "ٱ",
+              "rule": "h",
+              "id": 13151
+            },
+            {
+              "text": "لْإِكْر"
+            },
+            {
+              "text": "َا",
+              "rule": "p"
+            },
+            {
+              "text": "مِ"
+            }
+          ],
+          "transliteration": "wal-ik'rāmi"
+        }
+      ]
+    }
+  ]
+}

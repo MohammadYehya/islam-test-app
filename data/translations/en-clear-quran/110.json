@@ -1,0 +1,51 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 110,
+  "numberOfAyahs": 3,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:22:14+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "When",
+        "comes",
+        "(the) Help",
+        "(of) Allah",
+        "and the Victory"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "And you see",
+        "the people",
+        "entering",
+        "into",
+        "(the) religion",
+        "(of) Allah",
+        "(in) multitudes"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "Then glorify",
+        "with (the) praises",
+        "(of) your Lord",
+        "and ask His forgiveness",
+        "Indeed, He",
+        "is",
+        "Oft-Returning"
+      ]
+    }
+  ]
+}

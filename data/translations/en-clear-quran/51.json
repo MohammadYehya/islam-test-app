@@ -1,0 +1,734 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 51,
+  "numberOfAyahs": 60,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:21:24+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "By those scattering",
+        "dispersing"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "And those carrying",
+        "a load"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "And those sailing",
+        "(with) ease"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "And those distributing",
+        "Command"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "Indeed, what",
+        "you are promised",
+        "(is) surely true"
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "text": null,
+      "words": [
+        "And indeed",
+        "the Judgment",
+        "(is) surely to occur"
+      ]
+    },
+    {
+      "ayahNumber": 7,
+      "text": null,
+      "words": [
+        "By the heaven",
+        "full of",
+        "pathways"
+      ]
+    },
+    {
+      "ayahNumber": 8,
+      "text": null,
+      "words": [
+        "Indeed, you",
+        "(are) surely in",
+        "a speech",
+        "differing"
+      ]
+    },
+    {
+      "ayahNumber": 9,
+      "text": null,
+      "words": [
+        "Deluded away",
+        "from it",
+        "(is he) who",
+        "is deluded"
+      ]
+    },
+    {
+      "ayahNumber": 10,
+      "text": null,
+      "words": [
+        "Cursed be",
+        "the liars"
+      ]
+    },
+    {
+      "ayahNumber": 11,
+      "text": null,
+      "words": [
+        "Those who",
+        "[they]",
+        "(are) in",
+        "flood",
+        "(of) heedlessness"
+      ]
+    },
+    {
+      "ayahNumber": 12,
+      "text": null,
+      "words": [
+        "They ask",
+        "When",
+        "(is the) Day",
+        "(of) Judgment"
+      ]
+    },
+    {
+      "ayahNumber": 13,
+      "text": null,
+      "words": [
+        "A Day",
+        "they",
+        "over",
+        "the Fire",
+        "will be tried"
+      ]
+    },
+    {
+      "ayahNumber": 14,
+      "text": null,
+      "words": [
+        "Taste",
+        "your trial",
+        "This",
+        "(is) what",
+        "you were",
+        "for it",
+        "seeking to hasten"
+      ]
+    },
+    {
+      "ayahNumber": 15,
+      "text": null,
+      "words": [
+        "Indeed",
+        "the righteous",
+        "(will be) in",
+        "Gardens",
+        "and springs"
+      ]
+    },
+    {
+      "ayahNumber": 16,
+      "text": null,
+      "words": [
+        "Taking",
+        "what",
+        "their Lord has given them",
+        "their Lord has given them",
+        "Indeed, they",
+        "were",
+        "before",
+        "that",
+        "good-doers"
+      ]
+    },
+    {
+      "ayahNumber": 17,
+      "text": null,
+      "words": [
+        "They used to",
+        "little",
+        "of",
+        "the night",
+        "[what]",
+        "sleep"
+      ]
+    },
+    {
+      "ayahNumber": 18,
+      "text": null,
+      "words": [
+        "And in the hours before dawn",
+        "they",
+        "would ask forgiveness"
+      ]
+    },
+    {
+      "ayahNumber": 19,
+      "text": null,
+      "words": [
+        "And in",
+        "their wealth",
+        "(was the) right",
+        "(of) those who asked",
+        "and the deprived"
+      ]
+    },
+    {
+      "ayahNumber": 20,
+      "text": null,
+      "words": [
+        "And in",
+        "the earth",
+        "(are) signs",
+        "for those who are certain"
+      ]
+    },
+    {
+      "ayahNumber": 21,
+      "text": null,
+      "words": [
+        "And in",
+        "yourselves",
+        "Then will not",
+        "you see"
+      ]
+    },
+    {
+      "ayahNumber": 22,
+      "text": null,
+      "words": [
+        "And in",
+        "the heaven",
+        "(is) your provision",
+        "and what",
+        "you are promised"
+      ]
+    },
+    {
+      "ayahNumber": 23,
+      "text": null,
+      "words": [
+        "Then by (the) Lord",
+        "(of) the heaven",
+        "and the earth",
+        "indeed, it",
+        "(is) surely (the) truth",
+        "(just) as",
+        "[what]",
+        "you",
+        "speak"
+      ]
+    },
+    {
+      "ayahNumber": 24,
+      "text": null,
+      "words": [
+        "Has",
+        "reached you",
+        "(the) narration",
+        "(of the) guests",
+        "(of) Ibrahim",
+        "the honored"
+      ]
+    },
+    {
+      "ayahNumber": 25,
+      "text": null,
+      "words": [
+        "When",
+        "they entered",
+        "upon him",
+        "and said",
+        "Peace",
+        "He said",
+        "Peace",
+        "a people",
+        "unknown"
+      ]
+    },
+    {
+      "ayahNumber": 26,
+      "text": null,
+      "words": [
+        "Then he went",
+        "to",
+        "his household",
+        "and came",
+        "with a calf",
+        "fat"
+      ]
+    },
+    {
+      "ayahNumber": 27,
+      "text": null,
+      "words": [
+        "And he placed it near",
+        "[to] them",
+        "he said",
+        "Will not",
+        "you eat"
+      ]
+    },
+    {
+      "ayahNumber": 28,
+      "text": null,
+      "words": [
+        "Then he felt",
+        "from them",
+        "a fear",
+        "They said",
+        "(Do) not",
+        "fear",
+        "and they gave him glad tidings",
+        "of a son",
+        "learned"
+      ]
+    },
+    {
+      "ayahNumber": 29,
+      "text": null,
+      "words": [
+        "Then came forward",
+        "his wife",
+        "with",
+        "a loud voice",
+        "and struck",
+        "her face",
+        "and she said",
+        "An old woman",
+        "barren"
+      ]
+    },
+    {
+      "ayahNumber": 30,
+      "text": null,
+      "words": [
+        "They said",
+        "Thus",
+        "said",
+        "your Lord",
+        "Indeed, He",
+        "[He]",
+        "(is) the All-Wise",
+        "the All-Knower"
+      ]
+    },
+    {
+      "ayahNumber": 31,
+      "text": null,
+      "words": [
+        "He said",
+        "Then what",
+        "(is) your mission",
+        "O messengers",
+        "O messengers"
+      ]
+    },
+    {
+      "ayahNumber": 32,
+      "text": null,
+      "words": [
+        "They said",
+        "Indeed, we",
+        "[we] have been sent",
+        "to",
+        "a people",
+        "criminal"
+      ]
+    },
+    {
+      "ayahNumber": 33,
+      "text": null,
+      "words": [
+        "That we may send down",
+        "upon them",
+        "stones",
+        "of",
+        "clay"
+      ]
+    },
+    {
+      "ayahNumber": 34,
+      "text": null,
+      "words": [
+        "Marked",
+        "by your Lord",
+        "by your Lord",
+        "for the transgressors"
+      ]
+    },
+    {
+      "ayahNumber": 35,
+      "text": null,
+      "words": [
+        "Then We brought out",
+        "(those) who",
+        "were",
+        "therein",
+        "of",
+        "the believers"
+      ]
+    },
+    {
+      "ayahNumber": 36,
+      "text": null,
+      "words": [
+        "But not",
+        "We found",
+        "therein",
+        "other than",
+        "a house",
+        "of",
+        "the Muslims"
+      ]
+    },
+    {
+      "ayahNumber": 37,
+      "text": null,
+      "words": [
+        "And We left",
+        "therein",
+        "a Sign",
+        "for those who",
+        "fear",
+        "the punishment",
+        "the painful"
+      ]
+    },
+    {
+      "ayahNumber": 38,
+      "text": null,
+      "words": [
+        "And in",
+        "Musa",
+        "when",
+        "We sent him",
+        "to",
+        "Firaun",
+        "with an authority",
+        "clear"
+      ]
+    },
+    {
+      "ayahNumber": 39,
+      "text": null,
+      "words": [
+        "But he turned away",
+        "with his supporters",
+        "and said",
+        "A magician",
+        "or",
+        "a madman"
+      ]
+    },
+    {
+      "ayahNumber": 40,
+      "text": null,
+      "words": [
+        "So We took him",
+        "and his hosts",
+        "and threw them",
+        "into",
+        "the sea",
+        "while he",
+        "(was) blameworthy"
+      ]
+    },
+    {
+      "ayahNumber": 41,
+      "text": null,
+      "words": [
+        "And in",
+        "Aad",
+        "when",
+        "We sent",
+        "against them",
+        "the wind",
+        "the barren"
+      ]
+    },
+    {
+      "ayahNumber": 42,
+      "text": null,
+      "words": [
+        "Not",
+        "it left",
+        "any",
+        "thing",
+        "it came",
+        "upon it",
+        "but",
+        "it made it",
+        "like disintegrated ruins"
+      ]
+    },
+    {
+      "ayahNumber": 43,
+      "text": null,
+      "words": [
+        "And in",
+        "Thamud",
+        "when",
+        "was said",
+        "to them",
+        "Enjoy (yourselves)",
+        "for",
+        "a time"
+      ]
+    },
+    {
+      "ayahNumber": 44,
+      "text": null,
+      "words": [
+        "But they rebelled",
+        "against",
+        "(the) Command",
+        "(of) their Lord",
+        "so seized them",
+        "the thunderbolt",
+        "while they",
+        "were looking"
+      ]
+    },
+    {
+      "ayahNumber": 45,
+      "text": null,
+      "words": [
+        "Then not",
+        "they were able to",
+        "[of]",
+        "stand",
+        "and not",
+        "they could",
+        "help themselves"
+      ]
+    },
+    {
+      "ayahNumber": 46,
+      "text": null,
+      "words": [
+        "And (the) people",
+        "(of) Nuh",
+        "before",
+        "before",
+        "indeed, they",
+        "were",
+        "a people",
+        "defiantly disobedient"
+      ]
+    },
+    {
+      "ayahNumber": 47,
+      "text": null,
+      "words": [
+        "And the heaven",
+        "We constructed it",
+        "with strength",
+        "and indeed, We",
+        "(are) surely (its) Expanders"
+      ]
+    },
+    {
+      "ayahNumber": 48,
+      "text": null,
+      "words": [
+        "And the earth",
+        "We have spread it",
+        "how excellent",
+        "(are) the Spreaders"
+      ]
+    },
+    {
+      "ayahNumber": 49,
+      "text": null,
+      "words": [
+        "And of",
+        "every",
+        "thing",
+        "We have created",
+        "pairs",
+        "so that you may",
+        "remember"
+      ]
+    },
+    {
+      "ayahNumber": 50,
+      "text": null,
+      "words": [
+        "So flee",
+        "to",
+        "Allah",
+        "indeed, I am",
+        "to you",
+        "from Him",
+        "a warner",
+        "clear"
+      ]
+    },
+    {
+      "ayahNumber": 51,
+      "text": null,
+      "words": [
+        "And (do) not",
+        "make",
+        "with",
+        "Allah",
+        "god",
+        "another",
+        "Indeed, I am",
+        "to you",
+        "from Him",
+        "a warner",
+        "clear"
+      ]
+    },
+    {
+      "ayahNumber": 52,
+      "text": null,
+      "words": [
+        "Likewise",
+        "not",
+        "came",
+        "(to) those",
+        "before them",
+        "before them",
+        "any",
+        "Messenger",
+        "but",
+        "they said",
+        "A magician",
+        "or",
+        "a madman"
+      ]
+    },
+    {
+      "ayahNumber": 53,
+      "text": null,
+      "words": [
+        "Have they transmitted it to them",
+        "Have they transmitted it to them",
+        "Nay",
+        "they",
+        "(are) a people",
+        "transgressing"
+      ]
+    },
+    {
+      "ayahNumber": 54,
+      "text": null,
+      "words": [
+        "So turn away",
+        "from them",
+        "for not",
+        "you",
+        "(are) to be blamed"
+      ]
+    },
+    {
+      "ayahNumber": 55,
+      "text": null,
+      "words": [
+        "And remind",
+        "for indeed",
+        "the reminder",
+        "benefits",
+        "the believers"
+      ]
+    },
+    {
+      "ayahNumber": 56,
+      "text": null,
+      "words": [
+        "And not",
+        "I have created",
+        "the jinn",
+        "and the mankind",
+        "except",
+        "that they worship Me"
+      ]
+    },
+    {
+      "ayahNumber": 57,
+      "text": null,
+      "words": [
+        "Not",
+        "I want",
+        "from them",
+        "any",
+        "provision",
+        "and not",
+        "I want",
+        "that",
+        "they (should) feed Me"
+      ]
+    },
+    {
+      "ayahNumber": 58,
+      "text": null,
+      "words": [
+        "Indeed",
+        "Allah",
+        "He",
+        "(is) the All-Provider",
+        "Possessor",
+        "(of) Power",
+        "the Strong"
+      ]
+    },
+    {
+      "ayahNumber": 59,
+      "text": null,
+      "words": [
+        "So indeed",
+        "for those who",
+        "do wrong",
+        "(is) a portion",
+        "like",
+        "(the) portion",
+        "(of) their companions",
+        "so let them not ask Me to hasten",
+        "so let them not ask Me to hasten"
+      ]
+    },
+    {
+      "ayahNumber": 60,
+      "text": null,
+      "words": [
+        "Then woe",
+        "to those who",
+        "disbelieve",
+        "from",
+        "their Day",
+        "which",
+        "they are promised"
+      ]
+    }
+  ]
+}

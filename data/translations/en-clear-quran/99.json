@@ -1,0 +1,98 @@
+{
+  "key": "en-clear-quran",
+  "language": "en",
+  "translator": "Dr. Mustafa Khattab, the Clear Quran",
+  "translationId": 131,
+  "surahNumber": 99,
+  "numberOfAyahs": 8,
+  "source": {
+    "api": "api.quran.com v4",
+    "generatedAt": "2026-05-16T13:22:06+00:00"
+  },
+  "ayahs": [
+    {
+      "ayahNumber": 1,
+      "text": null,
+      "words": [
+        "When",
+        "is shaken",
+        "the earth",
+        "(with) its earthquake"
+      ]
+    },
+    {
+      "ayahNumber": 2,
+      "text": null,
+      "words": [
+        "And brings forth",
+        "the earth",
+        "its burdens"
+      ]
+    },
+    {
+      "ayahNumber": 3,
+      "text": null,
+      "words": [
+        "And says",
+        "man",
+        "What",
+        "(is) with it"
+      ]
+    },
+    {
+      "ayahNumber": 4,
+      "text": null,
+      "words": [
+        "That Day",
+        "it will report",
+        "its news"
+      ]
+    },
+    {
+      "ayahNumber": 5,
+      "text": null,
+      "words": [
+        "Because",
+        "your Lord",
+        "inspired",
+        "[to] it"
+      ]
+    },
+    {
+      "ayahNumber": 6,
+      "text": null,
+      "words": [
+        "That Day",
+        "will proceed",
+        "the mankind",
+        "(in) scattered groups",
+        "to be shown",
+        "their deeds"
+      ]
+    },
+    {
+      "ayahNumber": 7,
+      "text": null,
+      "words": [
+        "So whoever",
+        "does",
+        "(equal to the) weight",
+        "(of) an atom",
+        "good",
+        "will see it"
+      ]
+    },
+    {
+      "ayahNumber": 8,
+      "text": null,
+      "words": [
+        "And whoever",
+        "does",
+        "(equal to the) weight",
+        "(of) an atom",
+        "evil",
+        "will see it"
+      ]
+    }
+  ]
+}
