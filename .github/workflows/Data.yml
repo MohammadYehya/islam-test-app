@@ -1,0 +1,69 @@
+name: Build Tajweed Quran Data
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_surah:
+        description: "First surah to build (1-114)"
+        required: false
+        default: "1"
+      end_surah:
+        description: "Last surah to build (1-114)"
+        required: false
+        default: "114"
+      commit:
+        description: "Commit results back to the repo?"
+        required: false
+        type: choice
+        default: "true"
+        options:
+          - "true"
+          - "false"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tajweed-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build tajweed JSON
+        run: |
+          python scripts/build_tajweed.py \
+            --start "${{ github.event.inputs.start_surah || 1 }}" \
+            --end   "${{ github.event.inputs.end_surah   || 114 }}" \
+            --out   data/
+
+      - name: Upload as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: tajweed-quran-data
+          path: data/
+          retention-days: 30
+
+      - name: Commit to repo
+        if: ${{ github.event.inputs.commit != 'false' }}
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore(data): generate tajweed quran data"
+            git push
+          fi
