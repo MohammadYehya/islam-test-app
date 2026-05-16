@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Islam 24/7 - Comprehensive Shia App</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d473",
+                        "accent-gold": "#D4AF37",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102219",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#14261e",
+                        "tertiary": "#0f2219",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "arabic": ["Noto Sans Arabic", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "2xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    
+    <style>
+        .islamic-pattern {
+            background-color: transparent;
+            background-image: radial-gradient(circle at 2px 2px, rgba(17, 212, 115, 0.03) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            background-color: rgba(246, 248, 247, 0.9);
+        }
+        .dark .glass-nav {
+            background-color: rgba(16, 34, 25, 0.9);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        #nav-drawer {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(-100%);
+        }
+        #nav-drawer.open { transform: translateX(0); }
+        #drawer-overlay {
+            transition: opacity 0.3s ease-in-out;
+            pointer-events: none;
+            opacity: 0;
+        }
+        #drawer-overlay.open {
+            pointer-events: auto;
+            opacity: 1;
+        }
+        
+        .page-section {
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .page-section.hidden {
+            display: none;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        /* Reading view specific styles */
+        .ayah-end {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            margin-left: 8px;
+            font-family: 'Noto Sans Arabic', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2l4.3 4.3L26 5l-1.3 5.7L30 15l-5.7 1.3L26 22l-5.7-1.3L16 25l-4.3-4.3L6 22l1.3-5.7L2 15l5.7-1.3L6 5l5.7 1.3L16 2z' fill='none' stroke='currentColor' stroke-width='1.5'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+            line-height: 1;
+            padding-bottom: 2px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-body text-slate-900 dark:text-slate-100 islamic-pattern min-h-screen">
+
+    <!-- Navigation Drawer Overlay -->
+    <div class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[60]" id="drawer-overlay" onclick="toggleDrawer()"></div>
+    
+    <!-- Navigation Drawer -->
+    <aside class="fixed top-0 left-0 bottom-0 w-[280px] bg-white dark:bg-tertiary z-[70] shadow-2xl flex flex-col islamic-pattern" id="nav-drawer">
+        <div class="p-6 border-b border-slate-100 dark:border-slate-800">
+            <div class="flex items-center justify-between mb-8">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white font-display font-black text-xl">I</div>
+                    <h2 class="text-xl font-extrabold text-primary font-display">Islam 24/7</h2>
+                </div>
+                <button class="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-white" onclick="toggleDrawer()">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div class="space-y-1">
+                <a class="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/5 text-slate-700 dark:text-slate-200 group transition-colors" href="#" onclick="showPage('donations'); toggleDrawer()">
+                    <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">volunteer_activism</span>
+                    <span class="font-bold text-sm uppercase tracking-wide">Donations</span>
+                </a>
+                <a class="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/5 text-slate-700 dark:text-slate-200 group transition-colors" href="#" onclick="showPage('hawzah'); toggleDrawer()">
+                    <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">school</span>
+                    <span class="font-bold text-sm uppercase tracking-wide">Hawzah Online</span>
+                </a>
+                <a class="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/5 text-slate-700 dark:text-slate-200 group transition-colors" href="#" onclick="showPage('bazaar'); toggleDrawer()">
+                    <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">shopping_bag</span>
+                    <span class="font-bold text-sm uppercase tracking-wide">Bazaar Online</span>
+                </a>
+                <a class="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/5 text-slate-700 dark:text-slate-200 group transition-colors" href="#" onclick="showPage('ask'); toggleDrawer()">
+                    <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">chat</span>
+                    <span class="font-bold text-sm uppercase tracking-wide">Ask Molana</span>
+                </a>
+            </div>
+        </div>
+        <div class="mt-auto p-6">
+            <div class="p-4 rounded-2xl bg-primary/5 border border-primary/10">
+                <p class="text-[10px] font-bold text-primary uppercase tracking-widest mb-2">Featured Project</p>
+                <p class="text-xs font-medium text-slate-600 dark:text-slate-400 leading-relaxed">Support the expansion of the digital library for free global access.</p>
+                <button class="mt-3 w-full py-2 bg-primary text-white text-[10px] font-bold rounded-lg uppercase tracking-widest">Contribute</button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- App Shell Container -->
+    <div class="relative flex flex-col min-h-screen">
+        
+        <!-- Sticky Header -->
+        <header class="sticky top-0 z-50 glass-nav border-b border-primary/10 px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/5 text-on-surface hover:bg-primary/10 transition-colors" onclick="toggleDrawer()">
+                    <span class="material-symbols-outlined text-[24px]">menu</span>
+                </button>
+                <div>
+                    <h1 class="font-display font-extrabold text-xl tracking-tight leading-tight">Islam 24/7</h1>
+                    <div class="flex items-center gap-2 mt-0.5">
+                        <span id="current-date" class="text-[10px] font-bold text-slate-500 uppercase tracking-tight">Tue, Oct 24</span>
+                        <span class="w-1 h-1 rounded-full bg-slate-400"></span>
+                        <span class="text-[10px] font-bold text-slate-500 uppercase tracking-tight">17 Rabi' al-Awwal</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center gap-2">
+                <button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/5 text-slate-600 dark:text-slate-300 hover:bg-primary/10 transition-colors relative">
+                    <span class="material-symbols-outlined text-[24px]">notifications</span>
+                    <span class="absolute top-2.5 right-2.5 w-2 h-2 bg-accent-gold rounded-full border-2 border-white dark:border-background-dark"></span>
+                </button>
+                <button onclick="toggleTheme()" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/5 text-slate-600 dark:text-slate-300 hover:bg-primary/10 transition-colors">
+                    <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content Sections -->
+        <main class="flex-grow pb-24 max-w-4xl mx-auto w-full px-4 overflow-x-hidden">
+
+            <!-- HOME PAGE SECTION -->
+            <section id="page-home" class="page-section space-y-8 py-6">
+                <!-- Daily Spirituals -->
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-lg font-bold">Daily Spirituals</h2>
+                        <span class="text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-2 py-1 rounded-md">Today</span>
+                    </div>
+                    <div class="relative overflow-hidden flex flex-col gap-4 rounded-2xl p-6 bg-white dark:bg-surface-dark shadow-sm border border-slate-200 dark:border-slate-800">
+                        <div class="flex justify-between items-start z-10">
+                            <div>
+                                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Upcoming</p>
+                                <p class="text-3xl font-black text-slate-900 dark:text-white">Dhuhr <span class="text-primary">12:45</span></p>
+                                <p class="text-sm font-medium text-slate-500 mt-1">In 2 hours 15 minutes</p>
+                            </div>
+                            <div class="w-16 h-16 relative flex items-center justify-center">
+                                <svg class="w-full h-full -rotate-90">
+                                    <circle class="text-slate-100 dark:text-slate-700" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-width="4"></circle>
+                                    <circle class="text-primary" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-dasharray="176" stroke-dashoffset="61" stroke-width="4"></circle>
+                                </svg>
+                                <span class="material-symbols-outlined absolute text-primary">schedule</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-2 z-10 overflow-x-auto no-scrollbar">
+                            <span class="text-[10px] font-bold px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded-md whitespace-nowrap">Fajr 05:12</span>
+                            <span class="text-[10px] font-bold px-2 py-1 bg-primary/20 text-primary rounded-md whitespace-nowrap">Sunrise 06:45</span>
+                            <span class="text-[10px] font-bold px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded-md whitespace-nowrap">Asr 15:20</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Section (from Hawzah Online styles) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="md:col-span-2 bg-tertiary rounded-2xl p-6 text-white flex justify-between items-center relative overflow-hidden group">
+                        <div class="relative z-10">
+                            <span class="text-[10px] font-bold uppercase tracking-[0.2em] opacity-80">Featured Study</span>
+                            <h2 class="font-display font-extrabold text-2xl mt-1 leading-tight">Philosophy of Prayer</h2>
+                            <button class="mt-6 bg-primary text-white px-5 py-2 rounded-lg font-bold text-sm shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+                                Start Course
+                            </button>
+                        </div>
+                        <span class="material-symbols-outlined text-8xl opacity-10 absolute -right-4 -bottom-4 rotate-12" style="font-variation-settings: 'FILL' 1;">school</span>
+                    </div>
+                    <div class="bg-accent-gold/10 dark:bg-accent-gold/5 rounded-2xl p-6 border-l-4 border-accent-gold flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-gold">Next Event</span>
+                            <h3 class="font-display font-bold text-lg mt-1">Eid al-Mab'ath</h3>
+                        </div>
+                        <div class="flex items-center gap-2 mt-4 text-xs font-bold text-slate-500">
+                            <span class="material-symbols-outlined text-accent-gold text-sm">calendar_today</span>
+                            <span>27 Rajab</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recently Opened (Bento Grid) -->
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-lg font-bold">Quick Access</h2>
+                        <span class="text-primary text-xs font-bold">Browse All</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <a class="group bg-white dark:bg-surface-dark p-4 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all flex gap-4 items-center shadow-sm" href="#" onclick="showPage('library')">
+                            <div class="w-12 h-16 flex-none bg-primary/10 rounded-md border-l-4 border-primary flex items-center justify-center group-hover:scale-105 transition-transform">
+                                <span class="material-symbols-outlined text-primary text-2xl">menu_book</span>
+                            </div>
+                            <div class="min-w-0">
+                                <h3 class="font-bold text-sm truncate">Al-Qur'an</h3>
+                                <p class="text-[10px] text-slate-500 font-medium">Holy Revelation</p>
+                            </div>
+                        </a>
+                        <a class="group bg-white dark:bg-surface-dark p-4 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all flex gap-4 items-center shadow-sm" href="#">
+                            <div class="w-12 h-16 flex-none bg-accent-gold/10 rounded-md border-l-4 border-accent-gold flex items-center justify-center group-hover:scale-105 transition-transform">
+                                <span class="material-symbols-outlined text-accent-gold text-2xl">auto_stories</span>
+                            </div>
+                            <div class="min-w-0">
+                                <h3 class="font-bold text-sm truncate">Nahj al-Balagha</h3>
+                                <p class="text-[10px] text-slate-500 font-medium">Peak of Eloquence</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LIBRARY SECTION -->
+            <section id="page-library" class="page-section hidden space-y-8 py-6">
+                <!-- Search Bar -->
+                <div class="relative">
+                    <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+                    <input class="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-xl py-3 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/50 transition-all" placeholder="Search Quran, Hadith, Duas..." type="text"/>
+                </div>
+
+                <!-- Community Favorites Slider -->
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-lg font-bold">Community Favorites</h2>
+                        <a class="text-xs font-semibold text-primary" href="#">View All</a>
+                    </div>
+                    <div class="flex overflow-x-auto gap-4 no-scrollbar">
+                        <div class="min-w-[140px] group cursor-pointer" onclick="showPage('reader')">
+                            <div class="aspect-[3/4] rounded-xl overflow-hidden shadow-md relative bg-emerald-900">
+                                <img class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0zpm_RGvV04lXDjMrSPlPTy7pGHiLce0CPWNalY9pBCnVwHNlXDV5Xuv_pqP3JSvLT2dunPhJFbLR06v-rRh9J8A2KJrRCeEnuipjgvf4XNeksJZ6uD1xFJ-rnfaNmSJaIXtoRAjU1-dzk1d_00i3lBC8rRM-ViicbuVbGzX8kSGmBCgZW1213vFQU77POv-B9ANezPQz24ez-85bI0-ndWuSzsTuc_Uk4x7dfPmw1y1D_YM_-isTZBaVbPthRyhpeIJ0dvIXGNsx"/>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent flex items-end p-3">
+                                    <p class="text-white text-sm font-bold">The Holy Quran</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="min-w-[140px] group cursor-pointer">
+                            <div class="aspect-[3/4] rounded-xl overflow-hidden shadow-md relative bg-emerald-900">
+                                <img class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUPS-oBAzWaGKAKAjoULc-47OWbZ3y4l1venslkUaBhpb2NKynR-nOvLJFgKuPA0Bk5FqMaIlU8BzGsIhf1TK1mecOTXBWL81X105w9H_IleRyEKZWSRiFc81sbY2YZD4Vf2oOR-pscxgcSPR4lJkA6Cgpub7kxMfBLnXM7cmln7SnICl15oycv5TI-xmYxZ7eWnrSpQPtRygcO2dzv8aZPr20UYLm_pxPx3s4ZE4rXwQFjiCFh9B9U7kisWR2TSbYYONLgyy9YH6e"/>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent flex items-end p-3">
+                                    <p class="text-white text-sm font-bold">Nahj al-Balagha</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="min-w-[140px] group cursor-pointer">
+                            <div class="aspect-[3/4] rounded-xl overflow-hidden shadow-md relative bg-emerald-900">
+                                <img class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_FksDfEgbmUaIO-jB60RJmUDTKsgG2fD-fvHtT9I8Qn_DLrBR-Pa3Y_j9zIzDwIrmyx7gbzvd06Quhd9fI4Mb2z67YWxnYfaAreNNcvTj2R39Jqvmoo8nQCP36vQxOh_mO2HWm7BKEzKa_k-idW09D2hgMrCJEcQyKDf6yoxMN3poyQeZa6-CIFJWKoS2q-xMzhJF4BnnPhzbAM8oQl8SmqZuvceL_WagueDzQKrzUW9OgLrEe5OST5Ik63J-vKJDw6D0ET-VGuLG"/>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent flex items-end p-3">
+                                    <p class="text-white text-sm font-bold">Mafatih al-Jinan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collection Grid -->
+                <div>
+                   <h2 class="text-lg font-bold mb-4">Quranic Resources</h2>
+                   <div class="grid grid-cols-1 gap-3">
+                        <div class="flex items-center gap-4 p-4 bg-white dark:bg-surface-dark rounded-xl border border-primary/5 shadow-sm hover:border-primary transition-colors">
+                            <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">auto_stories</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-sm">Al-Mizan Tafsir</h3>
+                                <p class="text-xs text-slate-500">By Allamah Tabataba'i</p>
+                            </div>
+                            <span class="material-symbols-outlined text-slate-400">chevron_right</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 bg-white dark:bg-surface-dark rounded-xl border border-primary/5 shadow-sm hover:border-primary transition-colors">
+                            <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">prayer_times</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-sm">Quranic Duas</h3>
+                                <p class="text-xs text-slate-500">Collection of Rabbana verses</p>
+                            </div>
+                            <span class="material-symbols-outlined text-slate-400">chevron_right</span>
+                        </div>
+                   </div>
+                </div>
+            </section>
+
+            <!-- EVENTS SECTION -->
+            <section id="page-events" class="page-section hidden space-y-8 py-6">
+                <!-- Calendar View -->
+                <div class="bg-white dark:bg-surface-dark rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 p-4">
+                    <div class="flex items-center justify-between mb-4">
+                        <button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-full"><span class="material-symbols-outlined">chevron_left</span></button>
+                        <div class="text-center">
+                            <h2 class="text-base font-bold">February 2024</h2>
+                            <p class="text-sm text-primary font-medium">Rajab 1445</p>
+                        </div>
+                        <button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-full"><span class="material-symbols-outlined">chevron_right</span></button>
+                    </div>
+                    <div class="grid grid-cols-7 gap-1 text-center text-xs font-bold text-slate-400 mb-2">
+                        <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
+                    </div>
+                    <div class="grid grid-cols-7 gap-1">
+                        <!-- Simplified Calendar Grid -->
+                        <div class="h-10"></div><div class="h-10"></div><div class="h-10"></div>
+                        <div class="h-10 flex items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">1</div>
+                        <div class="h-10 flex items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">2</div>
+                        <div class="h-10 flex items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">3</div>
+                        <div class="h-10 flex items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">4</div>
+                        <div class="h-10 flex items-center justify-center rounded-lg bg-primary text-white shadow-md relative">
+                            5<span class="absolute top-1 right-1 w-1.5 h-1.5 bg-white rounded-full"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Details Card -->
+                <div class="relative h-64 w-full rounded-2xl overflow-hidden bg-primary/20 flex flex-col justify-end p-6 group" style='background-image: linear-gradient(to top, rgba(16, 34, 25, 0.9) 0%, rgba(16, 34, 25, 0.2) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBF8Vx42hXW8uAozY2si58NWFrehcG8e8c8So81vzjL3C-vga6Gshro6PuqSQiTrfmDoWOwm0Xxz7mondirnbrA2z5H_1n1a3QEevD8XeR72iuaIB0ajBLyzPQ-bRuO6hcbhaX3dedjvBxUYDq4jI8niODnyBVBOziY5iW3MEejjVYojf9z_K9jUsphoVExqaattrqUGhMWZEuvtPFuHi_G_wuXIyFjxbLi-zGa0lS4OPs0sZG8H9B4tm_0hhNifIGgQN3Ddl9cPRpw"); background-size: cover; background-position: center;'>
+                    <div class="z-10">
+                        <span class="bg-primary px-3 py-1 rounded-full text-xs font-bold text-background-dark uppercase tracking-wider">Upcoming</span>
+                        <h2 class="text-white text-3xl font-extrabold mt-2 leading-tight">Eid al-Mab'ath</h2>
+                        <p class="text-primary font-medium mt-1">Commencement of the Prophetic Mission</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROFILE SECTION -->
+            <section id="page-profile" class="page-section hidden py-6 space-y-8">
+                <div class="flex flex-col items-center text-center">
+                    <div class="relative w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-primary to-accent-gold shadow-xl mb-4">
+                        <img alt="Profile" class="w-full h-full rounded-full object-cover border-4 border-white dark:border-background-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfKgHgK5NA7nYZTgEf0K6mBo5-9Ac_nYunJlapXLKWu3RbutixpyGakD7D7QVMVs29tUqi6-ve79vTNvY5bXPQjmJC8xcG3G-2ils1jk9kuPmQUqoeJvUZqk1c-nCkcEskTJ9RijTvMdLEh8x1y9_ifQXvkpHVytbIWEysMZFU5kYCkhWZ9_E2VVBjXXQYMXau6f0KukrPn6WCsW1G7vhfJCHo1xRbNEqxzC-mhkqh3BQrnBfvdY58HbZwdpszqU-ZaGmX740PPf4o"/>
+                    </div>
+                    <h2 class="font-display font-bold text-2xl">Ali Raza</h2>
+                    <p class="text-slate-500 text-sm">Islamabad, Pakistan</p>
+                </div>
+                
+                <div class="bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800">
+                    <button class="w-full p-5 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                        <div class="flex items-center gap-4 text-slate-700 dark:text-slate-200">
+                            <span class="material-symbols-outlined">person_outline</span>
+                            <span class="font-medium text-sm">Personal Information</span>
+                        </div>
+                        <span class="material-symbols-outlined text-slate-400">chevron_right</span>
+                    </button>
+                    <div class="h-px bg-slate-100 dark:bg-slate-800 mx-5"></div>
+                    <button class="w-full p-5 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                        <div class="flex items-center gap-4 text-slate-700 dark:text-slate-200">
+                            <span class="material-symbols-outlined">translate</span>
+                            <span class="font-medium text-sm">Language Preferences</span>
+                        </div>
+                        <span class="material-symbols-outlined text-slate-400">chevron_right</span>
+                    </button>
+                    <div class="h-px bg-slate-100 dark:bg-slate-800 mx-5"></div>
+                    <button class="w-full p-5 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                        <div class="flex items-center gap-4 text-slate-700 dark:text-slate-200">
+                            <span class="material-symbols-outlined">security</span>
+                            <span class="font-medium text-sm">Security & Password</span>
+                        </div>
+                        <span class="material-symbols-outlined text-slate-400">chevron_right</span>
+                    </button>
+                </div>
+
+                <button class="w-full h-14 bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/20 text-red-600 font-bold rounded-xl flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined">logout</span> Log Out
+                </button>
+            </section>
+
+            <!-- READER VIEW SECTION -->
+            <section id="page-reader" class="page-section hidden py-6 space-y-6">
+                <div class="bg-slate-50 dark:bg-surface-dark border border-slate-200 dark:border-primary/10 rounded-2xl p-6 shadow-sm">
+                    <div class="flex flex-row items-start justify-end gap-2 mb-8">
+                        <p class="font-arabic text-3xl text-right leading-[2.8]" dir="rtl">
+                            <span class="hover:text-primary transition-colors">قُلْ</span>
+                            <span class="hover:text-primary transition-colors">هُوَ</span>
+                            <span class="hover:text-primary transition-colors">اللَّهُ</span>
+                            <span class="hover:text-primary transition-colors">أَحَدٌ</span>
+                            <span class="ayah-end">١</span>
+                        </p>
+                    </div>
+                    <div class="border-t border-slate-200 dark:border-slate-800 pt-6">
+                        <p class="text-lg leading-relaxed text-slate-700 dark:text-slate-300 font-light italic">"Say, He is Allah, [who is] One,"</p>
+                        <p class="text-lg leading-relaxed text-slate-600 dark:text-slate-400 font-arabic mt-4" dir="rtl text-right">کہہ دیجئے کہ وہ اللہ ایک ہی ہے۔</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-6 py-4">
+                    <button class="text-slate-400 hover:text-primary"><span class="material-symbols-outlined text-3xl">skip_previous</span></button>
+                    <button class="size-16 bg-primary text-white rounded-full shadow-lg flex items-center justify-center transition-transform active:scale-95"><span class="material-symbols-outlined text-4xl">play_arrow</span></button>
+                    <button class="text-slate-400 hover:text-primary"><span class="material-symbols-outlined text-3xl">skip_next</span></button>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Bottom Navigation Bar -->
+        <nav class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-tertiary/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800">
+            <div class="max-w-4xl mx-auto flex items-center justify-around h-20 px-6">
+                <a id="nav-home" class="flex flex-col items-center justify-center gap-1 text-primary nav-item active" href="#" onclick="showPage('home')">
+                    <div class="active-bg bg-primary/10 px-4 py-1.5 rounded-full flex items-center justify-center transition-colors">
+                        <span class="material-symbols-outlined fill-1 block text-[24px]">home</span>
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-tight">Home</span>
+                </a>
+                <a id="nav-library" class="flex flex-col items-center justify-center gap-1 text-slate-400 nav-item" href="#" onclick="showPage('library')">
+                    <div class="active-bg px-4 py-1.5 flex items-center justify-center rounded-full transition-colors">
+                        <span class="material-symbols-outlined block text-[24px]">library_books</span>
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-tight">Library</span>
+                </a>
+                <a id="nav-events" class="flex flex-col items-center justify-center gap-1 text-slate-400 nav-item" href="#" onclick="showPage('events')">
+                    <div class="active-bg px-4 py-1.5 flex items-center justify-center rounded-full transition-colors">
+                        <span class="material-symbols-outlined block text-[24px]">event</span>
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-tight">Events</span>
+                </a>
+                <a id="nav-profile" class="flex flex-col items-center justify-center gap-1 text-slate-400 nav-item" href="#" onclick="showPage('profile')">
+                    <div class="active-bg px-4 py-1.5 flex items-center justify-center rounded-full transition-colors">
+                        <span class="material-symbols-outlined block text-[24px]">person</span>
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-tight">Profile</span>
+                </a>
+            </div>
+        </nav>
+
+    </div>
+
+    <script>
+        function toggleDrawer() {
+            const drawer = document.getElementById('nav-drawer');
+            const overlay = document.getElementById('drawer-overlay');
+            drawer.classList.toggle('open');
+            overlay.classList.toggle('open');
+            
+            document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : '';
+        }
+
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page-section').forEach(page => {
+                page.classList.add('hidden');
+            });
+            // Show requested page
+            const activePage = document.getElementById('page-' + pageId);
+            if(activePage) {
+                activePage.classList.remove('hidden');
+            }
+
+            // Update bottom navigation state
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('text-primary');
+                item.classList.add('text-slate-400');
+                item.querySelector('.active-bg').classList.remove('bg-primary/10');
+            });
+            
+            const activeNav = document.getElementById('nav-' + pageId);
+            if(activeNav) {
+                activeNav.classList.add('text-primary');
+                activeNav.classList.remove('text-slate-400');
+                activeNav.querySelector('.active-bg').classList.add('bg-primary/10');
+            }
+            
+            // Scroll to top
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const icon = document.getElementById('theme-icon');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                icon.innerText = 'dark_mode';
+            } else {
+                html.classList.add('dark');
+                icon.innerText = 'light_mode';
+            }
+        }
+
+        // Initialize Hijri components
+        document.getElementById('current-date').innerText = new Intl.DateTimeFormat('en-GB', { 
+            weekday: 'short', month: 'short', day: 'numeric' 
+        }).format(new Date());
+
+        // Default to Home
+        showPage('home');
+    </script>
+</body>
+</html>

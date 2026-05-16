@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Serene Reader - Surah Al-Ikhlas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Noto+Sans+Arabic:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d473",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102219",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "arabic": ["Noto Sans Arabic", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .arabic-text {
+            line-height: 2.5;
+            direction: rtl;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #11d47344;
+            border-radius: 10px;
+        }
+        .ayah-end {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            margin-left: 8px;
+            font-family: 'Noto Sans Arabic', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2l4.3 4.3L26 5l-1.3 5.7L30 15l-5.7 1.3L26 22l-5.7-1.3L16 25l-4.3-4.3L6 22l1.3-5.7L2 15l5.7-1.3L6 5l5.7 1.3L16 2z' fill='none' stroke='currentColor' stroke-width='1.5'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+            line-height: 1;
+            padding-bottom: 2px;
+        }
+        .word-interactive {
+            position: relative;
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        .word-interactive:hover {
+            background-color: rgba(17, 212, 115, 0.1);
+        }
+        .word-tooltip {
+            position: absolute;
+            bottom: 110%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background: #11d473;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-family: 'Manrope', sans-serif;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s;
+            z-index: 20;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .word-interactive:hover .word-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+        .word-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: #11d473 transparent transparent transparent;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col max-w-2xl mx-auto bg-white dark:bg-[#0d1b14] shadow-xl">
+<!-- Header / Top Nav -->
+<header class="sticky top-0 z-10 flex items-center bg-white/80 dark:bg-[#0d1b14]/80 backdrop-blur-md p-4 border-b border-primary/10 justify-between">
+<div class="flex items-center gap-3">
+<button class="text-slate-900 dark:text-slate-100 flex size-10 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight">Surah Al-Ikhlas</h2>
+<p class="text-primary text-xs font-semibold tracking-wide uppercase">The Sincerity</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex size-10 items-center justify-center rounded-full text-slate-900 dark:text-slate-100 hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-full text-primary hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">bookmark</span>
+</button>
+</div>
+</header>
+<!-- Reading Content -->
+<main class="flex-1 overflow-y-auto px-4 py-6 space-y-4 custom-scrollbar">
+<!-- Verse 1 Card -->
+<div class="bg-slate-50 dark:bg-[#14261e] border border-slate-200 dark:border-primary/10 rounded-xl p-5 shadow-sm space-y-6">
+<div class="flex flex-row items-start justify-end gap-2">
+<p class="font-arabic text-3xl text-right leading-[2.5] text-slate-900 dark:text-slate-100" dir="rtl">
+<span class="word-interactive">قُلْ<span class="word-tooltip">Say</span></span>
+<span class="word-interactive">هُوَ<span class="word-tooltip">He</span></span>
+<span class="word-interactive">اللَّهُ<span class="word-tooltip">Allah</span></span>
+<span class="word-interactive">أَحَدٌ<span class="word-tooltip">One</span></span>
+<span class="ayah-end text-slate-900 dark:text-slate-100">١</span></p>
+</div>
+<div class="border-t border-slate-200 dark:border-primary/5 pt-4">
+<p class="text-lg leading-relaxed text-slate-700 dark:text-slate-300 font-light">Say, "He is Allah, [who is] One,</p>
+<p class="text-lg leading-relaxed text-slate-600 dark:text-slate-400 font-arabic mt-3" dir="rtl">کہہ دیجئے کہ وہ اللہ ایک ہی ہے۔</p>
+</div>
+<div class="flex justify-end">
+<button class="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-primary hover:bg-primary/5 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-sm">menu_book</span>
+                    View Tafsir
+                </button>
+</div>
+</div>
+<!-- Verse 2 Card -->
+<div class="bg-slate-50 dark:bg-[#14261e] border border-slate-200 dark:border-primary/10 rounded-xl p-5 shadow-sm space-y-6">
+<div class="flex flex-row items-start justify-end gap-2">
+<p class="font-arabic text-3xl text-right leading-[2.5] text-slate-900 dark:text-slate-100" dir="rtl">
+<span class="word-interactive">اللَّهُ<span class="word-tooltip">Allah</span></span>
+<span class="word-interactive">الصَّمَدُ<span class="word-tooltip">The Eternal</span></span>
+<span class="ayah-end text-slate-900 dark:text-slate-100">٢</span></p>
+</div>
+<div class="border-t border-slate-200 dark:border-primary/5 pt-4">
+<p class="text-lg leading-relaxed text-slate-700 dark:text-slate-300 font-light">Allah, the Eternal Refuge.</p>
+<p class="text-lg leading-relaxed text-slate-600 dark:text-slate-400 font-arabic mt-3" dir="rtl">اللہ بے نیاز ہے۔</p>
+</div>
+<div class="flex justify-end">
+<button class="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-primary hover:bg-primary/5 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-sm">menu_book</span>
+                    View Tafsir
+                </button>
+</div>
+</div>
+<!-- Verse 3 Card -->
+<div class="bg-slate-50 dark:bg-[#14261e] border border-slate-200 dark:border-primary/10 rounded-xl p-5 shadow-sm space-y-6">
+<div class="flex flex-row items-start justify-end gap-2">
+<p class="font-arabic text-3xl text-right leading-[2.5] text-slate-900 dark:text-slate-100" dir="rtl">
+<span class="word-interactive">لَمْ<span class="word-tooltip">Not</span></span>
+<span class="word-interactive">يَلِدْ<span class="word-tooltip">He begets</span></span>
+<span class="word-interactive">وَ<span class="word-tooltip">And</span></span>
+<span class="word-interactive">لَمْ<span class="word-tooltip">Not</span></span>
+<span class="word-interactive">يُولَدْ<span class="word-tooltip">He was born</span></span>
+<span class="ayah-end text-slate-900 dark:text-slate-100">٣</span></p>
+</div>
+<div class="border-t border-slate-200 dark:border-primary/5 pt-4">
+<p class="text-lg leading-relaxed text-slate-700 dark:text-slate-300 font-light">He neither begets nor is born,</p>
+<p class="text-lg leading-relaxed text-slate-600 dark:text-slate-400 font-arabic mt-3" dir="rtl">نہ اس کی کوئی اولاد ہے اور نہ وہ کسی کی اولاد ہے۔</p>
+</div>
+<div class="flex justify-end">
+<button class="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-primary hover:bg-primary/5 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-sm">menu_book</span>
+                    View Tafsir
+                </button>
+</div>
+</div>
+<!-- Verse 4 Card -->
+<div class="bg-slate-50 dark:bg-[#14261e] border border-slate-200 dark:border-primary/10 rounded-xl p-5 shadow-sm space-y-6">
+<div class="flex flex-row items-start justify-end gap-2">
+<p class="font-arabic text-3xl text-right leading-[2.5] text-slate-900 dark:text-slate-100" dir="rtl">
+<span class="word-interactive">وَ<span class="word-tooltip">And</span></span>
+<span class="word-interactive">لَمْ<span class="word-tooltip">Not</span></span>
+<span class="word-interactive">يَكُن<span class="word-tooltip">He is</span></span>
+<span class="word-interactive">لَّهُ<span class="word-tooltip">For Him</span></span>
+<span class="word-interactive">كُفُوًا<span class="word-tooltip">Equivalent</span></span>
+<span class="word-interactive">أَحَدٌ<span class="word-tooltip">Anyone</span></span>
+<span class="ayah-end text-slate-900 dark:text-slate-100">٤</span></p>
+</div>
+<div class="border-t border-slate-200 dark:border-primary/5 pt-4">
+<p class="text-lg leading-relaxed text-slate-700 dark:text-slate-300 font-light">Nor is there to Him any equivalent."</p>
+<p class="text-lg leading-relaxed text-slate-600 dark:text-slate-400 font-arabic mt-3" dir="rtl">اور نہ کوئی اس کا ہمسر ہے۔</p>
+</div>
+<div class="flex justify-end">
+<button class="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-primary hover:bg-primary/5 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-sm">menu_book</span>
+                    View Tafsir
+                </button>
+</div>
+</div>
+</main>
+<!-- Audio Player & Controls Floating Bar -->
+<div class="sticky bottom-0 bg-white/95 dark:bg-[#0d1b14]/95 backdrop-blur-lg border-t border-primary/10 px-6 py-4 flex flex-col gap-4">
+<!-- Playback Progress -->
+<div class="w-full bg-primary/10 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-1/3 rounded-full"></div>
+</div>
+<div class="flex items-center justify-between">
+<!-- Text Size Controls -->
+<div class="flex items-center bg-primary/5 rounded-full p-1">
+<button class="size-8 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary">
+<span class="material-symbols-outlined text-sm">text_fields</span>
+</button>
+<div class="w-px h-4 bg-primary/20"></div>
+<button class="size-8 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary">
+<span class="material-symbols-outlined text-lg">text_fields</span>
+</button>
+</div>
+<!-- Main Player Controls -->
+<div class="flex items-center gap-6">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">skip_previous</span>
+</button>
+<button class="flex size-14 items-center justify-center bg-primary text-white rounded-full shadow-lg shadow-primary/25 hover:scale-105 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-3xl">play_arrow</span>
+</button>
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">skip_next</span>
+</button>
+</div>
+<!-- Reciter Selection -->
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/5 text-primary border border-primary/10">
+<span class="text-xs font-bold">Mishary Rashid</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="flex gap-2 border-t border-primary/10 bg-white dark:bg-[#0d1b14] px-4 pb-6 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">menu_book</span>
+<p class="text-xs font-bold leading-normal tracking-wide">Read</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">headphones</span>
+<p class="text-xs font-medium leading-normal tracking-wide">Audio</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">search</span>
+<p class="text-xs font-medium leading-normal tracking-wide">Search</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">library_books</span>
+<p class="text-xs font-medium leading-normal tracking-wide">Library</p>
+</a>
+</nav>
+</div>
+<!-- Theme Switcher Floating -->
+<button class="fixed bottom-24 right-6 size-12 bg-white dark:bg-slate-800 rounded-full shadow-xl flex items-center justify-center border border-primary/20 z-20" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined text-primary">dark_mode</span>
+</button>
+</body></html>

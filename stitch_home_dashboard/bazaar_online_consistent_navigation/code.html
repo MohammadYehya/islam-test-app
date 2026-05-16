@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Islam 24/7 - Bazaar Online</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "surface-dim": "#e0e4e2",
+                "surface-container-highest": "#dee4e1",
+                "on-primary-container": "#00210f",
+                "primary-fixed-dim": "#57e59c",
+                "on-error-container": "#410002",
+                "inverse-primary": "#57e59c",
+                "error": "#ba1a1a",
+                "outline-variant": "#bfc9c1",
+                "error-container": "#ffdad6",
+                "surface-variant": "#dce5de",
+                "secondary": "#D4AF37",
+                "on-primary-fixed": "#00210f",
+                "on-primary": "#ffffff",
+                "surface-bright": "#ffffff",
+                "on-surface-variant": "#3f4943",
+                "on-background": "#0f1713",
+                "on-secondary-fixed": "#221b00",
+                "inverse-surface": "#2d322f",
+                "secondary-container": "#fef1c7",
+                "on-tertiary": "#ffffff",
+                "surface": "#f6f8f7",
+                "surface-tint": "#11d473",
+                "on-surface": "#0f1713",
+                "inverse-on-surface": "#eff1ef",
+                "tertiary-container": "#1c3d2e",
+                "outline": "#707973",
+                "on-tertiary-container": "#a6f6ce",
+                "surface-container-lowest": "#ffffff",
+                "primary-fixed": "#d0f9e3",
+                "on-secondary": "#ffffff",
+                "on-tertiary-fixed-variant": "#00522f",
+                "surface-container-high": "#e4e9e7",
+                "surface-container-low": "#f0f3f1",
+                "background": "#f6f8f7",
+                "primary": "#11d473",
+                "tertiary-fixed-dim": "#8adaaf",
+                "on-primary-fixed-variant": "#00522b",
+                "on-error": "#ffffff",
+                "secondary-fixed": "#fef1c7",
+                "on-tertiary-fixed": "#002111",
+                "tertiary-fixed": "#a6f6ce",
+                "secondary-fixed-dim": "#e2c462",
+                "tertiary": "#0f2219",
+                "surface-container": "#eaeeec",
+                "on-secondary-fixed-variant": "#534300",
+                "primary-container": "#d0f9e3",
+                "on-secondary-container": "#221b00"
+              },
+              fontFamily: {
+                "headline": ["Plus Jakarta Sans"],
+                "body": ["Manrope"],
+                "label": ["Manrope"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-islamic-pattern {
+            background-color: #f6f8f7;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l2.598 15L45 17.402 32.598 20 30 35l-2.598-15L15 17.402 27.402 15z' fill='%2311d473' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Drawer animation */
+        #nav-drawer {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(-100%);
+        }
+        #nav-drawer.open {
+            transform: translateX(0);
+        }
+    </style>
+<style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background bg-islamic-pattern min-h-screen pb-24">
+<!-- Navigation Drawer Overlay -->
+<div class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[60] opacity-0 pointer-events-none transition-opacity duration-300" id="drawer-overlay" onclick="toggleDrawer()"></div>
+<!-- Navigation Drawer -->
+<aside class="fixed top-0 left-0 bottom-0 w-[280px] bg-white dark:bg-background-dark z-[70] shadow-2xl flex flex-col" id="nav-drawer">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary font-headline font-black text-xl">I</div>
+<h2 class="text-xl font-extrabold text-on-surface">Islam 24/7</h2>
+</div>
+<button class="p-2 text-slate-400 hover:text-slate-600" onclick="toggleDrawer()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="space-y-1">
+<a class="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/5 text-slate-700 group transition-colors" href="#">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">volunteer_activism</span>
+<span class="font-bold text-sm uppercase tracking-wide">Donations</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/5 text-slate-700 group transition-colors" href="#">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">school</span>
+<span class="font-bold text-sm uppercase tracking-wide">Hawzah Online</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-xl bg-primary/10 text-primary group transition-colors" href="#">
+<span class="material-symbols-outlined fill-1 group-hover:scale-110 transition-transform">shopping_bag</span>
+<span class="font-bold text-sm uppercase tracking-wide">Bazaar Online</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/5 text-slate-700 group transition-colors" href="#">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">chat</span>
+<span class="font-bold text-sm uppercase tracking-wide">Ask Molana</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- TopAppBar updated to match SCREEN_3 styling -->
+<header class="sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-md mx-auto px-4 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/5 text-on-surface hover:bg-primary/10 transition-colors" onclick="toggleDrawer()">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+<div>
+<h1 class="text-xl font-extrabold tracking-tight leading-tight font-headline">Islam 24/7</h1>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="text-[10px] font-bold text-outline uppercase tracking-tight">15 Oct</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-[10px] font-bold text-outline uppercase tracking-tight">12 Rabi' al-awwal</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/5 text-on-surface hover:bg-primary/10 transition-colors relative">
+<span class="material-symbols-outlined text-[24px]">notifications</span>
+<span class="absolute top-2.5 right-2.5 w-2 h-2 bg-secondary rounded-full border-2 border-white"></span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-md mx-auto px-4 pt-6 space-y-8">
+<!-- Search & Filter Section -->
+<section class="flex gap-3">
+<div class="flex-1 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full bg-surface-container border-none rounded-xl pl-10 pr-4 py-3 text-sm focus:ring-2 focus:ring-primary/20" placeholder="Search for sacred texts..." type="text"/>
+</div>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</section>
+<!-- Featured Section: Book of the Month -->
+<section class="relative group overflow-hidden rounded-2xl bg-tertiary text-on-tertiary shadow-xl">
+<div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 20% 150%, #D4AF37 0%, transparent 50%);"></div>
+<div class="relative p-6 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<span class="bg-secondary/20 text-secondary text-[10px] font-bold tracking-[0.2em] px-3 py-1 rounded-full uppercase">Book of the Month</span>
+<button class="text-on-tertiary/60 hover:text-secondary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<div class="flex gap-4">
+<div class="w-32 aspect-[3/4] bg-surface-container-low rounded-lg shadow-2xl overflow-hidden flex-shrink-0 border-l-4 border-secondary">
+<img alt="Book Cover" class="w-full h-full object-cover" data-alt="Elegant leather bound book cover on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKZuYjwx1pQmoNlWG7MUuajkTOZQOsAkhpEszc5CEOTiEVopeWQk-VXB7oRX8YmjmIrbTPD5QueynKbP2Zx0FV-4_jGuQTXIivm-N7Ik_BGlx41Li6Is2yW_VeRC4i8law60Q9Rtah-u6KsDXbxGYkoLYjhn-LcJSI8V1aZVELPAW1pEN6xQ-95HgR6asFNH6DfGjwYMVHf6BmADFTEa5npjKUWGxRlxD2xs_W-8tcWG19wC9s-lS1Ult0Q9_6TCwkldB0-I0EMKIz"/>
+</div>
+<div class="flex flex-col justify-end">
+<h2 class="font-headline text-xl font-bold leading-tight">The Peak of Eloquence</h2>
+<p class="text-xs text-on-tertiary/70 mt-1">Premium Hardcover Edition</p>
+<p class="text-secondary font-bold text-lg mt-3">$45.00</p>
+<button class="mt-4 bg-primary text-on-primary font-bold py-2 px-4 rounded-lg text-sm flex items-center justify-center gap-2 hover:bg-primary/90 transition-all active:scale-95 w-fit">
+<span>Order Now</span>
+<span class="material-symbols-outlined text-sm">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Section -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="font-headline font-extrabold text-sm tracking-widest uppercase text-outline">Collections</h3>
+</div>
+<div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+<button class="whitespace-nowrap px-5 py-2.5 rounded-full bg-primary text-on-primary text-sm font-semibold shadow-md shadow-primary/20">Theology</button>
+<button class="whitespace-nowrap px-5 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-medium hover:bg-surface-container-highest transition-colors">History</button>
+<button class="whitespace-nowrap px-5 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-medium hover:bg-surface-container-highest transition-colors">Jurisprudence</button>
+<button class="whitespace-nowrap px-5 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-medium hover:bg-surface-container-highest transition-colors">Children's Books</button>
+<button class="whitespace-nowrap px-5 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-medium hover:bg-surface-container-highest transition-colors">Prayer Books</button>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="space-y-4 pb-12">
+<div class="flex items-center justify-between">
+<h3 class="font-headline font-extrabold text-sm tracking-widest uppercase text-outline">New Arrivals</h3>
+<button class="text-primary text-xs font-bold flex items-center gap-1">View All <span class="material-symbols-outlined text-xs">arrow_forward</span></button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Book 1 -->
+<div class="group flex flex-col bg-surface-container-low rounded-2xl overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
+<div class="aspect-[3/4] relative overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Stack of ancient scholarly books" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD8jELZkYWx_IWGPZvTfGuxYNRuYXUna3KShE5ab7EC6Y_l8vinGz7jZ6DGtOLwn5c5gEKzQ9BAQ-OLW9n5GQ0dyP6SugC1NE6cUDsf6ki0DTeui51ziVUn36hbzZwWjR7ZrWXkSGbzhmIOrS9JlIZVdcr-vsZN9f0A1f0Nyv3HYzKYnSETdIl9RmemHbOg4ZG_BQhFpprb398ORNlEREVI8x9oFvy6N8sPwi8hl6L4NmmALp371K-TbVPmm-XNQxuJ6YHsGplpI62"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col gap-1">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-tighter">Scholarly Set</span>
+<h4 class="font-headline font-bold text-sm text-on-surface line-clamp-1">Kitab al-Kafi (Set of 8)</h4>
+<p class="text-xs text-outline mb-2">Shaykh al-Kulayni</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="font-bold text-on-surface">$120.00</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Book 2 -->
+<div class="group flex flex-col bg-surface-container-low rounded-2xl overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
+<div class="aspect-[3/4] relative overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Ornate blue and gold book cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAw6KoW1Qsn8YVabSkrljrBcgMeM5G8vjFpVWHYGnIz09U7TqFJxocGPqEyN5Myi_3_ifmk3axY-4db59nfGRa1P912Zmmy3tMTMcOKq5DchfwoGszKG2X1GDpVWiGuBlJW4vP9yRueaRM7elQ5TYyqd_70kFAIieuHYXWhTtmGoSSQIQLmimJSZ_TZeZb0vIS3wRyW0n9JVd6cwBForVBBgtgnEfjHms4W73nea3Bq_8n4vEVKS1c_bPy1RecZUtNaTTJ439hAjcu"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col gap-1">
+<span class="text-[10px] font-bold text-primary uppercase tracking-tighter">Dua Collection</span>
+<h4 class="font-headline font-bold text-sm text-on-surface line-clamp-1">Sahifa Sajjadiya</h4>
+<p class="text-xs text-outline mb-2">Imam Zainul Abideen</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="font-bold text-on-surface">$24.50</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Book 3 -->
+<div class="group flex flex-col bg-surface-container-low rounded-2xl overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
+<div class="aspect-[3/4] relative overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Traditional green islamic book cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8PH_BYIS5UlKJexJEDTvfvQ05e-k9t1BZLf5m9t24mVEmetS9b2qLJJ5nw7j4JmYiGC7qX9_dJ1xgjYzwWfjPCoaav60opOyhF3_Z6u52-8kcnd1uIeTlKBy_PouXpjWIkJ7hHLymOHLoF0gF8zXYXtEqkx6IE05_-kGL_nZy31f96e1GEPNW7kX7EwSuiSl7xMCAuzyP4kE9Atey8gpXpuzmq6r5B70OfaISqL3HFiAgXcNqKJhQX1LizndXTyan598edBBuZV_4"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col gap-1">
+<span class="text-[10px] font-bold text-primary uppercase tracking-tighter">Daily Recitation</span>
+<h4 class="font-headline font-bold text-sm text-on-surface line-clamp-1">Mafatih al-Jinan</h4>
+<p class="text-xs text-outline mb-2">Sheikh Abbas Qummi</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="font-bold text-on-surface">$32.00</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Book 4 -->
+<div class="group flex flex-col bg-surface-container-low rounded-2xl overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
+<div class="aspect-[3/4] relative overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Ancient parchment and gold lettering" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA95qXnhQB4QVRgUaqMA9gwdlQaxq6L8YJCWq7nVCYIycdPA-POniRYCkzuWhCPYq5f2HmAe4pbedV-Y5nP47Q4cS3kfBEYcb134K3QBDkZAuRXO7gr9Fy-Z7O5TJHCFZ9UlVsV4hiQzzIwvfBOWFItCGtZ2KXugUW_YmkKRjoEWJLjh5dubHcH5fVH9X890XQj3LC4__uMWHRKAcYWHzSItUi80qRkOmCRCnmgCTFexsKVXOK3DPnZVqUpx0tqYEDKHGt__yP7kiK8"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="p-4 flex flex-col gap-1">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-tighter">Philosophy</span>
+<h4 class="font-headline font-bold text-sm text-on-surface line-clamp-1">Our Philosophy</h4>
+<p class="text-xs text-outline mb-2">Sadr-ud-Din Shirazi</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="font-bold text-on-surface">$18.99</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Button: Cart -->
+<button class="fixed bottom-24 right-6 w-14 h-14 rounded-2xl bg-tertiary text-secondary shadow-2xl flex items-center justify-center transition-transform active:scale-90 hover:shadow-secondary/20 z-40">
+<span class="relative">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+<span class="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-primary text-on-primary text-[10px] font-bold flex items-center justify-center border-2 border-tertiary">3</span>
+</span>
+</button>
+<!-- BottomNavBar - Active state set to Home -->
+<nav class="fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur-lg border-t border-primary/10 z-50">
+<div class="max-w-md mx-auto grid grid-cols-4 h-20 px-2">
+<button class="flex flex-col items-center justify-center gap-1 group text-primary">
+<div class="bg-primary/10 px-4 py-1.5 rounded-full flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined fill-1 text-[24px]">home</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-tight">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 group text-outline">
+<div class="px-4 py-1.5 flex items-center justify-center group-hover:bg-primary/5 rounded-full transition-colors">
+<span class="material-symbols-outlined text-[24px]">library_books</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-tight">Library</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 group text-outline">
+<div class="px-4 py-1.5 flex items-center justify-center group-hover:bg-primary/5 rounded-full transition-colors">
+<span class="material-symbols-outlined text-[24px]">event</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-tight">Events</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 group text-outline">
+<div class="px-4 py-1.5 flex items-center justify-center group-hover:bg-primary/5 rounded-full transition-colors">
+<span class="material-symbols-outlined text-[24px]">person</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-tight">Profile</span>
+</button>
+</div>
+</nav>
+<script>
+    function toggleDrawer() {
+        const drawer = document.getElementById('nav-drawer');
+        const overlay = document.getElementById('drawer-overlay');
+        const isOpen = drawer.classList.contains('open');
+        
+        if (!isOpen) {
+            drawer.classList.add('open');
+            overlay.style.opacity = '1';
+            overlay.style.pointerEvents = 'auto';
+            document.body.style.overflow = 'hidden';
+        } else {
+            drawer.classList.remove('open');
+            overlay.style.opacity = '0';
+            overlay.style.pointerEvents = 'none';
+            document.body.style.overflow = '';
+        }
+    }
+</script>
+</body></html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Islam 24/7 - Hawzah Online</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            background: rgba(246, 248, 247, 0.9);
+            backdrop-filter: blur(12px);
+        }
+        .islamic-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l2.5 7.5L40 10l-7.5 2.5L30 20l-2.5-7.5L20 10l7.5-2.5L30 0zm0 40l2.5 7.5L40 50l-7.5 2.5L30 60l-2.5-7.5L20 50l7.5-2.5L30 40z' fill='%2311d473' fill-opacity='0.03' fill-rule='evenodd' /%3E%3C/svg%3E");
+        }
+        /* Drawer animation */
+        #nav-drawer {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(-100%);
+        }
+        #nav-drawer.open {
+            transform: translateX(0);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "tertiary-fixed": "#a6f6ce",
+                "secondary-fixed-dim": "#e2c462",
+                "on-secondary-fixed-variant": "#534300",
+                "primary-container": "#d0f9e3",
+                "on-secondary-container": "#221b00",
+                "tertiary": "#0f2219",
+                "surface-container": "#eaeeec",
+                "tertiary-fixed-dim": "#8adaaf",
+                "on-primary-fixed-variant": "#00522b",
+                "background": "#f6f8f7",
+                "primary": "#11d473",
+                "secondary-fixed": "#fef1c7",
+                "on-tertiary-fixed": "#002111",
+                "on-error": "#ffffff",
+                "on-tertiary-fixed-variant": "#00522f",
+                "primary-fixed": "#d0f9e3",
+                "on-secondary": "#ffffff",
+                "surface-container-low": "#f0f3f1",
+                "surface-container-high": "#e4e9e7",
+                "outline": "#707973",
+                "inverse-on-surface": "#eff1ef",
+                "tertiary-container": "#1c3d2e",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary-container": "#a6f6ce",
+                "inverse-surface": "#2d322f",
+                "surface-bright": "#ffffff",
+                "on-surface-variant": "#3f4943",
+                "on-background": "#0f1713",
+                "on-secondary-fixed": "#221b00",
+                "surface": "#f6f8f7",
+                "surface-tint": "#11d473",
+                "on-surface": "#0f1713",
+                "secondary-container": "#fef1c7",
+                "on-tertiary": "#ffffff",
+                "outline-variant": "#bfc9c1",
+                "error-container": "#ffdad6",
+                "surface-variant": "#dce5de",
+                "secondary": "#D4AF37",
+                "on-primary-fixed": "#00210f",
+                "on-primary": "#ffffff",
+                "primary-fixed-dim": "#57e59c",
+                "on-error-container": "#410002",
+                "inverse-primary": "#57e59c",
+                "on-primary-container": "#00210f",
+                "error": "#ba1a1a",
+                "surface-dim": "#e0e4e2",
+                "surface-container-highest": "#dee4e1"
+              },
+              fontFamily: {
+                "headline": ["Plus Jakarta Sans"],
+                "body": ["Manrope"],
+                "label": ["Manrope"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background font-body text-on-background islamic-pattern min-h-screen pb-24">
+<!-- Navigation Drawer Overlay -->
+<div class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[60] opacity-0 pointer-events-none transition-opacity duration-300" id="drawer-overlay" onclick="toggleDrawer()"></div>
+<!-- Navigation Drawer -->
+<aside class="fixed top-0 left-0 bottom-0 w-[280px] bg-white z-[70] shadow-2xl flex flex-col islamic-pattern" id="nav-drawer">
+<div class="p-6 border-b border-surface-container">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-extrabold text-primary font-headline">Islam 24/7</h2>
+<button class="p-2 text-outline hover:text-on-surface" onclick="toggleDrawer()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="space-y-1">
+<a class="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/5 text-on-surface group transition-colors" href="#">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">volunteer_activism</span>
+<span class="font-bold text-sm uppercase tracking-wide">Donations</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-xl bg-primary/10 text-primary group transition-colors" href="#">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">school</span>
+<span class="font-bold text-sm uppercase tracking-wide">Hawzah Online</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/5 text-on-surface group transition-colors" href="#">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">shopping_bag</span>
+<span class="font-bold text-sm uppercase tracking-wide">Bazaar Online</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/5 text-on-surface group transition-colors" href="#">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">chat</span>
+<span class="font-bold text-sm uppercase tracking-wide">Ask Molana</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 glass-header border-b border-outline-variant/30">
+<div class="px-4 py-3 flex items-center justify-between max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/5 text-on-surface hover:bg-primary/10 transition-colors" onclick="toggleDrawer()">
+<span class="material-symbols-outlined text-[24px]" data-icon="menu">menu</span>
+</button>
+<div>
+<h1 class="text-xl font-extrabold tracking-tight leading-tight font-headline">Islam 24/7</h1>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="text-[10px] font-bold text-outline uppercase tracking-tight">May 24, 2024</span>
+<span class="w-1 h-1 rounded-full bg-outline/30"></span>
+<span class="text-[10px] font-bold text-outline uppercase tracking-tight">Dhul-Qi'dah 16, 1445</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/5 text-on-surface hover:bg-primary/10 transition-colors relative">
+<span class="material-symbols-outlined text-[24px]" data-icon="notifications">notifications</span>
+<span class="absolute top-2.5 right-2.5 w-2 h-2 bg-secondary rounded-full border-2 border-surface"></span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 py-6 space-y-10">
+<!-- Student Portal Quick Access (Bento Element) -->
+<section>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="md:col-span-2 bg-tertiary-container rounded-xl p-6 text-on-tertiary-container flex justify-between items-center relative overflow-hidden group">
+<div class="relative z-10">
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] opacity-80">Welcome back, Student</span>
+<h2 class="font-headline font-extrabold text-2xl mt-1">Hawzah Portal</h2>
+<div class="flex gap-4 mt-6">
+<button class="bg-primary text-on-primary px-5 py-2 rounded-lg font-bold text-sm shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+                                View Grades
+                            </button>
+<button class="bg-surface-container-highest/20 text-white border border-white/10 px-5 py-2 rounded-lg font-bold text-sm hover:bg-surface-container-highest/30 transition-colors">
+                                Certificates
+                            </button>
+</div>
+</div>
+<span class="material-symbols-outlined text-8xl opacity-10 absolute -right-4 -bottom-4 rotate-12" data-icon="school" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<div class="bg-secondary-container rounded-xl p-6 border-l-4 border-secondary flex flex-col justify-between">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] text-on-secondary-container opacity-70">Next Seminar</span>
+<h3 class="font-headline font-bold text-lg text-on-secondary-container mt-1">Philosophy of Prayer</h3>
+</div>
+<div class="flex items-center gap-2 mt-4">
+<span class="material-symbols-outlined text-secondary" data-icon="calendar_today">calendar_today</span>
+<span class="text-xs font-bold text-on-secondary-container">Tomorrow, 10:00 AM</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Current Progress -->
+<section class="space-y-4">
+<div class="flex items-center justify-between px-2">
+<h2 class="font-headline font-extrabold text-xl tracking-tight">Current Progress</h2>
+<button class="text-primary text-sm font-bold flex items-center gap-1">View All <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Course Card -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm border-l-4 border-primary group">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-bold text-lg group-hover:text-primary transition-colors">Intro to Fiqh</h3>
+<p class="text-xs text-outline font-medium">Module 4: Taharah &amp; Purification</p>
+</div>
+<span class="text-xs font-bold bg-primary-container text-on-primary-fixed-variant px-2 py-1 rounded">75%</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+</div>
+<div class="mt-4 flex justify-between items-center text-[10px] font-bold uppercase tracking-wider text-outline">
+<span>12/16 Lessons</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="schedule">schedule</span> 45m left</span>
+</div>
+</div>
+<!-- Course Card -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm border-l-4 border-secondary group">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-bold text-lg group-hover:text-secondary transition-colors">History of the Imams</h3>
+<p class="text-xs text-outline font-medium">Module 2: The Prophet's Legacy</p>
+</div>
+<span class="text-xs font-bold bg-secondary-container text-on-secondary-container px-2 py-1 rounded">30%</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2">
+<div class="bg-secondary h-2 rounded-full" style="width: 30%"></div>
+</div>
+<div class="mt-4 flex justify-between items-center text-[10px] font-bold uppercase tracking-wider text-outline">
+<span>4/12 Lessons</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="schedule">schedule</span> 2h 15m left</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Course Catalog Tabs -->
+<section class="space-y-6">
+<h2 class="font-headline font-extrabold text-xl tracking-tight px-2">Course Catalog</h2>
+<div class="flex gap-2 overflow-x-auto pb-2 px-2 no-scrollbar">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold text-sm whitespace-nowrap shadow-md">Introductory</button>
+<button class="bg-surface-container-high text-on-surface-variant px-6 py-2 rounded-full font-bold text-sm whitespace-nowrap hover:bg-surface-variant transition-colors">Intermediate</button>
+<button class="bg-surface-container-high text-on-surface-variant px-6 py-2 rounded-full font-bold text-sm whitespace-nowrap hover:bg-surface-variant transition-colors">Advanced</button>
+<button class="bg-surface-container-high text-on-surface-variant px-6 py-2 rounded-full font-bold text-sm whitespace-nowrap hover:bg-surface-variant transition-colors">Specialization</button>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="h-32 bg-surface-container-highest relative">
+<img class="w-full h-full object-cover opacity-60" data-alt="Close up of Arabic calligraphy on parchment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_4VaUtDqa9fsURo-k4fkshrlnO3FFM_nfVEipdL-PgELddWY_2AATm7QpS0Uhjpik439bBdWvif756_t0zXazcss_7IEaEDBy6lzNDV4kCpZDYErB0xaRK7Kg8Cj3E23oP5YzHP2W9b43bG1sAPwCxXySYf7oqhVyT6ADxktNHTs4DOjTPgLwO3uq2tXyL1pKRyvO2Yn6qm37oL6n3gsEhiStAyDbVr1mdKpGJN9XDXVtvU5z8IGY3cAdItDcTxWVYKg6k6AcRa9I"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-4">
+<h4 class="font-bold text-sm">Arabic Grammar I</h4>
+<p class="text-[10px] text-outline mt-1">Shaykh Yusuf Ahmed</p>
+<div class="mt-4 flex items-center justify-between">
+<span class="text-primary font-bold text-xs">$49.99</span>
+<span class="material-symbols-outlined text-lg text-outline" data-icon="add_circle">add_circle</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="h-32 bg-surface-container-highest relative">
+<img class="w-full h-full object-cover opacity-60" data-alt="Traditional Islamic library with many books" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuOIiJDGguvaaqRGvYHio-O1RL0JJFdoJ5W0J1vxCv48ZvgUmfvqjFg7OtD2qX_777sEgrAsw0jImGpbsPmx84u1gXI1VCdlrU_BO9IzRiQCuTdIQuihnOEiZIroPe3U2gnzzicUYk-Lm9aUa7MoKeYe6xpRjSTMaBtLyeUkg69j5gJbLUv7MMtEblc0ASHVHWQT7Ew-dwvIjmxJmDgRZkjifDwtlvTd6lsyKQQA6VzRQwJezTjSNsveK3OsX2-fHa2-h8hVVzM--P"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-4">
+<h4 class="font-bold text-sm">Ethics (Akhlaq)</h4>
+<p class="text-[10px] text-outline mt-1">Dr. Maryam Khan</p>
+<div class="mt-4 flex items-center justify-between">
+<span class="text-primary font-bold text-xs">Free</span>
+<span class="material-symbols-outlined text-lg text-outline" data-icon="add_circle">add_circle</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="h-32 bg-surface-container-highest relative">
+<img class="w-full h-full object-cover opacity-60" data-alt="A beautiful mosque at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZYiBPTUNvR014GkEM14V4xSSi5MoEno_0AnQQANI4IQYKlXQANyMDt3l6Ha1JOCRHcLgyzrNuXS3GLL4Hqrcu1-uuY3bWSRb8qdyCSOC8eNMb1cOO-Mu7uzX-H6R16ZC5NK66KRDXG9G9-LCUuEBn0uepNko8R-xmz_ZFy9MMUcAT92grGnYPRmtA1jHl3DqLzaYMgZ9udYCCRS_TFz2Jy3EK9E9Dp-rCyOkrp4xH0dLYEKkcDFkC0BJTlBYWD3-NzeCdFcVRDbIZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-4">
+<h4 class="font-bold text-sm">Usul al-Din</h4>
+<p class="text-[10px] text-outline mt-1">Sayyid Ibrahim</p>
+<div class="mt-4 flex items-center justify-between">
+<span class="text-primary font-bold text-xs">$29.99</span>
+<span class="material-symbols-outlined text-lg text-outline" data-icon="add_circle">add_circle</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="h-32 bg-surface-container-highest relative">
+<img class="w-full h-full object-cover opacity-60" data-alt="Islamic geometric patterns on tile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD15ZIB3PV08jnHHKSHRCE5EZXaPfK5ZRqjMbHPGyeqB8Nq4_xVlNW88RhKF46BKcrPwH4XVZ5W9LZJ6wI-eEN-EQJZG_96Acb46qPxdPg94WrrGPtpetp0dGugsn6h_UFlhOCwqOu6_Gs7BKvT49yIZ9k_pRDraVdCKBCO85kiADBw3yYcqbYmQw4dSUTMh01sqyNrCDLy4cuWFnCUsGkpg_hQpODY05NH6TSqjsSCJTMLOPU6val4O9A0jrVVaO9CFPsQAI9spCKx"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<div class="p-4">
+<h4 class="font-bold text-sm">Hadith Studies</h4>
+<p class="text-[10px] text-outline mt-1">Ustadha Zeinab</p>
+<div class="mt-4 flex items-center justify-between">
+<span class="text-primary font-bold text-xs">$39.99</span>
+<span class="material-symbols-outlined text-lg text-outline" data-icon="add_circle">add_circle</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Lectures (Asymmetric Layout) -->
+<section class="space-y-4">
+<h2 class="font-headline font-extrabold text-xl tracking-tight px-2">Featured Lecture Series</h2>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+<div class="md:col-span-3 bg-surface-container-low rounded-2xl p-8 relative overflow-hidden flex flex-col justify-end min-h-[300px] border border-outline-variant/20">
+<div class="absolute inset-0">
+<img class="w-full h-full object-cover grayscale opacity-20" data-alt="A close up of an open Quran on a wooden stand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcSCC8Ykhe7ymPOXLbk4TIMYFWkvOv7YUbgCwKZknN9WIVb-hSTkye-J0yqLwPWvn_uQoRLb3J9MzMebTFWg7-RzAxdJxk4d42n5CFuB0vk-n0OH_tZvbSwS8PqlTTiuAjKId2AjFkTjOLu26NbfYSzqZt_dLCN4q9xJzIo4KQW2UVroSkOJDmEaEPz-JCbQWjS20mpZGO35Oa4rXQpgz8e5szaW4wp97y4XAw8NXJEr9DJhOwbc5ejkDGw2Opdlppi1dG8ZJT12Uq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/80 to-transparent"></div>
+</div>
+<div class="relative z-10">
+<span class="bg-secondary/10 text-secondary border border-secondary/20 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4 inline-block">Editor's Choice</span>
+<h3 class="font-headline font-extrabold text-3xl max-w-md leading-tight">The Inner Dimensions of Hajj</h3>
+<p class="text-on-surface-variant mt-4 text-sm max-w-sm">Explore the spiritual secrets and the transformative journey of the pilgrimage with Allamah Jafri.</p>
+<button class="mt-6 flex items-center gap-2 font-bold text-primary group">
+                            Start Series <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</button>
+</div>
+</div>
+<div class="md:col-span-2 space-y-4">
+<div class="bg-surface-container-lowest p-4 rounded-xl flex gap-4 items-center shadow-sm border border-outline-variant/10">
+<div class="w-16 h-16 rounded-lg bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait of a scholarly man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOMaYqA-O3-MJUf-YYZ-PNMmLItkXi0gw0Rp5jYliCBRUQRZyU0BYMiWwqIJ_TIuepcY1HvEyPl8fAnTUiiNjhdzcwofjlABl4I2ywJebMN0DfiSTzXgavnDUojWWv8f5jTUPeeoh3hCbSOoD3voK6UKSVezMRp-RzE_SRwN9Nej1SeQ9-jp4qCKvFIFjrfC2BI_-i_IxN8ux-LWCY0Vmui6vFCQ4v1SZWad_o1d5zwk2u4QXs2r0msdj3dPJ0fA9I243R8YMvcuGf"/>
+</div>
+<div>
+<h4 class="font-bold text-sm">Divine Justice (Adl)</h4>
+<p class="text-xs text-outline mt-1">4 Parts • Shaykh Hamza</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl flex gap-4 items-center shadow-sm border border-outline-variant/10">
+<div class="w-16 h-16 rounded-lg bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Scholarly books in stacks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGAr1AgTYaQJtl9kePKxJ82kDowa_Yj8dSKtvqjWN8xr3BrfgMXqa1-Hvb6Iwdl1KyMX5pPZ6hvvtY3l-vqGWbYDKryqBJguIoFMqKKg6u4LeUaG67dULcE1oFLyVDR5T78vCEBs8CiQi_pZN0i6aO8QtvBFqGC6GDvXRmt6Elfbgxa1wSyv3x3saGdW6is_WPcri9s7DakZdKKlH2ng7EQ82-3KmCuvFlD-Qc--p8tVaYPtHfURchCoUjCfqn_SApdRiplOCzzj-m"/>
+</div>
+<div>
+<h4 class="font-bold text-sm">Tafsir al-Mizan Intro</h4>
+<p class="text-xs text-outline mt-1">12 Parts • Dr. Rizvi</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl flex gap-4 items-center shadow-sm border border-outline-variant/10">
+<div class="w-16 h-16 rounded-lg bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Islamic architecture detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOkWlp5XUEzzipcnNPMi5OoqnPnIO19GiEMzDtvRghk2rPl09ZMI5rIgIX1f2fQSKyHpTcomiDI8ADkuZ94JekTSM0_MDFy45xuX_T8maPT2OHFBbxfHgxB7ofKSyp0rrl8YnippUfc8ndOTYjFHh-fEcYlOXlANJr1WI3HX1RB1OidGxmRE9H27DYm6McBJEDqLR3C5q5C0m9PWQcIYwow7bSEhSJZu7nGZFd3o_vy__JtfqpYw8Efcf72KPxNay6FpqoX1rbe7SP"/>
+</div>
+<div>
+<h4 class="font-bold text-sm">Islamic Governance</h4>
+<p class="text-xs text-outline mt-1">6 Parts • Ayatollah Najafi</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom NavBar -->
+<nav class="fixed bottom-0 left-0 right-0 glass-header border-t border-outline-variant/30 px-6 py-3 z-50">
+<div class="max-w-md mx-auto flex justify-between items-center">
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="bg-primary/10 text-primary px-5 py-1.5 rounded-full transition-all flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+</div>
+<span class="text-[10px] font-bold text-primary">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="text-on-surface-variant px-5 py-1.5 rounded-full hover:bg-surface-container transition-all flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant">Library</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="text-on-surface-variant px-5 py-1.5 rounded-full hover:bg-surface-container transition-all flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="event">event</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant">Events</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="text-on-surface-variant px-5 py-1.5 rounded-full hover:bg-surface-container transition-all flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant">Profile</span>
+</a>
+</div>
+</nav>
+<script>
+    function toggleDrawer() {
+        const drawer = document.getElementById('nav-drawer');
+        const overlay = document.getElementById('drawer-overlay');
+        drawer.classList.toggle('open');
+        
+        if (drawer.classList.contains('open')) {
+            document.body.style.overflow = 'hidden';
+            overlay.style.opacity = '1';
+            overlay.style.pointerEvents = 'auto';
+        } else {
+            document.body.style.overflow = '';
+            overlay.style.opacity = '0';
+            overlay.style.pointerEvents = 'none';
+        }
+    }
+</script>
+</body></html>

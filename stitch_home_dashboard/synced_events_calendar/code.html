@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Islam 24/7 - Events</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d473",
+                        "accent-gold": "#D4AF37",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102219",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "2xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            min-height: max(884px, 100dvh);
+        }
+        .islamic-pattern {
+            background-color: transparent;
+            background-image: radial-gradient(circle at 2px 2px, rgba(17, 212, 115, 0.03) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen flex flex-col islamic-pattern">
+<!-- Header -->
+<header class="flex flex-col bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md sticky top-0 z-50 border-b border-primary/10">
+<div class="flex items-center justify-between p-4 max-w-4xl mx-auto w-full">
+<div class="flex items-center gap-3">
+<button class="bg-primary/10 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div>
+<h1 class="text-xl font-extrabold tracking-tight leading-tight">Islam 24/7</h1>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="text-[10px] font-bold text-slate-500 uppercase tracking-tight">Thu, Jan 25</span>
+<span class="w-1 h-1 rounded-full bg-slate-300"></span>
+<span class="text-[10px] font-bold text-slate-500 uppercase tracking-tight">13 Rajab 1445</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg bg-primary/10 text-primary relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-accent-gold rounded-full border-2 border-white dark:border-background-dark"></span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto pb-28 max-w-4xl mx-auto w-full">
+<!-- Calendar Section -->
+<section class="p-4">
+<div class="bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 p-4">
+<div class="flex items-center justify-between mb-4">
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">chevron_left</span>
+</button>
+<div class="text-center">
+<h2 class="text-base font-bold">February 2024</h2>
+<p class="text-sm text-primary font-medium">Rajab - Shaban 1445</p>
+</div>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">chevron_right</span>
+</button>
+</div>
+<!-- Calendar Grid -->
+<div class="grid grid-cols-7 gap-1">
+<!-- Days Header -->
+<div class="text-center text-xs font-bold text-slate-500 dark:text-slate-400 py-2">S</div>
+<div class="text-center text-xs font-bold text-slate-500 dark:text-slate-400 py-2">M</div>
+<div class="text-center text-xs font-bold text-slate-500 dark:text-slate-400 py-2">T</div>
+<div class="text-center text-xs font-bold text-slate-500 dark:text-slate-400 py-2">W</div>
+<div class="text-center text-xs font-bold text-slate-500 dark:text-slate-400 py-2">T</div>
+<div class="text-center text-xs font-bold text-slate-500 dark:text-slate-400 py-2">F</div>
+<div class="text-center text-xs font-bold text-slate-500 dark:text-slate-400 py-2">S</div>
+<!-- Empty slots for days before start of month -->
+<div class="h-12"></div>
+<div class="h-12"></div>
+<div class="h-12"></div>
+<!-- Calendar Days -->
+<button class="h-12 w-full flex flex-col items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700/50 active:scale-95 transition-all relative group">
+<span class="text-sm font-medium">1</span>
+<span class="text-[10px] text-slate-400">20</span>
+</button>
+<button class="h-12 w-full flex flex-col items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700/50 active:scale-95 transition-all relative group">
+<span class="text-sm font-medium">2</span>
+<span class="text-[10px] text-slate-400">21</span>
+</button>
+<button class="h-12 w-full flex flex-col items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700/50 active:scale-95 transition-all relative group">
+<span class="text-sm font-medium">3</span>
+<span class="text-[10px] text-slate-400">22</span>
+</button>
+<button class="h-12 w-full flex flex-col items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700/50 active:scale-95 transition-all relative group">
+<span class="text-sm font-medium">4</span>
+<span class="text-[10px] text-slate-400">23</span>
+</button>
+<!-- Today with Event -->
+<button class="h-12 w-full flex flex-col items-center justify-center rounded-lg bg-primary text-white shadow-md active:scale-95 transition-all relative group">
+<span class="text-sm font-bold">5</span>
+<span class="text-[10px] text-white/80">24</span>
+<span class="absolute top-1 right-1 w-1.5 h-1.5 bg-white rounded-full"></span>
+</button>
+<button class="h-12 w-full flex flex-col items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700/50 active:scale-95 transition-all relative group">
+<span class="text-sm font-medium">6</span>
+<span class="text-[10px] text-slate-400">25</span>
+</button>
+<!-- Day with Event -->
+<button class="h-12 w-full flex flex-col items-center justify-center rounded-lg bg-primary/10 dark:bg-primary/20 text-primary relative group border border-primary/20 hover:bg-primary/20 active:scale-95 transition-all">
+<span class="text-sm font-bold">7</span>
+<span class="text-[10px] opacity-70">26</span>
+<span class="absolute top-1 right-1 w-1.5 h-1.5 bg-primary rounded-full"></span>
+</button>
+<script>
+                    // Simulate filling the rest of the calendar
+                    const eventDays = [15, 25, 27];
+                    for(let i=8; i<=29; i++) {
+                        let hijri = (26 + i - 8) % 30 + 1;
+                        let hasEvent = eventDays.includes(i) ? 'bg-primary/10 dark:bg-primary/20 text-primary border border-primary/20 hover:bg-primary/20' : 'hover:bg-slate-100 dark:hover:bg-slate-700/50 text-slate-900 dark:text-slate-100';
+                        let dot = eventDays.includes(i) ? '<span class="absolute top-1 right-1 w-1.5 h-1.5 bg-primary rounded-full"></span>' : '';
+                        document.write(`
+                            <button class="h-12 w-full flex flex-col items-center justify-center rounded-lg ${hasEvent} relative active:scale-95 transition-all group">
+                                <span class="text-sm font-medium">${i}</span>
+                                <span class="text-[10px] text-slate-400 dark:text-slate-500 opacity-80">${hijri}</span>
+                                ${dot}
+                            </button>
+                        `);
+                    }
+                </script>
+</div>
+</div>
+</section>
+<!-- Events List -->
+<section class="px-4 pb-6">
+<h3 class="text-lg font-bold mb-4 flex items-center gap-2">Events this month</h3>
+<div class="space-y-3">
+<!-- Wiladat of Imam Ali (AS) -->
+<button class="w-full text-left bg-white dark:bg-slate-800 rounded-2xl p-4 shadow-sm border border-primary/30 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors group">
+<div class="flex items-center gap-4">
+<div class="bg-primary/10 text-primary w-12 h-12 rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">star</span>
+</div>
+<div>
+<h4 class="font-bold text-base leading-tight">Wiladat of Imam Ali (AS)</h4>
+<p class="text-sm text-primary font-medium mt-0.5">13 Rajab 1445</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="text-right shrink-0">
+<span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary border border-primary/20">Today</span>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Feb 5</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</button>
+<!-- Wafat of Lady Zainab (SA) -->
+<button class="w-full text-left bg-white dark:bg-slate-800 rounded-2xl p-4 shadow-sm border border-slate-200 dark:border-slate-700 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors group">
+<div class="flex items-center gap-4">
+<div class="bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 w-12 h-12 rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">history_edu</span>
+</div>
+<div>
+<h4 class="font-semibold text-base leading-tight">Wafat of Lady Zainab (SA)</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">15 Rajab 1445</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="text-right shrink-0">
+<span class="inline-flex items-center rounded-full bg-slate-100 dark:bg-slate-700 px-2.5 py-0.5 text-xs font-medium text-slate-600 dark:text-slate-300">Upcoming</span>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Feb 7</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</button>
+<!-- Shahadat of Imam Musa al-Kadhim (AS) -->
+<button class="w-full text-left bg-white dark:bg-slate-800 rounded-2xl p-4 shadow-sm border border-slate-200 dark:border-slate-700 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors group">
+<div class="flex items-center gap-4">
+<div class="bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 w-12 h-12 rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">account_balance</span>
+</div>
+<div>
+<h4 class="font-semibold text-base leading-tight">Shahadat of Imam Musa al-Kadhim (AS)</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">25 Rajab 1445</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="text-right shrink-0">
+<span class="inline-flex items-center rounded-full bg-slate-100 dark:bg-slate-700 px-2.5 py-0.5 text-xs font-medium text-slate-600 dark:text-slate-300">Upcoming</span>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Feb 17</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</button>
+<!-- Eid al-Mab'ath -->
+<a class="block bg-white dark:bg-slate-800 rounded-2xl p-4 shadow-sm border border-slate-200 dark:border-slate-700 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors group" href="#" onclick="event.preventDefault();">
+<div class="flex items-center gap-4">
+<div class="bg-primary/10 text-primary w-12 h-12 rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">celebration</span>
+</div>
+<div>
+<h4 class="font-semibold text-base leading-tight">Eid al-Mab'ath</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">27 Rajab 1445</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="text-right shrink-0">
+<span class="inline-flex items-center rounded-full bg-slate-100 dark:bg-slate-700 px-2.5 py-0.5 text-xs font-medium text-slate-600 dark:text-slate-300">Upcoming</span>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Feb 19</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</a>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-4xl mx-auto flex items-center justify-around h-20 px-6">
+<a class="flex flex-col items-center justify-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<div class="px-4 py-1.5 flex items-center justify-center">
+<span class="material-symbols-outlined block text-[24px]">home</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-tight">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<div class="px-4 py-1.5 flex items-center justify-center">
+<span class="material-symbols-outlined block text-[24px]">library_books</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-tight">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-primary" href="#">
+<div class="bg-primary/10 px-4 py-1.5 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined fill-1 block text-[24px]">event</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-tight">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<div class="px-4 py-1.5 flex items-center justify-center">
+<span class="material-symbols-outlined block text-[24px]">person</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-tight">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>
