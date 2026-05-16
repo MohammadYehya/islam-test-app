@@ -1,0 +1,1994 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Qur'an Reader</title>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:ital@0;1&family=Cormorant+Garamond:wght@500;600&family=Spectral:ital,wght@0,400;0,500;1,400&family=Noto+Nastaliq+Urdu:wght@500&display=swap"
+        />
+        <style>
+            :root {
+                --paper: #fbf6ea;
+                --paper-2: #f3ecd9;
+                --ink: #23201a;
+                --ink-soft: #6a6353;
+                --accent: #0c6b5f;
+                --accent-2: #0f8c7c;
+                --gold: #a9853f;
+                --gold-soft: #cba868;
+                --line: rgba(35, 32, 26, 0.13);
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            html,
+            body {
+                min-height: 100%;
+            }
+            body {
+                color: var(--ink);
+                background: radial-gradient(
+                    120% 90% at 50% -10%,
+                    #fffdf6 0%,
+                    var(--paper) 42%,
+                    var(--paper-2) 100%
+                );
+                font-family: "Spectral", Georgia, "Times New Roman", serif;
+                -webkit-font-smoothing: antialiased;
+                overflow-x: hidden;
+            }
+            .qv-grain {
+                position: fixed;
+                inset: 0;
+                pointer-events: none;
+                opacity: 0.5;
+                mix-blend-mode: multiply;
+                z-index: 0;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E");
+            }
+            #app {
+                position: relative;
+                z-index: 1;
+            }
+
+            .qv-loading,
+            .qv-error {
+                max-width: 560px;
+                margin: 22vh auto;
+                text-align: center;
+                color: var(--ink-soft);
+                font-size: 15px;
+                letter-spacing: 0.04em;
+                padding: 0 24px;
+                line-height: 1.7;
+            }
+            .qv-error b {
+                color: #9a2b16;
+                font-weight: 600;
+            }
+
+            .qv-bar {
+                position: sticky;
+                top: 0;
+                z-index: 30;
+                background: rgba(251, 246, 234, 0.86);
+                backdrop-filter: blur(10px);
+                border-bottom: 1px solid var(--line);
+            }
+            .qv-bar-in {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 13px 22px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 16px;
+            }
+            .qv-brand {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .qv-brand-mark {
+                color: var(--gold);
+                font-size: 20px;
+                line-height: 1;
+            }
+            .qv-brand-tx {
+                font-family: "Cormorant Garamond", serif;
+                font-weight: 600;
+                font-size: 17px;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+            }
+            .qv-controls {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .qv-pill {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                font-family: "Cormorant Garamond", serif;
+                font-weight: 600;
+                font-size: 13px;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                padding: 8px 14px;
+                border-radius: 999px;
+                cursor: pointer;
+                border: 1.5px solid var(--line);
+                background: var(--paper);
+                color: var(--ink-soft);
+                transition: all 0.22s ease;
+            }
+            .qv-pill:hover {
+                border-color: var(--gold-soft);
+                color: var(--ink);
+            }
+            .qv-pill.is-active {
+                border-color: var(--accent);
+                color: var(--accent);
+                background: rgba(15, 140, 124, 0.07);
+            }
+            .qv-pill-dot {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: var(--ink-soft);
+                transition: all 0.22s ease;
+            }
+            .qv-pill.is-on {
+                border-color: var(--accent);
+                color: var(--accent);
+                background: rgba(15, 140, 124, 0.07);
+            }
+            .qv-pill.is-on .qv-pill-dot {
+                background: var(--accent-2);
+                box-shadow: 0 0 0 4px rgba(15, 140, 124, 0.16);
+            }
+            .qv-count {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 18px;
+                height: 18px;
+                padding: 0 5px;
+                border-radius: 999px;
+                background: var(--accent);
+                color: #fbf6ea;
+                font-size: 11px;
+            }
+            .qv-chev {
+                transition: transform 0.22s ease;
+                display: inline-block;
+                font-size: 13px;
+            }
+            .qv-chev.up {
+                transform: rotate(180deg);
+            }
+
+            .qv-menu {
+                position: relative;
+            }
+            .qv-dropdown {
+                position: absolute;
+                top: calc(100% + 9px);
+                right: 0;
+                width: 288px;
+                z-index: 40;
+                background: #fffdf6;
+                border: 1px solid var(--line);
+                border-radius: 14px;
+                box-shadow: 0 22px 50px -16px rgba(20, 18, 12, 0.4);
+                padding: 7px;
+                animation: pop 0.16s ease both;
+            }
+            .qv-dropdown-cap {
+                font-family: "Cormorant Garamond", serif;
+                font-weight: 600;
+                font-size: 10.5px;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: var(--ink-soft);
+                padding: 8px 10px 9px;
+            }
+            .qv-opt {
+                display: flex;
+                align-items: center;
+                gap: 11px;
+                width: 100%;
+                text-align: left;
+                background: none;
+                border: 0;
+                cursor: pointer;
+                padding: 9px 10px;
+                border-radius: 9px;
+                transition: background 0.15s ease;
+                font: inherit;
+            }
+            .qv-opt:hover:not(:disabled) {
+                background: rgba(15, 140, 124, 0.06);
+            }
+            .qv-opt:disabled {
+                cursor: default;
+            }
+            .qv-check {
+                width: 18px;
+                height: 18px;
+                flex: none;
+                border-radius: 5px;
+                border: 1.5px solid var(--line);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 11px;
+                color: #fff;
+                transition: all 0.15s ease;
+            }
+            .qv-opt.on .qv-check {
+                background: var(--accent);
+                border-color: var(--accent);
+            }
+            .qv-opt-main {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                min-width: 0;
+            }
+            .qv-opt-name {
+                font-family: "Spectral", serif;
+                font-size: 14px;
+                color: var(--ink);
+            }
+            .qv-opt-sub {
+                font-size: 12px;
+                color: var(--ink-soft);
+            }
+            .qv-opt-tag {
+                font-family: "Cormorant Garamond", serif;
+                font-weight: 600;
+                font-size: 10px;
+                letter-spacing: 0.1em;
+                color: var(--gold);
+                border: 1px solid var(--gold-soft);
+                padding: 2px 6px;
+                border-radius: 5px;
+                flex: none;
+            }
+
+            .qv-legend-wrap {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 22px 11px;
+            }
+            .qv-legend-toggle {
+                background: none;
+                border: 0;
+                cursor: pointer;
+                color: var(--ink-soft);
+                font-family: "Spectral", serif;
+                font-size: 12px;
+                letter-spacing: 0.04em;
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+            }
+            .qv-legend {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(186px, 1fr));
+                gap: 7px 16px;
+                padding: 12px 2px 3px;
+                animation: fade 0.3s ease both;
+            }
+            .qv-legend-item {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 12.5px;
+                color: var(--ink-soft);
+                opacity: 0.5;
+                transition: opacity 0.2s ease;
+            }
+            .qv-legend-item.used {
+                opacity: 1;
+                color: var(--ink);
+            }
+            .qv-sw {
+                width: 13px;
+                height: 13px;
+                border-radius: 3px;
+                flex: none;
+                box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08) inset;
+            }
+            .qv-legend-name {
+                flex: 1;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .qv-legend-ar {
+                font-family: "Amiri", serif;
+                color: inherit;
+                font-size: 13px;
+            }
+            .qv-legend-dot {
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background: var(--accent-2);
+                flex: none;
+            }
+
+            .qv-head {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 54px 22px 30px;
+                text-align: center;
+            }
+            .qv-kicker {
+                font-family: "Cormorant Garamond", serif;
+                font-weight: 600;
+                letter-spacing: 0.32em;
+                text-transform: uppercase;
+                font-size: 11px;
+                color: var(--gold);
+                margin-bottom: 18px;
+            }
+            .qv-title {
+                font-family: "Amiri Quran", "Amiri", serif;
+                font-weight: 400;
+                font-size: clamp(46px, 11vw, 76px);
+                line-height: 1.15;
+                direction: rtl;
+                margin-bottom: 16px;
+            }
+            .qv-subtitle {
+                font-family: "Cormorant Garamond", serif;
+                font-size: 21px;
+                letter-spacing: 0.02em;
+            }
+            .qv-dot {
+                color: var(--gold);
+                padding: 0 0.35em;
+            }
+            .qv-meta {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 14px;
+                margin-top: 13px;
+                font-size: 12px;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+                color: var(--ink-soft);
+                font-family: "Cormorant Garamond", serif;
+                font-weight: 600;
+            }
+            .qv-meta i {
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background: var(--gold-soft);
+                display: inline-block;
+            }
+            .qv-rule {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 14px;
+                margin: 34px 0 26px;
+            }
+            .qv-rule span {
+                height: 1px;
+                width: 90px;
+                background: linear-gradient(
+                    90deg,
+                    transparent,
+                    var(--gold-soft)
+                );
+            }
+            .qv-rule span:last-child {
+                background: linear-gradient(
+                    90deg,
+                    var(--gold-soft),
+                    transparent
+                );
+            }
+            .qv-rule-d {
+                width: 8px !important;
+                height: 8px !important;
+                background: var(--gold) !important;
+                transform: rotate(45deg);
+                flex: none;
+            }
+            .qv-bism {
+                font-family: "Amiri Quran", "Amiri", serif;
+                font-size: clamp(26px, 6.5vw, 38px);
+                color: var(--accent);
+                direction: rtl;
+                line-height: 1.7;
+            }
+
+            .qv-list {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 8px 22px 30px;
+            }
+            .qv-ayah {
+                animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+            }
+            .qv-arabic {
+                font-family: "Amiri Quran", "Amiri", serif;
+                font-size: clamp(30px, 7.4vw, 42px);
+                line-height: 2.4;
+                direction: rtl;
+                text-align: center;
+                color: var(--ink);
+                padding: 30px 0 8px;
+                word-spacing: 0.06em;
+            }
+            .qv-word {
+                position: relative;
+                cursor: pointer;
+                border-radius: 6px;
+                padding: 2px 3px;
+                transition:
+                    background 0.2s ease,
+                    box-shadow 0.2s ease;
+                -webkit-box-decoration-break: clone;
+                box-decoration-break: clone;
+            }
+            .qv-word:hover,
+            .qv-word.on {
+                background: rgba(15, 140, 124, 0.1);
+                box-shadow: 0 1px 0 rgba(12, 107, 95, 0.35);
+            }
+            .qv-word:focus-visible {
+                outline: 2px solid var(--accent);
+                outline-offset: 2px;
+            }
+            .qv-seg {
+                transition: color 0.32s ease;
+            }
+            .qv-end {
+                font-family: "Amiri Quran", "Amiri", serif;
+                color: var(--gold);
+                font-size: 0.92em;
+                padding: 0 0.12em;
+            }
+
+            .qv-tip {
+                position: absolute;
+                left: 50%;
+                bottom: calc(100% + 12px);
+                transform: translateX(-50%);
+                background: #211e17;
+                color: #f7f2e6;
+                border-radius: 11px;
+                padding: 11px 15px 12px;
+                min-width: 130px;
+                max-width: 260px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 4px;
+                box-shadow:
+                    0 16px 38px -12px rgba(20, 18, 12, 0.55),
+                    0 0 0 1px rgba(203, 168, 104, 0.25);
+                z-index: 50;
+                pointer-events: none;
+                text-align: center;
+                animation: pop 0.18s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+                font-family: "Spectral", serif;
+            }
+            .qv-tip-ar {
+                font-family: "Amiri Quran", "Amiri", serif;
+                font-size: 25px;
+                line-height: 1.2;
+                color: #fbf6ea;
+                direction: rtl;
+            }
+            .qv-tip-tr {
+                font-style: italic;
+                font-size: 13px;
+                color: var(--gold-soft);
+                letter-spacing: 0.02em;
+                margin-bottom: 2px;
+            }
+            .qv-tip-gl {
+                font-size: 13.5px;
+                color: #f7f2e6;
+                line-height: 1.4;
+                display: flex;
+                align-items: baseline;
+                gap: 6px;
+            }
+            .qv-tip-gl[dir="rtl"] {
+                font-family: "Noto Nastaliq Urdu", "Amiri", serif;
+                font-size: 15px;
+                line-height: 1.9;
+            }
+            .qv-tip-tag {
+                font-size: 8.5px;
+                letter-spacing: 0.1em;
+                color: #211e17;
+                background: var(--gold-soft);
+                padding: 2px 4px;
+                border-radius: 3px;
+                flex: none;
+                font-family: "Cormorant Garamond", serif;
+                font-weight: 600;
+            }
+            .qv-tip-arrow {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                border: 7px solid transparent;
+                border-top-color: #211e17;
+            }
+
+            .qv-trans-stack {
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+                margin-top: 10px;
+                animation: fade 0.35s ease both;
+            }
+            .qv-tr-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 7px;
+            }
+            .qv-tr-label {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            .qv-tr-name {
+                font-family: "Cormorant Garamond", serif;
+                font-weight: 600;
+                font-size: 11px;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                color: var(--ink-soft);
+            }
+            .qv-tr-tag {
+                font-family: "Cormorant Garamond", serif;
+                font-weight: 600;
+                font-size: 9px;
+                letter-spacing: 0.1em;
+                color: var(--gold);
+                border: 1px solid var(--gold-soft);
+                padding: 1px 5px;
+                border-radius: 4px;
+            }
+            .qv-trans {
+                font-size: 18.5px;
+                line-height: 1.78;
+                color: var(--ink);
+                max-width: 60ch;
+                text-align: center;
+                padding: 0 6px;
+            }
+            .qv-trans.ur {
+                font-family: "Noto Nastaliq Urdu", "Amiri", serif;
+                font-size: 24px;
+                line-height: 2.5;
+                direction: rtl;
+            }
+
+            .qv-div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+                margin: 36px 0 4px;
+            }
+            .qv-div span {
+                height: 1px;
+                width: 70px;
+                background: var(--line);
+            }
+            .qv-div-d {
+                width: 6px !important;
+                height: 6px !important;
+                background: var(--gold-soft) !important;
+                transform: rotate(45deg);
+                flex: none;
+            }
+
+            .qv-foot {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 26px 22px 56px;
+                text-align: center;
+                font-size: 12.5px;
+                letter-spacing: 0.03em;
+                color: var(--ink-soft);
+                border-top: 1px solid var(--line);
+            }
+
+            @keyframes rise {
+                from {
+                    opacity: 0;
+                    transform: translateY(22px);
+                }
+                to {
+                    opacity: 1;
+                    transform: none;
+                }
+            }
+            @keyframes fade {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            @keyframes pop {
+                from {
+                    opacity: 0;
+                    transform: translateX(-50%) translateY(5px) scale(0.94);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(-50%) translateY(0) scale(1);
+                }
+            }
+
+            @media (max-width: 560px) {
+                .qv-bar-in {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 11px;
+                }
+                .qv-controls {
+                    width: 100%;
+                    justify-content: space-between;
+                }
+                .qv-dropdown {
+                    right: auto;
+                    left: 0;
+                    width: min(288px, 86vw);
+                }
+                .qv-arabic {
+                    line-height: 2.2;
+                }
+            }
+
+            /* surah picker (live mode) */
+            .qv-surah-wrap {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .qv-surah {
+                appearance: none;
+                -webkit-appearance: none;
+                background: transparent;
+                border: 0;
+                border-bottom: 1.5px solid var(--gold-soft);
+                font-family: "Cormorant Garamond", serif;
+                font-weight: 600;
+                font-size: 16px;
+                letter-spacing: 0.04em;
+                color: var(--ink);
+                padding: 2px 22px 3px 4px;
+                cursor: pointer;
+                max-width: 230px;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23A9853F' stroke-width='1.6' fill='none'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: right 4px center;
+            }
+            .qv-surah:focus {
+                outline: none;
+                border-color: var(--accent);
+            }
+            .qv-mode {
+                font-family: "Cormorant Garamond", serif;
+                font-weight: 600;
+                font-size: 9px;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+                color: var(--gold);
+                border: 1px solid var(--gold-soft);
+                padding: 2px 6px;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="qv-grain" aria-hidden="true"></div>
+        <div id="app"><div class="qv-loading">Loading…</div></div>
+
+        <!-- ========================================================================
+       OFFLINE FALLBACK (LOCAL MODE ONLY) — Surah 108 snapshot.
+       Only used when CONFIG.mode === "local" and the /data files can't be
+       fetched. Live mode ignores this entirely. Safe to delete.
+       ===================================================================== -->
+        <script type="application/json" data-path="./data/tajweed-rules.json">
+            {
+                "h": {
+                    "name": "Hamzat ul Wasl",
+                    "arabic": "همزة الوصل",
+                    "color": "#AAAAAA",
+                    "description": "The connecting hamza, only pronounced when starting on it."
+                },
+                "s": {
+                    "name": "Silent",
+                    "arabic": "حرف صامت",
+                    "color": "#AAAAAA",
+                    "description": "A letter written but not pronounced."
+                },
+                "l": {
+                    "name": "Laam Shamsiyyah",
+                    "arabic": "لام شمسية",
+                    "color": "#AAAAAA",
+                    "description": "The silent ل of ال before a sun letter."
+                },
+                "n": {
+                    "name": "Madd 2 Harakat",
+                    "arabic": "مد طبيعي",
+                    "color": "#537FFF",
+                    "description": "Natural prolongation of two counts."
+                },
+                "p": {
+                    "name": "Madd Munfasil 4-5",
+                    "arabic": "مد منفصل",
+                    "color": "#4050FF",
+                    "description": "Permissible four-to-five count prolongation across word boundaries."
+                },
+                "m": {
+                    "name": "Madd Lazim 6",
+                    "arabic": "مد لازم",
+                    "color": "#000EBC",
+                    "description": "Necessary six-count prolongation."
+                },
+                "q": {
+                    "name": "Qalqalah",
+                    "arabic": "قلقلة",
+                    "color": "#DD0008",
+                    "description": "Echoing sound on ق ط ب ج د when sukoon."
+                },
+                "o": {
+                    "name": "Madd Muttasil 4-5",
+                    "arabic": "مد متصل",
+                    "color": "#2144C1",
+                    "description": "Obligatory four-to-five count prolongation within a word."
+                },
+                "c": {
+                    "name": "Ikhfa Shafawi",
+                    "arabic": "إخفاء شفوي",
+                    "color": "#D500B7",
+                    "description": "Partial hiding of م before ب."
+                },
+                "f": {
+                    "name": "Ikhfa",
+                    "arabic": "إخفاء",
+                    "color": "#9400A8",
+                    "description": "Partial hiding of ن ساكنة or tanwīn before 15 letters."
+                },
+                "w": {
+                    "name": "Idgham Shafawi",
+                    "arabic": "إدغام شفوي",
+                    "color": "#58B800",
+                    "description": "Merging of م with م."
+                },
+                "i": {
+                    "name": "Iqlab",
+                    "arabic": "إقلاب",
+                    "color": "#26BFFD",
+                    "description": "Converting ن ساكنة / tanwīn into م before ب."
+                },
+                "a": {
+                    "name": "Idgham With Ghunnah",
+                    "arabic": "إدغام بغنة",
+                    "color": "#169200",
+                    "description": "Merging into ي ن م و with nasalization."
+                },
+                "u": {
+                    "name": "Idgham Without Ghunnah",
+                    "arabic": "إدغام بلا غنة",
+                    "color": "#169200",
+                    "description": "Merging into ل ر without nasalization."
+                },
+                "d": {
+                    "name": "Idgham Mutajanisain",
+                    "arabic": "إدغام متجانسين",
+                    "color": "#A1A1A1",
+                    "description": "Merging of letters from the same articulation point."
+                },
+                "b": {
+                    "name": "Idgham Mutaqaribain",
+                    "arabic": "إدغام متقاربين",
+                    "color": "#A1A1A1",
+                    "description": "Merging of letters from nearby articulation points."
+                },
+                "g": {
+                    "name": "Ghunnah",
+                    "arabic": "غنة",
+                    "color": "#FF7E1E",
+                    "description": "Two-count nasalization on shaddah of ن or م."
+                }
+            }
+        </script>
+        <script type="application/json" data-path="./data/surah/108.json">
+            {
+                "metadata": {
+                    "surahNumber": 108,
+                    "name": {
+                        "arabic": "سُورَةُ الكَوۡثَرِ",
+                        "transliteration": "Al-Kawthar",
+                        "translation": "Abundance"
+                    },
+                    "revelationType": "Meccan",
+                    "numberOfAyahs": 3,
+                    "source": {
+                        "tajweed": "api.alquran.cloud (quran-tajweed)",
+                        "transliteration": "api.quran.com v4 (en-clear-quran)",
+                        "generatedAt": "2026-05-16T00:00:00+00:00"
+                    }
+                },
+                "ayahs": [
+                    {
+                        "ayahNumber": 1,
+                        "globalNumber": 6205,
+                        "juz": 30,
+                        "manzil": 7,
+                        "page": 602,
+                        "ruku": 550,
+                        "hizbQuarter": 240,
+                        "sajda": false,
+                        "words": [
+                            {
+                                "plain": "إِنَّآ",
+                                "transliteration": "innā",
+                                "segments": [
+                                    { "text": "إِ" },
+                                    { "text": "نّ", "rule": "g" },
+                                    { "text": "َآ", "rule": "o" }
+                                ]
+                            },
+                            {
+                                "plain": "أَعْطَيْنَـٰكَ",
+                                "transliteration": "aʿṭaynāka",
+                                "segments": [
+                                    { "text": "أَعْطَيْنَ" },
+                                    { "text": "ـٰ", "rule": "n" },
+                                    { "text": "كَ" }
+                                ]
+                            },
+                            {
+                                "plain": "ٱلْكَوْثَرَ",
+                                "transliteration": "al-kawthara",
+                                "segments": [
+                                    { "text": "ٱ", "rule": "h", "id": 14659 },
+                                    { "text": "لْكَوْثَرَ" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "ayahNumber": 2,
+                        "globalNumber": 6206,
+                        "juz": 30,
+                        "manzil": 7,
+                        "page": 602,
+                        "ruku": 550,
+                        "hizbQuarter": 240,
+                        "sajda": false,
+                        "words": [
+                            {
+                                "plain": "فَصَلِّ",
+                                "transliteration": "fa-ṣalli",
+                                "segments": [{ "text": "فَصَلِّ" }]
+                            },
+                            {
+                                "plain": "لِرَبِّكَ",
+                                "transliteration": "li-rabbika",
+                                "segments": [{ "text": "لِرَبِّكَ" }]
+                            },
+                            {
+                                "plain": "وَٱنْحَرْ",
+                                "transliteration": "wa-nḥar",
+                                "segments": [
+                                    { "text": "وَ" },
+                                    { "text": "ٱ", "rule": "h", "id": 14660 },
+                                    { "text": "نْحَرْ" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "ayahNumber": 3,
+                        "globalNumber": 6207,
+                        "juz": 30,
+                        "manzil": 7,
+                        "page": 602,
+                        "ruku": 550,
+                        "hizbQuarter": 240,
+                        "sajda": false,
+                        "words": [
+                            {
+                                "plain": "إِنَّ",
+                                "transliteration": "inna",
+                                "segments": [
+                                    { "text": "إِ" },
+                                    { "text": "نّ", "rule": "g" },
+                                    { "text": "َ" }
+                                ]
+                            },
+                            {
+                                "plain": "شَانِئَكَ",
+                                "transliteration": "shāni'aka",
+                                "segments": [{ "text": "شَانِئَكَ" }]
+                            },
+                            {
+                                "plain": "هُوَ",
+                                "transliteration": "huwa",
+                                "segments": [{ "text": "هُوَ" }]
+                            },
+                            {
+                                "plain": "ٱلْأَبْتَرُ",
+                                "transliteration": "al-abtaru",
+                                "segments": [
+                                    { "text": "ٱ", "rule": "h", "id": 14661 },
+                                    { "text": "لْأَ" },
+                                    { "text": "بْ", "rule": "q", "id": 14662 },
+                                    { "text": "تَرُ" }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        </script>
+        <script
+            type="application/json"
+            data-path="./data/translations/en-clear-quran/108.json"
+        >
+            {
+                "key": "en-clear-quran",
+                "language": "en",
+                "translator": "Dr. Mustafa Khattab, the Clear Quran",
+                "translationId": 131,
+                "surahNumber": 108,
+                "numberOfAyahs": 3,
+                "ayahs": [
+                    {
+                        "ayahNumber": 1,
+                        "text": "Indeed, We have granted you ˹O Prophet˺ abundant goodness.",
+                        "words": ["Indeed, We", "have given you", "Al-Kauthar"]
+                    },
+                    {
+                        "ayahNumber": 2,
+                        "text": "So pray and sacrifice to your Lord ˹alone˺.",
+                        "words": ["So pray", "to your Lord", "and sacrifice"]
+                    },
+                    {
+                        "ayahNumber": 3,
+                        "text": "Only the one who hates you is truly cut off ˹from any goodness˺.",
+                        "words": [
+                            "Indeed,",
+                            "your enemy",
+                            "(is) he",
+                            "the one cut off"
+                        ]
+                    }
+                ]
+            }
+        </script>
+        <script
+            type="application/json"
+            data-path="./data/translations/en-saheeh/108.json"
+        >
+            {
+                "key": "en-saheeh",
+                "language": "en",
+                "translator": "Saheeh International",
+                "translationId": 20,
+                "surahNumber": 108,
+                "numberOfAyahs": 3,
+                "ayahs": [
+                    {
+                        "ayahNumber": 1,
+                        "text": "Indeed, We have granted you, [O Muhammad], al-Kawthar.",
+                        "words": ["Indeed, We", "have given you", "Al-Kawthar"]
+                    },
+                    {
+                        "ayahNumber": 2,
+                        "text": "So pray to your Lord and sacrifice [to Him alone].",
+                        "words": ["So pray", "to your Lord", "and sacrifice"]
+                    },
+                    {
+                        "ayahNumber": 3,
+                        "text": "Indeed, your enemy is the one cut off.",
+                        "words": [
+                            "Indeed,",
+                            "your enemy",
+                            "(is) he",
+                            "the one cut off"
+                        ]
+                    }
+                ]
+            }
+        </script>
+        <script
+            type="application/json"
+            data-path="./data/translations/ur-jalandhry/108.json"
+        >
+            {
+                "key": "ur-jalandhry",
+                "language": "ur",
+                "translator": "Fateh Muhammad Jalandhry",
+                "translationId": 54,
+                "surahNumber": 108,
+                "numberOfAyahs": 3,
+                "ayahs": [
+                    {
+                        "ayahNumber": 1,
+                        "text": "(اے محمدﷺ) ہم نے تم کو کوثر عطا فرمائی ہے",
+                        "words": ["بے شک ہم نے", "تمہیں عطا کیا", "کوثر"]
+                    },
+                    {
+                        "ayahNumber": 2,
+                        "text": "تو اپنے پروردگار کے لئے نماز پڑھا کرو اور قربانی دیا کرو",
+                        "words": [
+                            "تو نماز پڑھ",
+                            "اپنے رب کے لیے",
+                            "اور قربانی کر"
+                        ]
+                    },
+                    {
+                        "ayahNumber": 3,
+                        "text": "کچھ شک نہیں کہ تمہارا دشمن ہی بےاولاد رہے گا",
+                        "words": ["بے شک", "تمہارا دشمن", "وہی ہے", "بے اولاد"]
+                    }
+                ]
+            }
+        </script>
+        <!-- ===================== END OFFLINE FALLBACK ========================== -->
+
+        <script>
+            /* ============================================================================
+   CONFIG
+   ----------------------------------------------------------------------------
+   mode "live"  : fetch Arabic+tajwīd + translations straight from the public
+                  APIs and build everything in the browser. Works by just
+                  double-clicking this file — pick any surah from the dropdown.
+                  No server, no Node, no Python.
+   mode "local" : fetch your own ./data/*.json (the pipeline output). Needs to
+                  be served over HTTP (browsers block file:// fetch). Use this
+                  for production / your own API.
+   ========================================================================== */
+            const CONFIG = {
+                mode: "live", // "live"  or  "local"
+                surah: 108, // starting surah (live mode also has a picker)
+                dataBase: "./data", // used by local mode
+
+                // Live mode: which translations to pull from api.quran.com.
+                // translationId lookup: https://api.quran.com/api/v4/resources/translations
+                liveTranslations: [
+                    {
+                        key: "en-clear-quran",
+                        label: "Dr. Mustafa Khattab",
+                        lang: "en",
+                        translationId: 131,
+                    },
+                    {
+                        key: "en-saheeh",
+                        label: "Saheeh International",
+                        lang: "en",
+                        translationId: 20,
+                    },
+                    {
+                        key: "ur-jalandhry",
+                        label: "Fateh Muhammad Jalandhry",
+                        lang: "ur",
+                        translationId: 54,
+                    },
+                ],
+                // Local mode: which sidecar editions to load.
+                localTranslationKeys: [
+                    "en-clear-quran",
+                    "en-saheeh",
+                    "ur-jalandhry",
+                ],
+
+                defaultTranslations: ["en-clear-quran"],
+                tajweedOn: true,
+                noBasmala: [1, 9],
+            };
+
+            /* ---- constants ---------------------------------------------------------- */
+            const RTL_LANGS = new Set([
+                "ar",
+                "ur",
+                "fa",
+                "ps",
+                "he",
+                "ckb",
+                "sd",
+                "ug",
+                "dv",
+            ]);
+            const AR_DIGITS = [
+                "٠",
+                "١",
+                "٢",
+                "٣",
+                "٤",
+                "٥",
+                "٦",
+                "٧",
+                "٨",
+                "٩",
+            ];
+            const toArabicNum = (n) =>
+                String(n)
+                    .split("")
+                    .map((d) => AR_DIGITS[+d])
+                    .join("");
+            const END_OF_AYAH = "\u06DD";
+            const BASMALA = "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ";
+            const AQ = "https://api.alquran.cloud/v1";
+            const QC = "https://api.quran.com/api/v4";
+
+            /* ---- in-browser port of the pipeline parser ----------------------------- */
+            const TAJWEED_RE = /\[([a-z]+)(?::(\d+))?\[([^\]]+)\]/g;
+
+            function parseTajweed(marked) {
+                const segments = [];
+                let plain = "",
+                    pos = 0,
+                    m;
+                TAJWEED_RE.lastIndex = 0;
+                while ((m = TAJWEED_RE.exec(marked))) {
+                    if (m.index > pos) {
+                        const c = marked.slice(pos, m.index);
+                        segments.push({ text: c });
+                        plain += c;
+                    }
+                    const seg = { text: m[3], rule: m[1] };
+                    if (m[2] != null) seg.id = parseInt(m[2], 10);
+                    segments.push(seg);
+                    plain += m[3];
+                    pos = m.index + m[0].length;
+                }
+                if (pos < marked.length) {
+                    const r = marked.slice(pos);
+                    segments.push({ text: r });
+                    plain += r;
+                }
+                return { plain, segments };
+            }
+
+            function splitMarkedWords(marked) {
+                const RE = /\[([a-z]+)(?::(\d+))?\[([^\]]+)\]/g;
+                const tokens = [];
+                let pos = 0,
+                    m;
+                while ((m = RE.exec(marked))) {
+                    if (m.index > pos)
+                        tokens.push(["lit", marked.slice(pos, m.index)]);
+                    tokens.push(["mark", m[0]]);
+                    pos = m.index + m[0].length;
+                }
+                if (pos < marked.length)
+                    tokens.push(["lit", marked.slice(pos)]);
+                const words = [];
+                let buf = [];
+                for (const [kind, text] of tokens) {
+                    if (kind === "mark") {
+                        buf.push(text);
+                        continue;
+                    }
+                    for (const part of text.split(/(\s+)/)) {
+                        if (part === "") continue;
+                        if (/^\s+$/.test(part)) {
+                            if (buf.length) {
+                                words.push(buf.join(""));
+                                buf = [];
+                            }
+                        } else buf.push(part);
+                    }
+                }
+                if (buf.length) words.push(buf.join(""));
+                return words;
+            }
+
+            function stripHtml(s) {
+                if (!s) return s;
+                return (
+                    s
+                        .replace(/<sup\b[^>]*?>[\s\S]*?<\/sup>/gi, "")
+                        .replace(/<[^>]+>/g, "")
+                        .trim() || null
+                );
+            }
+
+            /* ---- generic fetch ------------------------------------------------------ */
+            async function fetchJSON(url) {
+                const r = await fetch(url, { cache: "no-store" });
+                if (!r.ok) throw new Error("HTTP " + r.status + " for " + url);
+                return r.json();
+            }
+
+            /* ---- LOCAL mode loader (pipeline output, with embedded fallback) -------- */
+            async function loadLocalJSON(path) {
+                try {
+                    const r = await fetch(path, { cache: "no-store" });
+                    if (r.ok) return await r.json();
+                } catch (e) {
+                    /* fall through */
+                }
+                const elx = document.querySelector(
+                    'script[type="application/json"][data-path="' + path + '"]',
+                );
+                if (elx) return JSON.parse(elx.textContent);
+                throw new Error("Could not load " + path);
+            }
+
+            async function loadLocal(n) {
+                const base = CONFIG.dataBase;
+                const [rules, surah] = await Promise.all([
+                    loadLocalJSON(base + "/tajweed-rules.json"),
+                    loadLocalJSON(base + "/surah/" + n + ".json"),
+                ]);
+                const translations = {};
+                const order = [];
+                for (const key of CONFIG.localTranslationKeys) {
+                    try {
+                        const t = await loadLocalJSON(
+                            base + "/translations/" + key + "/" + n + ".json",
+                        );
+                        translations[key] = {
+                            language: t.language,
+                            translator: t.translator,
+                            ayahs: t.ayahs,
+                        };
+                        order.push(key);
+                    } catch (e) {
+                        console.warn("translation missing:", key);
+                    }
+                }
+                return { rules, surah, translations, order };
+            }
+
+            /* ---- LIVE mode loader (build everything in the browser) ----------------- */
+            let SURAH_LIST = null;
+
+            async function loadSurahList() {
+                if (SURAH_LIST) return SURAH_LIST;
+                const j = await fetchJSON(AQ + "/surah");
+                SURAH_LIST = j.data.map((s) => ({
+                    number: s.number,
+                    en: s.englishName,
+                    ayahs: s.numberOfAyahs,
+                }));
+                return SURAH_LIST;
+            }
+
+            async function loadLive(n) {
+                // tajwīd-marked Arabic
+                const tj = await fetchJSON(
+                    AQ + "/surah/" + n + "/quran-tajweed",
+                );
+                if (tj.code !== 200)
+                    throw new Error("alquran.cloud: " + tj.status);
+                const sd = tj.data;
+
+                // pull each configured translation from quran.com
+                const qcByKey = {};
+                const order = [];
+                for (const t of CONFIG.liveTranslations) {
+                    try {
+                        const url =
+                            QC +
+                            "/verses/by_chapter/" +
+                            n +
+                            "?words=true&language=" +
+                            t.lang +
+                            "&word_fields=text_uthmani,transliteration" +
+                            "&translations=" +
+                            t.translationId +
+                            "&per_page=300";
+                        const qc = await fetchJSON(url);
+                        const map = {};
+                        for (const v of qc.verses || []) {
+                            const a = parseInt(v.verse_key.split(":")[1], 10);
+                            const translit = [],
+                                gloss = [];
+                            for (const w of v.words || []) {
+                                if (w.char_type_name === "end") continue;
+                                translit.push(
+                                    (w.transliteration || {}).text || null,
+                                );
+                                gloss.push(
+                                    stripHtml((w.translation || {}).text),
+                                );
+                            }
+                            const at = (v.translations || [])[0];
+                            map[a] = {
+                                translit,
+                                gloss,
+                                text: at ? stripHtml(at.text) : null,
+                            };
+                        }
+                        qcByKey[t.key] = { cfg: t, map };
+                        order.push(t.key);
+                    } catch (e) {
+                        console.warn("live translation failed:", t.key, e);
+                    }
+                }
+
+                // transliteration source = first edition that returned data
+                const translitKey = order[0] || null;
+
+                const ayahs = sd.ayahs
+                    .slice()
+                    .sort((x, y) => x.numberInSurah - y.numberInSurah)
+                    .map((ayah) => {
+                        const marked = ayah.text;
+                        const wstr = splitMarkedWords(marked);
+                        const tl =
+                            translitKey &&
+                            qcByKey[translitKey].map[ayah.numberInSurah]
+                                ? qcByKey[translitKey].map[ayah.numberInSurah]
+                                      .translit
+                                : [];
+                        const words = wstr.map((wm, i) => {
+                            const p = parseTajweed(wm);
+                            const o = { plain: p.plain, segments: p.segments };
+                            if (tl[i]) o.transliteration = tl[i];
+                            return o;
+                        });
+                        return {
+                            ayahNumber: ayah.numberInSurah,
+                            globalNumber: ayah.number,
+                            juz: ayah.juz,
+                            page: ayah.page,
+                            sajda: ayah.sajda,
+                            words,
+                        };
+                    });
+
+                const surah = {
+                    metadata: {
+                        surahNumber: sd.number,
+                        name: {
+                            arabic: sd.name,
+                            transliteration: sd.englishName,
+                            translation: sd.englishNameTranslation,
+                        },
+                        revelationType: sd.revelationType,
+                        numberOfAyahs: sd.numberOfAyahs,
+                    },
+                    ayahs,
+                };
+
+                const translations = {};
+                for (const key of order) {
+                    const { cfg, map } = qcByKey[key];
+                    translations[key] = {
+                        language: cfg.lang,
+                        translator: cfg.label,
+                        ayahs: ayahs.map((a) => ({
+                            ayahNumber: a.ayahNumber,
+                            text: (map[a.ayahNumber] || {}).text || null,
+                            words: (map[a.ayahNumber] || {}).gloss || [],
+                        })),
+                    };
+                }
+
+                // tajwīd rules: tiny static set (same colours as the pipeline)
+                const rules = LIVE_RULES;
+                return { rules, surah, translations, order };
+            }
+
+            /* full 17-rule legend, identical to data/tajweed-rules.json */
+            const LIVE_RULES = {
+                h: {
+                    name: "Hamzat ul Wasl",
+                    arabic: "همزة الوصل",
+                    color: "#AAAAAA",
+                },
+                s: { name: "Silent", arabic: "حرف صامت", color: "#AAAAAA" },
+                l: {
+                    name: "Laam Shamsiyyah",
+                    arabic: "لام شمسية",
+                    color: "#AAAAAA",
+                },
+                n: {
+                    name: "Madd 2 Harakat",
+                    arabic: "مد طبيعي",
+                    color: "#537FFF",
+                },
+                p: {
+                    name: "Madd Munfasil 4-5",
+                    arabic: "مد منفصل",
+                    color: "#4050FF",
+                },
+                m: {
+                    name: "Madd Lazim 6",
+                    arabic: "مد لازم",
+                    color: "#000EBC",
+                },
+                q: { name: "Qalqalah", arabic: "قلقلة", color: "#DD0008" },
+                o: {
+                    name: "Madd Muttasil 4-5",
+                    arabic: "مد متصل",
+                    color: "#2144C1",
+                },
+                c: {
+                    name: "Ikhfa Shafawi",
+                    arabic: "إخفاء شفوي",
+                    color: "#D500B7",
+                },
+                f: { name: "Ikhfa", arabic: "إخفاء", color: "#9400A8" },
+                w: {
+                    name: "Idgham Shafawi",
+                    arabic: "إدغام شفوي",
+                    color: "#58B800",
+                },
+                i: { name: "Iqlab", arabic: "إقلاب", color: "#26BFFD" },
+                a: {
+                    name: "Idgham With Ghunnah",
+                    arabic: "إدغام بغنة",
+                    color: "#169200",
+                },
+                u: {
+                    name: "Idgham Without Ghunnah",
+                    arabic: "إدغام بلا غنة",
+                    color: "#169200",
+                },
+                d: {
+                    name: "Idgham Mutajanisain",
+                    arabic: "إدغام متجانسين",
+                    color: "#A1A1A1",
+                },
+                b: {
+                    name: "Idgham Mutaqaribain",
+                    arabic: "إدغام متقاربين",
+                    color: "#A1A1A1",
+                },
+                g: { name: "Ghunnah", arabic: "غنة", color: "#FF7E1E" },
+            };
+
+            /* ---- state -------------------------------------------------------------- */
+            const state = {
+                data: null,
+                order: [],
+                selected: [],
+                tajweed: CONFIG.tajweedOn,
+                legendOpen: false,
+                menuOpen: false,
+                surah: CONFIG.surah,
+                list: null,
+            };
+            let pinnedKey = null;
+
+            /* ---- helpers ------------------------------------------------------------ */
+            const el = (tag, cls, txt) => {
+                const e = document.createElement(tag);
+                if (cls) e.className = cls;
+                if (txt != null) e.textContent = txt;
+                return e;
+            };
+            function editionMeta(key) {
+                const t = state.data.translations[key];
+                const lang = (t && t.language) || "en";
+                return {
+                    key,
+                    available: !!t,
+                    translator: (t && t.translator) || key,
+                    lang,
+                    tag: lang.toUpperCase(),
+                    dir: RTL_LANGS.has(lang) ? "rtl" : "ltr",
+                };
+            }
+            const availableKeys = () =>
+                state.order.filter((k) => state.data.translations[k]);
+            function usedRuleSet() {
+                const set = new Set();
+                state.data.surah.ayahs.forEach((a) =>
+                    a.words.forEach((w) =>
+                        (w.segments || []).forEach(
+                            (s) => s.rule && set.add(s.rule),
+                        ),
+                    ),
+                );
+                return set;
+            }
+
+            /* ---- tooltip ------------------------------------------------------------ */
+            function buildTip(word, ai, wi) {
+                const tip = el("div", "qv-tip");
+                tip.setAttribute("dir", "ltr");
+                tip.setAttribute("role", "tooltip");
+                tip.appendChild(el("span", "qv-tip-ar", word.plain));
+                if (word.transliteration)
+                    tip.appendChild(
+                        el("span", "qv-tip-tr", word.transliteration),
+                    );
+                state.selected.forEach((k) => {
+                    const t = state.data.translations[k];
+                    if (!t) return;
+                    const m = editionMeta(k);
+                    const g =
+                        (t.ayahs[ai] &&
+                            t.ayahs[ai].words &&
+                            t.ayahs[ai].words[wi]) ||
+                        "—";
+                    const line = el("span", "qv-tip-gl");
+                    line.setAttribute("dir", m.dir);
+                    line.appendChild(el("span", "qv-tip-tag", m.tag));
+                    line.appendChild(document.createTextNode(g));
+                    tip.appendChild(line);
+                });
+                tip.appendChild(el("span", "qv-tip-arrow"));
+                return tip;
+            }
+            function attachWord(span, word, ai, wi) {
+                const key = ai + ":" + wi;
+                const showTip = () => {
+                    if (span.querySelector(".qv-tip")) return;
+                    span.classList.add("on");
+                    span.appendChild(buildTip(word, ai, wi));
+                };
+                const hideTip = () => {
+                    if (pinnedKey === key) return;
+                    span.classList.remove("on");
+                    const t = span.querySelector(".qv-tip");
+                    if (t) t.remove();
+                };
+                span.addEventListener("mouseenter", showTip);
+                span.addEventListener("mouseleave", hideTip);
+                span.addEventListener("focus", showTip);
+                span.addEventListener("blur", hideTip);
+                span.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    if (pinnedKey === key) {
+                        pinnedKey = null;
+                        hideTip();
+                    } else {
+                        if (pinnedKey) {
+                            const prev = document.querySelector(
+                                '.qv-word[data-k="' + pinnedKey + '"]',
+                            );
+                            if (prev) {
+                                prev.classList.remove("on");
+                                const pt = prev.querySelector(".qv-tip");
+                                if (pt) pt.remove();
+                            }
+                        }
+                        pinnedKey = key;
+                        showTip();
+                    }
+                });
+                span.addEventListener("keydown", (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        span.click();
+                    }
+                });
+            }
+
+            /* ---- render ------------------------------------------------------------- */
+            function render() {
+                pinnedKey = null;
+                const { rules, surah } = state.data;
+                const meta = surah.metadata;
+                const firstAyah = surah.ayahs[0] || {};
+                const app = document.getElementById("app");
+                app.innerHTML = "";
+
+                const bar = el("header", "qv-bar");
+                const barIn = el("div", "qv-bar-in");
+
+                /* brand + surah picker */
+                const brand = el("div", "qv-brand");
+                brand.appendChild(el("span", "qv-brand-mark", "۞"));
+                if (CONFIG.mode === "live" && state.list) {
+                    const wrap = el("div", "qv-surah-wrap");
+                    const sel = el("select", "qv-surah");
+                    sel.setAttribute("aria-label", "Choose sūrah");
+                    state.list.forEach((s) => {
+                        const o = el("option", null, s.number + " · " + s.en);
+                        o.value = String(s.number);
+                        if (s.number === state.surah) o.selected = true;
+                        sel.appendChild(o);
+                    });
+                    sel.addEventListener("change", (e) =>
+                        go(parseInt(e.target.value, 10)),
+                    );
+                    wrap.appendChild(sel);
+                    wrap.appendChild(el("span", "qv-mode", "Live"));
+                    brand.appendChild(wrap);
+                } else {
+                    brand.appendChild(
+                        el("span", "qv-brand-tx", "Sūrah " + meta.surahNumber),
+                    );
+                }
+                barIn.appendChild(brand);
+
+                const controls = el("div", "qv-controls");
+
+                /* translations multiselect */
+                const menu = el("div", "qv-menu");
+                const menuBtn = el(
+                    "button",
+                    "qv-pill" + (state.menuOpen ? " is-active" : ""),
+                );
+                menuBtn.appendChild(document.createTextNode("Translations"));
+                menuBtn.appendChild(
+                    el("span", "qv-count", String(state.selected.length)),
+                );
+                menuBtn.appendChild(
+                    el("span", "qv-chev" + (state.menuOpen ? " up" : ""), "⌄"),
+                );
+                menuBtn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    state.menuOpen = !state.menuOpen;
+                    render();
+                });
+                menu.appendChild(menuBtn);
+                if (state.menuOpen) {
+                    const dd = el("div", "qv-dropdown");
+                    dd.setAttribute("role", "menu");
+                    dd.addEventListener("click", (e) => e.stopPropagation());
+                    dd.appendChild(
+                        el("div", "qv-dropdown-cap", "Show translations"),
+                    );
+                    const avail = availableKeys();
+                    if (!avail.length) {
+                        const none = el("div", "qv-opt-sub");
+                        none.style.padding = "4px 10px 10px";
+                        none.textContent =
+                            "No translations loaded for this sūrah.";
+                        dd.appendChild(none);
+                    }
+                    avail.forEach((k) => {
+                        const m = editionMeta(k);
+                        const on = state.selected.includes(k);
+                        const last = on && state.selected.length === 1;
+                        const opt = el("button", "qv-opt" + (on ? " on" : ""));
+                        opt.setAttribute("role", "menuitemcheckbox");
+                        opt.setAttribute("aria-checked", String(on));
+                        if (last) opt.disabled = true;
+                        opt.appendChild(el("span", "qv-check", on ? "✓" : ""));
+                        const main = el("div", "qv-opt-main");
+                        main.appendChild(
+                            el("span", "qv-opt-name", m.translator),
+                        );
+                        main.appendChild(
+                            el(
+                                "span",
+                                "qv-opt-sub",
+                                m.lang === "ur" ? "Urdu" : m.lang.toUpperCase(),
+                            ),
+                        );
+                        opt.appendChild(main);
+                        opt.appendChild(el("span", "qv-opt-tag", m.tag));
+                        opt.addEventListener("click", () => {
+                            if (on) {
+                                if (state.selected.length > 1)
+                                    state.selected = state.selected.filter(
+                                        (x) => x !== k,
+                                    );
+                            } else
+                                state.selected = avail.filter(
+                                    (x) =>
+                                        state.selected.includes(x) || x === k,
+                                );
+                            render();
+                        });
+                        dd.appendChild(opt);
+                    });
+                    menu.appendChild(dd);
+                }
+                controls.appendChild(menu);
+
+                /* tajweed toggle */
+                const tjBtn = el(
+                    "button",
+                    "qv-pill" + (state.tajweed ? " is-on" : ""),
+                );
+                tjBtn.setAttribute("aria-pressed", String(state.tajweed));
+                tjBtn.appendChild(el("span", "qv-pill-dot"));
+                tjBtn.appendChild(
+                    document.createTextNode(
+                        "Tajwīd " + (state.tajweed ? "On" : "Off"),
+                    ),
+                );
+                tjBtn.addEventListener("click", () => {
+                    state.tajweed = !state.tajweed;
+                    render();
+                });
+                controls.appendChild(tjBtn);
+
+                barIn.appendChild(controls);
+                bar.appendChild(barIn);
+
+                /* legend */
+                if (state.tajweed) {
+                    const lw = el("div", "qv-legend-wrap");
+                    const ruleKeys = Object.keys(rules);
+                    const lt = el("button", "qv-legend-toggle");
+                    lt.appendChild(
+                        document.createTextNode(
+                            (state.legendOpen ? "Hide" : "Show") +
+                                " all " +
+                                ruleKeys.length +
+                                " tajwīd rules",
+                        ),
+                    );
+                    lt.appendChild(
+                        el(
+                            "span",
+                            "qv-chev" + (state.legendOpen ? " up" : ""),
+                            "⌄",
+                        ),
+                    );
+                    lt.addEventListener("click", () => {
+                        state.legendOpen = !state.legendOpen;
+                        render();
+                    });
+                    lw.appendChild(lt);
+                    if (state.legendOpen) {
+                        const used = usedRuleSet();
+                        const grid = el("div", "qv-legend");
+                        ruleKeys.forEach((r) => {
+                            const it = el(
+                                "div",
+                                "qv-legend-item" + (used.has(r) ? " used" : ""),
+                            );
+                            const sw = el("span", "qv-sw");
+                            sw.style.background = rules[r].color;
+                            it.appendChild(sw);
+                            it.appendChild(
+                                el("span", "qv-legend-name", rules[r].name),
+                            );
+                            it.appendChild(
+                                el("span", "qv-legend-ar", rules[r].arabic),
+                            );
+                            if (used.has(r)) {
+                                const d = el("span", "qv-legend-dot");
+                                d.title = "occurs in this sūrah";
+                                it.appendChild(d);
+                            }
+                            grid.appendChild(it);
+                        });
+                        lw.appendChild(grid);
+                    }
+                    bar.appendChild(lw);
+                }
+                app.appendChild(bar);
+
+                /* surah header */
+                const head = el("section", "qv-head");
+                head.appendChild(
+                    el("div", "qv-kicker", "Sūrah " + meta.surahNumber),
+                );
+                head.appendChild(el("h1", "qv-title", meta.name.arabic));
+                const sub = el("div", "qv-subtitle");
+                sub.appendChild(
+                    document.createTextNode(meta.name.transliteration + " "),
+                );
+                sub.appendChild(el("span", "qv-dot", "·"));
+                sub.appendChild(
+                    document.createTextNode(" The " + meta.name.translation),
+                );
+                head.appendChild(sub);
+                const mrow = el("div", "qv-meta");
+                mrow.appendChild(el("span", null, meta.revelationType));
+                mrow.appendChild(el("i"));
+                mrow.appendChild(
+                    el("span", null, meta.numberOfAyahs + " Verses"),
+                );
+                if (firstAyah.juz != null) {
+                    mrow.appendChild(el("i"));
+                    mrow.appendChild(el("span", null, "Juzʼ " + firstAyah.juz));
+                }
+                head.appendChild(mrow);
+                const rl = el("div", "qv-rule");
+                rl.appendChild(el("span"));
+                rl.appendChild(el("span", "qv-rule-d"));
+                rl.appendChild(el("span"));
+                head.appendChild(rl);
+                if (!CONFIG.noBasmala.includes(meta.surahNumber))
+                    head.appendChild(el("div", "qv-bism", BASMALA));
+                app.appendChild(head);
+
+                /* ayahs */
+                const list = el("main", "qv-list");
+                surah.ayahs.forEach((ayah, ai) => {
+                    const art = el("article", "qv-ayah");
+                    art.style.animationDelay = ai * 110 + 120 + "ms";
+
+                    const ar = el("p", "qv-arabic");
+                    ar.setAttribute("dir", "rtl");
+                    ar.setAttribute("lang", "ar");
+                    ayah.words.forEach((w, wi) => {
+                        if (wi > 0)
+                            ar.appendChild(document.createTextNode(" "));
+                        const span = el("span", "qv-word");
+                        span.dataset.k = ai + ":" + wi;
+                        span.setAttribute("role", "button");
+                        span.tabIndex = 0;
+                        (w.segments || [{ text: w.plain }]).forEach((s) => {
+                            const seg = el("span", "qv-seg", s.text);
+                            seg.style.color =
+                                state.tajweed && s.rule
+                                    ? rules[s.rule].color
+                                    : "var(--ink)";
+                            span.appendChild(seg);
+                        });
+                        attachWord(span, w, ai, wi);
+                        ar.appendChild(span);
+                    });
+                    ar.appendChild(document.createTextNode(" "));
+                    const end = el(
+                        "span",
+                        "qv-end",
+                        END_OF_AYAH + toArabicNum(ayah.ayahNumber),
+                    );
+                    end.setAttribute(
+                        "aria-label",
+                        "End of verse " + ayah.ayahNumber,
+                    );
+                    ar.appendChild(end);
+                    art.appendChild(ar);
+
+                    const stack = el("div", "qv-trans-stack");
+                    state.selected.forEach((k) => {
+                        const t = state.data.translations[k];
+                        if (!t) return;
+                        const m = editionMeta(k);
+                        const item = el("div", "qv-tr-item");
+                        const lab = el("div", "qv-tr-label");
+                        lab.appendChild(el("span", "qv-tr-name", m.translator));
+                        lab.appendChild(el("span", "qv-tr-tag", m.tag));
+                        item.appendChild(lab);
+                        const p = el(
+                            "p",
+                            "qv-trans" + (m.lang === "ur" ? " ur" : ""),
+                        );
+                        p.setAttribute("dir", m.dir);
+                        p.setAttribute("lang", m.lang);
+                        p.textContent = (t.ayahs[ai] && t.ayahs[ai].text) || "";
+                        item.appendChild(p);
+                        stack.appendChild(item);
+                    });
+                    art.appendChild(stack);
+
+                    if (ai < surah.ayahs.length - 1) {
+                        const dv = el("div", "qv-div");
+                        dv.appendChild(el("span"));
+                        dv.appendChild(el("span", "qv-div-d"));
+                        dv.appendChild(el("span"));
+                        art.appendChild(dv);
+                    }
+                    list.appendChild(art);
+                });
+                app.appendChild(list);
+
+                const foot = el("div", "qv-foot");
+                foot.appendChild(
+                    document.createTextNode(
+                        CONFIG.mode === "live"
+                            ? "Live · alquran.cloud + quran.com "
+                            : "Local data · pipeline output ",
+                    ),
+                );
+                foot.appendChild(el("span", "qv-dot", "·"));
+                foot.appendChild(
+                    document.createTextNode(
+                        " " +
+                            state.selected.length +
+                            " translation" +
+                            (state.selected.length > 1 ? "s" : "") +
+                            " active ",
+                    ),
+                );
+                foot.appendChild(el("span", "qv-dot", "·"));
+                foot.appendChild(
+                    document.createTextNode(
+                        " hover or tap any word for its literal meaning",
+                    ),
+                );
+                app.appendChild(foot);
+            }
+
+            function showError(e) {
+                const safari =
+                    "If you are on Safari and opened this file directly, try Chrome or Firefox, " +
+                    'or switch CONFIG.mode to "local" and serve the folder.';
+                document.getElementById("app").innerHTML =
+                    '<div class="qv-error"><b>Could not load Sūrah ' +
+                    state.surah +
+                    ".</b><br>" +
+                    (CONFIG.mode === "live"
+                        ? "The public APIs could not be reached. Check your connection. " +
+                          safari
+                        : "Expected files under <code>" +
+                          CONFIG.dataBase +
+                          "</code>. Serve the folder over HTTP.") +
+                    "</div>";
+                console.error(e);
+            }
+
+            document.addEventListener("click", () => {
+                let dirty = false;
+                if (state.menuOpen) {
+                    state.menuOpen = false;
+                    dirty = true;
+                }
+                if (pinnedKey) {
+                    const prev = document.querySelector(
+                        '.qv-word[data-k="' + pinnedKey + '"]',
+                    );
+                    if (prev) {
+                        prev.classList.remove("on");
+                        const pt = prev.querySelector(".qv-tip");
+                        if (pt) pt.remove();
+                    }
+                    pinnedKey = null;
+                }
+                if (dirty) render();
+            });
+
+            /* ---- navigation + boot -------------------------------------------------- */
+            async function go(n) {
+                state.surah = n;
+                document.getElementById("app").innerHTML =
+                    '<div class="qv-loading">Loading Sūrah ' + n + " …</div>";
+                try {
+                    state.data =
+                        CONFIG.mode === "live"
+                            ? await loadLive(n)
+                            : await loadLocal(n);
+                    state.order =
+                        state.data.order ||
+                        Object.keys(state.data.translations);
+                    const avail = availableKeys();
+                    let sel = (
+                        state.selected.length
+                            ? state.selected
+                            : CONFIG.defaultTranslations
+                    ).filter((k) => avail.includes(k));
+                    if (!sel.length && avail.length) sel = [avail[0]];
+                    state.selected = sel;
+                    render();
+                } catch (e) {
+                    showError(e);
+                }
+            }
+
+            (async function init() {
+                try {
+                    if (CONFIG.mode === "live") {
+                        try {
+                            state.list = await loadSurahList();
+                        } catch (e) {
+                            state.list = null;
+                        }
+                    }
+                    await go(CONFIG.surah);
+                } catch (e) {
+                    showError(e);
+                }
+            })();
+        </script>
+    </body>
+</html>
